@@ -2,8 +2,15 @@
 import pandas as pd
 from bblocks import set_bblocks_data_path, DebtIDS
 from scripts import config
-from scripts.data.common import clean_debtors, clean_creditors
-from oda_data import ODAData, set_data_path, read_dac2a
+from scripts.data.common import (
+    clean_debtors,
+    clean_creditors,
+    add_oecd_names,
+    remove_counterpart_totals,
+    remove_groupings_and_totals_from_recipients,
+    remove_non_official_counterparts,
+)
+from oda_data import ODAData, set_data_path
 
 # set the path for the raw data
 set_bblocks_data_path(config.Paths.raw_data)
@@ -33,12 +40,27 @@ def clean_debt_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
-    data = data.filter(["year", "donor_name", "recipient_name", "prices", "value"])
-    # clean debtors
-    data = clean_debtors(data, "recipient_name")
-
-    # clean creditors
-    data = clean_creditors(data, "donor_name")
+    data = (
+        data.pipe(add_oecd_names)
+        .pipe(remove_non_official_counterparts)
+        .pipe(remove_groupings_and_totals_from_recipients)
+        .pipe(clean_debtors, "recipient")
+        .pipe(clean_creditors, "donor")
+        .filter(
+            [
+                "year",
+                "iso_code",
+                "recipient",
+                "continent",
+                "donor",
+                "counterpart_iso_code",
+                "prices",
+                "value",
+            ]
+        )
+        .rename(columns={"donor": "counterpart_area", "recipient": "country"})
+        .pipe(remove_counterpart_totals)
+    )
 
     return data
 
@@ -159,19 +181,18 @@ def get_debt_inflows() -> pd.DataFrame:
 def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
     oda = ODAData(
         years=range(config.ANALYSIS_YEARS[0], config.ANALYSIS_YEARS[1] + 1),
-        include_names=True,
+        include_names=False,
         base_year=config.CONSTANT_BASE_YEAR if constant else None,
         prices="constant" if constant else "current",
     )
 
     oda.load_indicator("recipient_grants_flow")
 
-    data = oda.get_data()
+    data = oda.get_data().pipe(clean_grants_inflows_output)
 
-    return data.pipe(clean_grants_inflows_output)
+    return data
 
 
 if __name__ == "__main__":
     grants = get_grants_inflows()
-    # debt_inflows = get_debt_inflows()
-    ...
+    debt_inflows = get_debt_inflows()

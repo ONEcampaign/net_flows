@@ -3,14 +3,24 @@ import logging
 import pandas as pd
 from bblocks import convert_id
 
+from scripts import config
+
 logging.getLogger("country_converter").setLevel(logging.ERROR)
+
 
 def multilateral_mapping() -> dict:
     return {
+        "Adaptation Fund": "Adaptation Fund",
         "African Dev. Bank": "African Development Bank",
+        "African Development Bank [AfDB]": "African Development Bank",
+        "African Development Fund [AfDF]": "African Development Fund",
         "African Export-Import Bank": "African Export Import Bank",
         "Arab African International Bank": "Arab African International Bank",
         "Arab Bank for Economic Dev. in Africa (BADEA)": (
+            "Arab Bank for Economic Development in Africa"
+        ),
+        "Asian Forest Cooperation Organisation [AFoCO]": "Asian Forest Cooperation Organisation",
+        "Arab Bank for Economic Development in Africa [BADEA]": (
             "Arab Bank for Economic Development in Africa"
         ),
         "Arab Fund for Tech. Assist. to African Countries": (
@@ -20,7 +30,9 @@ def multilateral_mapping() -> dict:
         "Arab League": "Arab League",
         "Arab Monetary Fund": "Arab Monetary Fund",
         "Arab Towns Organization (ATO)": "Arab Towns Organization",
+        "Arab Fund (AFESD)": "Arab Fund for Economic and Social Development",
         "Asian Dev. Bank": "Asian Development Bank",
+        "Asian Development Bank [AsDB]": "Asian Development Bank",
         "Asian Infrastructure Investment Bank": "Asian Infrastructure Investment Bank",
         "Bank for International Settlements (BIS)": "Bank for International Settlements",
         "Bolivarian Alliance for the Americas (ALBA)": (
@@ -28,10 +40,14 @@ def multilateral_mapping() -> dict:
         ),
         "Caribbean Community (CARICOM)": "Caribbean Community",
         "Caribbean Dev. Bank": "Caribbean Development Bank",
+        "Caribbean Development Bank [CarDB]": "Caribbean Development Bank",
         "Center for Latin American Monetary Studies (CEMLA)": (
             "Center for Latin American Monetary Studies"
         ),
         "Central American Bank for Econ. Integ. (CABEI)": (
+            "Central American Bank for Economic Integration"
+        ),
+        "Central American Bank for Economic Integration [CABEI]": (
             "Central American Bank for Economic Integration"
         ),
         "Central American Bank for Econ. Integration (BCIE)": (
@@ -40,8 +56,10 @@ def multilateral_mapping() -> dict:
         "Central Bank of West African States (BCEAO)": (
             "Central Bank of West African States"
         ),
+        "CGIAR": "CGIAR",
         "Corporacion Andina de Fomento": "Corporacion Andina de Fomento",
         "Council of Europe": "Council of Europe",
+        "Council of Europe Development Bank [CEB]": "Council of Europe",
         "Dev. Bank of the Central African States (BDEAC)": (
             "Development Bank of the Central African States"
         ),
@@ -65,6 +83,7 @@ def multilateral_mapping() -> dict:
             "European Coal and Steel Community"
         ),
         "European Development Fund (EDF)": "European Development Fund",
+        "EU Institutions": "EU Institutions",
         "European Economic Community (EEC)": "European Economic Community",
         "European Free Trade Association (EFTA)": "European Free Trade Association",
         "European Investment Bank": "European Investment Bank",
@@ -73,11 +92,20 @@ def multilateral_mapping() -> dict:
         "European Union": "European Union",
         "Fondo Latinoamericano de Reservas (FLAR)": "Fondo Latinoamericano de Reservas",
         "Food and Agriculture Organization (FAO)": "Food and Agriculture Organization",
+        "Food and Agriculture Organisation [FAO]": "Food and Agriculture Organization",
+        "IFAD": "International Fund for Agricultural Development",
         "Foreign Trade Bank of Latin America (BLADEX)": (
             "Foreign Trade Bank of Latin America"
         ),
         "Global Environment Facility": "Global Environment Facility",
+        "Global Environment Facility [GEF]": "Global Environment Facility",
+        "Global Alliance for Vaccines and Immunization [GAVI]": (
+            "Global Alliance for Vaccines and Immunization"
+        ),
+        "Global Fund": "Global Fund to Fight AIDS, Tuberculosis and Malaria",
+        "International Atomic Energy Agency [IAEA]": "International Atomic Energy Agency",
         "Inter-American Dev. Bank": "Inter-American Development Bank",
+        "Inter-American Development Bank [IDB]": "Inter-American Development Bank",
         "International Bank for Economic Cooperation (IBEC)": (
             "International Bank for Economic Cooperation"
         ),
@@ -88,8 +116,11 @@ def multilateral_mapping() -> dict:
         ),
         "International Investment Bank (IIB)": "International Investment Bank",
         "International Labour Organization (ILO)": "International Labour Organization",
+        "International Labour Organisation [ILO]": "International Labour Organization",
         "International Monetary Fund": "International Monetary Fund",
+        "IMF (Concessional Trust Funds)": "International Monetary Fund",
         "Islamic Dev. Bank": "Islamic Development Bank",
+        "Islamic Development Bank [IsDB]": "Islamic Development Bank",
         "Islamic Solidarity Fund for Dev. (ISFD)": "Islamic Solidarity Fund for Development",
         "Latin Amer. Conf. of Saving & Credit Coop. (COLAC)": (
             "Latin American Conference of Saving and Credit Cooperation"
@@ -98,32 +129,69 @@ def multilateral_mapping() -> dict:
             "Latin American Agribusiness Development Corporation"
         ),
         "Montreal Protocol Fund": "Montreal Protocol Fund",
+        "Montreal Protocol": "Montreal Protocol Fund",
         "Nordic Development Fund": "Nordic Development Fund",
+        "Nordic Development Fund [NDF]": "Nordic Development Fund",
         "Nordic Environment Finance Corporation (NEFCO)": "Nordic Environment Finance Corporation",
         "Nordic Investment Bank": "Nordic Investment Bank",
         "OPEC Fund for International Dev.": "OPEC Fund for International Development",
+        "OPEC Fund for International Development [OPEC Fund]": (
+            "OPEC Fund for International Development"
+        ),
         "Org. of Arab Petroleum Exporting Countries (OAPEC)": (
             "Organization of Arab Petroleum Exporting Countries"
         ),
         "Plata Basin Financial Dev. Fund": "Plata Basin Financial Development Fund",
         "South Asian Development Fund (SADF)": "South Asian Development Fund",
         "UN-Children's Fund (UNICEF)": "UNICEF",
+        "UNICEF": "UNICEF",
+        "World Health Organisation [WHO]": "WHO",
         "UN-Development Fund for Women (UNIFEM)": "UN Development Fund for Women",
+        "UN Women": "UN Women",
+        "COVID-19 Response and Recovery Multi-Partner Trust Fund [UN COVID-19 MPTF]": (
+            "UN COVID-19 Response and Recovery Multi-Partner Trust Fund"
+        ),
+        "Joint Sustainable Development Goals Fund [Joint SDG Fund]": (
+            "Joint Sustainable Development Goals Fund"
+        ),
+        "International Commission on Missing Persons [ICMP]": (
+            "International Commission on Missing Persons"
+        ),
+        "WHO-Strategic Preparedness and Response Plan [SPRP]": (
+            "WHO Strategic Preparedness and Response Plan"
+        ),
+        "International Centre for Genetic Engineering and Biotechnology [ICGEB]": (
+            "International Centre for Genetic Engineering and Biotechnology"
+        ),
+        "World Organisation for Animal Health [WOAH]": "World Organisation for Animal Health",
         "UN-Development Programme (UNDP)": "UN Development Programme",
+        "UNDP": "UN Development Programme",
         "UN-Educ., Scientific and Cultural Org. (UNESCO)": "UNESCO",
+        "UNECE": "UNECE",
         "UN-Environment Programme (UNEP)": "UN Environment Programme",
+        "UNEP": "UN Environment Programme",
         "UN-Fund for Drug Abuse Control (UNFDAC)": "UN Fund for Drug Abuse Control",
         "UN-Fund for Human Rights": "UN Fund for Human Rights",
         "UN-General Assembly (UNGA)": "UN General Assembly",
         "UN-High Commissioner for Refugees (UNHCR)": "UN High Commissioner for Refugees",
+        "UNHCR": "UN High Commissioner for Refugees",
+        "UNAIDS": "UNAIDS",
         "UN-Industrial Development Organization (UNIDO)": (
             "UN Industrial Development Organization"
+        ),
+        "United Nations Industrial Development Organization [UNIDO]": (
+            "UN Industrial Development Organization"
+        ),
+        "UN Institute for Disarmament Research [UNIDIR]": (
+            "UN Institute for Disarmament Research"
         ),
         "UN-INSTRAW": (
             "UN International Research and Training Institute for the Advancement of Women"
         ),
         "UN-Office on Drugs and Crime (UNDCP)": "UN Office on Drugs and Crime",
         "UN-Population Fund (UNFPA)": "UN Population Fund",
+        "UNFPA": "UN Population Fund",
+        "UN Peacebuilding Fund [UNPBF]": "UN Peacebuilding Fund",
         "UN-Regular Programme of Technical Assistance": (
             "UN Regular Programme of Technical Assistance"
         ),
@@ -131,25 +199,41 @@ def multilateral_mapping() -> dict:
             "UN Regular Programme of Technical Assistance"
         ),
         "UN-Relief and Works Agency (UNRWA)": "UN Relief and Works Agency",
+        "UNRWA": "UN Relief and Works Agency",
         "UN-UNETPSA": "UN UNETPSA",
         "UN-World Food Programme (WFP)": "UN World Food Programme",
+        "WFP": "UN World Food Programme",
         "UN-World Intellectual Property Organization": "UN World Intellectual Property Organization",
         "UN-World Meteorological Organization": "UN World Meteorological Organization",
+        "United Nations Conference on Trade and Development [UNCTAD]": (
+            "UN Conference on Trade and Development"
+        ),
+        "North American Development Bank [NADB]": "North American Development Bank",
+        "WTO - International Trade Centre [ITC]": "International Trade Centre",
+        "UN Capital Development Fund [UNCDF]": "UN Capital Development Fund",
+        "OSCE": "Organization for Security and Co-operation in Europe",
         "West African Development Bank - BOAD": "West African Development Bank",
         "West African Monetary Union (UMOA)": "West African Monetary Union",
         "World Bank-IBRD": "WB International Bank for Reconstruction and Development",
         "World Bank-IDA": "WB International Development Association",
+        "International Development Association [IDA]": "WB International Development Association",
         "World Bank-MIGA": "WB Multilateral Investment Guarantee Agency",
         "World Trade Organization": "World Trade Organization",
+        "Climate Investment Funds [CIF]": "Climate Investment Funds",
+        "Global Green Growth Institute [GGGI]": "Global Green Growth Institute",
+        "Green Climate Fund [GCF]": "Green Climate Fund",
+        "World Tourism Organisation [UNWTO]": "World Tourism Organization",
+        "Center of Excellence in Finance [CEF]": "Center of Excellence in Finance",
+        "Central Emergency Response Fund [CERF]": "Central Emergency Response Fund",
     }
 
 
 def clean_debtors(df: pd.DataFrame, column) -> pd.DataFrame:
     df["iso_code"] = convert_id(df[column], from_type="regex", to_type="ISO3")
     df["continent"] = convert_id(df[column], from_type="regex", to_type="continent")
-    df[column] = convert_id(df[column], from_type="regex", to_type="name_short")
+    df[f"{column}"] = convert_id(df[column], from_type="regex", to_type="name_short")
 
-    return df.set_index(["iso_code", column, "continent"]).reset_index()
+    return df.set_index(["iso_code", f"{column}", "continent"]).reset_index()
 
 
 def clean_creditors(df: pd.DataFrame, column) -> pd.DataFrame:
@@ -178,3 +262,63 @@ def clean_creditors(df: pd.DataFrame, column) -> pd.DataFrame:
     )
 
     return df
+
+
+def add_oecd_names(df: pd.DataFrame) -> pd.DataFrame:
+    from oda_data import set_data_path, read_dac2a
+
+    set_data_path(config.Paths.raw_data)
+
+    dac2a = read_dac2a(years=range(2010, 2023))
+
+    donors = dac2a.filter(["donor_code", "donor"]).drop_duplicates()
+    recipients = dac2a.filter(["recipient_code", "recipient"]).drop_duplicates()
+
+    df = df.merge(donors, on=["donor_code"], how="left")
+    df = df.merge(recipients, on=["recipient_code"], how="left")
+
+    return df
+
+
+def remove_counterpart_totals(df: pd.DataFrame) -> pd.DataFrame:
+    return df[~df["counterpart_area"].str.contains(", Total")]
+
+
+def remove_recipient_totals(df: pd.DataFrame) -> pd.DataFrame:
+    return df[~df["country"].str.contains(", Total")]
+
+
+def remove_groupings_and_totals_from_recipients(df: pd.DataFrame) -> pd.DataFrame:
+    from oda_data import recipient_groupings
+
+    groupings = recipient_groupings()["all_developing_countries_regions"]
+
+    return df[df["recipient_code"].isin(groupings)]
+
+
+def remove_non_official_counterparts(df: pd.DataFrame) -> pd.DataFrame:
+    from oda_data import donor_groupings
+
+    official = donor_groupings()["all_official"]
+
+    other_official = {
+        1038: "UN Institute for Disarmament Research",
+        962: "UN Conference on Trade and Development",
+        1039: "UN Capital Development Fund",
+        1045: "North American Development Bank",
+        1401: "International Trade Centre",
+        1406: "UN Industrial Development Organization",
+        910: "Central American Bank for Economic Integration",
+        1046: "UN Women",
+        1047: "UN COVID-19 Response and Recovery Multi-Partner Trust Fund",
+        1048: "Joint Sustainable Development Goals Fund",
+        1049: "International Commission on Missing Persons",
+        1050: "WHO Strategic Preparedness and Response Plan",
+        1054: "World Organisation for Animal Health",
+        915: "Asian Forest Cooperation Organisation",
+        1055: "CGIAR",
+    }
+
+    official = official | other_official
+
+    return df[df["donor_code"].isin(official)]
