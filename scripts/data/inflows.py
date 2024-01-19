@@ -1,6 +1,8 @@
-""" DEBT INFLOWS FROM IDS """
+""" DEBT INFLOWS FROM IDS AND GRANTS INFLOWS FROM ODA DATA"""
 import pandas as pd
 from bblocks import set_bblocks_data_path, DebtIDS
+from oda_data import ODAData, set_data_path
+
 from scripts import config
 from scripts.data.common import (
     clean_debtors,
@@ -9,15 +11,15 @@ from scripts.data.common import (
     remove_counterpart_totals,
     remove_groupings_and_totals_from_recipients,
     remove_non_official_counterparts,
+    filter_and_assign_indicator,
 )
-from oda_data import ODAData, set_data_path
 
 # set the path for the raw data
 set_bblocks_data_path(config.Paths.raw_data)
 set_data_path(config.Paths.raw_data)
 
 disbursements_indicators: dict = {
-    "total": "DT.DIS.DPPG.CD",  #'DT.DIS.DPPG.CD'
+    "total": "DT.DIS.DPPG.CD",  # 'DT.DIS.DPPG.CD'
     "bilateral": ("DT.DIS.BLAT.CD", "DT.DIS.BLTC.CD"),
     "multilateral": ("DT.DIS.MLAT.CD", "DT.DIS.MLTC.CD"),
     "bonds": "DT.DIS.PBND.CD",
@@ -26,7 +28,16 @@ disbursements_indicators: dict = {
 }
 
 
-def clean_debt_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
+def clean_debt_output(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Cleans the output data frame by replacing bad characters and
+    cleaning debtors and creditors.
+
+    Args:
+        data (pd.DataFrame): The input data frame containing the data to be cleaned.
+
+
+    """
     # replace bad characters
     data["counterpart_area"] = data["counterpart_area"].str.replace(" ", "")
 
@@ -40,6 +51,25 @@ def clean_debt_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
 
 
 def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Clean Grants Inflows Output
+
+    Cleans the given input DataFrame by performing the following operations:
+        - Adds OECD names to the data.
+        - Removes non-official counterparts from the data.
+        - Removes groupings and totals from the recipients.
+        - Cleans debtor values for recipients.
+        - Cleans creditor values for donors.
+        - Filters the columns to only include "year", "iso_code", "recipient",
+          "continent", "donor", "counterpart_iso_code", "prices", and "value".
+        - Renames the columns "donor" to "counterpart_area" and "recipient" to "country".
+        - Removes counterpart totals from the data.
+
+    Args:
+       - data : pd.DataFrame
+    """
+
+    # Pipeline
     data = (
         data.pipe(add_oecd_names)
         .pipe(remove_non_official_counterparts)
@@ -72,6 +102,18 @@ def _get_concessional_non_concessional(
     concessional_indicator: str,
     indicator_prefix: str,
 ) -> pd.DataFrame:
+    """
+    Get the concessional and non-concessional data for a given range of years,
+    using the specified indicators and indicator prefix.
+
+    Args:
+        - start_year (int): The start year of the data range.
+        - end_year (int): The end year of the data range.
+        - total_indicator (str): The indicator for total data.
+        - concessional_indicator (str): The indicator for concessional data.
+        - indicator_prefix (str): The prefix to use for the indicator columns.
+
+    """
     # Load indicators
     ids = DebtIDS().load_data(
         indicators=[total_indicator, concessional_indicator],
@@ -121,13 +163,14 @@ def _get_concessional_non_concessional(
     return data
 
 
-def _filter_and_assign_indicator(df: pd.DataFrame, indicator: str) -> pd.DataFrame:
-    return df.filter(["year", "country", "counterpart_area", "value"]).assign(
-        indicator=indicator
-    )
-
-
 def get_debt_inflows() -> pd.DataFrame:
+    """
+    Retrieve debt inflows data to bilateral, multilateral,
+    bonds, banks, and other private entities.
+
+    Note: this is disbursements data, not debt stocks or new commitments.
+    """
+    # get bilateral data, split by concessional and non-concessional
     bilateral = _get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
         end_year=config.ANALYSIS_YEARS[1],
@@ -136,6 +179,7 @@ def get_debt_inflows() -> pd.DataFrame:
         indicator_prefix="bilateral",
     )
 
+    # get multilateral data, split by concessional and non-concessional
     multilateral = _get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
         end_year=config.ANALYSIS_YEARS[1],
@@ -144,7 +188,7 @@ def get_debt_inflows() -> pd.DataFrame:
         indicator_prefix="multilateral",
     )
 
-    # get bonds, banks, and other private
+    # Load bonds, banks, and other private
     ids = DebtIDS().load_data(
         indicators=[
             disbursements_indicators["bonds"],
@@ -157,28 +201,39 @@ def get_debt_inflows() -> pd.DataFrame:
 
     # Get bonds data
     bonds = ids.get_data(disbursements_indicators["bonds"]).pipe(
-        _filter_and_assign_indicator, "bonds"
+        filter_and_assign_indicator, "bonds"
     )
 
     # Get banks data
     banks = ids.get_data(disbursements_indicators["banks"]).pipe(
-        _filter_and_assign_indicator, "banks"
+        filter_and_assign_indicator, "banks"
     )
 
     # Get other private data
     other_private = ids.get_data(disbursements_indicators["other_private"]).pipe(
-        _filter_and_assign_indicator, "other_private"
+        filter_and_assign_indicator, "other_private"
     )
 
     # combine
     data = pd.concat(
         [bilateral, multilateral, bonds, banks, other_private], ignore_index=True
-    ).pipe(clean_debt_inflows_output)
+    ).pipe(clean_debt_output)
 
     return data
 
 
 def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
+    """
+    Retrieve grants inflows from OECD ODA data.
+
+    Args:
+        - constant (bool): Whether to retrieve the data in constant or current prices.
+
+    Returns:
+        pd.DataFrame: DataFrame containing grants inflows data.
+    """
+
+    # Create an object with the basic settiongs
     oda = ODAData(
         years=range(config.ANALYSIS_YEARS[0], config.ANALYSIS_YEARS[1] + 1),
         include_names=False,
@@ -186,8 +241,10 @@ def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
         prices="constant" if constant else "current",
     )
 
+    # Load the data
     oda.load_indicator("recipient_grants_flow")
 
+    # Retrieve and clean the data
     data = oda.get_data().pipe(clean_grants_inflows_output)
 
     return data

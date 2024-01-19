@@ -9,6 +9,12 @@ logging.getLogger("country_converter").setLevel(logging.ERROR)
 
 
 def multilateral_mapping() -> dict:
+    """
+    Returns a dictionary of multilateral institutions and their
+    corresponding names.
+
+    This is done to ensure consistent naming across the data sets.
+    """
     return {
         "Adaptation Fund": "Adaptation Fund",
         "African Dev. Bank": "African Development Bank",
@@ -229,6 +235,10 @@ def multilateral_mapping() -> dict:
 
 
 def clean_debtors(df: pd.DataFrame, column) -> pd.DataFrame:
+    """
+    Clean debtors names by converting to ISO3 and continent, and by
+    creating a new column with the short name (from bblocks)
+    """
     df["iso_code"] = convert_id(df[column], from_type="regex", to_type="ISO3")
     df["continent"] = convert_id(df[column], from_type="regex", to_type="continent")
     df[f"{column}"] = convert_id(df[column], from_type="regex", to_type="name_short")
@@ -237,6 +247,10 @@ def clean_debtors(df: pd.DataFrame, column) -> pd.DataFrame:
 
 
 def clean_creditors(df: pd.DataFrame, column) -> pd.DataFrame:
+    """
+    Clean creditors names by converting to ISO3 and by creating a new column
+    with the short name (from bblocks)
+    """
     additional_iso = {
         "Korea, D.P.R. of": "PRK",
         "German Dem. Rep.": "DEU",
@@ -265,15 +279,27 @@ def clean_creditors(df: pd.DataFrame, column) -> pd.DataFrame:
 
 
 def add_oecd_names(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Add the OECD names for the donor and recipient. This is done by
+    merging on the donor and recipient codes from the DAC2a data set.
+
+    Args:
+        - df (pd.DataFrame): The data frame to add the names to.
+    """
+    # import the required functions
     from oda_data import set_data_path, read_dac2a
 
+    # set a path to the raw data
     set_data_path(config.Paths.raw_data)
 
+    # read the DAC2a data set
     dac2a = read_dac2a(years=range(2010, 2023))
 
+    # Create two dataframes, one with donors and one with recipients
     donors = dac2a.filter(["donor_code", "donor"]).drop_duplicates()
     recipients = dac2a.filter(["recipient_code", "recipient"]).drop_duplicates()
 
+    # Merge donors (by codes to get the names), and then merge recipients
     df = df.merge(donors, on=["donor_code"], how="left")
     df = df.merge(recipients, on=["recipient_code"], how="left")
 
@@ -281,26 +307,50 @@ def add_oecd_names(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def remove_counterpart_totals(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Remove counterpart totals from the data.
+    """
     return df[~df["counterpart_area"].str.contains(", Total")]
 
 
 def remove_recipient_totals(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Remove recipient totals from the data.
+    """
     return df[~df["country"].str.contains(", Total")]
 
 
 def remove_groupings_and_totals_from_recipients(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Remove regional groupings and totals from the data.
+    """
+    # import the required functions
     from oda_data import recipient_groupings
 
+    # Select only the codes for the developing countries and regions
     groupings = recipient_groupings()["all_developing_countries_regions"]
 
+    # Keep only the rows that are not in the groupings
     return df[df["recipient_code"].isin(groupings)]
 
 
 def remove_non_official_counterparts(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Remove non-official counterparts from the data.
+
+    Args:
+        - df (pd.DataFrame): The data frame to remove the non-official counterparts from.
+
+    Returns:
+        pd.DataFrame: The data frame with the non-official counterparts removed.
+    """
+    # import the required functions
     from oda_data import donor_groupings
 
+    # Select only the codes for the official counterparts
     official = donor_groupings()["all_official"]
 
+    # Add other official counterparts
     other_official = {
         1038: "UN Institute for Disarmament Research",
         962: "UN Conference on Trade and Development",
@@ -319,6 +369,18 @@ def remove_non_official_counterparts(df: pd.DataFrame) -> pd.DataFrame:
         1055: "CGIAR",
     }
 
+    # Combine the official counterparts
     official = official | other_official
 
+    # Keep only the rows that are in the official counterparts
     return df[df["donor_code"].isin(official)]
+
+
+def filter_and_assign_indicator(df: pd.DataFrame, indicator: str) -> pd.DataFrame:
+    """
+    Filter for key columns and assign the requested indicator name.
+
+    """
+    return df.filter(["year", "country", "counterpart_area", "value"]).assign(
+        indicator=indicator
+    )
