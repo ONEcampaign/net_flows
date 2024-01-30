@@ -212,7 +212,7 @@ def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
         pd.DataFrame: DataFrame containing grants inflows data.
     """
 
-    # Create an object with the basic settiongs
+    # Create an object with the basic settings
     oda = ODAData(
         years=range(config.ANALYSIS_YEARS[0], config.ANALYSIS_YEARS[1] + 1),
         include_names=False,

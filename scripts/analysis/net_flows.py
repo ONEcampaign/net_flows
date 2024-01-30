@@ -10,12 +10,28 @@ set_bblocks_data_path(Paths.raw_data)
 
 
 def prep_flows(inflows: pd.DataFrame) -> pd.DataFrame:
-    df = (
-        inflows.dropna(subset=["iso_code"])
-        .loc[lambda d: d.value != 0]
-        .loc[lambda d: d.counterpart_area != "World"]
-    )
+    """
+    Prepare the inflow data for further processing.
 
+    This function drops rows with NaN in 'iso_code', zero in 'value', or 'World' in
+    'counterpart_area'. Then, it groups the DataFrame by all columns except
+    'value', and sums up 'value' within each group.
+
+    Args:
+        inflows (pd.DataFrame): The input DataFrame containing inflow data. It is expected to
+         have columns including 'iso_code', 'value', and 'counterpart_area'.
+
+    Returns:
+        pd.DataFrame: The processed DataFrame.
+
+    """
+    # Drop rows with NaN in 'iso_code'
+    df = inflows.dropna(subset=["iso_code"])
+
+    # Further drop rows with zero 'value' or 'World' in 'counterpart_area'
+    df = df.loc[lambda d: d.value != 0].loc[lambda d: d.counterpart_area != "World"]
+
+    # Group by all columns except 'value', and sum up 'value' within each group
     df = (
         df.groupby(
             [c for c in df.columns if c != "value"], observed=True, dropna=False
@@ -28,6 +44,22 @@ def prep_flows(inflows: pd.DataFrame) -> pd.DataFrame:
 
 
 def rename_indicators(df: pd.DataFrame, suffix: str = "") -> pd.DataFrame:
+    """
+    Rename the indicators in the DataFrame.
+
+    Maps the original indicator names to new ones based on a predefined dictionary.
+    The new names are constructed by appending a suffix to the base name of each indicator.
+    If an indicator does not exist in the dictionary, its original name is preserved.
+
+    Args:
+        df (pd.DataFrame): The input DataFrame with an 'indicator' column that needs to be renamed.
+        suffix (str, optional): The suffix to append to the base name of each indicator.
+        Defaults to an empty string.
+
+    Returns:
+        pd.DataFrame: The DataFrame with renamed indicators.
+    """
+
     indicators = {
         "grants": f"Grants{suffix}",
         "bilateral": f"All bilateral{suffix}",
@@ -47,12 +79,25 @@ def rename_indicators(df: pd.DataFrame, suffix: str = "") -> pd.DataFrame:
 
 
 def get_all_flows(constant: bool = False) -> pd.DataFrame:
+    """
+    Retrieve all inflow and outflow data, process them, and combine into a single DataFrame.
+
+    Args:
+        constant (bool, optional): A flag to indicate whether to retrieve constant inflow
+        and debt service data. Defaults to False.
+
+    Returns:
+        pd.DataFrame: The combined DataFrame of processed inflow and outflow data.
+    """
+
+    # Get inflow and outflow data
     inflows = (
         get_total_inflows(constant=constant)
         .pipe(prep_flows)
         .pipe(rename_indicators, suffix="")
     )
 
+    # Get outflow data. NOTE: the value of outflow is negative
     outflows = (
         get_debt_service_data(constant=constant)
         .pipe(prep_flows)
@@ -60,6 +105,7 @@ def get_all_flows(constant: bool = False) -> pd.DataFrame:
         .pipe(rename_indicators, suffix="")
     )
 
+    # Combine inflow and outflow data
     data = (
         pd.concat([inflows, outflows], ignore_index=True)
         .drop(columns=["counterpart_iso_code", "iso_code"])
@@ -70,6 +116,20 @@ def get_all_flows(constant: bool = False) -> pd.DataFrame:
 
 
 def pivot_by_indicator(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Pivot the DataFrame based on the 'indicator_type' column.
+
+    This function pivots the DataFrame such that each unique value
+    in the 'indicator_type' column becomes a new column.
+
+    Args:
+        data (pd.DataFrame): The input DataFrame to be pivoted.
+        It is expected to have columns including 'value' and 'indicator_type'.
+
+    Returns:
+        pd.DataFrame: The pivoted DataFrame.
+    """
+
     return data.pivot(
         index=[c for c in data.columns if c not in ["value", "indicator_type"]],
         columns="indicator_type",
@@ -77,56 +137,108 @@ def pivot_by_indicator(data: pd.DataFrame) -> pd.DataFrame:
     ).reset_index()
 
 
-def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
-    scatter = (
-        data.groupby(
-            [
-                "year",
-                "country",
-                "continent",
-                "income_level",
-                "prices",
-                "indicator_type",
-            ],
-            dropna=False,
-            observed=True,
-        )["value"]
-        .sum()
-        .reset_index()
-    )
+def flip_outflow_values(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Flip the sign of the outflow values in the DataFrame.
 
-    scatter.loc[lambda d: d.indicator_type == "outflow", "value"] *= -1
-    scatter = scatter.fillna({"income_level": "Not assessed"})
+    Args:
+        df (pd.DataFrame): The input DataFrame with an 'outflow' column.
 
-    scatter = pivot_by_indicator(scatter)
+    Returns:
+        pd.DataFrame: The DataFrame with the sign of the 'outflow' column flipped.
+    """
+    df.loc[lambda d: d.indicator_type == "outflow", "outflow"] *= -1
+    return df
 
-    scatter = add_gdp_column(
-        scatter,
+
+def calculate_flows_as_percent_of_gdp(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Calculate the inflow and outflow as a percentage of GDP.
+
+    Args:
+        data (pd.DataFrame): The input DataFrame with 'inflow' and 'outflow' columns.
+
+    Returns:
+        pd.DataFrame: The DataFrame with 'inflow' and 'outflow' columns converted to
+        percentages of GDP.
+    """
+
+    # Use bblokcs to add GDP data
+    data = add_gdp_column(
+        data,
         id_column="country",
         id_type="regex",
         date_column="year",
         include_estimates=True,
     )
 
-    scatter = scatter.dropna(subset=["gdp", "outflow"], how="any")
+    # Drop rows with NaN in 'gdp' or 'outflow'
+    data = data.dropna(subset=["gdp", "outflow"], how="any")
 
-    scatter = scatter.assign(
+    # Calculate inflow and outflow as a percentage of GDP
+    data = data.assign(
         inflow=lambda d: 100 * d.inflow / d.gdp,
         outflow=lambda d: 100 * d.outflow / d.gdp,
+    ).drop(columns=["gdp"])
+
+    return data
+
+
+def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Create a dataset to visualise as a scatter plot. This function aggregates the
+    inflow and outflow data by year, country, continent, income level, and indicator.
+    The value columns become 'inflows' and 'outflows', as a share of GDP.
+
+    Args:
+        data (pd.DataFrame): The input DataFrame with the inflow and outflow data.
+
+    Returns:
+        pd.DataFrame: The aggregated and pivoted DataFrame.
+
+    """
+
+    # Aggregate the data by year, country, continent, income level, and indicator
+    df = (
+        data.loc[lambda d: d.prices == "current"]
+        .groupby(
+            ["year", "country", "continent", "income_level", "indicator_type"],
+            dropna=False,
+            observed=True,
+        )["value"]
+        .sum()
+        .reset_index()
+        .fillna({"income_level": "Not assessed"})
     )
 
-    scatter = scatter.loc[lambda d: d.prices == "current"].drop(
-        columns=["prices", "gdp"]
-    )
+    # Flip the sign of the outflow values
+    df = flip_outflow_values(df)
 
-    return scatter
+    # Pivot the DataFrame to have the indicators as columns
+    df = pivot_by_indicator(df)
+
+    # Calculate inflow and outflow as a percentage of GDP
+    df = calculate_flows_as_percent_of_gdp(data=df)
+
+    # Save the data
+    df.to_csv(Paths.output / "scatter_totals.csv", index=False)
+
+    return df
 
 
-if __name__ == "__main__":
-    ...
+def all_flows_pipeline() -> pd.DataFrame:
+    """Create a dataset with all flows for visualisation. It is saved as a CSV in the
+    output folder. It includes both constant and current prices.
+
+    The data is also returned as a DataFrame.
+
+    """
+
+    # get constant and current data
     df_const = get_all_flows(constant=False)
     df_current = get_all_flows(constant=True)
 
+    # Combine and make sure it is grouped at the right level
     data = (
         pd.concat([df_const, df_current], ignore_index=True)
         .groupby(
@@ -136,44 +248,12 @@ if __name__ == "__main__":
         .reset_index()
     )
 
+    # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
 
-    possibilities = data.filter(
-        ["country", "continent", "income_level", "counterpart_area"]
-    ).drop_duplicates()
+    return data
 
-    possibilities.to_csv(Paths.output / "combinations.csv", index=False)
 
-    # Scatter data
-    scatter = create_scatter_data(data)
-    scatter.to_csv(Paths.output / "scatter_totals.csv", index=False)
-
-    check = (
-        data.groupby(
-            [
-                "year",
-                "country",
-                "continent",
-                "income_level",
-                "prices",
-                "indicator_type",
-            ],
-            dropna=False,
-            observed=True,
-        )["value"]
-        .sum()
-        .reset_index()
-    )
-
-    check.loc[lambda d: d.indicator_type == "outflow", "value"] *= -1
-    check = check.fillna({"income_level": "Not assessed"})
-
-    check = pivot_by_indicator(check)
-
-    check = check.loc[lambda d: d.outflow.isna()]
-
-    checkp = check.pivot(
-        index=[c for c in check.columns if c not in ["year", "outflow", "inflow"]],
-        columns="year",
-        values="inflow",
-    ).reset_index()
+if __name__ == "__main__":
+    full_data = all_flows_pipeline()
+    scatter = create_scatter_data(full_data)

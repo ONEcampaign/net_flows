@@ -330,7 +330,11 @@ def remove_counterpart_totals(df: pd.DataFrame) -> pd.DataFrame:
     """
     Remove counterpart totals from the data.
     """
-    return df[lambda d: ~d["counterpart_area"].astype("string[pyarrow]").str.contains(", Total")]
+    return df[
+        lambda d: ~d["counterpart_area"]
+        .astype("string[pyarrow]")
+        .str.contains(", Total")
+    ]
 
 
 def remove_recipient_totals(df: pd.DataFrame) -> pd.DataFrame:
