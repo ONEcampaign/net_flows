@@ -1,7 +1,8 @@
 """ DEBT INFLOWS FROM IDS AND GRANTS INFLOWS FROM ODA DATA"""
 import pandas as pd
-from bblocks import set_bblocks_data_path, DebtIDS
+from bblocks import set_bblocks_data_path, DebtIDS, add_income_level_column
 from oda_data import ODAData, set_data_path
+from pydeflate import deflate, set_pydeflate_path
 
 from scripts import config
 from scripts.data.common import (
@@ -12,20 +13,50 @@ from scripts.data.common import (
     remove_groupings_and_totals_from_recipients,
     remove_non_official_counterparts,
     filter_and_assign_indicator,
+    get_concessional_non_concessional,
 )
 
 # set the path for the raw data
 set_bblocks_data_path(config.Paths.raw_data)
 set_data_path(config.Paths.raw_data)
+set_pydeflate_path(config.Paths.raw_data)
 
+# this dictionary contains the IDS codes. When a tuple, it's the total and concessional
 disbursements_indicators: dict = {
-    "total": "DT.DIS.DPPG.CD",  # 'DT.DIS.DPPG.CD'
+    "total": "DT.DIS.DPPG.CD",
     "bilateral": ("DT.DIS.BLAT.CD", "DT.DIS.BLTC.CD"),
     "multilateral": ("DT.DIS.MLAT.CD", "DT.DIS.MLTC.CD"),
     "bonds": "DT.DIS.PBND.CD",
     "banks": "DT.DIS.PCBK.CD",
     "other_private": "DT.DIS.PROP.CD",
 }
+
+
+def to_constant_prices(data: pd.DataFrame, base_year: int) -> pd.DataFrame:
+    """
+    This method takes in a pandas DataFrame 'data' and an integer 'base_year' as input parameters.
+    It returns a new pandas DataFrame with constant prices.
+
+    Parameters:
+    - data (pd.DataFrame): The  DataFrame containing the data to be converted to constant prices.
+    - base_year (int): The base year against which the prices will be deflated.
+
+    Returns:
+    - pd.DataFrame: A new DataFrame with constant prices.
+
+    """
+
+    # Pass the data to the deflate function and assign a prices column
+    data = deflate(
+        df=data,
+        base_year=base_year,
+        deflator_source=config.PRICES_SOURCE,
+        deflator_method="gdp",
+        exchange_source=config.PRICES_SOURCE,
+        date_column="year",
+    ).assign(prices="constant")
+
+    return data
 
 
 def clean_debt_output(data: pd.DataFrame) -> pd.DataFrame:
@@ -46,6 +77,15 @@ def clean_debt_output(data: pd.DataFrame) -> pd.DataFrame:
 
     # clean creditors
     data = clean_creditors(data, "counterpart_area")
+
+    # Convert the year to an integer
+    data.year = data.year.dt.year
+
+    # add income level
+    data = add_income_level_column(data, id_column="iso_code", id_type="ISO3")
+
+    # drop missing values and values which are zero
+    data = data.dropna(subset=["value"]).loc[lambda d: d.value != 0]
 
     return data
 
@@ -74,8 +114,8 @@ def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
         data.pipe(add_oecd_names)
         .pipe(remove_non_official_counterparts)
         .pipe(remove_groupings_and_totals_from_recipients)
-        .pipe(clean_debtors, "recipient")
-        .pipe(clean_creditors, "donor")
+        .pipe(clean_debtors, column="recipient")
+        .pipe(clean_creditors, column="donor")
         .filter(
             [
                 "year",
@@ -90,80 +130,14 @@ def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
         )
         .rename(columns={"donor": "counterpart_area", "recipient": "country"})
         .pipe(remove_counterpart_totals)
+        .assign(value=lambda d: d.value * 1e6)  # to units
+        .pipe(add_income_level_column, id_column="iso_code", id_type="ISO3")
     )
 
     return data
 
 
-def _get_concessional_non_concessional(
-    start_year: int,
-    end_year: int,
-    total_indicator: str,
-    concessional_indicator: str,
-    indicator_prefix: str,
-) -> pd.DataFrame:
-    """
-    Get the concessional and non-concessional data for a given range of years,
-    using the specified indicators and indicator prefix.
-
-    Args:
-        - start_year (int): The start year of the data range.
-        - end_year (int): The end year of the data range.
-        - total_indicator (str): The indicator for total data.
-        - concessional_indicator (str): The indicator for concessional data.
-        - indicator_prefix (str): The prefix to use for the indicator columns.
-
-    """
-    # Load indicators
-    ids = DebtIDS().load_data(
-        indicators=[total_indicator, concessional_indicator],
-        start_year=start_year,
-        end_year=end_year,
-    )
-
-    # Get total data and rename column
-    total = ids.get_data(total_indicator).rename(
-        columns={"value": f"{indicator_prefix}_total"}
-    )
-
-    # Get concessional data and rename column
-    concessional = ids.get_data(concessional_indicator).rename(
-        columns={"value": f"{indicator_prefix}_concessional"}
-    )
-
-    # Merge data
-    data = pd.merge(
-        total,
-        concessional,
-        on=["year", "country", "counterpart_area"],
-        how="left",
-        suffixes=("_total", "_concessional"),
-    )
-
-    # Calculate non concessional
-    data[f"{indicator_prefix}_non_concessional"] = data[
-        f"{indicator_prefix}_total"
-    ].fillna(0) - data[f"{indicator_prefix}_concessional"].fillna(0)
-
-    # Melt data
-    data = data.filter(
-        [
-            "year",
-            "country",
-            "counterpart_area",
-            f"{indicator_prefix}_concessional",
-            f"{indicator_prefix}_non_concessional",
-        ]
-    ).melt(
-        id_vars=["year", "country", "counterpart_area"],
-        var_name="indicator",
-        value_name="value",
-    )
-
-    return data
-
-
-def get_debt_inflows() -> pd.DataFrame:
+def get_debt_inflows(constant: bool = False) -> pd.DataFrame:
     """
     Retrieve debt inflows data to bilateral, multilateral,
     bonds, banks, and other private entities.
@@ -171,7 +145,7 @@ def get_debt_inflows() -> pd.DataFrame:
     Note: this is disbursements data, not debt stocks or new commitments.
     """
     # get bilateral data, split by concessional and non-concessional
-    bilateral = _get_concessional_non_concessional(
+    bilateral = get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
         end_year=config.ANALYSIS_YEARS[1],
         total_indicator=disbursements_indicators["bilateral"][0],
@@ -180,7 +154,7 @@ def get_debt_inflows() -> pd.DataFrame:
     )
 
     # get multilateral data, split by concessional and non-concessional
-    multilateral = _get_concessional_non_concessional(
+    multilateral = get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
         end_year=config.ANALYSIS_YEARS[1],
         total_indicator=disbursements_indicators["multilateral"][0],
@@ -219,6 +193,11 @@ def get_debt_inflows() -> pd.DataFrame:
         [bilateral, multilateral, bonds, banks, other_private], ignore_index=True
     ).pipe(clean_debt_output)
 
+    if constant:
+        data = to_constant_prices(data, config.CONSTANT_BASE_YEAR)
+    else:
+        data = data.assign(prices="current")
+
     return data
 
 
@@ -247,9 +226,38 @@ def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
     # Retrieve and clean the data
     data = oda.get_data().pipe(clean_grants_inflows_output)
 
+    # assign indicator
+    data = data.assign(indicator="grants")
+
+    return data
+
+
+def get_total_inflows(constant: bool = False) -> pd.DataFrame:
+    """
+    Get total inflows data.
+
+    This method calculates the total inflows by combining the grants inflows and
+    debt inflows data. The resulting data will have an additional column indicating
+    the type of indicator as "inflow".
+
+    Parameters:
+        constant (bool, optional): Flag to convert to constant values. Default is False.
+
+    Returns:
+        pd.DataFrame: Combined inflows data with an additional column indicating the indicator type.
+
+    """
+    # Get grants data
+    grants = get_grants_inflows(constant)
+
+    # Get debt data
+    debt = get_debt_inflows(constant)
+
+    # Combine the data and assign indicator type
+    data = pd.concat([grants, debt], ignore_index=True).assign(indicator_type="inflow")
+
     return data
 
 
 if __name__ == "__main__":
-    grants = get_grants_inflows()
-    debt_inflows = get_debt_inflows()
+    net_flows = get_total_inflows(constant=False)

@@ -1,7 +1,7 @@
 import logging
 
 import pandas as pd
-from bblocks import convert_id
+from bblocks import convert_id, DebtIDS
 
 from scripts import config
 
@@ -239,9 +239,27 @@ def clean_debtors(df: pd.DataFrame, column) -> pd.DataFrame:
     Clean debtors names by converting to ISO3 and continent, and by
     creating a new column with the short name (from bblocks)
     """
-    df["iso_code"] = convert_id(df[column], from_type="regex", to_type="ISO3")
-    df["continent"] = convert_id(df[column], from_type="regex", to_type="continent")
-    df[f"{column}"] = convert_id(df[column], from_type="regex", to_type="name_short")
+    df[column] = df[column].astype("string[pyarrow]")
+
+    df["iso_code"] = convert_id(
+        df[column],
+        from_type="regex",
+        to_type="ISO3",
+        not_found=pd.NA,
+        additional_mapping={"Macau (China)": "MAC"},
+    )
+    df["continent"] = convert_id(
+        df[column],
+        from_type="regex",
+        to_type="continent",
+        additional_mapping={"Macau (China)": "Asia"},
+    )
+    df[f"{column}"] = convert_id(
+        df[column],
+        from_type="regex",
+        to_type="name_short",
+        additional_mapping={"Macau (China)": "Macau"},
+    )
 
     return df.set_index(["iso_code", f"{column}", "continent"]).reset_index()
 
@@ -262,6 +280,8 @@ def clean_creditors(df: pd.DataFrame, column) -> pd.DataFrame:
         "German Dem. Rep.": "Germany",
         "Neth. Antilles": "Netherlands Antilles",
     }
+    df[column] = df[column].astype("string[pyarrow]")
+
     df["counterpart_iso_code"] = convert_id(
         df[column],
         from_type="regex",
@@ -310,7 +330,7 @@ def remove_counterpart_totals(df: pd.DataFrame) -> pd.DataFrame:
     """
     Remove counterpart totals from the data.
     """
-    return df[~df["counterpart_area"].str.contains(", Total")]
+    return df[lambda d: ~d["counterpart_area"].astype("string[pyarrow]").str.contains(", Total")]
 
 
 def remove_recipient_totals(df: pd.DataFrame) -> pd.DataFrame:
@@ -384,3 +404,71 @@ def filter_and_assign_indicator(df: pd.DataFrame, indicator: str) -> pd.DataFram
     return df.filter(["year", "country", "counterpart_area", "value"]).assign(
         indicator=indicator
     )
+
+
+def get_concessional_non_concessional(
+    start_year: int,
+    end_year: int,
+    total_indicator: str,
+    concessional_indicator: str,
+    indicator_prefix: str,
+) -> pd.DataFrame:
+    """
+    Get the concessional and non-concessional data for a given range of years,
+    using the specified indicators and indicator prefix.
+
+    Args:
+        - start_year (int): The start year of the data range.
+        - end_year (int): The end year of the data range.
+        - total_indicator (str): The indicator for total data.
+        - concessional_indicator (str): The indicator for concessional data.
+        - indicator_prefix (str): The prefix to use for the indicator columns.
+
+    """
+    # Load indicators
+    ids = DebtIDS().load_data(
+        indicators=[total_indicator, concessional_indicator],
+        start_year=start_year,
+        end_year=end_year,
+    )
+
+    # Get total data and rename column
+    total = ids.get_data(total_indicator).rename(
+        columns={"value": f"{indicator_prefix}_total"}
+    )
+
+    # Get concessional data and rename column
+    concessional = ids.get_data(concessional_indicator).rename(
+        columns={"value": f"{indicator_prefix}_concessional"}
+    )
+
+    # Merge data
+    data = pd.merge(
+        total,
+        concessional,
+        on=["year", "country", "counterpart_area"],
+        how="left",
+        suffixes=("_total", "_concessional"),
+    )
+
+    # Calculate non concessional
+    data[f"{indicator_prefix}_non_concessional"] = data[
+        f"{indicator_prefix}_total"
+    ].fillna(0) - data[f"{indicator_prefix}_concessional"].fillna(0)
+
+    # Melt data
+    data = data.filter(
+        [
+            "year",
+            "country",
+            "counterpart_area",
+            f"{indicator_prefix}_concessional",
+            f"{indicator_prefix}_non_concessional",
+        ]
+    ).melt(
+        id_vars=["year", "country", "counterpart_area"],
+        var_name="indicator",
+        value_name="value",
+    )
+
+    return data

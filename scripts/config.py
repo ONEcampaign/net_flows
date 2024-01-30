@@ -13,7 +13,7 @@ class Paths:
 
 CONSTANT_BASE_YEAR: int = 2022
 PRICES_SOURCE: str = "imf"
-ANALYSIS_YEARS: tuple = (2010, 2022)
+ANALYSIS_YEARS: tuple = (2000, 2022)
 
 # Create a root logger
 logger = logging.getLogger(__name__)
