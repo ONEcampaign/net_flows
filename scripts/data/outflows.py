@@ -1,6 +1,8 @@
 """DEBT SERVICE OUTFLOWS FROM IDS"""
+
 import pandas as pd
 from bblocks import set_bblocks_data_path, DebtIDS
+
 from scripts import config
 from scripts.data.common import (
     filter_and_assign_indicator,
