@@ -62,6 +62,8 @@ def rename_indicators(df: pd.DataFrame, suffix: str = "") -> pd.DataFrame:
 
     indicators = {
         "grants": f"Grants{suffix}",
+        "grants_bilateral": f"Bilateral Grants{suffix}",
+        "grants_multilateral": f"Multilateral Grants{suffix}",
         "bilateral": f"All bilateral{suffix}",
         "bilateral_non_concessional": f"Bilateral Non-Concessional Debt{suffix}",
         "bilateral_concessional": f"Bilateral Concessional Debt{suffix}",
@@ -147,7 +149,7 @@ def flip_outflow_values(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: The DataFrame with the sign of the 'outflow' column flipped.
     """
-    df.loc[lambda d: d.indicator_type == "outflow", "outflow"] *= -1
+    df.loc[lambda d: d.indicator_type == "outflow", "value"] *= -1
     return df
 
 

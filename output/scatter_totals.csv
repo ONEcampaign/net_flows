@@ -176,7 +176,7 @@ year,country,continent,income_level,inflow,outflow
 2001,Maldives,Asia,Upper middle income,5.101190638852674,2.656321551499348
 2001,Mali,Africa,Low income,12.224346862745097,1.795358290080738
 2001,Mauritania,Africa,Lower middle income,18.124787749140896,3.4937465922107673
-2001,Mauritius,Africa,Upper middle income,1.8080132978287586,2.81792793527243
+2001,Mauritius,Africa,Upper middle income,1.8080132978287584,2.81792793527243
 2001,Mexico,America,Upper middle income,2.7594277356840924,3.071780070824252
 2001,Moldova,Europe,Upper middle income,8.386580573936529,5.123793517893315
 2001,Mongolia,Asia,Lower middle income,16.921425307570978,2.98571261829653
@@ -262,7 +262,7 @@ year,country,continent,income_level,inflow,outflow
 2002,Eswatini,Africa,Lower middle income,2.8553061002785514,1.4459364693593315
 2002,Ethiopia,Africa,Low income,17.321143985692387,0.9281452095043434
 2002,Fiji,Oceania,Upper middle income,2.0280654609218436,0.9072735470941884
-2002,Gabon,Africa,Upper middle income,2.609585776444111,7.157778315828957
+2002,Gabon,Africa,Upper middle income,2.6095857764441113,7.157778315828957
 2002,Gambia,Africa,Low income,10.051932187147688,1.6004784667418264
 2002,Georgia,Asia,Upper middle income,9.013523741769253,1.9975679988548525
 2002,Ghana,Africa,Lower middle income,5.944176142907427,1.2641207286166842
@@ -356,7 +356,7 @@ year,country,continent,income_level,inflow,outflow
 2003,Burundi,Africa,Low income,33.30356147770701,3.5708868280254777
 2003,Cabo Verde,Africa,Lower middle income,15.870169565677964,2.0137510487288135
 2003,Cambodia,Asia,Lower middle income,11.306987742765273,0.2421240300107181
-2003,Cameroon,Africa,Lower middle income,7.013388184269946,1.9046428474661317
+2003,Cameroon,Africa,Lower middle income,7.013388184269944,1.9046428474661317
 2003,Central African Republic,Africa,Low income,4.737373737373737,0.010448089225589225
 2003,Chad,Africa,Low income,11.175324261766603,0.8623347421018698
 2003,China,Asia,Upper middle income,0.3760678545589513,0.8438028738412514
@@ -2038,7 +2038,7 @@ year,country,continent,income_level,inflow,outflow
 2017,Moldova,Europe,Upper middle income,4.651139473462953,0.7303808544403574
 2017,Mongolia,Asia,Lower middle income,21.99768756554307,2.48482498562843
 2017,Montenegro,Europe,Upper middle income,10.774324799176107,6.03477947476828
-2017,Morocco,Africa,Lower middle income,3.6225105882352935,2.80165401903139
+2017,Morocco,Africa,Lower middle income,3.622510588235294,2.80165401903139
 2017,Mozambique,Africa,Low income,16.96228912096225,2.7701846592026627
 2017,Myanmar,Asia,Lower middle income,2.609768494948341,1.0196765949042714
 2017,Nepal,Asia,Lower middle income,4.9988156651249485,0.7191762035758663
@@ -2547,7 +2547,7 @@ year,country,continent,income_level,inflow,outflow
 2021,Timor-Leste,Asia,Lower middle income,7.344890701463684,0.26507745098039215
 2021,Togo,Africa,Low income,4.823220196689854,1.292287228352123
 2021,Tonga,Oceania,Upper middle income,22.633218468085108,1.0183631914893616
-2021,Tunisia,Africa,Lower middle income,5.256806293480124,7.421356141620973
+2021,Tunisia,Africa,Lower middle income,5.256806293480123,7.421356141620973
 2021,Turkmenistan,Asia,Upper middle income,0.8880201915577859,2.528043406248543
 2021,Türkiye,Asia,Upper middle income,2.8406594709025743,2.6945253280738863
 2021,Uganda,Africa,Low income,7.6070634408098226,1.4493931853969442
@@ -2618,7 +2618,7 @@ year,country,continent,income_level,inflow,outflow
 2022,Kenya,Africa,Lower middle income,3.9133609898769586,2.6040566569335364
 2022,Kyrgyz Republic,Asia,Lower middle income,6.548503780843043,2.0886705817340645
 2022,Laos,Asia,Lower middle income,5.611016172895975,2.7512776973340305
-2022,Lebanon,Asia,Lower middle income,7.797513679063362,0.6579747713498622
+2022,Lebanon,Asia,Lower middle income,7.797513679063361,0.6579747713498622
 2022,Lesotho,Africa,Lower middle income,9.210362456354039,11.470555883069427
 2022,Liberia,Africa,Low income,13.448523417211877,0.7833297382989431
 2022,Madagascar,Africa,Low income,8.11917754109182,0.8983165000990164
