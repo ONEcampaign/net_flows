@@ -2,7 +2,7 @@
 
 import pandas as pd
 from bblocks import set_bblocks_data_path, DebtIDS, add_income_level_column
-from oda_data import ODAData, set_data_path
+from oda_data import ODAData, set_data_path, donor_groupings
 from pydeflate import deflate, set_pydeflate_path
 
 from scripts import config
@@ -115,6 +115,7 @@ def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
         data.pipe(add_oecd_names)
         .pipe(remove_non_official_counterparts)
         .pipe(remove_groupings_and_totals_from_recipients)
+        .pipe(assign_grants_indicator)
         .pipe(clean_debtors, column="recipient")
         .pipe(clean_creditors, column="donor")
         .filter(
@@ -126,6 +127,7 @@ def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
                 "donor",
                 "counterpart_iso_code",
                 "prices",
+                "indicator",
                 "value",
             ]
         )
@@ -202,6 +204,28 @@ def get_debt_inflows(constant: bool = False) -> pd.DataFrame:
     return data
 
 
+def assign_grants_indicator(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Split the grants data into bilateral and multilateral.
+
+    Args:
+        - data (pd.DataFrame): The input data frame containing the grants data.
+
+    Returns:
+        pd.DataFrame: A new data frame containing the split grants data.
+
+    """
+    # Get the donor_codes that are bilateral
+    bilateral = {c: "grants_bilateral" for c in donor_groupings()["all_bilateral"]}
+
+    # Map bilateral donors to "grants_bilateral" and fill the rest with "grants_multilateral"
+    data = data.assign(
+        indicator=lambda d: d.donor_code.map(bilateral).fillna("grants_multilateral")
+    )
+
+    return data
+
+
 def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
     """
     Retrieve grants inflows from OECD ODA data.
@@ -226,9 +250,6 @@ def get_grants_inflows(constant: bool = False) -> pd.DataFrame:
 
     # Retrieve and clean the data
     data = oda.get_data().pipe(clean_grants_inflows_output)
-
-    # assign indicator
-    data = data.assign(indicator="grants")
 
     return data
 
