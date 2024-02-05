@@ -204,7 +204,14 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     df = (
         data.loc[lambda d: d.prices == "current"]
         .groupby(
-            ["year", "country", "continent", "income_level", "indicator_type"],
+            [
+                "year",
+                "country",
+                "continent",
+                "income_level",
+                "indicator_type",
+                "counterpart_type",
+            ],
             dropna=False,
             observed=True,
         )["value"]
@@ -252,6 +259,9 @@ def all_flows_pipeline() -> pd.DataFrame:
 
     # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
+
+    # Save as parquet
+    data.reset_index(drop=True).to_parquet(Paths.output / "net_flows_full.parquet")
 
     return data
 

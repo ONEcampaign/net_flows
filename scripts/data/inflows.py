@@ -15,6 +15,7 @@ from scripts.data.common import (
     remove_non_official_counterparts,
     filter_and_assign_indicator,
     get_concessional_non_concessional,
+    add_counterpart_type,
 )
 
 # set the path for the raw data
@@ -88,6 +89,9 @@ def clean_debt_output(data: pd.DataFrame) -> pd.DataFrame:
     # drop missing values and values which are zero
     data = data.dropna(subset=["value"]).loc[lambda d: d.value != 0]
 
+    # add counterpart type
+    data = add_counterpart_type(data)
+
     return data
 
 
@@ -116,6 +120,7 @@ def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
         .pipe(remove_non_official_counterparts)
         .pipe(remove_groupings_and_totals_from_recipients)
         .pipe(assign_grants_indicator)
+        .pipe(add_counterpart_type)
         .pipe(clean_debtors, column="recipient")
         .pipe(clean_creditors, column="donor")
         .filter(
@@ -126,6 +131,7 @@ def clean_grants_inflows_output(data: pd.DataFrame) -> pd.DataFrame:
                 "continent",
                 "donor",
                 "counterpart_iso_code",
+                "counterpart_type",
                 "prices",
                 "indicator",
                 "value",

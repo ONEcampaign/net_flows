@@ -326,6 +326,32 @@ def add_oecd_names(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def add_counterpart_type(data: pd.DataFrame) -> pd.DataFrame:
+    """Adds counterpart type based on indicator.
+
+    Args:
+        data (pd.DataFrame): The data to add the counterpart type to. It needs to have
+        an 'indicator' column.
+
+    """
+
+    mapping = {
+        "grants_bilateral": "Bilateral",
+        "grants_multilateral": "Multilateral",
+        "bilateral_concessional": "Bilateral",
+        "bilateral_non_concessional": "Bilateral",
+        "multilateral_concessional": "Multilateral",
+        "multilateral_non_concessional": "Multilateral",
+        "bonds": "Private",
+        "banks": "Private",
+        "other_private": "Private",
+    }
+
+    data = data.assign(counterpart_type=lambda d: d.indicator.map(mapping))
+
+    return data
+
+
 def remove_counterpart_totals(df: pd.DataFrame) -> pd.DataFrame:
     """
     Remove counterpart totals from the data.
