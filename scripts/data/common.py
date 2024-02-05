@@ -331,7 +331,7 @@ def add_counterpart_type(data: pd.DataFrame) -> pd.DataFrame:
 
     Args:
         data (pd.DataFrame): The data to add the counterpart type to. It needs to have
-        columns 'indicator' and 'counterpart_iso_code'.
+        an 'indicator' column.
 
     """
 
