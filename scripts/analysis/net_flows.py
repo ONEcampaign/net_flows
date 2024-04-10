@@ -80,7 +80,7 @@ def rename_indicators(df: pd.DataFrame, suffix: str = "") -> pd.DataFrame:
     )
 
 
-def get_all_flows(constant: bool = False) -> pd.DataFrame:
+def get_all_flows(constant: bool = False, limit_to_2022: bool = True) -> pd.DataFrame:
     """
     Retrieve all inflow and outflow data, process them, and combine into a single DataFrame.
 
@@ -113,6 +113,8 @@ def get_all_flows(constant: bool = False) -> pd.DataFrame:
         .drop(columns=["counterpart_iso_code", "iso_code"])
         .loc[lambda d: d.value != 0]
     )
+    if limit_to_2022:
+        data = data.loc[lambda d: d.year <= 2022]
 
     return data
 
@@ -227,12 +229,54 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     df = pivot_by_indicator(df)
 
     # Calculate inflow and outflow as a percentage of GDP
-    df = calculate_flows_as_percent_of_gdp(data=df).loc[lambda d: d.year <= 2022]
+    df = calculate_flows_as_percent_of_gdp(data=df)
 
     # Save the data
     df.to_csv(Paths.output / "scatter_totals.csv", index=False)
 
     return df
+
+
+def create_grouping_totals(
+    data: pd.DataFrame, group_column: str, exclude_cols: list[str]
+) -> pd.DataFrame:
+    """Create group totals as 'country'"""
+
+    dfs = []
+
+    for group in data[group_column].unique():
+        df_ = data.loc[lambda d: d[group_column] == group].copy()
+        df_["country"] = group
+        df_ = (
+            df_.groupby(
+                [c for c in df_.columns if c not in ["value"] + exclude_cols],
+                observed=True,
+                dropna=False,
+            )["value"]
+            .sum()
+            .reset_index()
+        )
+
+        dfs.append(df_)
+
+    groups = pd.concat(dfs, ignore_index=True)
+
+    return pd.concat([data, groups], ignore_index=True)
+
+
+def create_world_total(data: pd.DataFrame) -> pd.DataFrame:
+    """Create a world total for the data"""
+
+    df = data.copy(deep=True)
+    df["country"] = "World"
+    df = df.groupby(
+        [c for c in df.columns if c not in ["income_level", "continent"]],
+        observed=True,
+        dropna=False,
+        as_index=False,
+    )["value"].sum()
+
+    return pd.concat([data, df], ignore_index=True)
 
 
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
@@ -244,8 +288,8 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """
 
     # get constant and current data
-    df_const = get_all_flows(constant=False)
-    df_current = get_all_flows(constant=True)
+    df_const = get_all_flows(constant=False, limit_to_2022=True)
+    df_current = get_all_flows(constant=True, limit_to_2022=True)
 
     # Combine and make sure it is grouped at the right level
     data = (
@@ -258,9 +302,20 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     )
 
     if exclude_countries:
-        data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])].loc[
-            lambda d: d.year <= 2022
-        ]
+        data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])]
+
+    # Create continent totals
+    data = create_grouping_totals(
+        data, group_column="continent", exclude_cols=["income_level"]
+    )
+
+    # Create income_level totals
+    data = create_grouping_totals(
+        data, group_column="income_level", exclude_cols=["continent"]
+    )
+
+    # Create world total
+    data = create_world_total(data)
 
     # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
@@ -272,5 +327,5 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    full_data = all_flows_pipeline().loc[lambda d: d.year <= 2022]
-    scatter = create_scatter_data(full_data).loc[lambda d: d.year <= 2022]
+    full_data = all_flows_pipeline()
+    scatter = create_scatter_data(full_data)
