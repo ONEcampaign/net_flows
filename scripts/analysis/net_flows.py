@@ -267,17 +267,14 @@ def create_grouping_totals(
 def create_world_total(data: pd.DataFrame) -> pd.DataFrame:
     """Create a world total for the data"""
 
-    df = data.copy()
+    df = data.copy(deep=True)
     df["country"] = "World"
-    df = (
-        df.groupby(
-            [c for c in df.columns if c not in ["income_level", "continent"]],
-            observed=True,
-            dropna=False,
-        )["value"]
-        .sum()
-        .reset_index()
-    )
+    df = df.groupby(
+        [c for c in df.columns if c not in ["income_level", "continent"]],
+        observed=True,
+        dropna=False,
+        as_index=False,
+    )["value"].sum()
 
     return pd.concat([data, df], ignore_index=True)
 
