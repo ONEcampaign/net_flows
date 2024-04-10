@@ -264,6 +264,24 @@ def create_grouping_totals(
     return pd.concat([data, groups], ignore_index=True)
 
 
+def create_world_total(data: pd.DataFrame) -> pd.DataFrame:
+    """Create a world total for the data"""
+
+    df = data.copy()
+    df["country"] = "World"
+    df = (
+        df.groupby(
+            [c for c in df.columns if c not in ["income_level", "continent"]],
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .reset_index()
+    )
+
+    return pd.concat([data, df], ignore_index=True)
+
+
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -298,6 +316,9 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     data = create_grouping_totals(
         data, group_column="income_level", exclude_cols=["continent"]
     )
+
+    # Create world total
+    data = create_world_total(data)
 
     # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
