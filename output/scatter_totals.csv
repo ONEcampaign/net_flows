@@ -64,9 +64,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2000,Chad,Africa,Low income,Bilateral,4.4614364631043255,0.44307845419847336
 2000,Chad,Africa,Low income,Multilateral,4.254340731552163,0.9655313040712468
 2000,Chad,Africa,Low income,Private,,0.004389312977099237
-2000,China,Asia,Upper middle income,Bilateral,0.2649096696722603,0.31025133861455123
-2000,China,Asia,Upper middle income,Multilateral,0.28660342057850074,0.24209790283941504
-2000,China,Asia,Upper middle income,Private,0.508759314417725,0.6402954836296069
 2000,Colombia,America,Upper middle income,Bilateral,0.3925220323360532,0.191334680165206
 2000,Colombia,America,Upper middle income,Multilateral,0.5385735871864612,0.9318726704946106
 2000,Colombia,America,Upper middle income,Private,2.32663360330412,2.4198424116047144
@@ -233,9 +230,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2000,Philippines,Asia,Lower middle income,Bilateral,1.7736646551208959,1.7193896757383438
 2000,Philippines,Asia,Lower middle income,Multilateral,0.5076391670551114,1.1669531789116379
 2000,Philippines,Asia,Lower middle income,Private,4.422934366715671,2.368612468595743
-2000,Russia,Europe,Upper middle income,Bilateral,0.07250558900899864,0.6073701323203864
-2000,Russia,Europe,Upper middle income,Multilateral,0.20631378834488112,0.26718572280280595
-2000,Russia,Europe,Upper middle income,Private,0.09362816411752868,0.8191804996334416
 2000,Rwanda,Africa,Low income,Bilateral,8.589067837969742,0.16135433870180577
 2000,Rwanda,Africa,Low income,Multilateral,6.241164377745242,0.8899981454367984
 2000,Samoa,Oceania,Lower middle income,Bilateral,6.704797047970479,0.34931011070110696
@@ -289,9 +283,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2000,Uganda,Africa,Low income,Bilateral,7.560887097730788,0.3379719855595668
 2000,Uganda,Africa,Low income,Multilateral,4.169162616039196,0.24664666709644145
 2000,Uganda,Africa,Low income,Private,,0.01943011861784425
-2000,Ukraine,Europe,Lower middle income,Bilateral,1.4964671179363458,3.568881620426216
-2000,Ukraine,Europe,Lower middle income,Multilateral,0.6475178621137607,0.6528669506046827
-2000,Ukraine,Europe,Lower middle income,Private,0.09924256472116544,1.21981964059262
 2000,Uzbekistan,Asia,Lower middle income,Bilateral,1.9844338115731315,0.9773413719104391
 2000,Uzbekistan,Asia,Lower middle income,Multilateral,0.7964059319569642,0.3173248037220122
 2000,Uzbekistan,Asia,Lower middle income,Private,1.7900285885431813,2.3767380436173307
@@ -373,9 +364,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2001,Central African Republic,Africa,Low income,Multilateral,2.574860956618465,1.0878452614015572
 2001,Chad,Africa,Low income,Bilateral,4.727274152892562,0.37074351239669423
 2001,Chad,Africa,Low income,Multilateral,5.233292696280992,0.5654874741735537
-2001,China,Asia,Upper middle income,Bilateral,0.21199085287744157,0.1628120190829678
-2001,China,Asia,Upper middle income,Multilateral,0.2024850523300716,0.22419987078318898
-2001,China,Asia,Upper middle income,Private,0.2727352764518427,0.6085957031604994
 2001,Colombia,America,Upper middle income,Bilateral,0.7301548905804971,0.22600128721594984
 2001,Colombia,America,Upper middle income,Multilateral,1.5884177202221175,0.9263252259082434
 2001,Colombia,America,Upper middle income,Private,3.550737318095199,3.390222147408971
@@ -542,9 +530,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2001,Philippines,Asia,Lower middle income,Bilateral,1.137843071805983,1.4426821034959008
 2001,Philippines,Asia,Lower middle income,Multilateral,0.6246663822049898,1.124901193345244
 2001,Philippines,Asia,Lower middle income,Private,3.442764770213252,4.364821889231004
-2001,Russia,Europe,Upper middle income,Bilateral,0.10208781639394168,1.272927050704011
-2001,Russia,Europe,Upper middle income,Multilateral,0.13152081589162037,0.23779648375066595
-2001,Russia,Europe,Upper middle income,Private,0.7655390168201538,1.2739308355582617
 2001,Rwanda,Africa,Low income,Bilateral,7.714285714285714,0.28741632943568884
 2001,Rwanda,Africa,Low income,Multilateral,7.713566954753432,0.5493556837824097
 2001,Samoa,Oceania,Lower middle income,Bilateral,10.02930402930403,0.12492750915750915
@@ -599,9 +584,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2001,Uganda,Africa,Low income,Bilateral,5.313572774728781,0.049364592214422465
 2001,Uganda,Africa,Low income,Multilateral,6.3028989342693045,0.30215203318442885
 2001,Uganda,Africa,Low income,Private,0.050692093171665606,0.03520639566049777
-2001,Ukraine,Europe,Lower middle income,Bilateral,1.0968988656472018,0.39218090695401847
-2001,Ukraine,Europe,Lower middle income,Multilateral,1.539431224678446,0.7616080601114544
-2001,Ukraine,Europe,Lower middle income,Private,0.020837086073475425,1.1432764371550062
 2001,Uzbekistan,Asia,Lower middle income,Bilateral,2.5996446203964063,1.2249129051505383
 2001,Uzbekistan,Asia,Lower middle income,Multilateral,0.8787737466566079,0.484335779438996
 2001,Uzbekistan,Asia,Lower middle income,Private,2.32540086208079,2.7109880707770384
@@ -682,9 +664,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2002,Central African Republic,Africa,Low income,Multilateral,1.895320447609359,0.0346073041709054
 2002,Chad,Africa,Low income,Bilateral,3.452911741249446,0.2375029020824103
 2002,Chad,Africa,Low income,Multilateral,7.404746242800177,0.5945103455914932
-2002,China,Asia,Upper middle income,Bilateral,0.09545777961291554,0.1277863863749548
-2002,China,Asia,Upper middle income,Multilateral,0.19047902581472612,0.2914218313856313
-2002,China,Asia,Upper middle income,Private,0.09565776212794116,0.46880412287236584
 2002,Colombia,America,Upper middle income,Bilateral,0.5603953747701664,0.21071681961521468
 2002,Colombia,America,Upper middle income,Multilateral,0.9748102267007693,1.354474951978881
 2002,Colombia,America,Upper middle income,Private,1.0725586268527934,3.4651333002578246
@@ -852,9 +831,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2002,Philippines,Asia,Lower middle income,Bilateral,1.5608858821924632,1.4620975283191193
 2002,Philippines,Asia,Lower middle income,Multilateral,0.5195469168633684,1.070154009631466
 2002,Philippines,Asia,Lower middle income,Private,3.8264405280700298,4.020872245720996
-2002,Russia,Europe,Upper middle income,Bilateral,0.08929530019294064,1.124709797439348
-2002,Russia,Europe,Upper middle income,Multilateral,0.06640644000194562,0.2168841977830742
-2002,Russia,Europe,Upper middle income,Private,0.861075760791435,0.7712649393344899
 2002,Rwanda,Africa,Low income,Bilateral,10.310239429444728,0.36006158940397354
 2002,Rwanda,Africa,Low income,Multilateral,8.67981386653082,0.41429647987773816
 2002,Samoa,Oceania,Lower middle income,Bilateral,10.709342560553633,0.12296467128027681
@@ -909,9 +885,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2002,Uganda,Africa,Low income,Bilateral,5.720655067062314,0.0777686362017804
 2002,Uganda,Africa,Low income,Multilateral,4.213552592284866,0.49092755845697317
 2002,Uganda,Africa,Low income,Private,,0.01031959169139466
-2002,Ukraine,Europe,Lower middle income,Bilateral,0.9835008280781313,0.4232891509010605
-2002,Ukraine,Europe,Lower middle income,Multilateral,0.3800921160159664,0.807024353669194
-2002,Ukraine,Europe,Lower middle income,Private,0.9456993060771393,1.4717830943102104
 2002,Uzbekistan,Asia,Lower middle income,Bilateral,1.6711538286799934,1.56928205765736
 2002,Uzbekistan,Asia,Lower middle income,Multilateral,0.7471914753015034,0.5849578721295225
 2002,Uzbekistan,Asia,Lower middle income,Private,1.779681621509995,3.088959084751363
@@ -992,9 +965,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2003,Central African Republic,Africa,Low income,Bilateral,3.3063973063973062,0.010448089225589225
 2003,Chad,Africa,Low income,Bilateral,3.798044165054803,0.3422010735009672
 2003,Chad,Africa,Low income,Multilateral,6.732534771115409,0.5201336686009026
-2003,China,Asia,Upper middle income,Bilateral,0.09524740735443221,0.12217609044877364
-2003,China,Asia,Upper middle income,Multilateral,0.15129758606122054,0.32097960415459637
-2003,China,Asia,Upper middle income,Private,0.12952286114329858,0.4006471792378814
 2003,Colombia,America,Upper middle income,Bilateral,0.8976089954502934,0.2470573955055702
 2003,Colombia,America,Upper middle income,Multilateral,3.545979675142444,1.7173983757122204
 2003,Colombia,America,Upper middle income,Private,2.4899713682073306,3.9414171163576834
@@ -1159,9 +1129,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2003,Philippines,Asia,Lower middle income,Bilateral,1.7617109596847391,1.5782789625340365
 2003,Philippines,Asia,Lower middle income,Multilateral,0.6962195590482427,1.021876454807615
 2003,Philippines,Asia,Lower middle income,Private,4.027410626960328,3.880699866611519
-2003,Russia,Europe,Upper middle income,Bilateral,0.01502574757647589,0.9880594636178871
-2003,Russia,Europe,Upper middle income,Multilateral,0.0755027972906799,0.20170307550301397
-2003,Russia,Europe,Upper middle income,Private,0.657384724517787,1.1148913671839453
 2003,Rwanda,Africa,Low income,Bilateral,10.156615240766715,0.46349331930808796
 2003,Rwanda,Africa,Low income,Multilateral,6.168174777933615,0.45833746143057513
 2003,Samoa,Oceania,Lower middle income,Bilateral,7.923976608187134,0.10250184210526316
@@ -1218,9 +1185,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2003,Uganda,Africa,Low income,Bilateral,6.728813753581662,0.07911669455587393
 2003,Uganda,Africa,Low income,Multilateral,5.811636795415473,0.6353539862464184
 2003,Uganda,Africa,Low income,Private,,0.011901263037249284
-2003,Ukraine,Europe,Lower middle income,Bilateral,0.5387490330565315,0.45987832341903545
-2003,Ukraine,Europe,Lower middle income,Multilateral,0.5394222584637497,0.5980975586873204
-2003,Ukraine,Europe,Lower middle income,Private,1.996307312559885,1.6614414889412328
 2003,Uzbekistan,Asia,Lower middle income,Bilateral,1.4783529069859025,1.4840459447113492
 2003,Uzbekistan,Asia,Lower middle income,Multilateral,0.7720406395211468,0.6192407655351658
 2003,Uzbekistan,Asia,Lower middle income,Private,2.4076620461526343,3.56222927226904
@@ -1303,9 +1267,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2004,Chad,Africa,Low income,Bilateral,3.4735465020987406,0.09760788327003797
 2004,Chad,Africa,Low income,Multilateral,4.117836933839696,0.40025737157705377
 2004,Chad,Africa,Low income,Private,,9.940435738556866e-05
-2004,China,Asia,Upper middle income,Bilateral,0.14323922090333172,0.09936549607838106
-2004,China,Asia,Upper middle income,Multilateral,0.10002354510246479,0.12412748517274101
-2004,China,Asia,Upper middle income,Private,0.20993629079483958,0.1865343924953192
 2004,Colombia,America,Upper middle income,Bilateral,0.4847202130054475,0.19862529652351738
 2004,Colombia,America,Upper middle income,Multilateral,1.0508231513464281,1.244960560911481
 2004,Colombia,America,Upper middle income,Private,1.4697341513292435,1.765892819851867
@@ -1473,9 +1434,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2004,Philippines,Asia,Lower middle income,Bilateral,1.3261855299888423,1.5815165275467884
 2004,Philippines,Asia,Lower middle income,Multilateral,0.3869253752552578,0.9133958596661123
 2004,Philippines,Asia,Lower middle income,Private,5.374008728447823,4.711747611629229
-2004,Russia,Europe,Upper middle income,Bilateral,0.007761980833546504,0.8116295605990267
-2004,Russia,Europe,Upper middle income,Multilateral,0.05279033118898963,0.15094411126585755
-2004,Russia,Europe,Upper middle income,Private,0.6747309152621057,0.6682378281019558
 2004,Rwanda,Africa,Low income,Bilateral,9.078726968174204,0.46914951423785595
 2004,Rwanda,Africa,Low income,Multilateral,12.968580255443886,0.5836904815745394
 2004,Samoa,Oceania,Lower middle income,Bilateral,5.921052631578948,0.08347808612440191
@@ -1531,9 +1489,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2004,Uganda,Africa,Low income,Bilateral,6.988893023255814,0.06983324186046512
 2004,Uganda,Africa,Low income,Multilateral,6.3825234130232555,0.57412412
 2004,Uganda,Africa,Low income,Private,,0.009046192558139534
-2004,Ukraine,Europe,Lower middle income,Bilateral,0.4290458191113102,0.3807628285480409
-2004,Ukraine,Europe,Lower middle income,Multilateral,0.3275921613356603,0.5490730097147358
-2004,Ukraine,Europe,Lower middle income,Private,3.920018378303242,1.4639239018024002
 2004,Uzbekistan,Asia,Lower middle income,Bilateral,1.5038812143569291,1.0900255240943835
 2004,Uzbekistan,Asia,Lower middle income,Multilateral,1.1604719175805915,0.5852642073778664
 2004,Uzbekistan,Asia,Lower middle income,Private,1.2923459448321701,2.828186144233965
@@ -1616,9 +1571,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2005,Chad,Africa,Low income,Bilateral,2.6313971434991013,0.1338863765727981
 2005,Chad,Africa,Low income,Multilateral,4.198457520970642,0.4658115937687238
 2005,Chad,Africa,Low income,Private,,3.732025164769323e-05
-2005,China,Asia,Upper middle income,Bilateral,0.10437044645898289,0.04122296196103091
-2005,China,Asia,Upper middle income,Multilateral,0.0961128808656693,0.08220857239674763
-2005,China,Asia,Upper middle income,Private,0.3321469244810089,0.2651374776726841
 2005,Colombia,America,Upper middle income,Bilateral,0.44315629700345466,0.1382915170225479
 2005,Colombia,America,Upper middle income,Multilateral,1.0554275039319785,1.7925907102286385
 2005,Colombia,America,Upper middle income,Private,1.8717533601417573,2.67054799465663
@@ -1788,9 +1740,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2005,Philippines,Asia,Lower middle income,Bilateral,1.0315639956246507,1.3676294243157698
 2005,Philippines,Asia,Lower middle income,Multilateral,0.40325739331595606,0.8402873661329361
 2005,Philippines,Asia,Lower middle income,Private,2.5410585244833364,3.156273842301247
-2005,Russia,Europe,Upper middle income,Bilateral,0.0038973027098617246,2.4469083349373926
-2005,Russia,Europe,Upper middle income,Multilateral,0.05002769906948248,0.1252869880410949
-2005,Russia,Europe,Upper middle income,Private,1.4258584430677117,0.8117830084124459
 2005,Rwanda,Africa,Low income,Bilateral,9.99116547740401,0.1982726571525654
 2005,Rwanda,Africa,Low income,Multilateral,10.647018338430174,0.5909682093102275
 2005,Samoa,Oceania,Lower middle income,Bilateral,6.189300411522634,0.07222604938271605
@@ -1847,9 +1796,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2005,Uganda,Africa,Low income,Bilateral,5.5997030497592295,0.5272616388443018
 2005,Uganda,Africa,Low income,Multilateral,4.908972548956661,0.5213038178170144
 2005,Uganda,Africa,Low income,Private,,0.007396984751203852
-2005,Ukraine,Europe,Lower middle income,Bilateral,0.3375913021535885,0.3775521192846179
-2005,Ukraine,Europe,Lower middle income,Multilateral,0.7952082252662914,0.4408789849527885
-2005,Ukraine,Europe,Lower middle income,Private,0.9854563002930369,1.2675856236336571
 2005,Uzbekistan,Asia,Lower middle income,Bilateral,0.8797722052511289,0.7833655527063939
 2005,Uzbekistan,Asia,Lower middle income,Multilateral,0.9128164245498634,0.5539986877752383
 2005,Uzbekistan,Asia,Lower middle income,Private,0.34578785996989797,2.1580481676793575
@@ -1931,9 +1877,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2006,Chad,Africa,Low income,Bilateral,2.565020963629043,0.11807871829284658
 2006,Chad,Africa,Low income,Multilateral,2.235220339551738,0.4169411058918266
 2006,Chad,Africa,Low income,Private,,0.006777917058113005
-2006,China,Asia,Upper middle income,Bilateral,0.12126001077283373,0.06869084860664815
-2006,China,Asia,Upper middle income,Multilateral,0.08663398870794982,0.08262492381315469
-2006,China,Asia,Upper middle income,Private,0.0976708240291923,0.17111124742661074
 2006,Colombia,America,Upper middle income,Bilateral,0.5901170013535815,0.13138556655726763
 2006,Colombia,America,Upper middle income,Multilateral,1.4248354378743209,0.9622696902832631
 2006,Colombia,America,Upper middle income,Private,2.0655853486862843,2.0696600326960994
@@ -2106,9 +2049,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2006,Philippines,Asia,Lower middle income,Bilateral,0.9910632002381456,1.123864598560159
 2006,Philippines,Asia,Lower middle income,Multilateral,0.8158030087032816,0.8377963424283017
 2006,Philippines,Asia,Lower middle income,Private,4.679170617925156,4.679488114732909
-2006,Russia,Europe,Upper middle income,Bilateral,0.003936280516542557,2.5173376484777075
-2006,Russia,Europe,Upper middle income,Multilateral,0.049732302761806006,0.0941241398812329
-2006,Russia,Europe,Upper middle income,Private,2.362928739749269,0.7679914790366669
 2006,Rwanda,Africa,Low income,Bilateral,11.304492010853181,0.18555335544166418
 2006,Rwanda,Africa,Low income,Multilateral,45.32167724449804,0.5841346759119687
 2006,Samoa,Oceania,Lower middle income,Bilateral,7.434108527131783,0.03898350775193799
@@ -2166,9 +2106,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2006,Uganda,Africa,Low income,Bilateral,6.702180552596065,0.23982625044392353
 2006,Uganda,Africa,Low income,Multilateral,30.304269522693374,0.41966723488884156
 2006,Uganda,Africa,Low income,Private,,0.006237035300802614
-2006,Ukraine,Europe,Lower middle income,Bilateral,0.2957770003804504,0.29804851030463875
-2006,Ukraine,Europe,Lower middle income,Multilateral,0.4522690916514332,0.38781256887544424
-2006,Ukraine,Europe,Lower middle income,Private,2.2289831924429557,1.07334210750972
 2006,Uzbekistan,Asia,Lower middle income,Bilateral,0.7036650965142428,0.9334136052286357
 2006,Uzbekistan,Asia,Lower middle income,Multilateral,0.7115236338080959,0.5858461117878561
 2006,Uzbekistan,Asia,Lower middle income,Private,0.08023735944527736,1.8453615437593702
@@ -2249,9 +2186,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2007,Chad,Africa,Low income,Bilateral,2.8522619696097617,0.10761772763900081
 2007,Chad,Africa,Low income,Multilateral,1.7400016588005065,0.49493964659836537
 2007,Chad,Africa,Low income,Private,,6.311154598825832e-05
-2007,China,Asia,Upper middle income,Bilateral,0.08458279343075548,0.061967629452759826
-2007,China,Asia,Upper middle income,Multilateral,0.07637473690960328,0.07055650211775029
-2007,China,Asia,Upper middle income,Private,0.10482931438888983,0.11052689369624766
 2007,Colombia,America,Upper middle income,Bilateral,0.3254376181932793,0.07301472603403966
 2007,Colombia,America,Upper middle income,Multilateral,0.8308859040876692,0.9232172816757989
 2007,Colombia,America,Upper middle income,Private,1.3862207244338844,1.3344562153905832
@@ -2425,9 +2359,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2007,Philippines,Asia,Lower middle income,Bilateral,0.789024973073471,0.8488037153481216
 2007,Philippines,Asia,Lower middle income,Multilateral,0.578871912360559,0.6145298282472111
 2007,Philippines,Asia,Lower middle income,Private,0.7130748127324017,1.7914029367867674
-2007,Russia,Europe,Upper middle income,Bilateral,0.00717658710223766,0.07908259570696559
-2007,Russia,Europe,Upper middle income,Multilateral,0.03015278953940664,0.07968250778659701
-2007,Russia,Europe,Upper middle income,Private,2.9227381351997246,0.9991306645304359
 2007,Rwanda,Africa,Low income,Bilateral,9.545148930941263,0.1558719931187024
 2007,Rwanda,Africa,Low income,Multilateral,5.5739911206684685,0.3979596043253871
 2007,Samoa,Oceania,Lower middle income,Bilateral,6.677200704225352,0.00892843309859155
@@ -2483,9 +2414,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2007,Uganda,Africa,Low income,Bilateral,5.901932627912289,0.1464126067839196
 2007,Uganda,Africa,Low income,Multilateral,4.034456614321608,0.20226660632708998
 2007,Uganda,Africa,Low income,Private,,0.005142534833257195
-2007,Ukraine,Europe,Lower middle income,Bilateral,0.19953966689934385,0.20122628081809296
-2007,Ukraine,Europe,Lower middle income,Multilateral,0.7072704180510959,0.2991564648192098
-2007,Ukraine,Europe,Lower middle income,Private,2.642834008097166,0.8198008755409745
 2007,Uzbekistan,Asia,Lower middle income,Bilateral,0.7058889954582842,0.7349198930729893
 2007,Uzbekistan,Asia,Lower middle income,Multilateral,0.49051364553159527,0.3909716031899296
 2007,Uzbekistan,Asia,Lower middle income,Private,0.07388704716947395,1.1483982058434359
@@ -2566,9 +2494,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2008,Chad,Africa,Low income,Bilateral,3.355854915627996,0.08124651965484181
 2008,Chad,Africa,Low income,Multilateral,2.161932836049856,1.0949151073825503
 2008,Chad,Africa,Low income,Private,,5.644199424736338e-05
-2008,China,Asia,Upper middle income,Bilateral,0.07025589091556557,0.03850466751433165
-2008,China,Asia,Upper middle income,Multilateral,0.06935054489784326,0.055470091510678825
-2008,China,Asia,Upper middle income,Private,0.03399398769574944,0.11195871720104517
 2008,Colombia,America,Upper middle income,Bilateral,0.3898349543512684,0.0638853206957411
 2008,Colombia,America,Upper middle income,Multilateral,1.0785013855441559,0.5741323854451885
 2008,Colombia,America,Upper middle income,Private,0.5343227328209019,1.1395499416916834
@@ -2743,9 +2668,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2008,Philippines,Asia,Lower middle income,Bilateral,0.535303052202401,0.9119413038169795
 2008,Philippines,Asia,Lower middle income,Multilateral,0.5149544584463585,0.7087336524554299
 2008,Philippines,Asia,Lower middle income,Private,0.37377113934820194,1.9467037041661372
-2008,Russia,Europe,Upper middle income,Bilateral,0.005649453940453373,0.04211033014822018
-2008,Russia,Europe,Upper middle income,Multilateral,0.014640915963599777,0.06591323751763523
-2008,Russia,Europe,Upper middle income,Private,1.6405964376907556,1.7441760346352955
 2008,Rwanda,Africa,Low income,Bilateral,9.031361502990546,0.02951912405942505
 2008,Rwanda,Africa,Low income,Multilateral,7.34976751495273,0.24333684545629944
 2008,Samoa,Oceania,Lower middle income,Bilateral,6.768126023391813,0.05232125730994152
@@ -2803,9 +2725,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2008,Uganda,Africa,Low income,Bilateral,4.600628580668183,0.1272942740532584
 2008,Uganda,Africa,Low income,Multilateral,2.860918724742406,0.17017340068691733
 2008,Uganda,Africa,Low income,Private,,0.002735618448637317
-2008,Ukraine,Europe,Lower middle income,Bilateral,0.18288339346875293,0.13943006954823978
-2008,Ukraine,Europe,Lower middle income,Multilateral,0.7664622562088763,0.2249350295345618
-2008,Ukraine,Europe,Lower middle income,Private,0.002435094891155074,0.7212423926028471
 2008,Uzbekistan,Asia,Lower middle income,Bilateral,0.7121477148753417,0.6089653076022087
 2008,Uzbekistan,Asia,Lower middle income,Multilateral,0.4043511029616822,0.3148126730436723
 2008,Uzbekistan,Asia,Lower middle income,Private,0.1040887734954543,0.6928314395671817
@@ -2889,9 +2808,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2009,Chad,Africa,Low income,Bilateral,3.894320987654321,0.09443666022544284
 2009,Chad,Africa,Low income,Multilateral,2.4014168738593664,0.5887495684380032
 2009,Chad,Africa,Low income,Private,,0.01079518196457327
-2009,China,Asia,Upper middle income,Bilateral,0.04745338701196111,0.028285097200033797
-2009,China,Asia,Upper middle income,Multilateral,0.05899345246502744,0.046099223508004536
-2009,China,Asia,Upper middle income,Private,0.06231098901746712,0.09619375215317774
 2009,Colombia,America,Upper middle income,Bilateral,0.4420756358912371,0.06409607160524629
 2009,Colombia,America,Upper middle income,Multilateral,1.05738090239989,0.6030839595817077
 2009,Colombia,America,Upper middle income,Private,2.4439887909785822,0.9608004789455798
@@ -3066,9 +2982,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2009,Philippines,Asia,Lower middle income,Bilateral,0.63448581694411,0.7745186389185382
 2009,Philippines,Asia,Lower middle income,Multilateral,1.0244302150659732,0.5106681317988782
 2009,Philippines,Asia,Lower middle income,Private,3.279075897735789,2.508534078418459
-2009,Russia,Europe,Upper middle income,Bilateral,,0.027397034803085793
-2009,Russia,Europe,Upper middle income,Multilateral,0.008377512558011514,0.07708355951771119
-2009,Russia,Europe,Upper middle income,Private,1.6147942932725758,1.5527917449404787
 2009,Rwanda,Africa,Low income,Bilateral,9.444318202643172,0.033197681057268724
 2009,Rwanda,Africa,Low income,Multilateral,5.6456473938326,0.16095985726872247
 2009,Samoa,Oceania,Lower middle income,Bilateral,10.000810275080907,0.1337634142394822
@@ -3129,9 +3042,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2009,Uganda,Africa,Low income,Bilateral,4.231980809308499,0.09385549425478076
 2009,Uganda,Africa,Low income,Multilateral,3.098659274899407,0.18356189612975485
 2009,Uganda,Africa,Low income,Private,,0.0011652225494669598
-2009,Ukraine,Europe,Lower middle income,Bilateral,0.3786245752867722,0.1981753018901767
-2009,Ukraine,Europe,Lower middle income,Multilateral,4.964922977647571,0.41249973291538194
-2009,Ukraine,Europe,Lower middle income,Private,,1.8367072640695596
 2009,Uzbekistan,Asia,Lower middle income,Bilateral,0.7741465473834783,0.45625169984503516
 2009,Uzbekistan,Asia,Lower middle income,Multilateral,0.6120082663011086,0.24906262367385862
 2009,Uzbekistan,Asia,Lower middle income,Private,0.019441718440815357,0.4111421618786506
@@ -3214,9 +3124,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2010,Chad,Africa,Low income,Bilateral,5.587122698813195,0.09756960844780863
 2010,Chad,Africa,Low income,Multilateral,2.4384147425474256,0.46061011868049717
 2010,Chad,Africa,Low income,Private,,0.01873944117372208
-2010,China,Asia,Upper middle income,Bilateral,0.055922126107298346,0.09825527007887196
-2010,China,Asia,Upper middle income,Multilateral,0.04996210765301641,0.038601716924407885
-2010,China,Asia,Upper middle income,Private,0.1238848293703999,0.0918093539294279
 2010,Colombia,America,Upper middle income,Bilateral,0.21796701559167747,0.03550479684047763
 2010,Colombia,America,Upper middle income,Multilateral,0.7687258315037749,0.5537081595398239
 2010,Colombia,America,Upper middle income,Private,0.4765213840187924,0.9603883202384651
@@ -3392,9 +3299,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2010,Philippines,Asia,Lower middle income,Bilateral,0.6659611409086764,0.6950383109771607
 2010,Philippines,Asia,Lower middle income,Multilateral,0.3022005432669927,0.4161958944468707
 2010,Philippines,Asia,Lower middle income,Private,3.3022748433308218,3.5872374606107433
-2010,Russia,Europe,Upper middle income,Bilateral,0.07229108878152728,0.019788280973112648
-2010,Russia,Europe,Upper middle income,Multilateral,0.008511980209538856,0.050932515262290964
-2010,Russia,Europe,Upper middle income,Private,2.968922179155109,1.8708562416371217
 2010,Rwanda,Africa,Low income,Bilateral,9.295775587851077,0.042958035597648596
 2010,Rwanda,Africa,Low income,Multilateral,8.0619313536904,0.18454683213585893
 2010,Samoa,Oceania,Lower middle income,Bilateral,16.855182632352943,0.24252276470588235
@@ -3454,9 +3358,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2010,Uganda,Africa,Low income,Bilateral,4.249096124052992,0.07221012316169023
 2010,Uganda,Africa,Low income,Multilateral,2.8289938978244136,0.17398867601183002
 2010,Uganda,Africa,Low income,Private,,0.0008409917757160799
-2010,Ukraine,Europe,Lower middle income,Bilateral,0.3365101180786848,0.15528083191800662
-2010,Ukraine,Europe,Lower middle income,Multilateral,3.2609726620640975,0.39395072927924946
-2010,Ukraine,Europe,Lower middle income,Private,2.709404386409923,0.950222833814912
 2010,Uzbekistan,Asia,Lower middle income,Bilateral,0.6724818954432211,0.41008849272683434
 2010,Uzbekistan,Asia,Lower middle income,Multilateral,0.4687163790886442,0.22338132805593505
 2010,Uzbekistan,Asia,Lower middle income,Private,0.030034532668970507,0.2361623770392992
@@ -3541,9 +3442,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2011,Chad,Africa,Low income,Bilateral,3.681794975785931,0.11151349667569564
 2011,Chad,Africa,Low income,Multilateral,2.3270698185996883,0.46056432241648204
 2011,Chad,Africa,Low income,Private,,0.04108609455799065
-2011,China,Asia,Upper middle income,Bilateral,0.06610403774720676,0.03420604666179939
-2011,China,Asia,Upper middle income,Multilateral,0.04259932293675698,0.052783973105398806
-2011,China,Asia,Upper middle income,Private,0.42542636952247737,0.10170284975861595
 2011,Colombia,America,Upper middle income,Bilateral,0.3109533982553453,0.02953036358914039
 2011,Colombia,America,Upper middle income,Multilateral,0.386389066353003,0.477876608372193
 2011,Colombia,America,Upper middle income,Private,1.5982511662079135,0.8157606073153694
@@ -3721,9 +3619,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2011,Philippines,Asia,Lower middle income,Bilateral,0.40464528249443893,0.7191373780724712
 2011,Philippines,Asia,Lower middle income,Multilateral,0.5791240131587375,0.3465056224783
 2011,Philippines,Asia,Lower middle income,Private,1.4069563843358937,2.2377943142043493
-2011,Russia,Europe,Upper middle income,Bilateral,0.0029590251243513696,0.0887683854012958
-2011,Russia,Europe,Upper middle income,Multilateral,0.0053072382757913044,0.03699157635516119
-2011,Russia,Europe,Upper middle income,Private,1.4579358649871494,1.043450817210816
 2011,Rwanda,Africa,Low income,Bilateral,9.10210242120552,0.05873273202614379
 2011,Rwanda,Africa,Low income,Multilateral,9.887716726216413,0.2071891793754539
 2011,Samoa,Oceania,Lower middle income,Bilateral,11.134423844086022,0.25555975806451614
@@ -3778,9 +3673,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2011,Türkiye,Asia,Upper middle income,Private,0.8290785777356925,1.0699903424535009
 2011,Uganda,Africa,Low income,Bilateral,3.615222112650449,0.0449821981018872
 2011,Uganda,Africa,Low income,Multilateral,2.175355751427221,0.1795869713828588
-2011,Ukraine,Europe,Lower middle income,Bilateral,0.3008192611263408,0.12150833232142967
-2011,Ukraine,Europe,Lower middle income,Multilateral,0.449058729355632,0.8750948901317928
-2011,Ukraine,Europe,Lower middle income,Private,1.6881984066503535,0.5146448412537793
 2011,Uzbekistan,Asia,Lower middle income,Bilateral,0.6566161983292644,0.28769945244382444
 2011,Uzbekistan,Asia,Lower middle income,Multilateral,0.4122942241708601,0.18987717785195887
 2011,Uzbekistan,Asia,Lower middle income,Private,0.12526618985933272,0.12542296796372876
@@ -3863,9 +3755,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2012,Chad,Africa,Low income,Bilateral,2.363341633228588,0.16236690999919426
 2012,Chad,Africa,Low income,Multilateral,2.4364834324389655,0.4630882410764644
 2012,Chad,Africa,Low income,Private,,0.01510756586898719
-2012,China,Asia,Upper middle income,Bilateral,0.030571173794261546,0.03767061056632762
-2012,China,Asia,Upper middle income,Multilateral,0.03543220887444113,0.03841938284903942
-2012,China,Asia,Upper middle income,Private,0.3332814962796765,0.046229742561109566
 2012,Colombia,America,Upper middle income,Bilateral,0.952853606875789,0.022016003312723232
 2012,Colombia,America,Upper middle income,Multilateral,0.35795404270931125,0.4143383536736698
 2012,Colombia,America,Upper middle income,Private,0.8405595414252264,0.9262382058420467
@@ -4042,9 +3931,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2012,Philippines,Asia,Lower middle income,Bilateral,0.3711266837583994,0.535653051886072
 2012,Philippines,Asia,Lower middle income,Multilateral,0.44084417906230905,0.29981795727703114
 2012,Philippines,Asia,Lower middle income,Private,0.9090876048793523,1.2559753933262063
-2012,Russia,Europe,Upper middle income,Bilateral,3.650501031266541e-05,0.021874897329658496
-2012,Russia,Europe,Upper middle income,Multilateral,0.004848276050887984,0.029517344707686126
-2012,Russia,Europe,Upper middle income,Private,1.270764962491102,0.7005273988811215
 2012,Rwanda,Africa,Low income,Bilateral,6.11567962241965,0.06160751241181082
 2012,Rwanda,Africa,Low income,Multilateral,6.11007842043376,0.20790123595505622
 2012,Samoa,Oceania,Lower middle income,Bilateral,15.143161591203105,0.43571795601552393
@@ -4099,9 +3985,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2012,Türkiye,Asia,Upper middle income,Private,1.0786306719377918,0.9185888712717623
 2012,Uganda,Africa,Low income,Bilateral,3.6347733853712145,0.03716695109732054
 2012,Uganda,Africa,Low income,Multilateral,2.425521270241443,0.17708308833511102
-2012,Ukraine,Europe,Lower middle income,Bilateral,0.2522267165393302,0.11027936199020372
-2012,Ukraine,Europe,Lower middle income,Multilateral,0.43976722268049445,0.7647156369004614
-2012,Ukraine,Europe,Lower middle income,Private,2.049464726676945,1.0770208216473909
 2012,Uzbekistan,Asia,Lower middle income,Bilateral,0.23269788210900477,0.24348104680094787
 2012,Uzbekistan,Asia,Lower middle income,Multilateral,0.7810290904917062,0.17629848311611376
 2012,Uzbekistan,Asia,Lower middle income,Private,0.014292209419431283,0.12550213255331757
@@ -4184,9 +4067,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2013,Chad,Africa,Low income,Bilateral,1.990133556256734,0.32001803601662304
 2013,Chad,Africa,Low income,Multilateral,2.3169377189472065,0.5588637463444667
 2013,Chad,Africa,Low income,Private,4.617515776512237,0.01929074957672772
-2013,China,Asia,Upper middle income,Bilateral,0.016822413126121438,0.05449281384072404
-2013,China,Asia,Upper middle income,Multilateral,0.02832620090743517,0.03555652467394568
-2013,China,Asia,Upper middle income,Private,0.24690163980413363,0.036467245090613644
 2013,Colombia,America,Upper middle income,Bilateral,0.4487509946767026,0.03712251233989542
 2013,Colombia,America,Upper middle income,Multilateral,0.4673423319916042,0.40644423652294986
 2013,Colombia,America,Upper middle income,Private,1.9320383249409832,0.680360973948819
@@ -4363,9 +4243,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2013,Philippines,Asia,Lower middle income,Bilateral,0.3379862337136275,0.3772776655054719
 2013,Philippines,Asia,Lower middle income,Multilateral,0.25812848265076455,0.5197916870198624
 2013,Philippines,Asia,Lower middle income,Private,0.018263667132788312,1.0252697960923274
-2013,Russia,Europe,Upper middle income,Bilateral,,0.017904775370013504
-2013,Russia,Europe,Upper middle income,Multilateral,0.0031280834458558924,0.02406824558758625
-2013,Russia,Europe,Upper middle income,Private,2.8167833825024142,0.9361726950747894
 2013,Rwanda,Africa,Low income,Bilateral,7.944533691343818,0.0743318757192175
 2013,Rwanda,Africa,Low income,Multilateral,6.80755275795934,0.22608168264927755
 2013,Rwanda,Africa,Low income,Private,5.11443549418233,0.17708732898606316
@@ -4423,9 +4300,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2013,Türkiye,Asia,Upper middle income,Private,0.9177958052394559,0.7565774791123588
 2013,Uganda,Africa,Low income,Bilateral,3.420213442516469,0.05607037270730877
 2013,Uganda,Africa,Low income,Multilateral,2.4349982057468065,0.1900235888156877
-2013,Ukraine,Europe,Lower middle income,Bilateral,0.35286127325295946,0.10993472783808848
-2013,Ukraine,Europe,Lower middle income,Multilateral,0.4312656959794883,1.7932536162784354
-2013,Ukraine,Europe,Lower middle income,Private,4.609677595330314,2.287852514429109
 2013,Uzbekistan,Asia,Lower middle income,Bilateral,0.3729054937698109,0.23365046644442017
 2013,Uzbekistan,Asia,Lower middle income,Multilateral,0.8022091257241227,0.17700423065362333
 2013,Uzbekistan,Asia,Lower middle income,Private,0.013628052519401026,0.07392216622035196
@@ -4510,9 +4384,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2014,Chad,Africa,Low income,Bilateral,1.7403199314432622,0.42755434335499537
 2014,Chad,Africa,Low income,Multilateral,1.9774495850889093,0.5591131443262157
 2014,Chad,Africa,Low income,Private,9.683639220167107,3.2125662008141114
-2014,China,Asia,Upper middle income,Bilateral,0.02879047918899607,0.029282347830342143
-2014,China,Asia,Upper middle income,Multilateral,0.028918066465607017,0.0335883566110237
-2014,China,Asia,Upper middle income,Private,0.3447978001261849,0.07688590675146138
 2014,Colombia,America,Upper middle income,Bilateral,0.2452610745958593,0.042441445621011376
 2014,Colombia,America,Upper middle income,Multilateral,0.5143793558405313,0.5023064756676223
 2014,Colombia,America,Upper middle income,Private,2.37264826634596,0.853688403345915
@@ -4688,9 +4559,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2014,Philippines,Asia,Lower middle income,Bilateral,0.474540714626669,0.3783230191539713
 2014,Philippines,Asia,Lower middle income,Multilateral,0.43362428920546986,0.24219074360301732
 2014,Philippines,Asia,Lower middle income,Private,0.5195885357195681,1.1108259673125278
-2014,Russia,Europe,Upper middle income,Bilateral,,0.015804857763417345
-2014,Russia,Europe,Upper middle income,Multilateral,0.003271314499912145,0.02224121298881318
-2014,Russia,Europe,Upper middle income,Private,0.2452187579313172,2.4521675586136538
 2014,Rwanda,Africa,Low income,Bilateral,6.31842638592233,0.08139781310679611
 2014,Rwanda,Africa,Low income,Multilateral,6.98300089684466,0.2387597572815534
 2014,Rwanda,Africa,Low income,Private,,0.32160194174757284
@@ -4748,9 +4616,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2014,Türkiye,Asia,Upper middle income,Private,1.05976221837334,0.9657215988394395
 2014,Uganda,Africa,Low income,Bilateral,3.37080740605398,0.08982947430511595
 2014,Uganda,Africa,Low income,Multilateral,1.8118379881452495,0.18516579846924094
-2014,Ukraine,Europe,Lower middle income,Bilateral,0.9655833328085642,0.1460246523779537
-2014,Ukraine,Europe,Lower middle income,Multilateral,3.059338681405181,0.9810319465934989
-2014,Ukraine,Europe,Lower middle income,Private,0.8854265384730718,1.8087428975500777
 2014,Uzbekistan,Asia,Lower middle income,Bilateral,0.46750138519196516,0.23734657938353454
 2014,Uzbekistan,Asia,Lower middle income,Multilateral,0.678007179645755,0.16887617727092818
 2014,Uzbekistan,Asia,Lower middle income,Private,0.14821577676627745,0.05313757866613891
@@ -4835,9 +4700,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2015,Chad,Africa,Low income,Bilateral,2.233976138604821,0.15377054784514246
 2015,Chad,Africa,Low income,Multilateral,8.2842314417458,0.3362583336376918
 2015,Chad,Africa,Low income,Private,,0.42497260774287804
-2015,China,Asia,Upper middle income,Bilateral,0.006536855248251903,0.04456880231627992
-2015,China,Asia,Upper middle income,Multilateral,0.025966077709022622,0.030792447951187338
-2015,China,Asia,Upper middle income,Private,0.21419300473027875,0.2361678913538567
 2015,Colombia,America,Upper middle income,Bilateral,0.3777091713260623,0.08846929344141086
 2015,Colombia,America,Upper middle income,Multilateral,0.8317888281492233,0.5998899358417407
 2015,Colombia,America,Upper middle income,Private,2.604119007949082,0.9667145289325467
@@ -5019,9 +4881,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2015,Philippines,Asia,Lower middle income,Bilateral,0.33580846080549265,0.28906790556900724
 2015,Philippines,Asia,Lower middle income,Multilateral,0.6431598549173427,0.2501912031809846
 2015,Philippines,Asia,Lower middle income,Private,1.386844666140201,1.2829991113279338
-2015,Russia,Europe,Upper middle income,Bilateral,,0.01677182402889364
-2015,Russia,Europe,Upper middle income,Multilateral,0.005936094936242353,0.020753970929461196
-2015,Russia,Europe,Upper middle income,Private,1.6951904621508072,3.4380719781307585
 2015,Rwanda,Africa,Low income,Bilateral,7.145827568453078,0.08604842850456355
 2015,Rwanda,Africa,Low income,Multilateral,6.368701454481629,0.265857270067868
 2015,Rwanda,Africa,Low income,Private,,0.31008659021764573
@@ -5082,9 +4941,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2015,Türkiye,Asia,Upper middle income,Private,0.7255945064352352,0.9880304163662477
 2015,Uganda,Africa,Low income,Bilateral,4.619935651414952,0.07451230554902818
 2015,Uganda,Africa,Low income,Multilateral,2.469705805498674,0.21525695625902178
-2015,Ukraine,Europe,Lower middle income,Bilateral,1.4161464652119398,0.10214912650403644
-2015,Ukraine,Europe,Lower middle income,Multilateral,2.499152615428609,1.7033665689272126
-2015,Ukraine,Europe,Lower middle income,Private,14.630598754976793,14.634777045049603
 2015,Uzbekistan,Asia,Lower middle income,Bilateral,0.5396146846909948,0.206693106278163
 2015,Uzbekistan,Asia,Lower middle income,Multilateral,0.9309996834068782,0.17369221953725106
 2015,Uzbekistan,Asia,Lower middle income,Private,0.13588649786369686,0.03774873234339614
@@ -5168,9 +5024,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2016,Chad,Africa,Low income,Bilateral,2.5950410213683592,0.14661208684571655
 2016,Chad,Africa,Low income,Multilateral,4.408974580474417,0.20468038717898454
 2016,Chad,Africa,Low income,Private,,1.2305724367771025
-2016,China,Asia,Upper middle income,Bilateral,0.005917212229555799,0.04031953259403753
-2016,China,Asia,Upper middle income,Multilateral,0.028088910803516554,0.03183380575403718
-2016,China,Asia,Upper middle income,Private,0.1559640206512929,0.09271125847295335
 2016,Colombia,America,Upper middle income,Bilateral,0.380599356817193,0.14235560758208682
 2016,Colombia,America,Upper middle income,Multilateral,1.1821729278895299,0.6538533958807154
 2016,Colombia,America,Upper middle income,Private,1.1835802946034755,1.2703683650196838
@@ -5352,9 +5205,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2016,Philippines,Asia,Lower middle income,Bilateral,0.2676812466928415,0.25447514774328606
 2016,Philippines,Asia,Lower middle income,Multilateral,0.3288488911171997,0.24450698839081433
 2016,Philippines,Asia,Lower middle income,Private,0.6481902872951758,1.544273465933521
-2016,Russia,Europe,Upper middle income,Bilateral,,0.017836879709522507
-2016,Russia,Europe,Upper middle income,Multilateral,0.0058150938976301095,0.016976120766798112
-2016,Russia,Europe,Upper middle income,Private,1.5564080357787062,4.0494561415765435
 2016,Rwanda,Africa,Low income,Bilateral,6.144407483611271,0.16464209430707302
 2016,Rwanda,Africa,Low income,Multilateral,6.714760837262795,0.27532283036227717
 2016,Rwanda,Africa,Low income,Private,,0.30477285796434733
@@ -5414,9 +5264,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2016,Türkiye,Asia,Upper middle income,Private,1.2729884823762194,1.1418711071231364
 2016,Uganda,Africa,Low income,Bilateral,4.705178164805017,0.10619213338559018
 2016,Uganda,Africa,Low income,Multilateral,2.415004708668104,0.22544383793846756
-2016,Ukraine,Europe,Lower middle income,Bilateral,1.2420054975414843,0.10801075126675164
-2016,Ukraine,Europe,Lower middle income,Multilateral,1.232275558495538,1.7583017021071463
-2016,Ukraine,Europe,Lower middle income,Private,1.8649337432645234,1.7943009836206065
 2016,Uzbekistan,Asia,Lower middle income,Bilateral,0.7089968047351094,0.2421145532232833
 2016,Uzbekistan,Asia,Lower middle income,Multilateral,0.6509358592308949,0.20386640629013053
 2016,Uzbekistan,Asia,Lower middle income,Private,0.07858333057040791,0.05838268066030025
@@ -5501,9 +5348,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,Chad,Africa,Low income,Bilateral,3.3536198333167975,0.06965482289909714
 2017,Chad,Africa,Low income,Multilateral,4.598517092965572,0.15447363528127792
 2017,Chad,Africa,Low income,Private,,1.424178986010517
-2017,China,Asia,Upper middle income,Bilateral,0.006302103244674216,0.03829252470989366
-2017,China,Asia,Upper middle income,Multilateral,0.028998997460321085,0.031092345628694867
-2017,China,Asia,Upper middle income,Private,0.38632018617925484,0.0838540225905051
 2017,Colombia,America,Upper middle income,Bilateral,0.35549382612459524,0.21591336144153386
 2017,Colombia,America,Upper middle income,Multilateral,0.5080000315816474,0.5433531216775145
 2017,Colombia,America,Upper middle income,Private,1.71985700086569,2.504405476385905
@@ -5685,9 +5529,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,Philippines,Asia,Lower middle income,Bilateral,0.22415410757395404,0.2344492830939993
 2017,Philippines,Asia,Lower middle income,Multilateral,0.3794559008283584,0.2661390212219276
 2017,Philippines,Asia,Lower middle income,Private,0.6246754402842174,1.1020618466212657
-2017,Russia,Europe,Upper middle income,Bilateral,,0.05561228834897215
-2017,Russia,Europe,Upper middle income,Multilateral,0.0041026829361199635,0.012962580780121132
-2017,Russia,Europe,Upper middle income,Private,3.22914448611552,1.6512488929111062
 2017,Rwanda,Africa,Low income,Bilateral,5.959733014157569,0.16750427753161137
 2017,Rwanda,Africa,Low income,Multilateral,7.263438051442775,0.33860715984005185
 2017,Rwanda,Africa,Low income,Private,,0.2863936020750027
@@ -5748,9 +5589,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,Türkiye,Asia,Upper middle income,Private,1.6345603768982877,1.5119294248555182
 2017,Uganda,Africa,Low income,Bilateral,5.884382019124212,0.17599270493619987
 2017,Uganda,Africa,Low income,Multilateral,3.0962402453851756,0.3859912984833613
-2017,Ukraine,Europe,Lower middle income,Bilateral,0.9646089032079697,0.10020440304297805
-2017,Ukraine,Europe,Lower middle income,Multilateral,2.5241143665664825,1.90841986872029
-2017,Ukraine,Europe,Lower middle income,Private,2.6755375600881144,2.4918160028360696
 2017,Uzbekistan,Asia,Lower middle income,Bilateral,0.9210106208018557,0.3080045877160484
 2017,Uzbekistan,Asia,Lower middle income,Multilateral,1.1042996863774746,0.32320559897553197
 2017,Uzbekistan,Asia,Lower middle income,Private,0.0583253879608898,0.10798094408917382
@@ -5835,9 +5673,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,Chad,Africa,Low income,Bilateral,2.8621450344140555,0.35042702499547185
 2018,Chad,Africa,Low income,Multilateral,3.8013570186560406,0.16362892863611664
 2018,Chad,Africa,Low income,Private,,1.0826209020105053
-2018,China,Asia,Upper middle income,Bilateral,0.00911010522178819,0.022682320742735233
-2018,China,Asia,Upper middle income,Multilateral,0.02427476084847285,0.0278041010901031
-2018,China,Asia,Upper middle income,Private,0.5479537781301723,0.10430798912136491
 2018,Colombia,America,Upper middle income,Bilateral,0.5964373995582478,0.17736495785995615
 2018,Colombia,America,Upper middle income,Multilateral,0.9043186752223725,0.5511351327351522
 2018,Colombia,America,Upper middle income,Private,0.8354853288000862,2.364726129161628
@@ -6018,9 +5853,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,Philippines,Asia,Lower middle income,Bilateral,0.29077881274470796,0.21874848870667335
 2018,Philippines,Asia,Lower middle income,Multilateral,0.5267216389595263,0.2766379600798058
 2018,Philippines,Asia,Lower middle income,Private,0.8083209210822221,0.8545889044291061
-2018,Russia,Europe,Upper middle income,Bilateral,,0.0049962856728029475
-2018,Russia,Europe,Upper middle income,Multilateral,0.001426670135086902,0.010804562434589023
-2018,Russia,Europe,Upper middle income,Private,1.9590044985874253,3.7337693111717414
 2018,Rwanda,Africa,Low income,Bilateral,5.520043266576735,0.1725446155442565
 2018,Rwanda,Africa,Low income,Multilateral,6.842843163847672,0.38570878696689836
 2018,Rwanda,Africa,Low income,Private,,0.2749818408218325
@@ -6082,9 +5914,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,Uganda,Africa,Low income,Bilateral,5.309630593749084,0.26317472948826853
 2018,Uganda,Africa,Low income,Multilateral,2.4725909976859306,0.6772671311403379
 2018,Uganda,Africa,Low income,Private,0.12765467529804622,0.0017854283956764989
-2018,Ukraine,Europe,Lower middle income,Bilateral,0.625476454978765,0.08801317134651226
-2018,Ukraine,Europe,Lower middle income,Multilateral,1.0884318377432858,1.6985468094808884
-2018,Ukraine,Europe,Lower middle income,Private,2.0207917533380186,2.1524935547984967
 2018,Uzbekistan,Asia,Lower middle income,Bilateral,1.6228611868734633,0.3895686483828258
 2018,Uzbekistan,Asia,Lower middle income,Multilateral,3.4092333213542654,0.4581478507660299
 2018,Uzbekistan,Asia,Lower middle income,Private,,0.14704257461698503
@@ -6170,9 +5999,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,Chad,Africa,Low income,Bilateral,2.6463221286273084,0.08455338124260892
 2019,Chad,Africa,Low income,Multilateral,2.972642635313381,0.23060546165741835
 2019,Chad,Africa,Low income,Private,,0.8894569271354499
-2019,China,Asia,Upper middle income,Bilateral,0.006499889227786843,0.01941507316569739
-2019,China,Asia,Upper middle income,Multilateral,0.026582757679594997,0.026796188773830942
-2019,China,Asia,Upper middle income,Private,0.5263202699580214,0.1581204464394795
 2019,Colombia,America,Upper middle income,Bilateral,0.2967621612418938,0.2482555483122069
 2019,Colombia,America,Upper middle income,Multilateral,0.6641589471142685,0.6218175996347372
 2019,Colombia,America,Upper middle income,Private,0.9286344430514928,1.7533569634582347
@@ -6352,9 +6178,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,Philippines,Asia,Lower middle income,Bilateral,0.35721385915934006,0.1947489128317539
 2019,Philippines,Asia,Lower middle income,Multilateral,0.5101128926843638,0.28109526509793725
 2019,Philippines,Asia,Lower middle income,Private,1.1495800289525853,1.2559488847549114
-2019,Russia,Europe,Upper middle income,Bilateral,,0.005063139344939023
-2019,Russia,Europe,Upper middle income,Multilateral,0.0013922699502276318,0.009400840197674145
-2019,Russia,Europe,Upper middle income,Private,2.3034924022774987,2.3609919544972042
 2019,Rwanda,Africa,Low income,Bilateral,6.053610796520058,0.18337254132431124
 2019,Rwanda,Africa,Low income,Multilateral,7.569487742870952,0.40356970710488166
 2019,Rwanda,Africa,Low income,Private,0.619555340744321,0.2561623972933784
@@ -6417,9 +6240,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,Uganda,Africa,Low income,Bilateral,3.944011481540126,0.34362232813448396
 2019,Uganda,Africa,Low income,Multilateral,2.995583301929116,0.36956359908162456
 2019,Uganda,Africa,Low income,Private,0.11171740347821499,0.0283247370226691
-2019,Ukraine,Europe,Lower middle income,Bilateral,0.5326554430009743,0.07604925839558298
-2019,Ukraine,Europe,Lower middle income,Multilateral,0.5579688797661578,0.812384688210458
-2019,Ukraine,Europe,Lower middle income,Private,3.117341451705099,2.21267971165963
 2019,Uzbekistan,Asia,Lower middle income,Bilateral,1.8738637117643155,0.40521710171853226
 2019,Uzbekistan,Asia,Lower middle income,Multilateral,3.1622564123150423,0.5769936751045054
 2019,Uzbekistan,Asia,Lower middle income,Private,2.7382929120496318,0.15556516239798288
@@ -6503,9 +6323,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,Chad,Africa,Low income,Bilateral,3.361982089801989,0.3453638914195408
 2020,Chad,Africa,Low income,Multilateral,5.672294176815097,0.32791562052616896
 2020,Chad,Africa,Low income,Private,,1.0495119457097704
-2020,China,Asia,Upper middle income,Bilateral,0.00873355599573694,0.020092729384439824
-2020,China,Asia,Upper middle income,Multilateral,0.020022339476510102,0.02273324709942298
-2020,China,Asia,Upper middle income,Private,0.6172022892381932,0.1847112857408145
 2020,Colombia,America,Upper middle income,Bilateral,0.6989489790154396,0.20691798549699983
 2020,Colombia,America,Upper middle income,Multilateral,1.40966383951938,0.6502390401294091
 2020,Colombia,America,Upper middle income,Private,3.361651816946819,1.761906846208232
@@ -6684,9 +6501,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,Philippines,Asia,Lower middle income,Bilateral,0.5426138098858054,0.20152584993545283
 2020,Philippines,Asia,Lower middle income,Multilateral,1.9843514403277391,0.28015023231449254
 2020,Philippines,Asia,Lower middle income,Private,1.788458047773192,1.080759933656023
-2020,Russia,Europe,Upper middle income,Bilateral,0.012758782893852646,0.005350545339085557
-2020,Russia,Europe,Upper middle income,Multilateral,0.000912157621697175,0.007503368303631428
-2020,Russia,Europe,Upper middle income,Private,2.9141471441214417,4.048970576398409
 2020,Rwanda,Africa,Low income,Bilateral,6.420932748451784,0.3513800353877912
 2020,Rwanda,Africa,Low income,Multilateral,9.033299699203775,0.5021537422589206
 2020,Rwanda,Africa,Low income,Private,2.7622628526491693,0.2604934630885678
@@ -6751,9 +6565,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,Uganda,Africa,Low income,Bilateral,5.054367857463021,0.4210906367495452
 2020,Uganda,Africa,Low income,Multilateral,5.930932842302318,0.39213051098162255
 2020,Uganda,Africa,Low income,Private,1.0886421114245788,0.03127007778100034
-2020,Ukraine,Europe,Lower middle income,Bilateral,0.5145289840067447,0.18300560741157085
-2020,Ukraine,Europe,Lower middle income,Multilateral,1.662666494194142,0.8330372560453739
-2020,Ukraine,Europe,Lower middle income,Private,3.0240479756779886,3.377968971488062
 2020,Uzbekistan,Asia,Lower middle income,Bilateral,1.863292911581569,0.5262019181403071
 2020,Uzbekistan,Asia,Lower middle income,Multilateral,4.143346458281445,0.6417609607305936
 2020,Uzbekistan,Asia,Lower middle income,Private,3.7426597391448735,0.19919153806558743
@@ -6836,9 +6647,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Chad,Africa,Low income,Bilateral,3.0886370390161155,0.6581011272264632
 2021,Chad,Africa,Low income,Multilateral,3.925977635284139,0.5755801119592875
 2021,Chad,Africa,Low income,Private,,1.470771840542833
-2021,China,Asia,Upper middle income,Bilateral,0.0071466740543410755,0.01259045307503501
-2021,China,Asia,Upper middle income,Multilateral,0.01888676418171652,0.01689800779253248
-2021,China,Asia,Upper middle income,Private,0.67022711584628,0.25408294490551714
 2021,Colombia,America,Upper middle income,Bilateral,0.5686570286519818,0.17573460632566432
 2021,Colombia,America,Upper middle income,Multilateral,1.38132738424298,0.6303927560971015
 2021,Colombia,America,Upper middle income,Private,4.382183054515999,3.3851202318593963
@@ -7016,9 +6824,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Philippines,Asia,Lower middle income,Bilateral,0.5297663276636884,0.16828282706610467
 2021,Philippines,Asia,Lower middle income,Multilateral,1.0700734727610908,0.2375102224381926
 2021,Philippines,Asia,Lower middle income,Private,1.5951457375401878,1.5622832157366267
-2021,Russia,Europe,Upper middle income,Bilateral,0.02287885965055564,0.003957553502882998
-2021,Russia,Europe,Upper middle income,Multilateral,0.001033033327344103,0.004721696901390046
-2021,Russia,Europe,Upper middle income,Private,0.5348260673080588,1.8473408348061395
 2021,Rwanda,Africa,Low income,Bilateral,7.0662882683434365,0.34853111824843935
 2021,Rwanda,Africa,Low income,Multilateral,6.595568568714376,0.6157472885189541
 2021,Rwanda,Africa,Low income,Private,5.8751560662263635,3.209002080883018
@@ -7082,9 +6887,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Uganda,Africa,Low income,Bilateral,3.8867300459274534,0.8130870526759771
 2021,Uganda,Africa,Low income,Multilateral,3.677016468741213,0.526741331661824
 2021,Uganda,Africa,Low income,Private,0.04331692614115662,0.10956480105914332
-2021,Ukraine,Europe,Lower middle income,Bilateral,0.5213880939775315,0.1800100678059399
-2021,Ukraine,Europe,Lower middle income,Multilateral,1.3068693566692522,0.3378355226061501
-2021,Ukraine,Europe,Lower middle income,Private,2.0077667395601373,2.0172355272599893
 2021,Uzbekistan,Asia,Lower middle income,Bilateral,1.7276646081234468,0.5190069797847731
 2021,Uzbekistan,Asia,Lower middle income,Multilateral,1.9056590941222107,0.6856568572290628
 2021,Uzbekistan,Asia,Lower middle income,Private,2.9159911890633756,0.3614773902673812
@@ -7166,9 +6968,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Chad,Africa,Low income,Bilateral,2.9993429348544973,0.2600141302910053
 2022,Chad,Africa,Low income,Multilateral,3.3571907746362433,0.16349084821428572
 2022,Chad,Africa,Low income,Private,,1.3927248677248678
-2022,China,Asia,Upper middle income,Bilateral,0.002805941744337715,0.009238666395509867
-2022,China,Asia,Upper middle income,Multilateral,0.013174726173563833,0.0182725365980612
-2022,China,Asia,Upper middle income,Private,0.2562843324114002,0.3798570432179212
 2022,Colombia,America,Upper middle income,Bilateral,0.515999550232523,0.17771017129287411
 2022,Colombia,America,Upper middle income,Multilateral,1.07026237478974,0.5061434466943328
 2022,Colombia,America,Upper middle income,Private,1.5901500032884972,1.8766209115248733
@@ -7346,9 +7145,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Philippines,Asia,Lower middle income,Bilateral,0.4726153067398165,0.13286627660258632
 2022,Philippines,Asia,Lower middle income,Multilateral,0.8621201975838767,0.3077173481512996
 2022,Philippines,Asia,Lower middle income,Private,1.1838857162786556,0.9217307288935501
-2022,Russia,Europe,Upper middle income,Bilateral,0.01042488136348446,0.006403564464743233
-2022,Russia,Europe,Upper middle income,Multilateral,2.8071738888270023e-05,0.008353116769522112
-2022,Russia,Europe,Upper middle income,Private,,2.0088337277397796
 2022,Rwanda,Africa,Low income,Bilateral,4.471023547975054,0.26857375685626267
 2022,Rwanda,Africa,Low income,Multilateral,5.710794345931324,0.6190424231722893
 2022,Rwanda,Africa,Low income,Private,0.9725298670072883,0.36137200390713053
@@ -7411,9 +7207,6 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Uganda,Africa,Low income,Bilateral,3.057241272697123,0.6294671382969903
 2022,Uganda,Africa,Low income,Multilateral,2.494710708274604,0.6544416333637344
 2022,Uganda,Africa,Low income,Private,,0.1504358121217146
-2022,Ukraine,Europe,Lower middle income,Bilateral,11.620648450352334,0.09395274048136772
-2022,Ukraine,Europe,Lower middle income,Multilateral,9.724794780094829,0.5409587511604289
-2022,Ukraine,Europe,Lower middle income,Private,0.6703114340097569,0.8588612649142373
 2022,Uzbekistan,Asia,Lower middle income,Bilateral,0.738467550672735,0.4718099736377428
 2022,Uzbekistan,Asia,Lower middle income,Multilateral,4.124309524235867,0.6802011407893755
 2022,Uzbekistan,Asia,Lower middle income,Private,0.7158638383197792,0.4076330208411052
