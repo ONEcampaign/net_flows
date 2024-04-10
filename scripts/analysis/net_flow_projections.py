@@ -1,6 +1,7 @@
 import pandas as pd
 
 from scripts.analysis.net_flows import get_all_flows, prep_flows, rename_indicators
+from scripts.analysis.population_tools import add_population_under18
 from scripts.data.outflows import get_debt_service_data
 
 
@@ -76,7 +77,11 @@ if __name__ == "__main__":
     outflows_df = outflows_projections()
 
     net_flows = projected_netflows(inflows_df, outflows_df)
-    net_negative = projected_negative_list(net_flows)
+    net_negative = (
+        projected_negative_list(net_flows)
+        .pipe(add_population_under18, country_col="country")
+        .rename(columns={"population": "population_under_18"})
+    )
 
     nn23 = net_negative.query("year == 2023")
     nn24 = net_negative.query("year == 2024")
