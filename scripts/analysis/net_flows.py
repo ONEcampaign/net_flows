@@ -235,6 +235,12 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def exclude_outlier_countries(data: pd.DataFrame) -> pd.DataFrame:
+    data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])]
+
+    return data
+
+
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -258,10 +264,7 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     )
 
     if exclude_countries:
-        data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])].loc[
-            lambda d: d.year <= 2022
-        ]
-
+        data = exclude_outlier_countries(data)
     # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
 

@@ -1,6 +1,6 @@
 import pandas as pd
 
-from scripts.analysis.net_flows import get_all_flows
+from scripts.analysis.net_flows import get_all_flows, exclude_outlier_countries
 from scripts.analysis.population_tools import add_population_under18
 from scripts.config import Paths
 
@@ -110,7 +110,7 @@ def calculate_close_negative(threshold_gdp: float = 0.5) -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    df = get_all_flows()
+    df = get_all_flows().pipe(exclude_outlier_countries)
     # dfp = check_inflows_and_outflows_present(df).query("year == 2022")
     net = convert_to_net_flows(df).pipe(summarise_by_year_debtor)
     negative_count = count_negative_flows_by_year(net)

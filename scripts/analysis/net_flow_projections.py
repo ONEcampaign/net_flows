@@ -1,6 +1,11 @@
 import pandas as pd
 
-from scripts.analysis.net_flows import get_all_flows, prep_flows, rename_indicators
+from scripts.analysis.net_flows import (
+    get_all_flows,
+    prep_flows,
+    rename_indicators,
+    exclude_outlier_countries,
+)
 from scripts.analysis.population_tools import add_population_under18
 from scripts.data.outflows import get_debt_service_data
 
@@ -66,13 +71,13 @@ def projected_netflows(inflows: pd.DataFrame, outflows: pd.DataFrame) -> pd.Data
 def projected_negative_list(net_negative_df: pd.DataFrame) -> pd.DataFrame:
     """List of countries with negative net flows"""
 
-    data = net_negative_df.query("net_flows < 0")
+    data = net_negative_df  # .query("net_flows < 0")
 
     return data.filter(["year", "country", "continent", "income_level", "net_flows"])
 
 
 if __name__ == "__main__":
-    df = get_all_flows()
+    df = get_all_flows().pipe(exclude_outlier_countries)
     inflows_df = calculate_average_inflows(df).query("year == 2022")
     outflows_df = outflows_projections()
 
@@ -83,8 +88,10 @@ if __name__ == "__main__":
         .rename(columns={"population": "population_under_18"})
     )
 
+    count = net_negative.groupby(["year"])[["country"]].count().reset_index()
+
     nn23 = net_negative.query("year == 2023")
     nn24 = net_negative.query("year == 2024")
     nn25 = net_negative.query("year == 2025")
 
-    nn25.to_clipboard(index=False)
+    nn24.to_clipboard(index=False)
