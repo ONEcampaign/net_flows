@@ -15,60 +15,6 @@ def get_csv(doc: str) -> pd.DataFrame:
     return pd.read_csv(Paths.output / doc)
 
 
-def set_prices(df: pd.DataFrame, prices: str) -> pd.DataFrame:
-    return df.loc[lambda d: d.prices == prices]
-
-
-def pivot_table_by_indicator_type(
-    df: pd.DataFrame, index_for_pivot: list[str]
-) -> pd.DataFrame:
-
-    return df.pivot(
-        index=index_for_pivot, columns="indicator_type", values="value"
-    ).reset_index()
-
-
-def aggregate_by_year(df: pd.DataFrame, years: list[int] | range) -> pd.DataFrame:
-
-    df_years = df.loc[lambda d: d.year.isin(years)]
-
-    return (
-        df_years.groupby(["country", "continent", "prices"], observed=True)
-        .sum(["inflow", "outflow"])
-        .reset_index()
-    )
-
-
-def calculate_net_inflows(df: pd.DataFrame) -> pd.DataFrame:
-
-    df["net_inflows"] = df["inflow"] + df["outflow"]
-
-    return df
-
-
-def net_inflows_pipeline(df: pd.DataFrame, prices: str) -> pd.DataFrame:
-
-    df = set_prices(df=df, prices=prices)
-
-    # pivot by indicator type
-    index_for_pivot = [
-        "year",
-        "country",
-        "continent",
-        "counterpart_area",
-        "counterpart_type",
-        "prices",
-        "indicator",
-        "income_level",
-    ]
-
-    df = pivot_table_by_indicator_type(df=df, index_for_pivot=index_for_pivot)
-
-    df = calculate_net_inflows(df)
-
-    return df
-
-
 def remove_special_case_countries(df: pd.DataFrame, iso_to_remove) -> pd.DataFrame:
     return df.loc[lambda d: ~d.iso_3.isin(iso_to_remove)]
 
@@ -110,9 +56,9 @@ def flourish_2_histogram(df: pd.DataFrame) -> pd.DataFrame:
     data = histogram_chart(df=df, grouping="net_flows_over_gdp_percent")
 
     # specify bins required for analysis
-    #bins = ["-5 to -4", "-4 to -3", "-3 to -2", "-2 to -1", "-1 to 0", "0 to 1", "1 to 2", "2 to 3","3 to 4", "4 to 5"]
+    bins = ["-5 to -4", "-4 to -3", "-3 to -2", "-2 to -1", "-1 to 0", "0 to 1", "1 to 2", "2 to 3","3 to 4", "4 to 5"]
 
-    return data#.loc[lambda d: d.binned.isin(bins)]
+    return data.loc[lambda d: d.binned.isin(bins)]
 
 
 def histogram_chart(df: pd.DataFrame, grouping: str) -> pd.DataFrame:
