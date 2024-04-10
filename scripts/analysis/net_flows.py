@@ -237,6 +237,33 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def create_grouping_totals(
+    data: pd.DataFrame, group_column: str, exclude_cols: list[str]
+) -> pd.DataFrame:
+    """Create group totals as 'country'"""
+
+    dfs = []
+
+    for group in data[group_column].unique():
+        df_ = data.loc[lambda d: d[group_column] == group].copy()
+        df_["country"] = group
+        df_ = (
+            df_.groupby(
+                [c for c in df_.columns if c not in ["value"] + exclude_cols],
+                observed=True,
+                dropna=False,
+            )["value"]
+            .sum()
+            .reset_index()
+        )
+
+        dfs.append(df_)
+
+    groups = pd.concat(dfs, ignore_index=True)
+
+    return pd.concat([data, groups], ignore_index=True)
+
+
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -261,6 +288,16 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
 
     if exclude_countries:
         data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])]
+
+    # Create continent totals
+    data = create_grouping_totals(
+        data, group_column="continent", exclude_cols=["income_level"]
+    )
+
+    # Create income_level totals
+    data = create_grouping_totals(
+        data, group_column="income_level", exclude_cols=["continent"]
+    )
 
     # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
