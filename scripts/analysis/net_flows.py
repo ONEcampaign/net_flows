@@ -227,7 +227,7 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     df = pivot_by_indicator(df)
 
     # Calculate inflow and outflow as a percentage of GDP
-    df = calculate_flows_as_percent_of_gdp(data=df)
+    df = calculate_flows_as_percent_of_gdp(data=df).loc[lambda d: d.year <= 2022]
 
     # Save the data
     df.to_csv(Paths.output / "scatter_totals.csv", index=False)
@@ -235,7 +235,7 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def all_flows_pipeline() -> pd.DataFrame:
+def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
 
@@ -257,6 +257,11 @@ def all_flows_pipeline() -> pd.DataFrame:
         .reset_index()
     )
 
+    if exclude_countries:
+        data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])].loc[
+            lambda d: d.year <= 2022
+        ]
+
     # Save the data
     data.to_csv(Paths.output / "net_flows_full.csv", index=False)
 
@@ -267,5 +272,5 @@ def all_flows_pipeline() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
-    full_data = all_flows_pipeline()
-    scatter = create_scatter_data(full_data)
+    full_data = all_flows_pipeline().loc[lambda d: d.year <= 2022]
+    scatter = create_scatter_data(full_data).loc[lambda d: d.year <= 2022]
