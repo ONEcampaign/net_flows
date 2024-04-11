@@ -287,6 +287,74 @@ def summarise_by_country(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def create_groupings(data: pd.DataFrame) -> pd.DataFrame:
+    # Create world totals
+    data_grouped = create_world_total(data, "Developing countries")
+
+    # Create continent totals
+    data_grouped = create_grouping_totals(
+        data_grouped, group_column="continent", exclude_cols=["income_level"]
+    )
+
+    # Create income_level totals
+    data_grouped = create_grouping_totals(
+        data_grouped, group_column="income_level", exclude_cols=["continent"]
+    )
+
+    # remove individual country data
+    data_grouped = data_grouped.loc[lambda d: d.country.isin(GROUPS)]
+
+    return data_grouped
+
+
+def save_pipeline(data: pd.DataFrame, suffix: str) -> None:
+
+    data_grouped = create_groupings(data)
+
+    # Save detailed data as parquet
+    data.reset_index(drop=True).to_parquet(
+        Paths.output / f"full_flows_country{suffix}.parquet"
+    )
+
+    # Saved country grouping data as parquet
+    data_grouped.reset_index(drop=True).to_parquet(
+        Paths.output / f"full_flows_grouping{suffix}.parquet"
+    )
+
+    # convert to net flows
+    data_net = convert_to_net_flows(data=data)
+    data_grouped_net = convert_to_net_flows(data=data_grouped)
+
+    # Save net flows data as parquet
+    data_net.reset_index(drop=True).to_parquet(
+        Paths.output / f"net_flows_country{suffix}.parquet"
+    )
+    data_grouped_net.reset_index(drop=True).to_parquet(
+        Paths.output / f"net_flows_grouping{suffix}.parquet"
+    )
+
+    # Summarise data by country
+    data_summary = summarise_by_country(data=data)
+    data_grouped_summary = summarise_by_country(data=data_grouped)
+    data_net_summary = summarise_by_country(data=data_net)
+    data_grouped_net_summary = summarise_by_country(data=data_grouped_net)
+
+    # Save summary data as parquet
+    data_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_flows_country{suffix}.parquet"
+    )
+    data_grouped_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_flows_grouping{suffix}.parquet"
+    )
+
+    data_net_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_net_flows_country{suffix}.parquet"
+    )
+    data_grouped_net_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_net_flows_grouping{suffix}.parquet"
+    )
+
+
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -312,62 +380,8 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     if exclude_countries:
         data = exclude_outlier_countries(data)
 
-    # Create world totals
-    data_grouped = create_world_total(data, "Developing countries")
-
-    # Create continent totals
-    data_grouped = create_grouping_totals(
-        data_grouped, group_column="continent", exclude_cols=["income_level"]
-    )
-
-    # Create income_level totals
-    data_grouped = create_grouping_totals(
-        data_grouped, group_column="income_level", exclude_cols=["continent"]
-    )
-
-    # remove individual country data
-    data_grouped = data_grouped.loc[lambda d: d.country.isin(GROUPS)]
-
-    # Save detailed data as parquet
-    data.reset_index(drop=True).to_parquet(Paths.output / "full_flows_country.parquet")
-
-    # Saved country grouping data as parquet
-    data_grouped.reset_index(drop=True).to_parquet(
-        Paths.output / "full_flows_grouping.parquet"
-    )
-
-    # convert to net flows
-    data_net = convert_to_net_flows(data=data)
-    data_grouped_net = convert_to_net_flows(data=data_grouped)
-
-    # Save net flows data as parquet
-    data_net.reset_index(drop=True).to_parquet(
-        Paths.output / "net_flows_country.parquet"
-    )
-    data_grouped_net.reset_index(drop=True).to_parquet(
-        Paths.output / "net_flows_grouping.parquet"
-    )
-
-    # Summarise data by country
-    data_summary = summarise_by_country(data=data)
-    data_grouped_summary = summarise_by_country(data=data_grouped)
-    data_net_summary = summarise_by_country(data=data_net)
-    data_grouped_net_summary = summarise_by_country(data=data_grouped_net)
-
-    # Save summary data as parquet
-    data_summary.reset_index(drop=True).to_parquet(
-        Paths.output / "summary_flows_country.parquet"
-    )
-    data_grouped_summary.reset_index(drop=True).to_parquet(
-        Paths.output / "summary_flows_grouping.parquet"
-    )
-
-    data_net_summary.reset_index(drop=True).to_parquet(
-        Paths.output / "summary_net_flows_country.parquet"
-    )
-    data_grouped_net_summary.reset_index(drop=True).to_parquet(
-        Paths.output / "summary_net_flows_grouping.parquet"
-    )
+    # Save the data
+    save_pipeline(data, "")
 
     return data
 

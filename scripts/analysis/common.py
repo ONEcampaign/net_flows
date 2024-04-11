@@ -1,6 +1,19 @@
 import pandas as pd
 
 
+GROUPS = {
+    "Developing countries": 1,
+    "Low income": 2,
+    "Lower middle income": 3,
+    "Upper middle income": 4,
+    "Africa": 7,
+    "Europe": 8,
+    "Asia": 9,
+    "America": 10,
+    "Oceania": 11,
+}
+
+
 def create_grouping_totals(
     data: pd.DataFrame, group_column: str, exclude_cols: list[str]
 ) -> pd.DataFrame:
@@ -49,14 +62,17 @@ def create_world_total(data: pd.DataFrame, name: str = "World") -> pd.DataFrame:
     return pd.concat([data, df], ignore_index=True)
 
 
-GROUPS = {
-    "Developing countries": 1,
-    "Low income": 2,
-    "Lower middle income": 3,
-    "Upper middle income": 4,
-    "Africa": 7,
-    "Europe": 8,
-    "Asia": 9,
-    "America": 10,
-    "Oceania": 11,
-}
+def add_china_as_counterpart_type(df: pd.DataFrame) -> pd.DataFrame:
+    """Adds China as counterpart type"""
+
+    # Get china as counterpart
+    china = df.loc[lambda d: d.counterpart_area == "China"].copy()
+
+    # Add counterpart type, by type
+    china["counterpart_type"] = "China"
+
+    # Remove China from the original data
+    df = df.loc[lambda d: d.counterpart_area != "China"]
+
+    # Concatenate the data
+    return pd.concat([df, china], ignore_index=True)

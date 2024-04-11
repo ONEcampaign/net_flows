@@ -7,6 +7,7 @@ from scripts.analysis.common import (
     create_grouping_totals,
     create_world_total,
     GROUPS,
+    add_china_as_counterpart_type,
 )
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
@@ -15,22 +16,6 @@ from scripts.data.outflows import get_debt_service_data
 def remove_world(df: pd.DataFrame) -> pd.DataFrame:
     """Remove 'World' (totals) from counterpart area data"""
     return df.loc[lambda d: d.counterpart_area != "World"]
-
-
-def add_china_as_counterpart_type(df: pd.DataFrame) -> pd.DataFrame:
-    """Adds China as counterpart type"""
-
-    # Get china as counterpart
-    china = df.loc[lambda d: d.counterpart_area == "China"].copy()
-
-    # Add counterpart type, by type
-    china["counterpart_type"] = "China"
-
-    # Remove China from the original data
-    df = df.loc[lambda d: d.counterpart_area != "China"]
-
-    # Concatenate the data
-    return pd.concat([df, china], ignore_index=True)
 
 
 def groupby_counterpart_type(df: pd.DataFrame) -> pd.DataFrame:
