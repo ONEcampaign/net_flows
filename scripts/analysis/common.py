@@ -47,3 +47,16 @@ def create_world_total(data: pd.DataFrame, name: str = "World") -> pd.DataFrame:
     )["value"].sum()
 
     return pd.concat([data, df], ignore_index=True)
+
+
+GROUPS = {
+    "Developing countries": 1,
+    "Low income": 2,
+    "Lower middle income": 3,
+    "Upper middle income": 4,
+    "Africa": 7,
+    "Europe": 8,
+    "Asia": 9,
+    "America": 10,
+    "Oceania": 11,
+}

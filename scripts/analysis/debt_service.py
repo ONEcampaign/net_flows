@@ -6,6 +6,7 @@ from scripts.analysis.common import (
     exclude_outlier_countries,
     create_grouping_totals,
     create_world_total,
+    GROUPS,
 )
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
@@ -63,19 +64,8 @@ def add_africa_total(df: pd.DataFrame) -> pd.DataFrame:
 
 def reorder_countries(df: pd.DataFrame, counterpart_type: bool = False) -> pd.DataFrame:
     """Reorder countries by continent and income level"""
-    top = {
-        "Developing countries": 1,
-        "Low income": 2,
-        "Lower middle income": 3,
-        "Upper middle income": 4,
-        "Africa": 7,
-        "Europe": 8,
-        "Asia": 9,
-        "America": 10,
-        "Oceania": 11,
-    }
 
-    df["order"] = df["country"].map(top).fillna(99)
+    df["order"] = df["country"].map(GROUPS).fillna(99)
 
     counterpart_order = {
         "Bilateral": 1,

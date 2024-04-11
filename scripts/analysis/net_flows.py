@@ -6,6 +6,7 @@ from scripts.analysis.common import (
     create_grouping_totals,
     exclude_outlier_countries,
     create_world_total,
+    GROUPS,
 )
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
@@ -268,23 +269,28 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
         data = exclude_outlier_countries(data)
 
     # Create world totals
-    data = create_world_total(data)
+    data_grouped = create_world_total(data)
 
     # Create continent totals
-    data = create_grouping_totals(
-        data, group_column="continent", exclude_cols=["income_level"]
+    data_grouped = create_grouping_totals(
+        data_grouped, group_column="continent", exclude_cols=["income_level"]
     )
 
     # Create income_level totals
-    data = create_grouping_totals(
-        data, group_column="income_level", exclude_cols=["continent"]
+    data_grouped = create_grouping_totals(
+        data_grouped, group_column="income_level", exclude_cols=["continent"]
     )
 
-    # Save the data
-    # data.to_csv(Paths.output / "net_flows_full.csv", index=False)
+    # remove individual country data
+    data_grouped = data_grouped.loc[lambda d: d.country.isin(GROUPS)]
 
     # Save as parquet
-    data.reset_index(drop=True).to_parquet(Paths.output / "net_flows_full.parquet")
+    data.reset_index(drop=True).to_parquet(Paths.output / "full_flows_country.parquet")
+
+    # Saved grouped data
+    data_grouped.reset_index(drop=True).to_parquet(
+        Paths.output / "full_flows_grouping.parquet"
+    )
 
     return data
 
