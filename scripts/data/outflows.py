@@ -43,7 +43,7 @@ def get_debt_service_data(constant: bool = False) -> pd.DataFrame:
     # get bilateral amt data, split by concessional and non-concessional
     bilateral_amt = get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
-        end_year=config.ANALYSIS_YEARS[1],
+        end_year=config.ANALYSIS_YEARS[1] + 3,
         total_indicator=outflow_indicators["bilateral_amt"][0],
         concessional_indicator=outflow_indicators["bilateral_amt"][1],
         indicator_prefix="bilateral",
@@ -51,7 +51,7 @@ def get_debt_service_data(constant: bool = False) -> pd.DataFrame:
     # get bilateral int data, split by concessional and non-concessional
     bilateral_int = get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
-        end_year=config.ANALYSIS_YEARS[1],
+        end_year=config.ANALYSIS_YEARS[1] + 3,
         total_indicator=outflow_indicators["bilateral_int"][0],
         concessional_indicator=outflow_indicators["bilateral_int"][1],
         indicator_prefix="bilateral",
@@ -60,7 +60,7 @@ def get_debt_service_data(constant: bool = False) -> pd.DataFrame:
     # get multilateral amt data, split by concessional and non-concessional
     multilateral_amt = get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
-        end_year=config.ANALYSIS_YEARS[1],
+        end_year=config.ANALYSIS_YEARS[1] + 3,
         total_indicator=outflow_indicators["multilateral_amt"][0],
         concessional_indicator=outflow_indicators["multilateral_amt"][1],
         indicator_prefix="multilateral",
@@ -68,7 +68,7 @@ def get_debt_service_data(constant: bool = False) -> pd.DataFrame:
     # get multilateral int data, split by concessional and non-concessional
     multilateral_int = get_concessional_non_concessional(
         start_year=config.ANALYSIS_YEARS[0],
-        end_year=config.ANALYSIS_YEARS[1],
+        end_year=config.ANALYSIS_YEARS[1] + 3,
         total_indicator=outflow_indicators["multilateral_int"][0],
         concessional_indicator=outflow_indicators["multilateral_int"][1],
         indicator_prefix="multilateral",
@@ -85,7 +85,7 @@ def get_debt_service_data(constant: bool = False) -> pd.DataFrame:
             outflow_indicators["other_private_int"],
         ],
         start_year=config.ANALYSIS_YEARS[0],
-        end_year=config.ANALYSIS_YEARS[1],
+        end_year=config.ANALYSIS_YEARS[1] + 3,
     )
 
     # Get bonds data
