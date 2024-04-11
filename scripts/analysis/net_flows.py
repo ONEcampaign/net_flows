@@ -261,6 +261,32 @@ def convert_to_net_flows(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def summarise_by_country(data: pd.DataFrame) -> pd.DataFrame:
+    """Summarise the data by country"""
+
+    data = (
+        data.groupby(
+            [
+                c
+                for c in data.columns
+                if c
+                not in [
+                    "value",
+                    "counterpart_area",
+                    "counterpart_type",
+                    "indicator",
+                ]
+            ],
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .reset_index()
+    )
+
+    return data
+
+
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -320,6 +346,27 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     )
     data_grouped_net.reset_index(drop=True).to_parquet(
         Paths.output / "net_flows_grouping.parquet"
+    )
+
+    # Summarise data by country
+    data_summary = summarise_by_country(data=data)
+    data_grouped_summary = summarise_by_country(data=data_grouped)
+    data_net_summary = summarise_by_country(data=data_net)
+    data_grouped_net_summary = summarise_by_country(data=data_grouped_net)
+
+    # Save summary data as parquet
+    data_summary.reset_index(drop=True).to_parquet(
+        Paths.output / "summary_flows_country.parquet"
+    )
+    data_grouped_summary.reset_index(drop=True).to_parquet(
+        Paths.output / "summary_flows_grouping.parquet"
+    )
+
+    data_net_summary.reset_index(drop=True).to_parquet(
+        Paths.output / "summary_net_flows_country.parquet"
+    )
+    data_grouped_net_summary.reset_index(drop=True).to_parquet(
+        Paths.output / "summary_net_flows_grouping.parquet"
     )
 
     return data
