@@ -304,7 +304,7 @@ def add_nnt_column(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def flourish_5_connected_scatterplot() -> pd.DataFrame:
-    data = get_parquet(doc="net_flows_full.parquet")
+    data = get_parquet(doc="full_flows_country.parquet")
 
     # filter for current prices
     data = data.loc[lambda d: d.prices == "constant"]
