@@ -313,7 +313,7 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
         data = exclude_outlier_countries(data)
 
     # Create world totals
-    data_grouped = create_world_total(data)
+    data_grouped = create_world_total(data, "Developing countries")
 
     # Create continent totals
     data_grouped = create_grouping_totals(
