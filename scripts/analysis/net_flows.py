@@ -3,9 +3,11 @@ from bblocks import set_bblocks_data_path
 from bblocks.dataframe_tools.add import add_gdp_column
 
 from scripts.analysis.common import (
-    create_grouping_totals,
     exclude_outlier_countries,
-    create_world_total,
+    add_china_as_counterpart_type,
+    convert_to_net_flows,
+    summarise_by_country,
+    create_groupings,
 )
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
@@ -242,6 +244,54 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def save_pipeline(data: pd.DataFrame, suffix: str) -> None:
+
+    data_grouped = create_groupings(data)
+
+    # Save detailed data as parquet
+    data.reset_index(drop=True).to_parquet(
+        Paths.output / f"full_flows_country{suffix}.parquet"
+    )
+
+    # Saved country grouping data as parquet
+    data_grouped.reset_index(drop=True).to_parquet(
+        Paths.output / f"full_flows_grouping{suffix}.parquet"
+    )
+
+    # convert to net flows
+    data_net = convert_to_net_flows(data=data)
+    data_grouped_net = convert_to_net_flows(data=data_grouped)
+
+    # Save net flows data as parquet
+    data_net.reset_index(drop=True).to_parquet(
+        Paths.output / f"net_flows_country{suffix}.parquet"
+    )
+    data_grouped_net.reset_index(drop=True).to_parquet(
+        Paths.output / f"net_flows_grouping{suffix}.parquet"
+    )
+
+    # Summarise data by country
+    data_summary = summarise_by_country(data=data)
+    data_grouped_summary = summarise_by_country(data=data_grouped)
+    data_net_summary = summarise_by_country(data=data_net)
+    data_grouped_net_summary = summarise_by_country(data=data_grouped_net)
+
+    # Save summary data as parquet
+    data_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_flows_country{suffix}.parquet"
+    )
+    data_grouped_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_flows_grouping{suffix}.parquet"
+    )
+
+    data_net_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_net_flows_country{suffix}.parquet"
+    )
+    data_grouped_net_summary.reset_index(drop=True).to_parquet(
+        Paths.output / f"summary_net_flows_grouping{suffix}.parquet"
+    )
+
+
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -267,24 +317,24 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     if exclude_countries:
         data = exclude_outlier_countries(data)
 
-    # Create world totals
-    data = create_world_total(data)
+    # Save the data
+    save_pipeline(data, "")
 
-    # Create continent totals
-    data = create_grouping_totals(
-        data, group_column="continent", exclude_cols=["income_level"]
-    )
-
-    # Create income_level totals
-    data = create_grouping_totals(
-        data, group_column="income_level", exclude_cols=["continent"]
-    )
+    # separate china as counterpart type and produce a summary file
+    data_china = data.pipe(add_china_as_counterpart_type)
 
     # Save the data
-    # data.to_csv(Paths.output / "net_flows_full.csv", index=False)
+    data_china = (
+        data_china.groupby(
+            [c for c in data_china.columns if c not in ["value", "counterpart_area"]],
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .reset_index()
+    )
 
-    # Save as parquet
-    data.reset_index(drop=True).to_parquet(Paths.output / "net_flows_full.parquet")
+    save_pipeline(data_china, "_china_as_counterpart_type")
 
     return data
 

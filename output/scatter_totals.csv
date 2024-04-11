@@ -4183,7 +4183,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2013,Malawi,Africa,Low income,Bilateral,9.820750193514645,0.16622397228033473
 2013,Malawi,Africa,Low income,Multilateral,6.538600141213389,0.2964534035041841
 2013,Maldives,Asia,Upper middle income,Bilateral,6.156461101643336,0.9255301430310408
-2013,Maldives,Asia,Upper middle income,Multilateral,0.5951213998782715,0.5406108277541083
+2013,Maldives,Asia,Upper middle income,Multilateral,0.5951213998782715,0.5406025471698114
 2013,Maldives,Asia,Upper middle income,Private,0.19801497565429094,0.5093095069993914
 2013,Mali,Africa,Low income,Bilateral,6.302779318130333,0.25549546401872686
 2013,Mali,Africa,Low income,Multilateral,5.395814118402175,0.5280326867024088
@@ -4498,9 +4498,9 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2014,Malawi,Africa,Low income,Bilateral,7.001667617874736,0.17865479357260144
 2014,Malawi,Africa,Low income,Multilateral,5.1848867475955895,0.27707633356790995
 2014,Malawi,Africa,Low income,Private,,0.03608578935022285
-2014,Maldives,Asia,Upper middle income,Bilateral,1.4943611707317073,3.7063195691056916
+2014,Maldives,Asia,Upper middle income,Bilateral,1.4943611707317073,3.7064279701897025
 2014,Maldives,Asia,Upper middle income,Multilateral,0.5026417262872629,0.36663072086720866
-2014,Maldives,Asia,Upper middle income,Private,0.30457029539295394,0.43066138753387534
+2014,Maldives,Asia,Upper middle income,Private,0.30457029539295394,0.4275990569105691
 2014,Mali,Africa,Low income,Bilateral,5.577464781821978,0.2837103883360011
 2014,Mali,Africa,Low income,Multilateral,4.397412442758717,0.40947738186373445
 2014,Mali,Africa,Low income,Private,0.0002034824970422437,0.006650172593778272
@@ -4781,7 +4781,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2015,India,Asia,Lower middle income,Multilateral,0.21643449047580562,0.16638446836598383
 2015,India,Asia,Lower middle income,Private,0.8123690262693775,0.39618194469929974
 2015,Indonesia,Asia,Lower middle income,Bilateral,0.2692827893872837,0.4452036034533035
-2015,Indonesia,Asia,Lower middle income,Multilateral,0.46949139583219573,0.18887688914551531
+2015,Indonesia,Asia,Lower middle income,Multilateral,0.46949139583219573,0.18888420842041914
 2015,Indonesia,Asia,Lower middle income,Private,2.5541206488827655,1.0189612670129575
 2015,Iran,Asia,Lower middle income,Bilateral,0.025129320479661415,0.04280975142546438
 2015,Iran,Asia,Lower middle income,Multilateral,0.007072017448467748,0.021361665270593307
@@ -5106,7 +5106,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2016,India,Asia,Lower middle income,Multilateral,0.21556367362733134,0.17450602977601534
 2016,India,Asia,Lower middle income,Private,0.1983875639140666,0.7256863791964442
 2016,Indonesia,Asia,Lower middle income,Bilateral,0.23831412631723506,0.42330418707473505
-2016,Indonesia,Asia,Lower middle income,Multilateral,0.33745054618449766,0.19724995061508518
+2016,Indonesia,Asia,Lower middle income,Multilateral,0.33745054618449766,0.1974512239154738
 2016,Indonesia,Asia,Lower middle income,Private,2.401903351168265,1.0947452698628637
 2016,Iran,Asia,Lower middle income,Bilateral,0.029698823361176487,0.026427891263246604
 2016,Iran,Asia,Lower middle income,Multilateral,0.011519405906008619,0.019435469192781447
@@ -5270,7 +5270,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2016,Vanuatu,Oceania,Lower middle income,Bilateral,16.229462361290324,0.6979883096774193
 2016,Vanuatu,Oceania,Lower middle income,Multilateral,3.5003870967741935,0.3407741935483871
 2016,Vietnam,Asia,Lower middle income,Bilateral,1.391551042689553,0.5887042327461074
-2016,Vietnam,Asia,Lower middle income,Multilateral,0.771903173518517,0.23503499944476616
+2016,Vietnam,Asia,Lower middle income,Multilateral,0.771903173518517,0.2350683134771125
 2016,Vietnam,Asia,Lower middle income,Private,0.1940552912994852,0.6283351375393621
 2016,Yemen,Asia,Low income,Bilateral,5.7223960661600355,0.021909757008748962
 2016,Yemen,Asia,Low income,Multilateral,0.773148778657641,0.38950083785682355
@@ -5430,7 +5430,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,India,Asia,Lower middle income,Multilateral,0.17832739291789082,0.15882031193639753
 2017,India,Asia,Lower middle income,Private,1.2027890646886445,0.3004862190558445
 2017,Indonesia,Asia,Lower middle income,Bilateral,0.24292917688997429,0.35413759725846633
-2017,Indonesia,Asia,Lower middle income,Multilateral,0.2378938575564506,0.1886502295443579
+2017,Indonesia,Asia,Lower middle income,Multilateral,0.2378938575564506,0.18895008478665473
 2017,Indonesia,Asia,Lower middle income,Private,2.364594440142197,1.263548845621326
 2017,Iran,Asia,Lower middle income,Bilateral,0.048451156134905686,0.025990543414628135
 2017,Iran,Asia,Lower middle income,Multilateral,0.010468992562070048,0.02137967442366827
@@ -5453,7 +5453,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,Kyrgyz Republic,Asia,Lower middle income,Bilateral,6.748349749448267,0.7975444450214202
 2017,Kyrgyz Republic,Asia,Lower middle income,Multilateral,2.8805988056601324,0.9218754485265481
 2017,Laos,Asia,Lower middle income,Bilateral,4.868900128408091,1.5313315250659632
-2017,Laos,Asia,Lower middle income,Multilateral,1.3035006291410143,0.5335182099091176
+2017,Laos,Asia,Lower middle income,Multilateral,1.3035006291410143,0.533547526824978
 2017,Laos,Asia,Lower middle income,Private,2.7376613544415127,0.7166313960715333
 2017,Lebanon,Asia,Lower middle income,Bilateral,1.837366189748812,0.32537232990118425
 2017,Lebanon,Asia,Lower middle income,Multilateral,1.298244621520706,0.2965719157803425
@@ -5498,7 +5498,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,Mozambique,Africa,Low income,Multilateral,4.798483224903548,0.6472391179363038
 2017,Mozambique,Africa,Low income,Private,0.14846564641803464,1.2709268931084046
 2017,Myanmar,Asia,Lower middle income,Bilateral,1.6863118311652276,0.5122688522369302
-2017,Myanmar,Asia,Lower middle income,Multilateral,0.8708309530416047,0.08508712063590514
+2017,Myanmar,Asia,Lower middle income,Multilateral,0.8708309530416047,0.08512629343692363
 2017,Myanmar,Asia,Lower middle income,Private,0.05262571074150848,0.42232062203143617
 2017,Nepal,Asia,Lower middle income,Bilateral,2.3118383446085877,0.12839318963136823
 2017,Nepal,Asia,Lower middle income,Multilateral,2.6869773205163607,0.5902799930967831
@@ -5595,7 +5595,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2017,Vanuatu,Oceania,Lower middle income,Bilateral,14.300629647727273,0.6577567045454545
 2017,Vanuatu,Oceania,Lower middle income,Multilateral,3.54875,0.31204545454545457
 2017,Vietnam,Asia,Lower middle income,Bilateral,1.324552793976995,0.615533434210004
-2017,Vietnam,Asia,Lower middle income,Multilateral,0.6207386006113956,0.2562712306592895
+2017,Vietnam,Asia,Lower middle income,Multilateral,0.6207386006113956,0.2563903337050792
 2017,Vietnam,Asia,Lower middle income,Private,0.3113698848309639,0.4588750426785914
 2017,Yemen,Asia,Low income,Bilateral,7.858319052231577,0.0009723567543402131
 2017,Yemen,Asia,Low income,Multilateral,2.9974119342820953,0.2929401683928172
@@ -5754,7 +5754,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,India,Asia,Lower middle income,Multilateral,0.2153167500379218,0.17312516740352135
 2018,India,Asia,Lower middle income,Private,0.37652839847868796,0.6243347152830447
 2018,Indonesia,Asia,Lower middle income,Bilateral,0.3483936425372347,0.337032553490424
-2018,Indonesia,Asia,Lower middle income,Multilateral,0.3403403885452331,0.23034336892328644
+2018,Indonesia,Asia,Lower middle income,Multilateral,0.3403403885452331,0.23092790345350098
 2018,Indonesia,Asia,Lower middle income,Private,2.392705783631115,1.1124075433917389
 2018,Iran,Asia,Lower middle income,Bilateral,0.04305308382318575,0.011118212113585841
 2018,Iran,Asia,Lower middle income,Multilateral,0.01043520465944022,0.02201365256131394
@@ -5777,7 +5777,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,Kyrgyz Republic,Asia,Lower middle income,Bilateral,4.28770220166848,0.9436067174464998
 2018,Kyrgyz Republic,Asia,Lower middle income,Multilateral,2.967924232861806,0.9356013577560149
 2018,Laos,Asia,Lower middle income,Bilateral,8.165839537808173,1.8357130886327282
-2018,Laos,Asia,Lower middle income,Multilateral,1.3109811924328498,0.5386201571893442
+2018,Laos,Asia,Lower middle income,Multilateral,1.3109811924328498,0.5386973730075562
 2018,Laos,Asia,Lower middle income,Private,1.6345047620098172,1.1527409552699799
 2018,Lebanon,Asia,Lower middle income,Bilateral,1.850830048450848,0.294600509280341
 2018,Lebanon,Asia,Lower middle income,Multilateral,0.8963513524343819,0.2935483652392488
@@ -5822,7 +5822,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,Mozambique,Africa,Low income,Multilateral,4.322207455708992,0.5637407874705289
 2018,Mozambique,Africa,Low income,Private,0.09212115661839003,1.4326430596160324
 2018,Myanmar,Asia,Lower middle income,Bilateral,2.0933367102955067,0.6077082337066522
-2018,Myanmar,Asia,Lower middle income,Multilateral,0.7147093659575106,0.0839470774674283
+2018,Myanmar,Asia,Lower middle income,Multilateral,0.7147093659575106,0.08404003238429361
 2018,Myanmar,Asia,Lower middle income,Private,0.07332783385058246,0.5359021291173781
 2018,Nepal,Asia,Lower middle income,Bilateral,2.1196126525126844,0.06670169908190385
 2018,Nepal,Asia,Lower middle income,Multilateral,2.974223312998309,0.5823373492993477
@@ -5920,14 +5920,14 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2018,Vanuatu,Oceania,Lower middle income,Bilateral,9.805256921420883,1.248917922497309
 2018,Vanuatu,Oceania,Lower middle income,Multilateral,5.56254036598493,0.49494079655543594
 2018,Vietnam,Asia,Lower middle income,Bilateral,0.7338746219331954,0.6278495623870989
-2018,Vietnam,Asia,Lower middle income,Multilateral,0.5014215607777449,0.3007711838276349
+2018,Vietnam,Asia,Lower middle income,Multilateral,0.5014215607777449,0.30104083272572013
 2018,Vietnam,Asia,Lower middle income,Private,0.18492874782408775,0.429060044175124
 2018,Yemen,Asia,Low income,Bilateral,18.434925483661946,0.0010367490511894843
 2018,Yemen,Asia,Low income,Multilateral,2.9913512491900396,0.3872581690271221
 2018,Zambia,Africa,Low income,Bilateral,4.917631052751596,1.0757420211310431
 2018,Zambia,Africa,Low income,Multilateral,1.803259158938887,0.18595322172392825
 2018,Zambia,Africa,Low income,Private,3.890399132335056,1.9290171784737002
-2018,Zimbabwe,Africa,Lower middle income,Bilateral,2.060918400162009,0.10563030592682598
+2018,Zimbabwe,Africa,Lower middle income,Bilateral,2.060918400162009,0.10431588308356961
 2018,Zimbabwe,Africa,Lower middle income,Multilateral,0.8926852976913731,0.1369002295126232
 2018,Zimbabwe,Africa,Lower middle income,Private,0.00010800594032671797,0.00010800594032671797
 2019,Afghanistan,Asia,Low income,Bilateral,16.52919580684467,0.023903292011019286
@@ -6080,7 +6080,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,India,Asia,Lower middle income,Multilateral,0.24471707036581195,0.19212370225806796
 2019,India,Asia,Lower middle income,Private,0.5080864706535807,0.28014241841790655
 2019,Indonesia,Asia,Lower middle income,Bilateral,0.13938446764929208,0.3119164612086293
-2019,Indonesia,Asia,Lower middle income,Multilateral,0.34186966408504177,0.2947277849658314
+2019,Indonesia,Asia,Lower middle income,Multilateral,0.34186966408504177,0.29630230816919023
 2019,Indonesia,Asia,Lower middle income,Private,2.4253144676939566,1.290418692411452
 2019,Iran,Asia,Lower middle income,Bilateral,0.0673844855125839,0.008011772711848976
 2019,Iran,Asia,Lower middle income,Multilateral,0.022238985632588203,0.03681915918363969
@@ -6102,7 +6102,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,Kyrgyz Republic,Asia,Lower middle income,Bilateral,4.091033422962014,1.0021952219376866
 2019,Kyrgyz Republic,Asia,Lower middle income,Multilateral,2.6411715194195478,0.8927352635510031
 2019,Laos,Asia,Lower middle income,Bilateral,4.5067214033031435,1.748023272242941
-2019,Laos,Asia,Lower middle income,Multilateral,1.83900368460309,0.5229782978156633
+2019,Laos,Asia,Lower middle income,Multilateral,1.83900368460309,0.5232127144379328
 2019,Laos,Asia,Lower middle income,Private,2.181125842301545,1.83812631752797
 2019,Lebanon,Asia,Lower middle income,Bilateral,2.089508354756289,0.2682630898191824
 2019,Lebanon,Asia,Lower middle income,Multilateral,0.7391341079009434,0.3193402761399371
@@ -6147,7 +6147,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,Mozambique,Africa,Low income,Multilateral,5.078633545808967,0.6917507823261858
 2019,Mozambique,Africa,Low income,Private,0.2324741877842755,1.9657279753086416
 2019,Myanmar,Asia,Lower middle income,Bilateral,2.4301292984215577,0.41727982703991157
-2019,Myanmar,Asia,Lower middle income,Multilateral,0.8004325252172902,0.07575576872765327
+2019,Myanmar,Asia,Lower middle income,Multilateral,0.8004325252172902,0.0759069271242115
 2019,Myanmar,Asia,Lower middle income,Private,0.03481765806226563,0.4232674446963751
 2019,Nepal,Asia,Lower middle income,Bilateral,2.334187082431405,0.13151869537237465
 2019,Nepal,Asia,Lower middle income,Multilateral,2.872027690575089,0.5869432206166267
@@ -6246,14 +6246,14 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2019,Vanuatu,Oceania,Lower middle income,Bilateral,10.157653677419354,0.5892096344086022
 2019,Vanuatu,Oceania,Lower middle income,Multilateral,6.266559139784946,0.3767741935483871
 2019,Vietnam,Asia,Lower middle income,Bilateral,0.48481893091996214,0.6279029816947845
-2019,Vietnam,Asia,Lower middle income,Multilateral,0.37014291171666397,0.3250492823174149
+2019,Vietnam,Asia,Lower middle income,Multilateral,0.37014291171666397,0.3254705976167658
 2019,Vietnam,Asia,Lower middle income,Private,0.03404470580257852,0.3861112671404204
 2019,Yemen,Asia,Low income,Bilateral,9.04751461988304,0.0005847953216374269
 2019,Yemen,Asia,Low income,Multilateral,4.2351072350146195,0.38337445175438595
 2019,Zambia,Africa,Low income,Bilateral,7.074322425672486,1.5422040366382084
 2019,Zambia,Africa,Low income,Multilateral,2.447753223218499,0.23692366510789822
 2019,Zambia,Africa,Low income,Private,5.3777757767385985,2.859863976146553
-2019,Zimbabwe,Africa,Lower middle income,Bilateral,2.400448678057209,0.17815829487425613
+2019,Zimbabwe,Africa,Lower middle income,Bilateral,2.400448678057209,0.17640019082357458
 2019,Zimbabwe,Africa,Lower middle income,Multilateral,1.2913649452870033,0.062113685160299484
 2019,Zimbabwe,Africa,Lower middle income,Private,,0.02694951046266078
 2020,Afghanistan,Asia,Low income,Bilateral,11.989769566944776,0.0027588120778704807
@@ -6403,7 +6403,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,India,Asia,Lower middle income,Multilateral,0.4279710560562959,0.18974241935169933
 2020,India,Asia,Lower middle income,Private,0.2788627380895344,0.702814327039976
 2020,Indonesia,Asia,Lower middle income,Bilateral,0.4852700908115536,0.29022722050200933
-2020,Indonesia,Asia,Lower middle income,Multilateral,0.4588388019444157,0.3035068429503167
+2020,Indonesia,Asia,Lower middle income,Multilateral,0.4588388019444157,0.3049769190893434
 2020,Indonesia,Asia,Lower middle income,Private,1.989252953177793,2.043317145878234
 2020,Iran,Asia,Lower middle income,Bilateral,0.0987173192586228,0.012024202569452969
 2020,Iran,Asia,Lower middle income,Multilateral,0.050486886788592936,0.03813721553946238
@@ -6426,7 +6426,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,Kyrgyz Republic,Asia,Lower middle income,Bilateral,2.8622144597368107,1.1185804744657732
 2020,Kyrgyz Republic,Asia,Lower middle income,Multilateral,3.438290473258481,1.06382790897018
 2020,Laos,Asia,Lower middle income,Bilateral,3.4392052460699043,0.9505795002971207
-2020,Laos,Asia,Lower middle income,Multilateral,1.362958402571444,0.5425957209226946
+2020,Laos,Asia,Lower middle income,Multilateral,1.362958402571444,0.5431035270919994
 2020,Laos,Asia,Lower middle income,Private,1.3699975484846847,1.9625748630544
 2020,Lebanon,Asia,Lower middle income,Bilateral,4.799822291173348,0.34091893565771203
 2020,Lebanon,Asia,Lower middle income,Multilateral,1.7901718282028252,0.5328594835469911
@@ -6470,7 +6470,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,Mozambique,Africa,Low income,Multilateral,8.602912670057215,0.7863510093946458
 2020,Mozambique,Africa,Low income,Private,0.0770252871371053,2.340353918203009
 2020,Myanmar,Asia,Lower middle income,Bilateral,2.420068213815425,0.3236565647267312
-2020,Myanmar,Asia,Lower middle income,Multilateral,1.0783047033486346,0.0672639207699029
+2020,Myanmar,Asia,Lower middle income,Multilateral,1.0783047033486346,0.06747067218824225
 2020,Myanmar,Asia,Lower middle income,Private,0.015026782184919454,0.23863681085937208
 2020,Nepal,Asia,Lower middle income,Bilateral,1.8326332392175635,0.10858369474187954
 2020,Nepal,Asia,Lower middle income,Multilateral,3.5616235810851227,0.6648860079559731
@@ -6571,12 +6571,12 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2020,Vanuatu,Oceania,Lower middle income,Bilateral,9.474075744047619,1.0124163988095238
 2020,Vanuatu,Oceania,Lower middle income,Multilateral,6.560912698412698,0.4209325396825397
 2020,Vietnam,Asia,Lower middle income,Bilateral,0.3870285359071352,0.6028974648147614
-2020,Vietnam,Asia,Lower middle income,Multilateral,0.4277261580953481,0.3383024061390084
+2020,Vietnam,Asia,Lower middle income,Multilateral,0.4277261580953481,0.3394646596113309
 2020,Vietnam,Asia,Lower middle income,Private,0.00767825373220525,0.533703624469406
 2020,Yemen,Asia,Low income,Multilateral,2.6710475291790305,0.4255736894164194
 2020,Zambia,Africa,Low income,Bilateral,6.489925541383689,0.8100184440395339
 2020,Zambia,Africa,Low income,Multilateral,5.637522276517034,0.3651114897023909
-2020,Zambia,Africa,Low income,Private,4.5235989177847715,2.856834135608194
+2020,Zambia,Africa,Low income,Private,4.5235989177847715,2.8568341356081937
 2020,Zimbabwe,Africa,Lower middle income,Bilateral,2.3696585077123213,0.11080235272254228
 2020,Zimbabwe,Africa,Lower middle income,Multilateral,1.5414458279130274,0.03395476342687233
 2020,Zimbabwe,Africa,Lower middle income,Private,,0.013755807470730347
@@ -6726,7 +6726,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,India,Asia,Lower middle income,Multilateral,0.2651523114042745,0.15274306237481391
 2021,India,Asia,Lower middle income,Private,0.5506308035748863,0.29117033454485436
 2021,Indonesia,Asia,Lower middle income,Bilateral,0.20508545080110796,0.24677862283515614
-2021,Indonesia,Asia,Lower middle income,Multilateral,0.30076803397236745,0.23646643008933008
+2021,Indonesia,Asia,Lower middle income,Multilateral,0.30076803397236745,0.2383756182044741
 2021,Indonesia,Asia,Lower middle income,Private,1.3913963591388616,2.7068868019246803
 2021,Iran,Asia,Lower middle income,Bilateral,0.088762757022268,0.0028775643117382316
 2021,Iran,Asia,Lower middle income,Multilateral,0.018918124814202852,0.022359481634600095
@@ -6749,7 +6749,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Kyrgyz Republic,Asia,Lower middle income,Bilateral,2.4967634064390665,0.6554613818063959
 2021,Kyrgyz Republic,Asia,Lower middle income,Multilateral,4.605964243733794,1.0424305877268798
 2021,Laos,Asia,Lower middle income,Bilateral,3.0346661760103597,0.794881781686721
-2021,Laos,Asia,Lower middle income,Multilateral,1.483746027626396,0.5966944310149463
+2021,Laos,Asia,Lower middle income,Multilateral,1.483746027626396,0.5975469643338909
 2021,Laos,Asia,Lower middle income,Private,,2.1949687006960557
 2021,Lebanon,Asia,Lower middle income,Bilateral,5.928510030279352,0.40352929576089075
 2021,Lebanon,Asia,Lower middle income,Multilateral,1.9588030040046884,0.6486358116819692
@@ -6793,7 +6793,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Mozambique,Africa,Low income,Multilateral,7.014946814819418,0.9793705476471685
 2021,Mozambique,Africa,Low income,Private,0.029899470379809785,0.9666209753216884
 2021,Myanmar,Asia,Lower middle income,Bilateral,1.6549419938612646,0.5854326818600368
-2021,Myanmar,Asia,Lower middle income,Multilateral,0.6724584211172498,0.1549308549723757
+2021,Myanmar,Asia,Lower middle income,Multilateral,0.6724584211172498,0.15605731292203806
 2021,Myanmar,Asia,Lower middle income,Private,,0.4662729016267649
 2021,Nepal,Asia,Lower middle income,Bilateral,1.8424781238660057,0.0819378357299537
 2021,Nepal,Asia,Lower middle income,Multilateral,3.2435375375741327,0.6666124824654047
@@ -6858,7 +6858,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Sudan,Africa,Low income,Bilateral,4.16448200528918,0.2617690367368058
 2021,Sudan,Africa,Low income,Multilateral,6.137709895366219,4.586749967230079
 2021,Suriname,America,Upper middle income,Bilateral,0.26438860971524286,0.14006700167504188
-2021,Suriname,America,Upper middle income,Multilateral,2.1761809045226133,2.632371742043551
+2021,Suriname,America,Upper middle income,Multilateral,2.1761809045226133,2.8998424288107203
 2021,Tajikistan,Asia,Lower middle income,Bilateral,2.101983219162749,1.0851144873516905
 2021,Tajikistan,Asia,Lower middle income,Multilateral,6.029781664428028,0.9920433837027087
 2021,Tajikistan,Asia,Lower middle income,Private,,0.39875755540631297
@@ -6893,7 +6893,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2021,Vanuatu,Oceania,Lower middle income,Bilateral,15.284082133757959,1.3330008174097665
 2021,Vanuatu,Oceania,Lower middle income,Multilateral,4.559129511677282,0.4651804670912951
 2021,Vietnam,Asia,Lower middle income,Bilateral,0.36966294026007745,0.535957536296168
-2021,Vietnam,Asia,Lower middle income,Multilateral,0.3239846809615509,0.40814392144665385
+2021,Vietnam,Asia,Lower middle income,Multilateral,0.3239846809615509,0.40918358217755374
 2021,Vietnam,Asia,Lower middle income,Private,0.0009002352218880498,0.27413958930155574
 2021,Yemen,Asia,Low income,Multilateral,4.147775685511084,0.47428230286040596
 2021,Zambia,Africa,Low income,Bilateral,3.702462341520679,0.37245713292396604
@@ -6923,8 +6923,8 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Bangladesh,Asia,Lower middle income,Bilateral,1.483236552897538,0.10692209714885452
 2022,Bangladesh,Asia,Lower middle income,Multilateral,1.0375917735945814,0.40723191440261974
 2022,Bangladesh,Asia,Lower middle income,Private,0.1050819098611259,0.22503151499018906
-2022,Belarus,Europe,Upper middle income,Bilateral,2.484250563053477,3.6992358828859757
-2022,Belarus,Europe,Upper middle income,Multilateral,0.36292230768174644,0.41923144463513423
+2022,Belarus,Europe,Upper middle income,Bilateral,2.484250563053477,3.8752594171758084
+2022,Belarus,Europe,Upper middle income,Multilateral,0.36292230768174644,0.4690845195304455
 2022,Belarus,Europe,Upper middle income,Private,,0.5481222480950093
 2022,Belize,America,Upper middle income,Bilateral,0.5653662646566164,0.25567966164154105
 2022,Belize,America,Upper middle income,Multilateral,2.3548743718592964,1.7289949246231155
@@ -7047,7 +7047,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,India,Asia,Lower middle income,Multilateral,0.23688008589576037,0.1589295308037018
 2022,India,Asia,Lower middle income,Private,0.19936920387115045,0.3033269198186265
 2022,Indonesia,Asia,Lower middle income,Bilateral,0.2081910984751405,0.19013581987549383
-2022,Indonesia,Asia,Lower middle income,Multilateral,0.40619572470636406,0.23393035901304965
+2022,Indonesia,Asia,Lower middle income,Multilateral,0.40619572470636406,0.2358264623183021
 2022,Indonesia,Asia,Lower middle income,Private,0.875822458724153,2.276579715675495
 2022,Iran,Asia,Lower middle income,Bilateral,0.07373306618871563,0.0060179343914061175
 2022,Iran,Asia,Lower middle income,Multilateral,0.035785429997200406,0.008010862563099063
@@ -7070,7 +7070,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Kyrgyz Republic,Asia,Lower middle income,Bilateral,2.2895986660383825,1.1906998509252913
 2022,Kyrgyz Republic,Asia,Lower middle income,Multilateral,4.25890511480466,0.8979707308087731
 2022,Laos,Asia,Lower middle income,Bilateral,3.302724275352849,0.5044468831677993
-2022,Laos,Asia,Lower middle income,Multilateral,1.365938102456874,0.7255595190799791
+2022,Laos,Asia,Lower middle income,Multilateral,1.365938102456874,0.7273695033978045
 2022,Laos,Asia,Lower middle income,Private,0.9423537950862518,1.521271295086252
 2022,Lebanon,Asia,Lower middle income,Bilateral,5.3934488879706155,0.1643538067033976
 2022,Lebanon,Asia,Lower middle income,Multilateral,2.3996536336088155,0.4910332759412305
@@ -7114,7 +7114,7 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Mozambique,Africa,Low income,Multilateral,7.79582922169442,0.7606656788641227
 2022,Mozambique,Africa,Low income,Private,0.0780700882184058,0.8987727410346088
 2022,Myanmar,Asia,Lower middle income,Bilateral,1.3800692466291793,0.7013755101578087
-2022,Myanmar,Asia,Lower middle income,Multilateral,0.30864471854404735,0.16553259658987846
+2022,Myanmar,Asia,Lower middle income,Multilateral,0.30864471854404735,0.1665529122075095
 2022,Myanmar,Asia,Lower middle income,Private,,0.4923876664248141
 2022,Nepal,Asia,Lower middle income,Bilateral,1.3057119817282257,0.15167835015185657
 2022,Nepal,Asia,Lower middle income,Multilateral,2.159425759527775,0.6057106426961889
@@ -7178,8 +7178,9 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,St. Vincent and the Grenadines,America,Upper middle income,Private,,0.3081895987328406
 2022,Sudan,Africa,Low income,Bilateral,3.3784960891206444,0.25668724786679303
 2022,Sudan,Africa,Low income,Multilateral,1.3513273287508887,0.24696822321640197
-2022,Suriname,America,Upper middle income,Bilateral,0.2817896695156695,0.12672364672364672
-2022,Suriname,America,Upper middle income,Multilateral,8.714102564102564,2.161108236467237
+2022,Suriname,America,Upper middle income,Bilateral,0.2817896695156695,0.0061176638176638175
+2022,Suriname,America,Upper middle income,Multilateral,8.714102564102564,2.3330440341880343
+2022,Suriname,America,Upper middle income,Private,,0.12863543874643876
 2022,Tajikistan,Asia,Lower middle income,Bilateral,1.504331475269227,1.290565530353569
 2022,Tajikistan,Asia,Lower middle income,Multilateral,5.538059035547508,0.9126499895168207
 2022,Tajikistan,Asia,Lower middle income,Private,,0.339742965786715
@@ -7213,12 +7214,12 @@ year,country,continent,income_level,counterpart_type,inflow,outflow
 2022,Vanuatu,Oceania,Lower middle income,Bilateral,11.743581109040074,1.5274130754892823
 2022,Vanuatu,Oceania,Lower middle income,Multilateral,4.229916123019572,0.37315936626281454
 2022,Vietnam,Asia,Lower middle income,Bilateral,0.2814743475982404,0.41129798731461525
-2022,Vietnam,Asia,Lower middle income,Multilateral,0.30756546898526765,0.450782389335026
+2022,Vietnam,Asia,Lower middle income,Multilateral,0.30756546898526765,0.45179456297422577
 2022,Vietnam,Asia,Lower middle income,Private,0.020809032628699084,0.21975426040467264
 2022,Yemen,Asia,Low income,Multilateral,3.9560278979106505,0.37292763716663835
 2022,Zambia,Africa,Low income,Bilateral,2.4339833968798334,0.17475819480868804
 2022,Zambia,Africa,Low income,Multilateral,3.8390931087351228,0.41021369208526665
 2022,Zambia,Africa,Low income,Private,,0.8787405016475018
-2022,Zimbabwe,Africa,Lower middle income,Bilateral,2.3993270838361385,0.06154893204191807
+2022,Zimbabwe,Africa,Lower middle income,Bilateral,2.3993270838361385,0.06021071197205462
 2022,Zimbabwe,Africa,Lower middle income,Multilateral,1.0114703080342966,0.025028726579866625
 2022,Zimbabwe,Africa,Lower middle income,Private,,0.01671641791044776

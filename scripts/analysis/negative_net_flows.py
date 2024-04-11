@@ -1,5 +1,11 @@
 import pandas as pd
 
+from scripts.analysis.common import (
+    convert_to_net_flows,
+    summarise_by_country,
+    create_groupings,
+    reorder_countries,
+)
 from scripts.analysis.net_flows import get_all_flows, exclude_outlier_countries
 from scripts.analysis.population_tools import add_population_under18
 from scripts.config import Paths
@@ -18,37 +24,6 @@ def check_inflows_and_outflows_present(data: pd.DataFrame):
         columns="indicator_type",
         values="value",
     ).reset_index()
-
-    return data
-
-
-def convert_to_net_flows(data: pd.DataFrame) -> pd.DataFrame:
-    """Group data summing the inflows and outflows to calculate the net flows"""
-    data = (
-        data.groupby(
-            [c for c in data.columns if c not in ["value", "indicator_type"]],
-            observed=True,
-            dropna=False,
-        )[["value"]]
-        .sum()
-        .reset_index()
-    )
-
-    return data
-
-
-def summarise_by_year_debtor(data: pd.DataFrame) -> pd.DataFrame:
-    """Summarise data by year and debtor country"""
-
-    data = (
-        data.groupby(
-            ["year", "country", "income_level", "continent"],
-            dropna=False,
-            observed=True,
-        )["value"]
-        .sum()
-        .reset_index()
-    )
 
     return data
 
@@ -72,52 +47,32 @@ def count_negative_flows_by_year(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
-def negative_flows_list(data: pd.DataFrame, latest_only: bool = True) -> pd.DataFrame:
+def negative_flows_only(data: pd.DataFrame) -> pd.DataFrame:
     """produce a list of countries with negative flows"""
 
-    data = data.query("value < 0")
+    return data.query("value < 0")
 
-    if latest_only:
-        data = data.query("year == 2022")
 
-    data = data.drop_duplicates(subset=["year", "country"]).reset_index(drop=True)
-
-    return data.sort_values(
-        ["year", "income_level", "continent", "value"],
-        ascending=[False, True, True, True],
+def output_pipeline(constant: bool = False, limit_to_2022: bool = True) -> None:
+    df = (
+        get_all_flows(constant=constant, limit_to_2022=limit_to_2022)
+        .pipe(exclude_outlier_countries)
+        .pipe(convert_to_net_flows)
+        .pipe(summarise_by_country)
+        .pipe(negative_flows_only)
     )
 
+    df_grouped = create_groupings(df).pipe(reorder_countries)
 
-def calculate_close_negative(threshold_gdp: float = 0.5) -> pd.DataFrame:
-    data = pd.read_csv(Paths.output / "scatter_totals.csv")
-
-    data = (
-        data.groupby(
-            ["year", "country", "continent", "income_level"],
-            dropna=False,
-            observed=True,
-        )[["inflow", "outflow"]]
-        .sum()
-        .reset_index()
+    # Save data
+    df.reset_index(drop=True).to_parquet(
+        Paths.output / "net_negative_flows_country.parquet"
     )
 
-    data["net"] = data["inflow"] - data["outflow"]
-
-    # keep countries that are above zero but less than 0.5
-    data = data.query(f"net > 0 and net < {threshold_gdp}")
-
-    return data
+    df_grouped.reset_index(drop=True).to_parquet(
+        Paths.output / "net_negative_flows_group.parquet"
+    )
 
 
 if __name__ == "__main__":
-    df = get_all_flows().pipe(exclude_outlier_countries)
-    # dfp = check_inflows_and_outflows_present(df).query("year == 2022")
-    net = convert_to_net_flows(df).pipe(summarise_by_year_debtor)
-    negative_count = count_negative_flows_by_year(net)
-    negative_list = (
-        negative_flows_list(net)
-        .pipe(add_population_under18, country_col="country")
-        .rename(columns={"population": "population_under_18"})
-    )
-
-    df = calculate_close_negative().query("year == 2022")
+    output_pipeline()

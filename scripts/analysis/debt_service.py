@@ -6,6 +6,8 @@ from scripts.analysis.common import (
     exclude_outlier_countries,
     create_grouping_totals,
     create_world_total,
+    add_china_as_counterpart_type,
+    reorder_countries,
 )
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
@@ -14,22 +16,6 @@ from scripts.data.outflows import get_debt_service_data
 def remove_world(df: pd.DataFrame) -> pd.DataFrame:
     """Remove 'World' (totals) from counterpart area data"""
     return df.loc[lambda d: d.counterpart_area != "World"]
-
-
-def add_china_as_counterpart_type(df: pd.DataFrame) -> pd.DataFrame:
-    """Adds China as counterpart type"""
-
-    # Get china as counterpart
-    china = df.loc[lambda d: d.counterpart_area == "China"].copy()
-
-    # Add counterpart type, by type
-    china["counterpart_type"] = "China"
-
-    # Remove China from the original data
-    df = df.loc[lambda d: d.counterpart_area != "China"]
-
-    # Concatenate the data
-    return pd.concat([df, china], ignore_index=True)
 
 
 def groupby_counterpart_type(df: pd.DataFrame) -> pd.DataFrame:
@@ -59,47 +45,6 @@ def add_africa_total(df: pd.DataFrame) -> pd.DataFrame:
         .reset_index()
     )
     return pd.concat([df, africa], ignore_index=True)
-
-
-def reorder_countries(df: pd.DataFrame, counterpart_type: bool = False) -> pd.DataFrame:
-    """Reorder countries by continent and income level"""
-    top = {
-        "Developing countries": 1,
-        "Low income": 2,
-        "Lower middle income": 3,
-        "Upper middle income": 4,
-        "Africa": 7,
-        "Europe": 8,
-        "Asia": 9,
-        "America": 10,
-        "Oceania": 11,
-    }
-
-    df["order"] = df["country"].map(top).fillna(99)
-
-    counterpart_order = {
-        "Bilateral": 1,
-        "Multilateral": 2,
-        "Private": 3,
-        "China": 4,
-    }
-
-    if counterpart_type:
-        df["order_counterpart"] = (
-            df["counterpart_type"].map(counterpart_order).fillna(99)
-        )
-
-    df = (
-        df.sort_values(
-            ["order", "country", "year", "order_counterpart"]
-            if counterpart_type
-            else ["order", "country", "year"]
-        )
-        .drop(columns=["order", "order_counterpart"] if counterpart_type else ["order"])
-        .reset_index(drop=True)
-    )
-
-    return df
 
 
 def pivot_flourish_columns(df: pd.DataFrame) -> pd.DataFrame:
