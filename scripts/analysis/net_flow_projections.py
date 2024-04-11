@@ -76,6 +76,9 @@ def projected_negative_list(net_negative_df: pd.DataFrame) -> pd.DataFrame:
     return data.filter(["year", "country", "continent", "income_level", "net_flows"])
 
 
+def projections_pipline() -> pd.DataFrame: ...
+
+
 if __name__ == "__main__":
     df = get_all_flows().pipe(exclude_outlier_countries)
     inflows_df = calculate_average_inflows(df).query("year == 2022")

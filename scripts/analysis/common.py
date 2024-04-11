@@ -143,3 +143,33 @@ def create_groupings(data: pd.DataFrame) -> pd.DataFrame:
     data_grouped = data_grouped.loc[lambda d: d.country.isin(GROUPS)]
 
     return data_grouped
+
+
+def reorder_countries(df: pd.DataFrame, counterpart_type: bool = False) -> pd.DataFrame:
+    """Reorder countries by continent and income level"""
+
+    df["order"] = df["country"].map(GROUPS).fillna(99)
+
+    counterpart_order = {
+        "Bilateral": 1,
+        "Multilateral": 2,
+        "Private": 3,
+        "China": 4,
+    }
+
+    if counterpart_type:
+        df["order_counterpart"] = (
+            df["counterpart_type"].map(counterpart_order).fillna(99)
+        )
+
+    df = (
+        df.sort_values(
+            ["order", "country", "year", "order_counterpart"]
+            if counterpart_type
+            else ["order", "country", "year"]
+        )
+        .drop(columns=["order", "order_counterpart"] if counterpart_type else ["order"])
+        .reset_index(drop=True)
+    )
+
+    return df

@@ -4,6 +4,7 @@ from scripts.analysis.common import (
     convert_to_net_flows,
     summarise_by_country,
     create_groupings,
+    reorder_countries,
 )
 from scripts.analysis.net_flows import get_all_flows, exclude_outlier_countries
 from scripts.analysis.population_tools import add_population_under18
@@ -46,20 +47,10 @@ def count_negative_flows_by_year(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
-def negative_flows_list(data: pd.DataFrame, latest_only: bool = True) -> pd.DataFrame:
+def negative_flows_only(data: pd.DataFrame) -> pd.DataFrame:
     """produce a list of countries with negative flows"""
 
-    data = data.query("value < 0")
-
-    if latest_only:
-        data = data.query("year == 2022")
-
-    data = data.drop_duplicates(subset=["year", "country"]).reset_index(drop=True)
-
-    return data.sort_values(
-        ["year", "income_level", "continent", "value"],
-        ascending=[False, True, True, True],
-    )
+    return data.query("value < 0")
 
 
 def output_pipeline(constant: bool = False, limit_to_2022: bool = True) -> None:
@@ -68,12 +59,20 @@ def output_pipeline(constant: bool = False, limit_to_2022: bool = True) -> None:
         .pipe(exclude_outlier_countries)
         .pipe(convert_to_net_flows)
         .pipe(summarise_by_country)
+        .pipe(negative_flows_only)
     )
 
-    df_grouped = create_groupings(df)
+    df_grouped = create_groupings(df).pipe(reorder_countries)
 
-    return df_grouped
+    # Save data
+    df.reset_index(drop=True).to_parquet(
+        Paths.output / "net_negative_flows_country.parquet"
+    )
+
+    df_grouped.reset_index(drop=True).to_parquet(
+        Paths.output / "net_negative_flows_group.parquet"
+    )
 
 
 if __name__ == "__main__":
-    df = output_pipeline()
+    output_pipeline()

@@ -33,6 +33,14 @@ It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
 All of the files above have an additional version ending in `_china_as_counterpart_type`, which
 separates inflows and outflows from China as a counterpart type, from the rest of the data.
 
+### Net negative flows
+- [`net_negative_flows_country.parquet`](net_negative_flows_country.parquet): Data on net
+negative flows (inflows - outflows < 0) by country (for all counterparts total). Presented yearly, including continent and income level.
+It is created by the script [negative_net_flows.py](../scripts/analysis/negative_net_flows.py).
+- [`net_negative_flows_group.parquet`](net_negative_flows_country.parquet): Data on net
+  negative flows (inflows - outflows < 0) by country groupings (for all counterparts total). Presented yearly. 
+  It is created by the script [negative_net_flows.py](../scripts/analysis/negative_net_flows.py).
+
 ### Projections
 (forthcoming)
 
