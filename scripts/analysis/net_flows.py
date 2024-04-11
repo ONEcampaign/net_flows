@@ -2,6 +2,11 @@ import pandas as pd
 from bblocks import set_bblocks_data_path
 from bblocks.dataframe_tools.add import add_gdp_column
 
+from scripts.analysis.common import (
+    create_grouping_totals,
+    exclude_outlier_countries,
+    create_world_total,
+)
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
 from scripts.data.outflows import get_debt_service_data
@@ -237,48 +242,6 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def create_grouping_totals(
-    data: pd.DataFrame, group_column: str, exclude_cols: list[str]
-) -> pd.DataFrame:
-    """Create group totals as 'country'"""
-
-    dfs = []
-
-    for group in data[group_column].unique():
-        df_ = data.loc[lambda d: d[group_column] == group].copy()
-        df_["country"] = group
-        df_ = (
-            df_.groupby(
-                [c for c in df_.columns if c not in ["value"] + exclude_cols],
-                observed=True,
-                dropna=False,
-            )["value"]
-            .sum()
-            .reset_index()
-        )
-
-        dfs.append(df_)
-
-    groups = pd.concat(dfs, ignore_index=True)
-
-    return pd.concat([data, groups], ignore_index=True)
-
-
-def create_world_total(data: pd.DataFrame) -> pd.DataFrame:
-    """Create a world total for the data"""
-
-    df = data.copy(deep=True)
-    df["country"] = "World"
-    df = df.groupby(
-        [c for c in df.columns if c not in ["income_level", "continent"]],
-        observed=True,
-        dropna=False,
-        as_index=False,
-    )["value"].sum()
-
-    return pd.concat([data, df], ignore_index=True)
-
-
 def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
@@ -302,7 +265,10 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     )
 
     if exclude_countries:
-        data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])]
+        data = exclude_outlier_countries(data)
+
+    # Create world totals
+    data = create_world_total(data)
 
     # Create continent totals
     data = create_grouping_totals(
@@ -314,11 +280,8 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
         data, group_column="income_level", exclude_cols=["continent"]
     )
 
-    # Create world total
-    data = create_world_total(data)
-
     # Save the data
-    data.to_csv(Paths.output / "net_flows_full.csv", index=False)
+    # data.to_csv(Paths.output / "net_flows_full.csv", index=False)
 
     # Save as parquet
     data.reset_index(drop=True).to_parquet(Paths.output / "net_flows_full.parquet")
