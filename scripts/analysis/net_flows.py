@@ -2,6 +2,7 @@ import pandas as pd
 from bblocks import set_bblocks_data_path
 from bblocks.dataframe_tools.add import add_gdp_column
 
+from scripts.analysis.common import create_grouping_totals
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
 from scripts.data.outflows import get_debt_service_data
@@ -237,33 +238,6 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def create_grouping_totals(
-    data: pd.DataFrame, group_column: str, exclude_cols: list[str]
-) -> pd.DataFrame:
-    """Create group totals as 'country'"""
-
-    dfs = []
-
-    for group in data[group_column].unique():
-        df_ = data.loc[lambda d: d[group_column] == group].copy()
-        df_["country"] = group
-        df_ = (
-            df_.groupby(
-                [c for c in df_.columns if c not in ["value"] + exclude_cols],
-                observed=True,
-                dropna=False,
-            )["value"]
-            .sum()
-            .reset_index()
-        )
-
-        dfs.append(df_)
-
-    groups = pd.concat(dfs, ignore_index=True)
-
-    return pd.concat([data, groups], ignore_index=True)
-
-
 def create_world_total(data: pd.DataFrame) -> pd.DataFrame:
     """Create a world total for the data"""
 
@@ -318,7 +292,7 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
     data = create_world_total(data)
 
     # Save the data
-    data.to_csv(Paths.output / "net_flows_full.csv", index=False)
+    # data.to_csv(Paths.output / "net_flows_full.csv", index=False)
 
     # Save as parquet
     data.reset_index(drop=True).to_parquet(Paths.output / "net_flows_full.parquet")

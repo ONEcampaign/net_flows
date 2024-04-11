@@ -2,7 +2,8 @@
 
 import pandas as pd
 
-from scripts.analysis.net_flows import exclude_outlier_countries
+import scripts.analysis.common
+
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
 
@@ -141,8 +142,9 @@ def avg_repayments_charts() -> None:
     """Export data for average repayment charts for flourish"""
 
     data = (
-        get_debt_service_data(constant=False)
-        .pipe(exclude_outlier_countries)
+        scripts.analysis.common.create_grouping_totals(
+            group_column="continent", exclude_cols=["income_level"]
+        )
         .pipe(remove_world)
         .pipe(groupby_counterpart_type)
         .pipe(group_by_avg_payments, [(2010, 2014), (2018, 2022), (2023, 2025)])
