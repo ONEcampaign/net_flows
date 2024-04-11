@@ -42,7 +42,12 @@ It is created by the script [negative_net_flows.py](../scripts/analysis/negative
   It is created by the script [negative_net_flows.py](../scripts/analysis/negative_net_flows.py).
 
 ### Projections
-(forthcoming)
+- [`net_flow_projections_country.parquet`](net_flow_projections_country.parquet): Data on projected
+net flows, by country.
+It is created by the script [net_flow_projections.py](../scripts/analysis/net_flow_projections.py).
+- [`net_flow_projections_group.parquet`](net_flow_projections_group.parquet): ata on projected
+  net flows, by country grouping. Presented yearly.
+  It is created by the script [net_flow_projections.py](../scripts/analysis/net_flow_projections.py).
 
 
 ## Data viz outputs
