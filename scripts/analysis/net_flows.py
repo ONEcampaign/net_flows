@@ -7,6 +7,7 @@ from scripts.analysis.common import (
     exclude_outlier_countries,
     create_world_total,
     GROUPS,
+    add_china_as_counterpart_type,
 )
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
@@ -382,6 +383,22 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
 
     # Save the data
     save_pipeline(data, "")
+
+    # separate china as counterpart type and produce a summary file
+    data_china = data.pipe(add_china_as_counterpart_type)
+
+    # Save the data
+    data_china = (
+        data_china.groupby(
+            [c for c in data_china.columns if c not in ["value", "counterpart_area"]],
+            observed=True,
+            dropna=False,
+        )["value"]
+        .sum()
+        .reset_index()
+    )
+
+    save_pipeline(data_china, "_china_as_counterpart_type")
 
     return data
 

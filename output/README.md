@@ -5,6 +5,8 @@ This directory contains the outputs of the analysis.
 
 ## Research outputs
 
+### Inflows, outflows and net flows
+
 - [`full_flows_country.parquet`](full_flows_country.parquet): Data on inflows and outflows by country and
 counterpart. Presented yearly, including continent and income level.
 It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
@@ -28,6 +30,11 @@ presented as net flows (inflows - outflows). It is created by the script [net_fl
 for all counterpart_areas, presented as net flows (inflows - outflows). 
 It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
 
+All of the files above have an additional version ending in `_china_as_counterpart_type`, which
+separates inflows and outflows from China as a counterpart type, from the rest of the data.
+
+### Projections
+(forthcoming)
 
 
 ## Data viz outputs
