@@ -26,3 +26,24 @@ def create_grouping_totals(
     groups = pd.concat(dfs, ignore_index=True)
 
     return pd.concat([data, groups], ignore_index=True)
+
+
+def exclude_outlier_countries(data: pd.DataFrame) -> pd.DataFrame:
+    data = data.loc[lambda d: ~d.country.isin(["China", "Ukraine", "Russia"])]
+
+    return data
+
+
+def create_world_total(data: pd.DataFrame, name: str = "World") -> pd.DataFrame:
+    """Create a world total for the data"""
+
+    df = data.copy(deep=True)
+    df["country"] = name
+    df = df.groupby(
+        [c for c in df.columns if c not in ["income_level", "continent"]],
+        observed=True,
+        dropna=False,
+        as_index=False,
+    )["value"].sum()
+
+    return pd.concat([data, df], ignore_index=True)
