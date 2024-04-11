@@ -295,16 +295,16 @@ def filter_for_countries_with_negative_net_flow_at_any_point(df: pd.DataFrame) -
 
     return filtered_df
 
-def add_nnt_column(df: pd.DataFrame) -> pd.DataFrame:
-    df['nnt'] = df['net_flow'].apply(lambda x: 'nnt' if x < 0 else '')
-
-    return df
+# def add_nnt_column(df: pd.DataFrame) -> pd.DataFrame:
+#     df['nnt'] = df['net_flow'].apply(lambda x: 'nnt' if x < 0 else '')
+#
+#     return df
 
 
 
 
 def flourish_5_connected_scatterplot() -> pd.DataFrame:
-    data = get_parquet(doc="full_flows_country.parquet")
+    data = get_parquet(doc="net_flows_full.parquet")
 
     # filter for current prices
     data = data.loc[lambda d: d.prices == "constant"]
@@ -329,9 +329,9 @@ def flourish_5_connected_scatterplot() -> pd.DataFrame:
 
     negative_countries = filter_for_countries_with_negative_net_flow_at_any_point(data)
 
-    negative_countries['outflow'] = negative_countries['outflow']*-1
+    # negative_countries['outflow'] = negative_countries['outflow']*-1
 
-    negative_countries = add_nnt_column(negative_countries)
+    # negative_countries = add_nnt_column(negative_countries)
 
     return negative_countries
 
