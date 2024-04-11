@@ -3,11 +3,11 @@ from bblocks import set_bblocks_data_path
 from bblocks.dataframe_tools.add import add_gdp_column
 
 from scripts.analysis.common import (
-    create_grouping_totals,
     exclude_outlier_countries,
-    create_world_total,
-    GROUPS,
     add_china_as_counterpart_type,
+    convert_to_net_flows,
+    summarise_by_country,
+    create_groupings,
 )
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
@@ -242,70 +242,6 @@ def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     df.to_csv(Paths.output / "scatter_totals.csv", index=False)
 
     return df
-
-
-def convert_to_net_flows(data: pd.DataFrame) -> pd.DataFrame:
-    """Group the indicator type to get net flows"""
-
-    data = (
-        data.groupby(
-            [c for c in data.columns if c not in ["value", "indicator_type"]],
-            observed=True,
-            dropna=False,
-        )["value"]
-        .sum()
-        .reset_index()
-    )
-
-    data["indicator_type"] = "net_flow"
-
-    return data
-
-
-def summarise_by_country(data: pd.DataFrame) -> pd.DataFrame:
-    """Summarise the data by country"""
-
-    data = (
-        data.groupby(
-            [
-                c
-                for c in data.columns
-                if c
-                not in [
-                    "value",
-                    "counterpart_area",
-                    "counterpart_type",
-                    "indicator",
-                ]
-            ],
-            observed=True,
-            dropna=False,
-        )["value"]
-        .sum()
-        .reset_index()
-    )
-
-    return data
-
-
-def create_groupings(data: pd.DataFrame) -> pd.DataFrame:
-    # Create world totals
-    data_grouped = create_world_total(data, "Developing countries")
-
-    # Create continent totals
-    data_grouped = create_grouping_totals(
-        data_grouped, group_column="continent", exclude_cols=["income_level"]
-    )
-
-    # Create income_level totals
-    data_grouped = create_grouping_totals(
-        data_grouped, group_column="income_level", exclude_cols=["continent"]
-    )
-
-    # remove individual country data
-    data_grouped = data_grouped.loc[lambda d: d.country.isin(GROUPS)]
-
-    return data_grouped
 
 
 def save_pipeline(data: pd.DataFrame, suffix: str) -> None:
