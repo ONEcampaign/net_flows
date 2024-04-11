@@ -12,6 +12,13 @@ It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
 - [`full_flows_grouping.parquet`](full_flows_country.parquet): Data on inflows and outflows by country groupings and
 counterpart. Presented yearly.
 It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
+- [`net_flows_country.parquet`](full_flows_country.parquet): Data on net flows (inflows - outflows) by country and
+    counterpart. Presented yearly, including continent and income level.
+    It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
+
+- [`net_flows_grouping.parquet`](full_flows_country.parquet): Data on net flows (inflows - outflows) by country groupings and
+  counterpart. Presented yearly.
+  It is created by the script [net_flows.py](../scripts/analysis/net_flows.py).
 
 
 
