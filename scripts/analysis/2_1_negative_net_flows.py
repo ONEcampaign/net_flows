@@ -223,4 +223,4 @@ if __name__ == "__main__":
     data = get_parquet(doc="full_flows_country.parquet")
 
     flourish_chart_1 = flourish_1_beeswarm_pipeline(df=data)
-    flourish_chart_1.to_csv(Paths.output / "flourish_chart_1.csv", index=False)
+    flourish_chart_1.to_csv(Paths.output / "number_of_countries_with_nnt_2022_2025.csv", index=False)
