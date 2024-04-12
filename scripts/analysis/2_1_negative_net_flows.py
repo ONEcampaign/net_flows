@@ -1,4 +1,3 @@
-import asana
 import pandas as pd
 from bblocks import set_bblocks_data_path
 from bblocks.dataframe_tools.add import add_iso_codes_column
@@ -166,6 +165,16 @@ def add_nnt_column(df: pd.DataFrame, target_col: str) -> pd.DataFrame:
 
 
 def flourish_1_beeswarm_pipeline(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Pipeline function to produce flourish chart 2.1. Output takes data from
+    'full_flows_country.parquet', 'net_flow_projections_country.parquet' and
+    'weo_data.csv' files to calculate net_flows as a share of gdp for 2022 and 2025.
+
+    Args:
+        df (pd.DataFrame): DataFrame containing the 'full_flows_country.parquet' data
+
+    Returns: pd.DataFrame of 2022 and 2025 data ready for export as CSV for Flourish.
+    """
 
     # filter for current prices
     df = df.loc[lambda d: d.prices == "current"]
