@@ -213,7 +213,7 @@ def flourish_1_beeswarm_pipeline(df: pd.DataFrame) -> pd.DataFrame:
     df = add_nnt_column(df, target_col="net_flow")
 
     # filter for specified years
-    df = filter_for_specified_years(df=df, years=[2022, 2025])
+    df = filter_for_specified_years(df=df, years=[2022, 2024])
 
     return df
 
