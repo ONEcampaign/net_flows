@@ -5,6 +5,7 @@ from bblocks.dataframe_tools.add import add_gdp_share_column
 from bblocks.import_tools.imf_weo import WEO
 from bblocks.dataframe_tools.add import add_iso_codes_column
 from bblocks import clean_numeric_series
+import numpy as np
 
 from scripts.config import Paths
 
@@ -41,7 +42,7 @@ def calculate_net_transfers(df: pd.DataFrame) -> pd.DataFrame:
 def calculate_share_gdp(df: pd.DataFrame) -> pd.DataFrame:
     # df['negative_net_flows'] = df['net_flows']*-1
 
-    df["net_flows_over_gdp_percent"] = df["net_flows"] * 100 / df["gdp"]
+    df["net_flows_over_gdp_percent"] = df["net_flow"] * 100 / df["gdp"]
 
     return df
 
@@ -58,7 +59,9 @@ def add_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
             "country",
             "income_level",
             "continent",
-            "net_flows",
+            "inflow",
+            "outflow",
+            "net_flow",
             "iso_3",
             "gdp",
         ],
@@ -170,38 +173,67 @@ def aggregate_by_year_chart_4(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.groupby(["year"])[["inflow", "outflow", "net_flow"]].sum().reset_index()
 
+def get_net_flow_as_share_gdp() -> pd.DataFrame:
+    df = get_parquet(doc="full_flows_country.parquet")
 
-def flourish_1_beeswarm() -> pd.DataFrame:
-    df = get_csv(doc="final_stacked_net_flows.csv").rename(
-        {"value": "net_flows"}, axis=1
+    # filter for current prices
+    df = df.loc[lambda d: d.prices == "current"]
+
+    # Groupby country
+    df = (
+        df.groupby(
+            by=["year", "country", "continent", "income_level", "indicator_type"]
+        )["value"]
+        .sum()
+        .reset_index()
     )
-    # df['net_flows'] = clean_numeric_series(data=df['net_flows'], to=float)
-    df["net_flows"] = df["net_flows"] / 1000000000
 
-    df = add_iso_codes_column(
-        df=df, id_column="country", id_type="regex", target_column="iso_3"
+    df = df.pivot_table(
+        index=["year", "country", "continent", "income_level"],  # Rows
+        columns="indicator_type",  # Columns to pivot on
+        values="value",  # Values to fill in the table
+        fill_value=0,  # Fill missing values with 0
+    ).reset_index()
+
+    df = calculate_net_transfers(df)
+    df["net_flow"] = df["net_flow"] / 1000000000
+    df = df.filter(items=['year', 'country', 'continent', 'income_level', 'net_flow'], axis=1)
+
+    # add projection data
+    projection = get_parquet(doc="net_flow_projections_country.parquet").rename({'value':'net_flow'},axis=1)
+    projection['net_flow'] = projection['net_flow']/1000000000
+    df_merged = pd.concat([df,projection])
+
+    df_merged = add_iso_codes_column(
+        df=df_merged, id_column="country", id_type="regex", target_column="iso_3"
     )
 
     # add gdp data
-    data = add_gdp_data(df)
+    df_merged = add_gdp_data(df_merged)
 
     # calculate net transfers share of gdp
-    data = calculate_share_gdp(data)
+    df_merged = calculate_share_gdp(df_merged)
 
-    # remove Russia, China and Ukraine
-    special_case_countries = ["CHN", "RUS", "UKR"]
-    data = remove_special_case_countries(df=data, iso_to_remove=special_case_countries)
+    return df_merged
+def flourish_1_beeswarm() -> pd.DataFrame:
+    df = get_net_flow_as_share_gdp().pipe(add_nnt_column, target_col='net_flow')
+
+    # filter for specified years
+    years = [2022, 2025]
+    df = filter_for_specified_years(df=df, years=years)
+
+    return df#.loc[lambda d: d.net_flows_over_gdp_percent <= 2]
+
+
+def flourish_2_histogram() -> pd.DataFrame:
+    df= get_net_flow_as_share_gdp()
+
+    # bin data
+    data = create_histogram_bins(df=df, grouping="net_flows_over_gdp_percent")
 
     # filter for specified years
     years = [2010, 2022]
     data = filter_for_specified_years(df=data, years=years)
-
-    return data
-
-
-def flourish_2_histogram(df: pd.DataFrame) -> pd.DataFrame:
-    # bin data
-    data = create_histogram_bins(df=df, grouping="net_flows_over_gdp_percent")
 
     # specify bins required for analysis
     bins = [
@@ -221,50 +253,58 @@ def flourish_2_histogram(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def flourish_3_scatter() -> pd.DataFrame:
-    data = get_csv(doc="scatter_totals.csv")
+    df = get_net_flow_as_share_gdp().filter(items=['year', 'country', 'income_level', 'continent', 'inflow', 'outflow','gdp'], axis=1)
 
     # Filter for 2022
-    data = data.loc[lambda d: d.year == 2022]
+    df = df.loc[lambda d: d.year == 2022]
 
-    # Groupby country
-    data = (
-        data.groupby(by=["year", "country", "continent", "income_level"])[
-            ["inflow", "outflow"]
-        ]
-        .sum()
-        .reset_index()
-    )
+    # make outflows positive
+    df['outflow'] = df['outflow']*-1
 
-    return data
+    # as share of gdp
+    df['gdp'] = df['gdp']*1000000000
+    df['inflow_gdp'] = df['inflow']*100/df['gdp']
+    df['outflow_gdp'] = df['outflow']*100/df['gdp']
+
+    # # Groupby country
+    # data = (
+    #     data.groupby(by=["year", "country", "continent", "income_level"])[
+    #         ["inflow", "outflow"]
+    #     ]
+    #     .sum()
+    #     .reset_index()
+    # )
+
+    return df
 
 
 def flourish_4_steamgraph() -> pd.DataFrame:
-    data = get_parquet(doc="net_flows_full.parquet")
+    data = get_parquet(doc="full_flows_country.parquet")
 
     # filter for current prices
     data = data.loc[lambda d: d.prices == "constant"]
 
     # Groupby country
-    data = (
-        data.groupby(
-            by=["year", "country", "continent", "income_level", "indicator_type"]
-        )["value"]
-        .sum()
-        .reset_index()
-    )
-
-    # Groupby counterpart area
-    # data_counterpart = (
+    # data = (
     #     data.groupby(
-    #         by=["year", "indicator_type", "counterpart_area"]
+    #         by=["year", "country", "continent", "income_level", "indicator_type"]
     #     )["value"]
     #     .sum()
     #     .reset_index()
-    # ).pivot_table(index=["year", "counterpart_area"],  # Rows
-    #               columns="indicator_type",  # Columns to pivot on
-    #               values="value",  # Values to fill in the table
-    #               fill_value=0,  # Fill missing values with 0
-    #               ).reset_index()
+    # )
+
+    # Groupby counterpart area
+    data_counterpart = (
+        data.groupby(
+            by=["year", "indicator_type", "counterpart_area"]
+        )["value"]
+        .sum()
+        .reset_index()
+    ).pivot_table(index=["year", "counterpart_area"],  # Rows
+                  columns="indicator_type",  # Columns to pivot on
+                  values="value",  # Values to fill in the table
+                  fill_value=0,  # Fill missing values with 0
+                  ).reset_index()
 
     # Pivot for inflows and outflows
     data = data.pivot_table(
@@ -276,7 +316,7 @@ def flourish_4_steamgraph() -> pd.DataFrame:
 
     data = calculate_net_transfers(data)
 
-    data = filter_net_negative_only(data)
+    #data = filter_net_negative_only(data)
 
     pivot_by_income_group = pivot_by_income_group_chart_4(df=data)
 
@@ -284,7 +324,7 @@ def flourish_4_steamgraph() -> pd.DataFrame:
 
     aggregate_by_year = aggregate_by_year_chart_4(data)
 
-    return data.loc[lambda d: d.year >= 2010]
+    return data_counterpart.loc[lambda d: d.year >= 2010]
 
 def filter_for_countries_with_negative_net_flow_at_any_point(df: pd.DataFrame) -> pd.DataFrame:
     # Identify countries with any negative net_flow
@@ -295,16 +335,15 @@ def filter_for_countries_with_negative_net_flow_at_any_point(df: pd.DataFrame) -
 
     return filtered_df
 
-# def add_nnt_column(df: pd.DataFrame) -> pd.DataFrame:
-#     df['nnt'] = df['net_flow'].apply(lambda x: 'nnt' if x < 0 else '')
-#
-#     return df
+def add_nnt_column(df: pd.DataFrame, target_col: str) -> pd.DataFrame:
+    df['nnt'] = np.where(df[target_col] < 0, 'net negative transfers', '')
+    return df
 
 
 
 
 def flourish_5_connected_scatterplot() -> pd.DataFrame:
-    data = get_parquet(doc="net_flows_full.parquet")
+    data = get_parquet(doc="full_flows_country.parquet")
 
     # filter for current prices
     data = data.loc[lambda d: d.prices == "constant"]
@@ -338,20 +377,22 @@ def flourish_5_connected_scatterplot() -> pd.DataFrame:
 if __name__ == "__main__":
     # full_data = get_csv(doc="net_flows_full.csv")
 
-    # flourish_chart_1 = flourish_1_beeswarm()
-    # flourish_chart_1.to_csv(Paths.output / "flourish_chart_1.csv", index=False)
+    flourish_chart_1 = flourish_1_beeswarm()
+    flourish_chart_1.to_csv(Paths.output / "flourish_chart_1.csv", index=False)
 
-    # flourish_chart_2 = flourish_2_histogram(df=flourish_chart_1)
-    # flourish_chart_2.to_csv(Paths.output / "flourish_chart_2.csv", index=False)
+    flourish_chart_2 = flourish_2_histogram()
+    flourish_chart_2.to_csv(Paths.output / "flourish_chart_2.csv", index=False)
 
-    # flourish_chart_3 = flourish_3_scatter()
-    # flourish_chart_3.to_csv(Paths.output / "flourish_chart_3.csv", index=False)
+    flourish_chart_3 = flourish_3_scatter()
+    flourish_chart_3.to_csv(Paths.output / "flourish_chart_3.csv", index=False)
 
     # flourish_chart_4 = flourish_4_steamgraph()
     # flourish_chart_4.to_csv(Paths.output / "flourish_chart_4.csv", index=False)
 
-    flourish_chart_5 = flourish_5_connected_scatterplot()
-    flourish_chart_5.to_csv(Paths.output / "flourish_chart_5.csv", index=False)
+    # flourish_chart_5 = flourish_5_connected_scatterplot()
+    # flourish_chart_5.to_csv(Paths.output / "flourish_chart_5.csv", index=False)
+
+
 
     # inflows_outflows_ratio = net_inflows_pipeline(df=full_data, prices="constant")
 
