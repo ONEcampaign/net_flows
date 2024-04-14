@@ -284,6 +284,9 @@ def net_flows_dev_countries_summary():
     # Net transfers change from 2022 to 2024
     nt_change = round(nt_2024 - latest_value, 2)
 
+    # Percent change
+    nt_change_pct = round((nt_2024 - latest_value) / latest_value * 100, 1)
+
     # numbers
     numbers = {
         "dev_countries_nt_peak_year": int(peak_year),
@@ -296,6 +299,7 @@ def net_flows_dev_countries_summary():
         ),
         f"dev_countries_nt_2024": f"${nt_2024} bn",
         f"dev_countries_nt_2022_2024_change": f"${nt_change} bn",
+        f"dev_countries_nt_2022_2024_change_pct": f"{nt_change_pct}%",
     }
 
     # update dictionary
