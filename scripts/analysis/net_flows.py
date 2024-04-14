@@ -195,6 +195,33 @@ def calculate_flows_as_percent_of_gdp(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
+def exclude_countries_without_outflows(data: pd.DataFrame) -> pd.DataFrame:
+    df_pivot = (
+        data.query("prices == 'current'")
+        .groupby(["year", "country", "indicator_type"], observed=True, dropna=False)[
+            "value"
+        ]
+        .sum()
+        .reset_index()
+        .pivot(index=["year", "country"], columns="indicator_type", values="value")
+        .reset_index()
+    )
+
+    new_data = []
+
+    # for each year, from the original data remove countries where "outflow" is missing
+    for year in df_pivot["year"].unique():
+        countries = (
+            df_pivot.loc[lambda d: d.year == year]
+            .loc[lambda d: d.outflow.notna()]["country"]
+            .unique()
+        )
+        d_ = data.loc[lambda d: d.country.isin(countries)].loc[lambda d: d.year == year]
+        new_data.append(d_)
+
+    return pd.concat(new_data, ignore_index=True)
+
+
 def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:
     """
     Create a dataset to visualise as a scatter plot. This function aggregates the
@@ -292,7 +319,9 @@ def save_pipeline(data: pd.DataFrame, suffix: str) -> None:
     )
 
 
-def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
+def all_flows_pipeline(
+    exclude_countries: bool = True, remove_countries_wo_outflows: bool = True
+) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
 
@@ -316,6 +345,10 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
 
     if exclude_countries:
         data = exclude_outlier_countries(data)
+
+    if remove_countries_wo_outflows:
+        # Exclude countries with incomplete data
+        data = exclude_countries_without_outflows(data)
 
     # Save the data
     save_pipeline(data, "")
