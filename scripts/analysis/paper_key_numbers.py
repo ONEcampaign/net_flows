@@ -129,7 +129,7 @@ def change_between_years(
 
     # As percentage
     change["change_percentage"] = round(
-        (change[previous_year] - change["change"]) / change[previous_year] * 100, 1
+        change["change"] / change[previous_year] * 100, 1
     )
 
     # return as a single dictionary (indicator: value)
