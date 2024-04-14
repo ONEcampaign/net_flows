@@ -5,6 +5,7 @@ from scripts.analysis.common import (
     summarise_by_country,
     create_groupings,
     reorder_countries,
+    exclude_countries_without_outflows,
 )
 from scripts.analysis.net_flows import get_all_flows, exclude_outlier_countries
 from scripts.analysis.population_tools import add_population_under18
@@ -57,6 +58,7 @@ def output_pipeline(constant: bool = False, limit_to_2022: bool = True) -> None:
     df = (
         get_all_flows(constant=constant, limit_to_2022=limit_to_2022)
         .pipe(exclude_outlier_countries)
+        .pipe(exclude_countries_without_outflows)
         .pipe(convert_to_net_flows)
         .pipe(summarise_by_country)
         .pipe(negative_flows_only)
