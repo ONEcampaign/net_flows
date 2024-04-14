@@ -22,5 +22,14 @@
     "nnt_countries_total_value_2025": "$-101.82 bn",
     "dev_countries_debt_service_2022": "$-293.66 bn",
     "dev_countries_debt_service_projected_2023": "$-346.62 bn",
-    "dev_countries_debt_service_projected_2024": "$-358.44 bn"
+    "dev_countries_debt_service_projected_2024": "$-358.44 bn",
+    "china_lending_africa_average_2008_2021": "$8.9 bn",
+    "china_lending_africa_2022": "$6.3 bn",
+    "low_income_china_share_2008_2021": "25.5%",
+    "low_income_period_share_2022": "10.4%",
+    "china_lending_low_income_2022": "$0.8404 bn",
+    "private_lending_max_year": 2017,
+    "private_lending_max_year_value": "$257.0 bn",
+    "private_lending_2022": "$125.8 bn",
+    "private_lending_2022_to_max_ratio": 0.5
 }

@@ -1,9 +1,11 @@
 import pandas as pd
 from bblocks import add_iso_codes_column
 
-from scripts.analysis.common import update_key_number
+from scripts.analysis.common import update_key_number, exclude_outlier_countries
+from scripts.analysis.net_flows import prep_flows, rename_indicators
 from scripts.analysis.population_tools import population_for_countries
 from scripts.config import Paths
+from scripts.data.inflows import get_debt_inflows
 
 KEY_NUMBERS = Paths.output / "key_numbers.json"
 
@@ -145,6 +147,81 @@ def income_grouping_country_list(income_level: str) -> list[str]:
         .pipe(add_iso_codes_column, id_column="country", id_type="regex")["iso_code"]
         .unique()
     )
+
+    return data
+
+
+def loan_inflows() -> pd.DataFrame:
+    return (
+        pd.read_parquet(Paths.output / "debt_inflows_country.parquet")
+        .pipe(prep_flows)
+        .pipe(rename_indicators, suffix="")
+        .pipe(exclude_outlier_countries)
+    )
+
+
+def private_lending_to(to="all") -> pd.DataFrame:
+    data = loan_inflows()
+
+    if to not in ["all", "country", "income_level", "continent"]:
+        raise ValueError(
+            "to must be either 'all', 'country', 'income_level', or 'continent'"
+        )
+
+    if to == "all":
+        data = (
+            data.groupby(["year", "counterpart_type"], observed=True, dropna=False)[
+                "value"
+            ]
+            .sum()
+            .reset_index()
+            .assign(country="Developing countries")
+        )
+
+    else:
+        data = (
+            data.groupby(["year", to, "counterpart_type"], observed=True, dropna=False)[
+                "value"
+            ]
+            .sum()
+            .reset_index()
+            .rename(columns={to: "country"})
+        )
+
+    data = data.loc[lambda d: d.counterpart_type == "Private"]
+
+    return data
+
+
+def china_lending_to(to="all") -> pd.DataFrame:
+    data = loan_inflows()
+
+    if to not in ["all", "country", "income_level", "continent"]:
+        raise ValueError(
+            "to must be either 'all', 'country', 'income_level', or 'continent'"
+        )
+
+    if to == "all":
+        data = (
+            data.groupby(["year", "counterpart_area"], observed=True, dropna=False)[
+                "value"
+            ]
+            .sum()
+            .reset_index()
+            .assign(country="Developing countries")
+        )
+
+    else:
+        data = (
+            data.groupby(["year", to, "counterpart_area"], observed=True, dropna=False)[
+                "value"
+            ]
+            .sum()
+            .reset_index()
+            .rename(columns={to: "country"})
+        )
+
+    data = data.loc[lambda d: d.counterpart_area == "China"]
 
     return data
 
@@ -329,9 +406,122 @@ def debt_service_numbers() -> None:
     update_key_number(KEY_NUMBERS, numbers)
 
 
+def china_lending_numbers() -> None:
+
+    lending_to_continents = china_lending_to(to="continent")
+    lending_to_income = china_lending_to(to="income_level")
+
+    africa_average_2008_2021 = (
+        lending_to_continents.query("country == 'Africa' and year.between(2008,2021)")
+        .groupby("country")["value"]
+        .mean()
+        .div(1e9)
+        .round(1)
+        .item()
+    )
+
+    africa_lending_2022 = (
+        lending_to_continents.query("country == 'Africa' and year == 2022")["value"]
+        .div(1e9)
+        .round(1)
+        .item()
+    )
+
+    low_income_2008_2021_total_china = (
+        lending_to_income.query("country == 'Low income' and year.between(2008,2021)")
+        .groupby("country")["value"]
+        .sum()
+        .div(1e9)
+        .round(2)
+        .item()
+    )
+
+    low_income_total = (
+        loan_inflows()
+        .query("income_level == 'Low income'")
+        .groupby(["year", "income_level"])["value"]
+        .sum()
+        .div(1e9)
+        .round(2)
+        .reset_index()
+    )
+
+    low_income_2008_2021_total_all = (
+        low_income_total.query("year.between(2008,2021)")
+        .groupby("income_level")["value"]
+        .sum()
+        .item()
+    )
+
+    low_income_2022_total = (
+        low_income_total.query("year == 2022")
+        .groupby("income_level")["value"]
+        .sum()
+        .item()
+    )
+
+    low_income_2022_total_china = (
+        lending_to_income.query("country == 'Low income' and year==2022")
+        .groupby("country")["value"]
+        .sum()
+        .div(1e9)
+        .round(4)
+        .item()
+    )
+
+    period_share_lic_2008_2021 = round(
+        low_income_2008_2021_total_china / low_income_2008_2021_total_all * 100, 1
+    )
+
+    period_share_lic_2022 = round(
+        low_income_2022_total_china / low_income_2022_total * 100, 1
+    )
+
+    numbers = {
+        "china_lending_africa_average_2008_2021": f"${africa_average_2008_2021} bn",
+        "china_lending_africa_2022": f"${africa_lending_2022} bn",
+        "low_income_china_share_2008_2021": f"{period_share_lic_2008_2021}%",
+        "low_income_period_share_2022": f"{period_share_lic_2022}%",
+        "china_lending_low_income_2022": f"${low_income_2022_total_china} bn",
+    }
+
+    update_key_number(KEY_NUMBERS, numbers)
+
+
+def private_lending_numbers(as_billion=True) -> None:
+
+    # Private to all countries
+    private_to_all = private_lending_to(to="all")
+
+    if as_billion:
+        private_to_all["value"] = private_to_all["value"] / 1e9
+
+    # Max private lending
+    max_year = private_to_all.loc[lambda d: d.value == d.value.max()].year.item()
+    max_year_value = (
+        private_to_all.loc[lambda d: d.year == max_year].round(1).value.item()
+    )
+
+    # 2022 private lending
+    private_2022 = private_to_all.query("year == 2022").round(1).value.item()
+
+    ratio_2022_to_max = round(private_2022 / max_year_value, 1)
+
+    numbers = {
+        "private_lending_max_year": int(max_year),
+        "private_lending_max_year_value": f"${max_year_value} bn",
+        "private_lending_2022": f"${private_2022} bn",
+        "private_lending_2022_to_max_ratio": ratio_2022_to_max,
+    }
+
+    update_key_number(KEY_NUMBERS, numbers)
+
+
 if __name__ == "__main__":
     net_flows_dev_countries_summary()
     upper_middle_income_nt_numbers()
     lower_middle_income_nt_projection_numbers()
     negative_nt_counts_numbers()
     debt_service_numbers()
+    china_lending_numbers()
+    private_lending_numbers()
