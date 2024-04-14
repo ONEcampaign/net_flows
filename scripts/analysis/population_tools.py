@@ -3,7 +3,7 @@ import time
 
 import pandas as pd
 import requests
-from bblocks import add_iso_codes_column
+from bblocks import add_iso_codes_column, add_income_level_column
 from bs4 import BeautifulSoup
 
 from scripts import config
@@ -122,10 +122,10 @@ def download_all_population(indicator: int = 49) -> None:
     logger.info(f"Downloaded UN population data to {file_path}")
 
 
-def raw_un_population_data() -> pd.DataFrame:
+def raw_un_population_data(indicator: int = 47) -> pd.DataFrame:
     """Read the raw UN population data"""
 
-    file_path = Paths.raw_data / "un_population_raw_47.csv"
+    file_path = Paths.raw_data / f"un_population_raw_{indicator}.csv"
 
     logger.debug(f"Read UN population data from {file_path}")
 
@@ -190,6 +190,61 @@ def add_population_under18(data: pd.DataFrame, country_col: str = None) -> pd.Da
     data = data.merge(population, on=["iso_code"], how="left")
 
     return data
+
+
+def get_population() -> pd.DataFrame:
+    # get population
+    return (
+        raw_un_population_data(indicator=49)
+        .query("sex == 'Both sexes' and variant=='Median'")
+        .filter(["iso3", "value"])
+        .pipe(add_income_level_column, id_column="iso3", id_type="ISO3")
+    )
+
+
+def population_for_income(income_level: str | list[str]) -> pd.DataFrame:
+    if isinstance(income_level, str):
+        income_level = [income_level]
+
+    population = get_population()
+
+    return population.loc[lambda d: d.income_level.isin(income_level)].value.sum()
+
+
+def population_for_countries(countries: list[str]) -> pd.DataFrame:
+    population = get_population()
+
+    return population.loc[lambda d: d.iso3.isin(countries)].value.sum()
+
+
+def population_as_share_for_countries(countries: list[str]) -> float:
+    # Get population
+    population = get_population()
+
+    # Total population
+    total_population = population["value"].sum()
+
+    # income level population
+    country_population = population_for_countries(countries)
+
+    return round(country_population / total_population * 100, 1)
+
+
+def population_as_share(income_level: str | list[str]) -> float:
+
+    if isinstance(income_level, str):
+        income_level = [income_level]
+
+    # Get population
+    population = get_population()
+
+    # Total population
+    total_population = population["value"].sum()
+
+    # income level population
+    income_level_population = population_for_income(income_level)
+
+    return round(income_level_population / total_population * 100, 1)
 
 
 if __name__ == "__main__":
