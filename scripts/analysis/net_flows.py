@@ -8,6 +8,7 @@ from scripts.analysis.common import (
     convert_to_net_flows,
     summarise_by_country,
     create_groupings,
+    exclude_countries_without_outflows,
 )
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
@@ -193,33 +194,6 @@ def calculate_flows_as_percent_of_gdp(data: pd.DataFrame) -> pd.DataFrame:
     ).drop(columns=["gdp"])
 
     return data
-
-
-def exclude_countries_without_outflows(data: pd.DataFrame) -> pd.DataFrame:
-    df_pivot = (
-        data.query("prices == 'current'")
-        .groupby(["year", "country", "indicator_type"], observed=True, dropna=False)[
-            "value"
-        ]
-        .sum()
-        .reset_index()
-        .pivot(index=["year", "country"], columns="indicator_type", values="value")
-        .reset_index()
-    )
-
-    new_data = []
-
-    # for each year, from the original data remove countries where "outflow" is missing
-    for year in df_pivot["year"].unique():
-        countries = (
-            df_pivot.loc[lambda d: d.year == year]
-            .loc[lambda d: d.outflow.notna()]["country"]
-            .unique()
-        )
-        d_ = data.loc[lambda d: d.country.isin(countries)].loc[lambda d: d.year == year]
-        new_data.append(d_)
-
-    return pd.concat(new_data, ignore_index=True)
 
 
 def create_scatter_data(data: pd.DataFrame) -> pd.DataFrame:

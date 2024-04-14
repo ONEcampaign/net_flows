@@ -6,6 +6,7 @@ from scripts.analysis.common import (
     create_groupings,
     reorder_countries,
     add_china_as_counterpart_type,
+    exclude_countries_without_outflows,
 )
 from scripts.analysis.net_flows import (
     get_all_flows,
@@ -201,6 +202,7 @@ def projections_pipline(
     data = (
         get_all_flows(limit_to_2022=limit_to_2022, constant=constant)
         .pipe(exclude_outlier_countries)
+        .pipe(exclude_countries_without_outflows)
         .loc[lambda d: d.indicator_type == "inflow"]
         .reset_index(drop=True)
         .copy(deep=True)

@@ -194,3 +194,30 @@ def update_key_number(path: str, new_dict: dict) -> None:
 
     with open(path, "w") as f:
         json.dump(data, f, indent=4)
+
+
+def exclude_countries_without_outflows(data: pd.DataFrame) -> pd.DataFrame:
+    df_pivot = (
+        data.query("prices == 'current'")
+        .groupby(["year", "country", "indicator_type"], observed=True, dropna=False)[
+            "value"
+        ]
+        .sum()
+        .reset_index()
+        .pivot(index=["year", "country"], columns="indicator_type", values="value")
+        .reset_index()
+    )
+
+    new_data = []
+
+    # for each year, from the original data remove countries where "outflow" is missing
+    for year in df_pivot["year"].unique():
+        countries = (
+            df_pivot.loc[lambda d: d.year == year]
+            .loc[lambda d: d.outflow.notna()]["country"]
+            .unique()
+        )
+        d_ = data.loc[lambda d: d.country.isin(countries)].loc[lambda d: d.year == year]
+        new_data.append(d_)
+
+    return pd.concat(new_data, ignore_index=True)
