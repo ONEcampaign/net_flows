@@ -412,11 +412,21 @@ def debt_service_numbers() -> None:
 
 def china_lending_numbers() -> None:
 
-    lending_to_continents = china_lending_to(to="continent")
+    lending_to_continents_china = china_lending_to(to="continent")
     lending_to_income = china_lending_to(to="income_level")
 
+    # Lending to Africa peak
+    africa_peak = highest_flow(
+        lending_to_continents_china.query("country == 'Africa'")
+    ).popitem()
+
+    peak_year_africa_china = africa_peak[0]
+    peak_value_africa_china = round(africa_peak[1] / 1e9, 1)
+
     africa_average_2008_2021 = (
-        lending_to_continents.query("country == 'Africa' and year.between(2008,2021)")
+        lending_to_continents_china.query(
+            "country == 'Africa' and year.between(2008,2021)"
+        )
         .groupby("country")["value"]
         .mean()
         .div(1e9)
@@ -425,7 +435,9 @@ def china_lending_numbers() -> None:
     )
 
     africa_lending_2022 = (
-        lending_to_continents.query("country == 'Africa' and year == 2022")["value"]
+        lending_to_continents_china.query("country == 'Africa' and year == 2022")[
+            "value"
+        ]
         .div(1e9)
         .round(1)
         .item()
@@ -481,9 +493,18 @@ def china_lending_numbers() -> None:
         low_income_2022_total_china / low_income_2022_total * 100, 1
     )
 
+    change_from_peak_china_africa = (
+        (africa_lending_2022 - peak_value_africa_china) / peak_value_africa_china * 100
+    )
+
     numbers = {
         "china_lending_africa_average_2008_2021": f"${africa_average_2008_2021} bn",
         "china_lending_africa_2022": f"${africa_lending_2022} bn",
+        "china_lending_africa_peak_year": int(peak_year_africa_china),
+        "china_lending_africa_peak_value": f"${peak_value_africa_china} bn",
+        "china_lending_africa_change_from_peak": (
+            f"{round(change_from_peak_china_africa, 1)}%"
+        ),
         "low_income_china_share_2008_2021": f"{period_share_lic_2008_2021}%",
         "low_income_period_share_2022": f"{period_share_lic_2022}%",
         "china_lending_low_income_2022": f"${low_income_2022_total_china} bn",
