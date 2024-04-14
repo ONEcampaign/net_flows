@@ -225,11 +225,11 @@ def projections_pipline(
         .assign(indicator_type="outflow")
     )
 
+    projections_full = projected_netflows(inflows=inflows, outflows=outflows)
+
     # Get projected net flows
-    projections = (
-        projected_netflows(inflows=inflows, outflows=outflows)
-        .drop(columns=["inflow", "outflow"])
-        .rename({"net_flows": "value"}, axis=1)
+    projections = projections_full.drop(columns=["inflow", "outflow"]).rename(
+        {"net_flows": "value"}, axis=1
     )
 
     if projected_only:
@@ -244,6 +244,11 @@ def projections_pipline(
 
     projections.reset_index(drop=True).to_parquet(
         Paths.output / "net_flow_projections_country.parquet"
+    )
+
+    # detailed inflows outflows and projections
+    projections_full.reset_index(drop=True).to_parquet(
+        Paths.output / "inflows_outflows_projected_country.parquet"
     )
 
 

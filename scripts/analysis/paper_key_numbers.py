@@ -44,7 +44,7 @@ def net_flows_grouping_projections_per_year(
     return df
 
 
-def negative_net_flows_counts(year: int) -> dict:
+def negative_net_flows_counts_totals(year: int, as_billion: bool = True) -> dict:
 
     if year > 2022:
         data = pd.read_parquet(Paths.output / "net_flow_projections_country.parquet")
@@ -57,6 +57,9 @@ def negative_net_flows_counts(year: int) -> dict:
             .reset_index()
         )
 
+    if as_billion:
+        data["value"] = data["value"] / 1e9
+
     # Filter for year
     data = data.loc[lambda d: d.year == year]
 
@@ -66,9 +69,27 @@ def negative_net_flows_counts(year: int) -> dict:
     # get negative net flows count
     negative_net_flows_count = data.loc[lambda d: d.value < 0]["country"].nunique()
 
+    # Negative net countries
+    negative_net_countries = (
+        data.loc[lambda d: d.value < 0]
+        .copy()
+        .pipe(add_iso_codes_column, id_column="country", id_type="regex")["iso_code"]
+        .unique()
+    )
+
+    # Negative net countries population
+    nnt_population = int(
+        round(population_for_countries(negative_net_countries) / 1e6, 0)
+    )
+
+    # get net flows total
+    net_flows_total = data.loc[lambda d: d.value < 0]["value"].sum().round(2)
+
     return {
         "negative_net_flows_count": negative_net_flows_count,
         "full_country_count": full_country_count,
+        "net_flows_total": f"${net_flows_total} bn",
+        "nnt_population": f"{nnt_population} million",
     }
 
 
@@ -124,6 +145,28 @@ def income_grouping_country_list(income_level: str) -> list[str]:
         .pipe(add_iso_codes_column, id_column="country", id_type="regex")["iso_code"]
         .unique()
     )
+
+    return data
+
+
+def outflows_historical_and_projections(
+    year: int | None, as_billion
+) -> pd.DataFrame | float:
+    data = pd.read_parquet(Paths.output / "inflows_outflows_projected_country.parquet")
+
+    data = (
+        data.groupby(["year"], observed=True, dropna=False)["outflow"]
+        .sum()
+        .reset_index()
+    )
+
+    if as_billion:
+        data["outflow"] = data["outflow"] / 1e9
+
+    data = data.rename(columns={"outflow": "value"})
+
+    if year is not None:
+        data = data.loc[lambda d: d.year == year].round(2).value.item()
 
     return data
 
@@ -228,16 +271,18 @@ def lower_middle_income_nt_projection_numbers() -> None:
 
 def negative_nt_counts_numbers() -> None:
     # Get 2022 negative net flows count
-    nnt2022 = negative_net_flows_counts(year=2022)
+    nnt2022 = negative_net_flows_counts_totals(year=2022)
 
     # Get 2023 projected negative net flows count
-    nnt2023 = negative_net_flows_counts(year=2024)
+    nnt2023 = negative_net_flows_counts_totals(year=2023)
 
     # Get 2024 projected negative net flows count
-    nnt2024 = negative_net_flows_counts(year=2024)
+    nnt2024 = negative_net_flows_counts_totals(year=2024)
 
     # Get 2025 projected negative net flows count
-    nnt2025 = negative_net_flows_counts(year=2025)
+    nnt2025 = negative_net_flows_counts_totals(year=2025)
+
+    # 2022 negative net flows population
 
     # numbers
     numbers = {
@@ -245,18 +290,40 @@ def negative_nt_counts_numbers() -> None:
             f"{nnt2022['negative_net_flows_count']} out"
             f" of {nnt2022['full_country_count']} countries"
         ),
+        "nnt_countries_total_value_2022": nnt2022["net_flows_total"],
+        "nnt_2022_countries_population": nnt2022["nnt_population"],
         "nnt_count_2023": (
             f"{nnt2023['negative_net_flows_count']} out"
             f" of {nnt2023['full_country_count']} countries"
         ),
+        "nnt_countries_total_value_2023": nnt2023["net_flows_total"],
         "nnt_count_2024": (
             f"{nnt2024['negative_net_flows_count']} out"
             f" of {nnt2024['full_country_count']} countries"
         ),
+        "nnt_countries_total_value_2024": nnt2024["net_flows_total"],
         "nnt_count_2025": (
             f"{nnt2025['negative_net_flows_count']} out"
             f" of {nnt2025['full_country_count']} countries"
         ),
+        "nnt_countries_total_value_2025": nnt2025["net_flows_total"],
+    }
+
+    update_key_number(KEY_NUMBERS, numbers)
+
+
+def debt_service_numbers() -> None:
+
+    # 2022 debt service
+    ds2022 = outflows_historical_and_projections(year=2022, as_billion=True)
+    ds2023 = outflows_historical_and_projections(year=2023, as_billion=True)
+    ds2024 = outflows_historical_and_projections(year=2024, as_billion=True)
+
+    # numbers
+    numbers = {
+        "dev_countries_debt_service_2022": f"${ds2022} bn",
+        "dev_countries_debt_service_projected_2023": f"${ds2023} bn",
+        "dev_countries_debt_service_projected_2024": f"${ds2024} bn",
     }
 
     update_key_number(KEY_NUMBERS, numbers)
@@ -267,3 +334,4 @@ if __name__ == "__main__":
     upper_middle_income_nt_numbers()
     lower_middle_income_nt_projection_numbers()
     negative_nt_counts_numbers()
+    debt_service_numbers()

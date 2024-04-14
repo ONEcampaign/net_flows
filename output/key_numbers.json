@@ -12,7 +12,15 @@
     "lmic_nt_2024_value": "$-29.83 bn",
     "lmic_nt_population": "3.4 billion",
     "nnt_count_2022": "26 out of 118 countries",
-    "nnt_count_2023": "41 out of 119 countries",
+    "nnt_countries_total_value_2022": "$-47.89 bn",
+    "nnt_2022_countries_population": "1299 million",
+    "nnt_count_2023": "39 out of 119 countries",
+    "nnt_countries_total_value_2023": "$-101.42 bn",
     "nnt_count_2024": "41 out of 119 countries",
-    "nnt_count_2025": "45 out of 119 countries"
+    "nnt_countries_total_value_2024": "$-124.67 bn",
+    "nnt_count_2025": "45 out of 119 countries",
+    "nnt_countries_total_value_2025": "$-101.82 bn",
+    "dev_countries_debt_service_2022": "$-293.66 bn",
+    "dev_countries_debt_service_projected_2023": "$-346.62 bn",
+    "dev_countries_debt_service_projected_2024": "$-358.44 bn"
 }
