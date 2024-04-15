@@ -123,7 +123,7 @@ def add_projections_data(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     # put projections into billions
-    projection["net_flow"] = projection["net_flow"] / 1000000000
+    projection["net_flow"] = projection["net_flow"] / 1e9
 
     # Merge projections data into actual data.
     df_merged = pd.concat([df, projection])
@@ -210,10 +210,11 @@ def flourish_1_beeswarm_pipeline(df: pd.DataFrame) -> pd.DataFrame:
     # Add new column for net flows as a share of GDP (using WEO GDP data)
     df = calculate_net_flow_as_share_gdp(df)
 
+    # Add negative net transfers column (states 'nnt' when outflow > inflow)
     df = add_nnt_column(df, target_col="net_flow")
 
     # filter for specified years
-    df = filter_for_specified_years(df=df, years=[2022, 2024])
+    df = filter_for_specified_years(df=df, years=[2022, 2025])
 
     return df
 
@@ -223,6 +224,4 @@ if __name__ == "__main__":
     data = get_parquet(doc="full_flows_country.parquet")
 
     flourish_chart_1 = flourish_1_beeswarm_pipeline(df=data)
-    flourish_chart_1.to_csv(
-        Paths.output / "chart_2_1.csv", index=False
-    )
+    flourish_chart_1.to_csv(Paths.output / "chart_2_1.csv", index=False)
