@@ -59,6 +59,43 @@ def calculate_net_transfers(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def add_latest_year_for_missing_gdp_data(
+    df: pd.DataFrame, gdp: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Fills gaps in GDP data where the year does not currently have data. Fills gaps with
+    latest available year.
+
+    Args:
+        df (pd.DataFrame) with missing GDP data
+        gdp (pd.DataFrame) with all gdp data
+
+    Returns: pd.DataFrame with gdp data for the latest year available, where neccessary.
+    """
+
+    # Make a copy to avoid modifying the original DataFrame
+    df = df.copy()
+
+    # Identify rows with missing GDP data
+    missing_gdp_indices = df.loc[lambda d: d.gdp.isna()].index
+
+    # Loop through rows with missing GDP data and fill in the latest year available
+    for idx in missing_gdp_indices:
+        iso = df.loc[idx, "iso_3"]
+        year = df.loc[idx, "year"]
+
+        # Find the latest year before the current 'year' for which GDP data is available
+        past_years = gdp.loc[lambda d: (d["iso_3"] == iso) & (d["year"] < year)]
+        if not past_years.empty:
+            latest_year = past_years["year"].max()
+            latest_gdp = gdp.loc[
+                lambda d: (d["iso_3"] == iso) & (d["year"] == latest_year), "gdp"
+            ].iloc[0]
+            df.loc[idx, "gdp"] = latest_gdp
+
+    return df
+
+
 def add_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Merges IMF WEO gdp data (in current prices, US$) from 'weo_data.csv' in output
@@ -74,14 +111,14 @@ def add_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
         {"entity_code": "iso_3", "value": "gdp"}, axis=1
     )
 
-    df_merged = pd.merge(df, gdp, on=["year", "iso_3"], how="inner").filter(
+    df_merged = pd.merge(df, gdp, on=["year", "iso_3"], how="left").filter(
         items=[
             "year",
             "country",
             "income_level",
             "continent",
-            "inflow",
-            "outflow",
+            # "inflow",
+            # "outflow",
             "net_flow",
             "iso_3",
             "gdp",
@@ -89,7 +126,9 @@ def add_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
         axis="columns",
     )
 
-    return df_merged
+    df_filled_empty = add_latest_year_for_missing_gdp_data(df=df_merged, gdp=gdp)
+
+    return df_filled_empty
 
 
 def calculate_share_gdp(df: pd.DataFrame) -> pd.DataFrame:

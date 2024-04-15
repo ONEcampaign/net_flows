@@ -1,4 +1,5 @@
 year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percent,nnt
+2022,Afghanistan,Low income,Asia,3.924253,AFG,14.941,26.264995649554916,
 2022,Albania,Upper middle income,Europe,0.23197158820000005,ALB,19.083,1.215592874286014,
 2022,Algeria,Lower middle income,Africa,0.11226608460000001,DZA,195.06,0.05755464195632114,
 2022,Angola,Lower middle income,Africa,-0.8864178457000008,AGO,122.781,-0.7219503389775297,net negative transfers
@@ -34,6 +35,7 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2022,Ecuador,Upper middle income,America,-0.2263051881999998,ECU,115.049,-0.19670330746029935,net negative transfers
 2022,Egypt,Lower middle income,Africa,0.4817305746000004,EGY,475.231,0.10136766637698306,
 2022,El Salvador,Lower middle income,America,-0.8802073868000001,SLV,32.489,-2.709247396965127,net negative transfers
+2022,Eritrea,Low income,Africa,0.042515664,ERI,1.982,2.1450890010090817,
 2022,Eswatini,Lower middle income,Africa,0.24892855950000004,SWZ,4.837,5.146341937151128,
 2022,Ethiopia,Low income,Africa,3.4608425103999996,ETH,120.369,2.87519420315862,
 2022,Fiji,Upper middle income,Oceania,0.5043300648000001,FJI,4.98,10.12710973493976,
@@ -115,6 +117,7 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2022,Yemen,Low income,Asia,2.8652184494,YEM,23.548,12.167566032784102,
 2022,Zambia,Low income,Africa,1.4304010756999999,ZMB,29.742,4.809364117073498,
 2022,Zimbabwe,Lower middle income,Africa,1.0419541995,ZWE,31.49,3.308841535408066,
+2025,Afghanistan,Low income,Asia,4.3040178295,AFG,14.941,28.806758781206078,
 2025,Albania,Upper middle income,Europe,-0.39157981523333335,ALB,26.361,-1.4854512925660381,net negative transfers
 2025,Algeria,Lower middle income,Africa,0.12368504623333301,DZA,247.742,0.049924940556438965,
 2025,Angola,Lower middle income,Africa,1.9702159994998092,AGO,96.895,2.033351565612064,
@@ -150,6 +153,7 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2025,Ecuador,Upper middle income,America,-0.4012104557666578,ECU,127.109,-0.3156428386397956,net negative transfers
 2025,Egypt,Lower middle income,Africa,0.8266417946333924,EGY,408.934,0.20214552828412222,
 2025,El Salvador,Lower middle income,America,-0.30352278953331924,SLV,38.81,-0.7820736653783026,net negative transfers
+2025,Eritrea,Low income,Africa,0.010422364033333253,ERI,1.982,0.5258508594012742,
 2025,Eswatini,Lower middle income,Africa,0.4141049009333086,SWZ,5.189,7.980437481852159,
 2025,Ethiopia,Low income,Africa,1.6762365470000735,ETH,223.52,0.7499268732104839,
 2025,Fiji,Upper middle income,Oceania,0.577029736133334,FJI,6.342,9.098545192893946,
@@ -175,6 +179,7 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2025,Kosovo,Upper middle income,Europe,0.12122630920003205,XKX,11.947,1.0147008387045455,
 2025,Kyrgyz Republic,Lower middle income,Asia,0.7116128022333428,KGZ,14.693,4.843209706889966,
 2025,Laos,Lower middle income,Asia,-1.0885746458666625,LAO,14.866,-7.322579347952796,net negative transfers
+2025,Lebanon,Lower middle income,Asia,-1.8034996832999968,LBN,21.78,-8.280531144628084,net negative transfers
 2025,Lesotho,Lower middle income,Africa,0.1268580216333334,LSO,2.654,4.7798802424014095,
 2025,Liberia,Low income,Africa,0.3651198316666733,LBR,4.92,7.421134789973034,
 2025,Madagascar,Low income,Africa,1.2001407529999841,MDG,18.329,6.547769943804813,
@@ -195,6 +200,7 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2025,Niger,Low income,Africa,1.9218091630333207,NER,21.287,9.028088331062719,
 2025,Nigeria,Lower middle income,Africa,6.204905870799838,NGA,457.998,1.3547888573312195,
 2025,North Macedonia,Upper middle income,Europe,-1.1562666126333336,MKD,18.448,-6.267707136997688,net negative transfers
+2025,Pakistan,Lower middle income,Asia,-2.6053115391332646,PAK,340.636,-0.7648374038954381,net negative transfers
 2025,Papua New Guinea,Lower middle income,Oceania,1.0853128739333433,PNG,33.152,3.2737478098858084,
 2025,Paraguay,Upper middle income,America,-0.6632641926999421,PRY,49.186,-1.3484816669376287,net negative transfers
 2025,Peru,Upper middle income,America,-3.6045049763332884,PER,291.094,-1.23826151563869,net negative transfers
@@ -208,10 +214,12 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2025,Solomon Islands,Lower middle income,Oceania,0.3317209241666641,SLB,1.911,17.35849943310644,
 2025,Somalia,Low income,Africa,0.8198894506666871,SOM,13.544,6.053525182122615,
 2025,South Africa,Upper middle income,Africa,0.5888529144994049,ZAF,417.947,0.14089176725742855,
+2025,Sri Lanka,Lower middle income,Asia,-1.7978982463999147,LKA,74.846,-2.4021300355395274,net negative transfers
 2025,St. Lucia,Upper middle income,America,-0.034884023466666025,LCA,2.715,-1.2848627427869623,net negative transfers
 2025,St. Vincent and the Grenadines,Upper middle income,America,0.07809509763333074,VCT,1.183,6.60144527754275,
 2025,Sudan,Low income,Africa,0.5776176698999611,SDN,26.217,2.2032180260897936,
 2025,Suriname,Upper middle income,America,0.32357084270001035,SUR,4.434,7.2974930694634725,
+2025,Syria,Low income,Asia,-0.056802423,SYR,60.043,-0.09460290625052045,net negative transfers
 2025,Tajikistan,Lower middle income,Asia,0.2112813420999998,TJK,14.086,1.4999385354252435,
 2025,Tanzania,Lower middle income,Africa,3.6204987871000305,TZA,92.411,3.917822323208309,
 2025,Thailand,Upper middle income,Asia,-0.42771275199999287,THA,579.69,-0.07378301367972413,net negative transfers
