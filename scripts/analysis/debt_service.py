@@ -8,6 +8,7 @@ from scripts.analysis.common import (
     create_world_total,
     add_china_as_counterpart_type,
     reorder_countries,
+    exclude_countries_without_outflows,
 )
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
@@ -109,7 +110,7 @@ def avg_repayments_charts() -> None:
 
     data = (
         get_debt_service_data(constant=False)
-        .pipe(exclude_outlier_countries)
+        .pipe(exclude_countries_without_outflows)
         .pipe(remove_default_groupings)
         .pipe(create_world_total, "Developing countries")
         .pipe(
@@ -135,6 +136,7 @@ def avg_repayments_charts() -> None:
         get_debt_service_data(constant=False)
         .pipe(exclude_outlier_countries)
         .pipe(remove_world)
+        .pipe(exclude_countries_without_outflows)
         .pipe(add_china_as_counterpart_type)
         .pipe(remove_default_groupings)
         .pipe(create_world_total, "Developing countries")
