@@ -59,3 +59,4 @@ It is created by the script [net_flow_projections.py](../scripts/analysis/net_fl
   Structured for a flourish bar chart. It is created by the script [debt_service.py](../scripts/analysis/debt_service.py).
 - [`chart_1_1](chart_1_1.csv): Data for chart 1.1. Net flows for countries and groups
 - [`chart_1_2](chart_1_2.csv): Data for chart 1.2. Inflows for countries and groups
+- [`chart_2_1`](chart_2_1.csv): Data for chart 2.1. Net negative transfer countries (2022 and 2025). 
