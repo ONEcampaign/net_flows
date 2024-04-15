@@ -8,6 +8,7 @@ from scripts.analysis.common import (
     convert_to_net_flows,
     summarise_by_country,
     create_groupings,
+    exclude_countries_without_outflows,
 )
 from scripts.config import Paths
 from scripts.data.inflows import get_total_inflows
@@ -292,7 +293,9 @@ def save_pipeline(data: pd.DataFrame, suffix: str) -> None:
     )
 
 
-def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
+def all_flows_pipeline(
+    exclude_countries: bool = True, remove_countries_wo_outflows: bool = True
+) -> pd.DataFrame:
     """Create a dataset with all flows for visualisation. It is saved as a CSV in the
     output folder. It includes both constant and current prices.
 
@@ -316,6 +319,10 @@ def all_flows_pipeline(exclude_countries: bool = True) -> pd.DataFrame:
 
     if exclude_countries:
         data = exclude_outlier_countries(data)
+
+    if remove_countries_wo_outflows:
+        # Exclude countries with incomplete data
+        data = exclude_countries_without_outflows(data)
 
     # Save the data
     save_pipeline(data, "")

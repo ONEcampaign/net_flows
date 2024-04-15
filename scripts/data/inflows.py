@@ -287,5 +287,18 @@ def get_total_inflows(constant: bool = False) -> pd.DataFrame:
     return data
 
 
+def export_debt_inflows(constant: bool = False):
+    """
+    Export debt inflows data to a csv file.
+
+    Args:
+        constant (bool): Whether to export the data in constant or current prices.
+
+    """
+    data = get_debt_inflows(constant)
+    data.to_parquet(config.Paths.output / "debt_inflows_country.parquet")
+
+
 if __name__ == "__main__":
-    net_flows = get_total_inflows(constant=False)
+    # inflows = get_total_inflows(constant=False)
+    export_debt_inflows(constant=False)
