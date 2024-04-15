@@ -132,6 +132,16 @@ def avg_repayments_charts() -> None:
         .replace({"year": {"2023-2025": "2023-2025 (projected)"}})
     )
 
+    # add percentages as column
+    data = (
+        data.groupby(["year", "country"], dropna=False, observed=True, sort=False)
+        .apply(
+            lambda x: x.assign(percent=round(100 * x["value"] / x["value"].sum(), 1)),
+            include_groups=True,
+        )
+        .reset_index(drop=True)
+    )
+
     data_china = (
         get_debt_service_data(constant=False)
         .pipe(exclude_outlier_countries)
@@ -156,6 +166,16 @@ def avg_repayments_charts() -> None:
         .pipe(reorder_countries, True)
         .drop(columns=["income_level", "continent"])
         .replace({"year": {"2023-2025": "2023-2025 (projected)"}})
+    )
+
+    # add percentages as column
+    data_china = (
+        data_china.groupby(["year", "country"], dropna=False, observed=True, sort=False)
+        .apply(
+            lambda x: x.assign(percent=round(100 * x["value"] / x["value"].sum(), 1)),
+            include_groups=True,
+        )
+        .reset_index(drop=True)
     )
 
     data.to_csv(Paths.output / "avg_repayments.csv", index=False)
