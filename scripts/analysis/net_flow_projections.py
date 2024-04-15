@@ -169,9 +169,34 @@ def projected_netflows(inflows: pd.DataFrame, outflows: pd.DataFrame) -> pd.Data
             index=[c for c in data.columns if c not in ["value", "indicator_type"]],
             columns="indicator_type",
             values="value",
-        )
+        ).reset_index()
+        # .fillna(0)
+    )
+
+    # Create grouped data at right level to check missing projections.
+    missing_projections_groups = data.loc[lambda d: d.year > 2022].groupby(
+        ["year", "country", "continent", "income_level"], dropna=False
+    )
+
+    # Check if inflow is missing for all values in group
+    missing_projections = (
+        missing_projections_groups["inflow"]
+        .apply(lambda x: x.isnull().all())
         .reset_index()
-        .fillna(0)
+        .filter(["year", "country", "inflow"])
+    )
+
+    # Merge missing projections back to data. Remove missing inflow projections
+    data = (
+        pd.merge(
+            data,
+            missing_projections,
+            on=["year", "country"],
+            how="left",
+            suffixes=("", "_m"),
+        )
+        .loc[lambda d: d.inflow_m != True]
+        .drop(columns=["inflow_m"])
     )
 
     # Group by country
