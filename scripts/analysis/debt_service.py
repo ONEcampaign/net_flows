@@ -3,7 +3,6 @@
 import pandas as pd
 
 from scripts.analysis.common import (
-    exclude_outlier_countries,
     create_grouping_totals,
     create_world_total,
     add_china_as_counterpart_type,
@@ -136,6 +135,23 @@ def get_preprocess_debt_service(
         .pipe(reorder_countries, True)
         .drop(columns=["income_level", "continent"])
         .replace({"year": {"2023-2025": "2023-2025 (projected)"}})
+        .pipe(add_percentages)
+    )
+
+    return data
+
+
+def add_percentages(data: pd.DataFrame) -> pd.DataFrame:
+    # add percentages as column
+    data = (
+        data.groupby(["year", "country"], dropna=False, observed=True, sort=False)[
+            ["year", "country", "counterpart_type", "value"]
+        ]
+        .apply(
+            lambda x: x.assign(percent=round(100 * x["value"] / x["value"].sum(), 1)),
+            include_groups=True,
+        )
+        .reset_index(drop=True)
     )
 
     return data
@@ -146,16 +162,6 @@ def avg_repayments_charts() -> None:
 
     data = get_preprocess_debt_service(constant=False, china_as_type=False)
     data_china = get_preprocess_debt_service(constant=False, china_as_type=True)
-
-    # # add percentages as column
-    # data = (
-    #     data.groupby(["year", "country"], dropna=False, observed=True, sort=False)
-    #     .apply(
-    #         lambda x: x.assign(percent=round(100 * x["value"] / x["value"].sum(), 1)),
-    #         include_groups=True,
-    #     )
-    #     .reset_index(drop=True)
-    # )
 
     data.to_csv(Paths.output / "avg_repayments.csv", index=False)
     data_china.to_csv(Paths.output / "avg_repayments_china.csv", index=False)
