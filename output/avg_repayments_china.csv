@@ -1,16 +1,16 @@
 year,country,counterpart_type,value,percent
-2010-2014,Developing countries,Bilateral,27887350362.8,13.9
-2010-2014,Developing countries,Multilateral,39194146596.12,19.6
-2010-2014,Developing countries,Private,128026362839.68001,64.0
-2010-2014,Developing countries,China,5012013388.86,2.5
-2018-2022,Developing countries,Bilateral,31089753169.32,7.9
-2018-2022,Developing countries,Multilateral,57923903249.28001,14.7
-2018-2022,Developing countries,Private,285495597175.33997,72.3
-2018-2022,Developing countries,China,20201514566.18,5.1
-2023-2025 (projected),Developing countries,Bilateral,35636892255.9,8.2
-2023-2025 (projected),Developing countries,Multilateral,96176626691.23334,22.2
-2023-2025 (projected),Developing countries,Private,267747165935.1333,61.8
-2023-2025 (projected),Developing countries,China,33414773605.36667,7.7
+2010-2014,Developing countries,Bilateral,23030174379.98,14.9
+2010-2014,Developing countries,Multilateral,33660765625.04,21.8
+2010-2014,Developing countries,Private,92373286754.86,60.0
+2010-2014,Developing countries,China,4991741988.86,3.2
+2018-2022,Developing countries,Bilateral,28360183474.98,9.5
+2018-2022,Developing countries,Multilateral,53046590348.259995,17.7
+2018-2022,Developing countries,Private,198380401929.92,66.2
+2018-2022,Developing countries,China,20072599966.18,6.7
+2023-2025 (projected),Developing countries,Bilateral,34281527902.400005,10.0
+2023-2025 (projected),Developing countries,Multilateral,89057223878.7,26.0
+2023-2025 (projected),Developing countries,Private,186066656959.19998,54.3
+2023-2025 (projected),Developing countries,China,33342483605.36667,9.7
 2010-2014,Low income,Bilateral,656557990.74,23.5
 2010-2014,Low income,Multilateral,1217279483.8600001,43.6
 2010-2014,Low income,Private,374836381.74,13.4
@@ -23,30 +23,30 @@ year,country,counterpart_type,value,percent
 2023-2025 (projected),Low income,Multilateral,4460019260.433333,34.1
 2023-2025 (projected),Low income,Private,2544221854.633333,19.5
 2023-2025 (projected),Low income,China,4211818476.566667,32.2
-2010-2014,Lower middle income,Bilateral,16106302181.7,24.2
-2010-2014,Lower middle income,Multilateral,16277206948.52,24.4
-2010-2014,Lower middle income,Private,31492656162.940002,47.3
-2010-2014,Lower middle income,China,2740741574.46,4.1
-2018-2022,Lower middle income,Bilateral,17010014585.52,13.1
-2018-2022,Lower middle income,Multilateral,28339613895.22,21.8
-2018-2022,Lower middle income,Private,73277405342.72,56.2
-2018-2022,Lower middle income,China,11644528320.7,8.9
-2023-2025 (projected),Lower middle income,Bilateral,22285444545.966667,12.6
-2023-2025 (projected),Lower middle income,Multilateral,50819013883.73334,28.7
-2023-2025 (projected),Lower middle income,Private,81285771477.73334,45.9
-2023-2025 (projected),Lower middle income,China,22809754561.966667,12.9
-2010-2014,Upper middle income,Bilateral,11124490190.36,8.5
-2010-2014,Upper middle income,Multilateral,21699660163.739998,16.6
-2010-2014,Upper middle income,Private,96158870295.0,73.6
-2010-2014,Upper middle income,China,1725926447.7,1.3
-2018-2022,Upper middle income,Bilateral,13417183510.9,5.2
-2018-2022,Upper middle income,Multilateral,27248801723.239998,10.6
-2018-2022,Upper middle income,Private,210572994507.9,81.6
-2018-2022,Upper middle income,China,6835120699.92,2.6
-2023-2025 (projected),Upper middle income,Bilateral,11494550345.699999,4.7
-2023-2025 (projected),Upper middle income,Multilateral,40897593547.066666,16.9
-2023-2025 (projected),Upper middle income,Private,183917172602.7667,75.8
-2023-2025 (projected),Upper middle income,China,6393200566.833333,2.6
+2010-2014,Lower middle income,Bilateral,15926676381.079998,25.4
+2010-2014,Lower middle income,Multilateral,14696648261.48,23.4
+2010-2014,Lower middle income,Private,29366383952.78,46.8
+2010-2014,Lower middle income,China,2720470174.46,4.3
+2018-2022,Lower middle income,Bilateral,16933060400.920002,13.5
+2018-2022,Lower middle income,Multilateral,27074936962.14,21.6
+2018-2022,Lower middle income,Private,69892854680.14,55.7
+2018-2022,Lower middle income,China,11515613720.7,9.2
+2023-2025 (projected),Lower middle income,Bilateral,22082358699.266666,12.9
+2023-2025 (projected),Lower middle income,Multilateral,48681302938.4,28.5
+2023-2025 (projected),Lower middle income,Private,77091737814.06667,45.2
+2023-2025 (projected),Lower middle income,China,22737464561.966667,13.3
+2010-2014,Upper middle income,Bilateral,6446940008.16,7.3
+2010-2014,Upper middle income,Multilateral,17746837879.7,20.0
+2010-2014,Upper middle income,Private,62632066420.340004,70.7
+2010-2014,Upper middle income,China,1725926447.7,1.9
+2018-2022,Upper middle income,Bilateral,10764568001.16,6.4
+2018-2022,Upper middle income,Multilateral,23636165755.3,14.1
+2018-2022,Upper middle income,Private,126842349925.06001,75.5
+2018-2022,Upper middle income,China,6835120699.92,4.1
+2023-2025 (projected),Upper middle income,Bilateral,10342271838.9,6.5
+2023-2025 (projected),Upper middle income,Multilateral,35915901679.86667,22.6
+2023-2025 (projected),Upper middle income,Private,106430697290.5,66.9
+2023-2025 (projected),Upper middle income,China,6393200566.833333,4.0
 2010-2014,Africa,Bilateral,5064700943.9800005,20.9
 2010-2014,Africa,Multilateral,5239671354.780001,21.7
 2010-2014,Africa,Private,11795951609.32,48.8
@@ -59,30 +59,30 @@ year,country,counterpart_type,value,percent
 2023-2025 (projected),Africa,Multilateral,20213465814.733334,24.7
 2023-2025 (projected),Africa,Private,36204835442.93333,44.3
 2023-2025 (projected),Africa,China,16657179618.133333,20.4
-2010-2014,Europe,Bilateral,1966156541.4600003,5.2
-2010-2014,Europe,Multilateral,3783471035.0800004,9.9
-2010-2014,Europe,Private,32069250907.380005,84.2
-2010-2014,Europe,China,247237680.51999998,0.6
-2018-2022,Europe,Bilateral,2239844291.4199996,3.6
-2018-2022,Europe,Multilateral,3880441906.3,6.2
-2018-2022,Europe,Private,55273527537.68001,88.3
-2018-2022,Europe,China,1169064271.3,1.9
-2023-2025 (projected),Europe,Bilateral,3123997888.0333333,7.5
-2023-2025 (projected),Europe,Multilateral,5501758131.166667,13.1
-2023-2025 (projected),Europe,Private,31692009626.833332,75.7
-2023-2025 (projected),Europe,China,1535779911.3333333,3.7
-2010-2014,Asia,Bilateral,17515489671.260002,23.7
-2010-2014,Asia,Multilateral,16134076093.9,21.8
-2010-2014,Asia,Private,38674113039.22,52.3
-2010-2014,Asia,China,1664622575.0,2.2
-2018-2022,Asia,Bilateral,17335338299.8,11.1
-2018-2022,Asia,Multilateral,25711588554.88,16.4
-2018-2022,Asia,Private,106643801331.78,68.1
-2018-2022,Asia,China,6797402125.68,4.3
-2023-2025 (projected),Asia,Bilateral,20473110512.86667,9.9
-2023-2025 (projected),Asia,Multilateral,44274565768.73334,21.3
-2023-2025 (projected),Asia,Private,130948482026.53333,63.1
-2023-2025 (projected),Asia,China,11688059619.166666,5.6
+2010-2014,Europe,Bilateral,1115959856.1399999,22.1
+2010-2014,Europe,Multilateral,1554472442.74,30.7
+2010-2014,Europe,Private,2157943109.66,42.7
+2010-2014,Europe,China,226966280.51999998,4.5
+2018-2022,Europe,Bilateral,2069996924.0199997,22.3
+2018-2022,Europe,Multilateral,2470993678.38,26.7
+2018-2022,Europe,Private,3684776732.7,39.8
+2018-2022,Europe,China,1040149671.3,11.2
+2023-2025 (projected),Europe,Bilateral,2670246819.066667,24.0
+2023-2025 (projected),Europe,Multilateral,3360742028.866667,30.2
+2023-2025 (projected),Europe,Private,3637060730.7999997,32.7
+2023-2025 (projected),Europe,China,1463489911.3333333,13.1
+2010-2014,Asia,Bilateral,13508510373.76,22.2
+2010-2014,Asia,Multilateral,12829693715.16,21.1
+2010-2014,Asia,Private,32932344752.119995,54.0
+2010-2014,Asia,China,1664622575.0,2.7
+2018-2022,Asia,Bilateral,14775615972.86,12.9
+2018-2022,Asia,Multilateral,22243723881.78,19.4
+2018-2022,Asia,Private,71117356891.34,61.9
+2018-2022,Asia,China,6797402125.68,5.9
+2023-2025 (projected),Asia,Bilateral,19571497228.333332,13.2
+2023-2025 (projected),Asia,Multilateral,39296179058.5,26.6
+2023-2025 (projected),Asia,Private,77322921946.63335,52.3
+2023-2025 (projected),Asia,China,11688059619.166666,7.9
 2010-2014,America,Bilateral,3303809269.54,5.2
 2010-2014,America,Multilateral,13949440601.52,21.9
 2010-2014,America,Private,45429187770.44,71.3
@@ -357,15 +357,6 @@ year,country,counterpart_type,value,percent
 2023-2025 (projected),Chad,Multilateral,136692525.63333333,33.8
 2023-2025 (projected),Chad,Private,141306666.66666666,34.9
 2023-2025 (projected),Chad,China,42586287.5,10.5
-2010-2014,China,Bilateral,4006979297.5,30.7
-2010-2014,China,Multilateral,3304382378.7400002,25.3
-2010-2014,China,Private,5741768287.1,44.0
-2018-2022,China,Bilateral,2559722326.94,6.2
-2018-2022,China,Multilateral,3467864673.1,8.3
-2018-2022,China,Private,35526444440.44,85.5
-2023-2025 (projected),China,Bilateral,901613284.5333333,1.5
-2023-2025 (projected),China,Multilateral,4978386710.233334,8.4
-2023-2025 (projected),China,Private,53625560079.9,90.1
 2010-2014,Colombia,Bilateral,117179242.52000001,2.5
 2010-2014,Colombia,Multilateral,1638201780.4,34.8
 2010-2014,Colombia,Private,2954348641.02,62.7
@@ -1071,15 +1062,6 @@ year,country,counterpart_type,value,percent
 2023-2025 (projected),Philippines,Multilateral,3052504124.566667,50.8
 2023-2025 (projected),Philippines,Private,2235172632.9333334,37.2
 2023-2025 (projected),Philippines,China,164529366.0,2.7
-2010-2014,Russia,Bilateral,670570884.7,2.3
-2010-2014,Russia,Multilateral,648439905.3,2.2
-2010-2014,Russia,Private,27785035587.559998,95.5
-2018-2022,Russia,Bilateral,92893182.8,0.2
-2018-2022,Russia,Multilateral,144771294.84,0.3
-2018-2022,Russia,Private,48204200142.4,99.5
-2023-2025 (projected),Russia,Bilateral,250665222.26666665,1.0
-2023-2025 (projected),Russia,Multilateral,3305156.966666667,0.0
-2023-2025 (projected),Russia,Private,23860915232.36667,98.9
 2010-2014,Rwanda,Bilateral,3856107.7600000002,9.5
 2010-2014,Rwanda,Multilateral,15767007.2,38.7
 2010-2014,Rwanda,Private,20175000.0,49.5
@@ -1326,18 +1308,6 @@ year,country,counterpart_type,value,percent
 2023-2025 (projected),Uganda,Multilateral,600986858.6,51.7
 2023-2025 (projected),Uganda,Private,88671107.3,7.6
 2023-2025 (projected),Uganda,China,357281425.43333334,30.7
-2010-2014,Ukraine,Bilateral,179625800.62,4.6
-2010-2014,Ukraine,Multilateral,1580558687.04,40.1
-2010-2014,Ukraine,Private,2126272210.1599998,54.0
-2010-2014,Ukraine,China,50678500.0,1.3
-2018-2022,Ukraine,Bilateral,76954184.6,1.6
-2018-2022,Ukraine,Multilateral,1264676933.08,26.0
-2018-2022,Ukraine,Private,3384550662.58,69.7
-2018-2022,Ukraine,China,128914600.0,2.7
-2023-2025 (projected),Ukraine,Bilateral,203085846.70000002,3.1
-2023-2025 (projected),Ukraine,Multilateral,2137710945.3333333,32.4
-2023-2025 (projected),Ukraine,Private,4194033663.6666665,63.5
-2023-2025 (projected),Ukraine,China,72290000.0,1.1
 2010-2014,Uzbekistan,Bilateral,141998109.57999998,37.6
 2010-2014,Uzbekistan,Multilateral,122126956.75999999,32.3
 2010-2014,Uzbekistan,Private,70858298.28,18.7

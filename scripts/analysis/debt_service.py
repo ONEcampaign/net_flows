@@ -8,6 +8,7 @@ from scripts.analysis.common import (
     add_china_as_counterpart_type,
     reorder_countries,
     exclude_countries_without_outflows,
+    exclude_outlier_countries,
 )
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
@@ -110,6 +111,7 @@ def get_preprocess_debt_service(
 ) -> pd.DataFrame:
     data = (
         get_debt_service_data(constant=constant)
+        .pipe(exclude_outlier_countries)
         .pipe(exclude_countries_without_outflows)
         .pipe(remove_default_groupings)
         .pipe(remove_world)
