@@ -219,7 +219,6 @@ year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percen
 2025,St. Vincent and the Grenadines,Upper middle income,America,0.07809509763333074,VCT,1.183,6.60144527754275,
 2025,Sudan,Low income,Africa,0.5776176698999611,SDN,26.217,2.2032180260897936,
 2025,Suriname,Upper middle income,America,0.32357084270001035,SUR,4.434,7.2974930694634725,
-2025,Syria,Low income,Asia,-0.056802423,SYR,60.043,-0.09460290625052045,net negative transfers
 2025,Tajikistan,Lower middle income,Asia,0.2112813420999998,TJK,14.086,1.4999385354252435,
 2025,Tanzania,Lower middle income,Africa,3.6204987871000305,TZA,92.411,3.917822323208309,
 2025,Thailand,Upper middle income,Asia,-0.42771275199999287,THA,579.69,-0.07378301367972413,net negative transfers
