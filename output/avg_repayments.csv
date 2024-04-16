@@ -1,13 +1,13 @@
 year,country,counterpart_type,value
-2010-2014,Developing countries,Bilateral,35827594775.46
-2010-2014,Developing countries,Multilateral,44408710798.1
-2010-2014,Developing countries,Private,135017079442.8
-2018-2022,Developing countries,Bilateral,54205330282.86
-2018-2022,Developing countries,Multilateral,67726327895.31999
-2018-2022,Developing countries,Private,309016876189.42004
-2023-2025 (projected),Developing countries,Bilateral,76506748432.3
-2023-2025 (projected),Developing countries,Multilateral,113893393172.0
-2023-2025 (projected),Developing countries,Private,297518770196.0334
+2010-2014,Developing countries,Bilateral,31731124559.920002
+2010-2014,Developing countries,Multilateral,39194146596.12
+2010-2014,Developing countries,Private,129194602031.42
+2018-2022,Developing countries,Bilateral,47214931531.54
+2018-2022,Developing countries,Multilateral,57923903249.28001
+2018-2022,Developing countries,Private,289571933379.3
+2023-2025 (projected),Developing countries,Bilateral,61573661126.76666
+2023-2025 (projected),Developing countries,Multilateral,96176626691.23334
+2023-2025 (projected),Developing countries,Private,275225170669.6333
 2010-2014,Low income,Bilateral,1077356157.44
 2010-2014,Low income,Multilateral,1217279483.8600001
 2010-2014,Low income,Private,499383581.74000007
@@ -36,23 +36,14 @@ year,country,counterpart_type,value
 2023-2025 (projected),Upper middle income,Multilateral,40897593547.066666
 2023-2025 (projected),Upper middle income,Private,184243988469.06665
 2010-2014,Africa,Bilateral,6155910264.66
-2010-2014,Africa,Bilateral,12315537564.888332
 2010-2014,Africa,Multilateral,5239671354.780001
-2010-2014,Africa,Multilateral,10482409397.59
 2010-2014,Africa,Private,12783156230.16
-2010-2014,Africa,Private,25592148103.368332
 2018-2022,Africa,Bilateral,12992475919.14
-2018-2022,Africa,Bilateral,25984951838.28
 2018-2022,Africa,Multilateral,12282204670.079998
-2018-2022,Africa,Multilateral,24632792838.199997
 2018-2022,Africa,Private,34929373615.14
-2018-2022,Africa,Private,69877291346.79666
 2023-2025 (projected),Africa,Bilateral,19420135250.233334
-2023-2025 (projected),Africa,Bilateral,38840270500.46667
 2023-2025 (projected),Africa,Multilateral,20213465814.733334
-2023-2025 (projected),Africa,Multilateral,40426931629.46667
 2023-2025 (projected),Africa,Private,42088945092.5
-2023-2025 (projected),Africa,Private,84186068873.90001
 2010-2014,Europe,Bilateral,2202061480.7
 2010-2014,Europe,Multilateral,3783471035.0800004
 2010-2014,Europe,Private,32080583648.659996
@@ -926,15 +917,6 @@ year,country,counterpart_type,value
 2023-2025 (projected),South Africa,Bilateral,421252358.40000004
 2023-2025 (projected),South Africa,Multilateral,704413696.6666666
 2023-2025 (projected),South Africa,Private,7391396069.0
-2010-2014,South Asia,Bilateral,8192940431.08
-2010-2014,South Asia,Multilateral,10429128403.960001
-2010-2014,South Asia,Private,11644954822.76
-2018-2022,South Asia,Bilateral,13980797502.64
-2018-2022,South Asia,Multilateral,19604849292.079998
-2018-2022,South Asia,Private,38889885620.240005
-2023-2025 (projected),South Asia,Bilateral,29866174611.066666
-2023-2025 (projected),South Asia,Multilateral,35433532961.53333
-2023-2025 (projected),South Asia,Private,44587199052.799995
 2010-2014,Sri Lanka,Bilateral,614049128.96
 2010-2014,Sri Lanka,Multilateral,282223935.65999997
 2010-2014,Sri Lanka,Private,839200545.6
