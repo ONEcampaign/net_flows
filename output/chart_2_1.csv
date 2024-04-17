@@ -1,237 +1,237 @@
-year,country,income_level,continent,net_flow,iso_3,gdp,net_flows_over_gdp_percent,nnt
-2022,Afghanistan,Low income,Asia,3.924253,AFG,14.941,26.264995649554916,
-2022,Albania,Upper middle income,Europe,0.23197158820000005,ALB,19.083,1.215592874286014,
-2022,Algeria,Lower middle income,Africa,0.11226608460000001,DZA,195.06,0.05755464195632114,
-2022,Angola,Lower middle income,Africa,-0.8864178457000008,AGO,122.781,-0.7219503389775297,net negative transfers
-2022,Argentina,Upper middle income,America,-0.7712333008999996,ARG,630.606,-0.12230034298753892,net negative transfers
-2022,Armenia,Upper middle income,Asia,0.20259294820000004,ARM,19.514,1.0381928266885316,
-2022,Azerbaijan,Upper middle income,Asia,-0.7891687264000001,AZE,78.721,-1.0024881879041172,net negative transfers
-2022,Bangladesh,Lower middle income,Asia,8.682725981799999,BGD,460.201,1.886724709811582,
-2022,Belarus,Upper middle income,Europe,-1.4896893852999997,BLR,72.835,-2.0452933140660394,net negative transfers
-2022,Belize,Upper middle income,America,0.015533646599999994,BLZ,2.985,0.5203901708542712,
-2022,Benin,Lower middle income,Africa,0.9406919945,BEN,17.439,5.394185414874706,
-2022,Bhutan,Lower middle income,Asia,0.17208256639999997,BTN,2.653,6.486338725970598,
-2022,Bolivia,Lower middle income,America,0.5728209255,BOL,44.315,1.2926118142841023,
-2022,Bosnia and Herzegovina,Upper middle income,Europe,0.1565086325,BIH,24.52,0.6382896920880913,
-2022,Botswana,Upper middle income,Africa,0.12256322270000004,BWA,20.352,0.6022170926690253,
-2022,Brazil,Upper middle income,America,-8.011721478599995,BRA,1920.023,-0.4172721617709786,net negative transfers
-2022,Bulgaria,Upper middle income,Europe,0.9336425798999999,BGR,89.115,1.047682859114627,
-2022,Burkina Faso,Low income,Africa,1.4573753876000002,BFA,18.934,7.697134190345411,
-2022,Burundi,Low income,Africa,0.5934464033000001,BDI,3.918,15.146666750893315,
-2022,Cabo Verde,Lower middle income,Africa,0.09976875610000001,CPV,2.308,4.32273639948007,
-2022,Cambodia,Lower middle income,Asia,1.5113807484000001,KHM,28.818,5.244571963356235,
-2022,Cameroon,Lower middle income,Africa,0.5226981125,CMR,44.322,1.1793197791164658,
-2022,Central African Republic,Low income,Africa,0.6273626228,CAF,2.463,25.47148285830288,
-2022,Chad,Low income,Africa,0.5491951553,TCD,12.096,4.540303863260582,
-2022,Colombia,Upper middle income,America,2.1164964085,COL,343.622,0.61593739879868,
-2022,Comoros,Lower middle income,Africa,0.1504603271,COM,1.237,12.163324745351659,
-2022,Congo Republic,Lower middle income,Africa,-0.36334405329999997,COG,13.961,-2.6025646680037244,net negative transfers
-2022,Costa Rica,Upper middle income,America,0.8430607997999999,CRI,68.373,1.233031752007371,
-2022,Cote d'Ivoire,Lower middle income,Africa,4.4629911343,CIV,70.18,6.359349008691935,
-2022,DR Congo,Low income,Africa,2.7883967379000003,COD,65.784,4.238715702754469,
-2022,Djibouti,Lower middle income,Africa,0.15376036820000002,DJI,3.662,4.198808525395959,
-2022,Dominica,Upper middle income,America,0.045700277299999995,DMA,0.627,7.288720462519936,
-2022,Dominican Republic,Upper middle income,America,1.3316829838000002,DOM,113.873,1.1694457718686608,
-2022,Ecuador,Upper middle income,America,-0.2263051881999998,ECU,115.049,-0.19670330746029935,net negative transfers
-2022,Egypt,Lower middle income,Africa,0.4817305746000004,EGY,475.231,0.10136766637698306,
-2022,El Salvador,Lower middle income,America,-0.8802073868000001,SLV,32.489,-2.709247396965127,net negative transfers
-2022,Eritrea,Low income,Africa,0.042515664,ERI,1.982,2.1450890010090817,
-2022,Eswatini,Lower middle income,Africa,0.24892855950000004,SWZ,4.837,5.146341937151128,
-2022,Ethiopia,Low income,Africa,3.4608425103999996,ETH,120.369,2.87519420315862,
-2022,Fiji,Upper middle income,Oceania,0.5043300648000001,FJI,4.98,10.12710973493976,
-2022,Gabon,Upper middle income,Africa,-0.1768319428,GAB,21.117,-0.8373914040820192,net negative transfers
-2022,Gambia,Low income,Africa,0.2701617925,GMB,2.161,12.501702568255437,
-2022,Georgia,Upper middle income,Asia,1.1175887412999999,GEO,24.606,4.541935874583434,
-2022,Ghana,Lower middle income,Africa,1.1779699935999999,GHA,72.243,1.6305662743795246,
-2022,Grenada,Upper middle income,America,0.003781252599999994,GRD,1.216,0.3109582730263153,
-2022,Guatemala,Upper middle income,America,-0.056084843300000194,GTM,95.004,-0.05903419150772619,net negative transfers
-2022,Guinea,Low income,Africa,0.5882861739,GIN,20.304,2.8973905333924352,
-2022,Guinea-Bissau,Low income,Africa,0.1223385242,GNB,1.718,7.120985110593714,
-2022,Guyana,Upper middle income,America,0.5184837693000001,GUY,14.529,3.568612907288871,
-2022,Haiti,Lower middle income,America,0.873596,HTI,20.535,4.25418066715364,
-2022,Honduras,Lower middle income,America,0.5023536564000001,HND,31.523,1.5936099241823432,
-2022,India,Lower middle income,Asia,2.9439574820999983,IND,3389.689,0.08685037129069949,
-2022,Indonesia,Lower middle income,Asia,-15.988365091399997,IDN,1318.806,-1.2123363930252058,net negative transfers
-2022,Iran,Lower middle income,Asia,0.37624087510000004,IRN,346.479,0.10858980633746924,
-2022,Iraq,Upper middle income,Asia,-1.7698154648999995,IRQ,261.14,-0.6777266848816725,net negative transfers
-2022,Jamaica,Upper middle income,America,-0.7338101795,JAM,17.003,-4.315768861377404,net negative transfers
-2022,Jordan,Upper middle income,Asia,0.5416455199000001,JOR,47.519,1.1398504175172037,
-2022,Kazakhstan,Upper middle income,Asia,-2.2244637275,KAZ,225.529,-0.9863315704410519,net negative transfers
-2022,Kenya,Lower middle income,Africa,1.4886921196000005,KEN,113.701,1.3093043329434224,
-2022,Kosovo,Upper middle income,Europe,0.3846565314,XKX,9.437,4.076046745787856,
-2022,Kyrgyz Republic,Lower middle income,Asia,0.520551731,KGZ,11.672,4.459833199108978,
-2022,Laos,Lower middle income,Asia,0.4373773763,LAO,15.304,2.857928491244119,
-2022,Lebanon,Lower middle income,Asia,1.5549915741,LBN,21.78,7.139538907713499,
-2022,Lesotho,Lower middle income,Africa,-0.05566856409999996,LSO,2.463,-2.2601934267153863,net negative transfers
-2022,Liberia,Low income,Africa,0.5033147968,LBR,3.974,12.665193678912933,
-2022,Madagascar,Low income,Africa,1.0938882391000002,MDG,15.149,7.220861040992807,
-2022,Malawi,Low income,Africa,1.3604973008999999,MWI,12.537,10.851856910744196,
-2022,Maldives,Upper middle income,Asia,-0.049742678299999954,MDV,6.238,-0.7974138874639299,net negative transfers
-2022,Mali,Low income,Africa,1.3554422147000003,MLI,19.171,7.070273927807627,
-2022,Mauritania,Lower middle income,Africa,0.12890310589999998,MRT,9.903,1.3016571331919617,
-2022,Mauritius,Upper middle income,Africa,0.38163027679999995,MUS,12.898,2.9588329725538838,
-2022,Mexico,Upper middle income,America,0.15703848559999847,MEX,1465.854,0.010713105507096784,
-2022,Moldova,Upper middle income,Europe,1.1185865875,MDA,14.55,7.687880326460481,
-2022,Mongolia,Lower middle income,Asia,-0.7147994573,MNG,17.146,-4.1688992027295,net negative transfers
-2022,Montenegro,Upper middle income,Europe,-0.1796592582,MNE,6.109,-2.940894715992797,net negative transfers
-2022,Morocco,Lower middle income,Africa,0.2157409328000002,MAR,130.913,0.16479718041752933,
-2022,Mozambique,Low income,Africa,2.1964352414,MOZ,19.157,11.465444701153626,
-2022,Myanmar,Lower middle income,Asia,0.21725489910000004,MMR,66.156,0.32839787638309453,
-2022,Nepal,Lower middle income,Asia,1.105519659,NPL,40.828,2.707748748407955,
-2022,Nicaragua,Lower middle income,America,0.38422201889999996,NIC,15.671,2.4518028134771233,
-2022,Niger,Low income,Africa,1.8475797353999999,NER,15.448,11.959993108493007,
-2022,Nigeria,Lower middle income,Africa,5.1950802803,NGA,477.376,1.0882575329090696,
-2022,North Macedonia,Upper middle income,Europe,0.31086464690000004,MKD,13.593,2.2869465673508427,
-2022,Pakistan,Lower middle income,Asia,-2.365329144,PAK,374.658,-0.6313302115529362,net negative transfers
-2022,Papua New Guinea,Lower middle income,Oceania,1.395845663,PNG,31.533,4.4266186629879805,
-2022,Paraguay,Upper middle income,America,1.0800272790999998,PRY,41.722,2.5886277721585733,
-2022,Peru,Upper middle income,America,0.2131215363000002,PER,244.594,0.08713277361668732,
-2022,Philippines,Lower middle income,Asia,4.674763654,PHL,404.284,1.156306866954913,
-2022,Rwanda,Low income,Africa,1.3183043061,RWA,13.309,9.905359576977986,
-2022,Samoa,Lower middle income,Oceania,0.10182513959999999,WSM,0.833,12.223906314525811,
-2022,Sao Tome and Principe,Lower middle income,Africa,0.08473386470000001,STP,0.548,15.462384069343067,
-2022,Senegal,Lower middle income,Africa,1.0036297853,SEN,27.744,3.6174660658160325,
-2022,Serbia,Upper middle income,Europe,1.170680896,SRB,63.502,1.84353389814494,
-2022,Sierra Leone,Low income,Africa,0.49581662309999996,SLE,3.987,12.435832031602708,
-2022,Solomon Islands,Lower middle income,Oceania,0.2508794179,SLB,1.591,15.768662344437463,
-2022,Somalia,Low income,Africa,1.9396159385999998,SOM,10.42,18.614356416506716,
-2022,South Africa,Upper middle income,Africa,-6.300150853400001,ZAF,405.106,-1.5551857670338134,net negative transfers
-2022,Sri Lanka,Lower middle income,Asia,0.7807410093000002,LKA,74.846,1.04312990580659,
-2022,St. Lucia,Upper middle income,America,-0.0035368941000000014,LCA,2.297,-0.1539788463212887,net negative transfers
-2022,St. Vincent and the Grenadines,Upper middle income,America,0.0594050927,VCT,0.947,6.2729770538542775,
-2022,Sudan,Low income,Africa,1.4264162054,SDN,33.752,4.226167946788338,
-2022,Suriname,Upper middle income,America,0.22913613789999998,SUR,3.51,6.528095096866097,
-2022,Tajikistan,Lower middle income,Asia,0.47212540239999995,TJK,10.493,4.49943202515963,
-2022,Tanzania,Lower middle income,Africa,2.1305913207000002,TZA,77.065,2.7646679046259655,
-2022,Thailand,Upper middle income,Asia,-0.49017064589999987,THA,495.424,-0.09893962462456399,net negative transfers
-2022,Timor-Leste,Lower middle income,Asia,0.2274153569,TLS,4.904,4.637344145595432,
-2022,Togo,Low income,Africa,0.344324725,TGO,8.144,4.227955857072692,
-2022,Tonga,Upper middle income,Oceania,0.13255854109999998,TON,0.498,26.618180943775098,
-2022,Tunisia,Lower middle income,Africa,-0.07922311509999991,TUN,46.361,-0.17088310239209661,net negative transfers
-2022,Turkmenistan,Upper middle income,Asia,-0.4747182710999999,TKM,77.252,-0.614506124242738,net negative transfers
-2022,Türkiye,Upper middle income,Asia,-0.8844091910999985,TUR,905.841,-0.09763404296118176,net negative transfers
-2022,Uganda,Low income,Africa,1.9864985126999999,UGA,48.244,4.117607397189288,
-2022,Uzbekistan,Lower middle income,Asia,3.2319968289000007,UZB,80.418,4.018996777960159,
-2022,Vanuatu,Lower middle income,Oceania,0.151002483,VUT,1.073,14.072924790307548,
-2022,Vietnam,Lower middle income,Asia,-1.9225096743999996,VNM,406.452,-0.4729979614813064,net negative transfers
-2022,Yemen,Low income,Asia,2.8652184494,YEM,23.548,12.167566032784102,
-2022,Zambia,Low income,Africa,1.4304010756999999,ZMB,29.742,4.809364117073498,
-2022,Zimbabwe,Lower middle income,Africa,1.0419541995,ZWE,31.49,3.308841535408066,
-2025,Afghanistan,Low income,Asia,4.3040178295,AFG,14.941,28.806758781206078,
-2025,Albania,Upper middle income,Europe,-0.39157981523333335,ALB,26.361,-1.4854512925660381,net negative transfers
-2025,Algeria,Lower middle income,Africa,0.12368504623333301,DZA,247.742,0.049924940556438965,
-2025,Angola,Lower middle income,Africa,1.9702159994998092,AGO,96.895,2.033351565612064,
-2025,Argentina,Upper middle income,America,0.8559521003335275,ARG,635.908,0.13460313446811922,
-2025,Armenia,Upper middle income,Asia,-0.05388919739999842,ARM,28.996,-0.1858504531659485,net negative transfers
-2025,Azerbaijan,Upper middle income,Asia,-0.6421428235000489,AZE,84.292,-0.7618075540977185,net negative transfers
-2025,Bangladesh,Lower middle income,Asia,9.302474239966674,BGD,511.79,1.8176350143548474,
-2025,Belarus,Upper middle income,Europe,-1.4251844333666306,BLR,66.632,-2.138888872263523,net negative transfers
-2025,Belize,Upper middle income,America,1.6248052195999998,BLZ,3.497,46.46283155847869,
-2025,Benin,Lower middle income,Africa,1.1410822869999955,BEN,23.627,4.829569081982458,
-2025,Bhutan,Lower middle income,Asia,-0.15831370326666952,BTN,3.093,-5.118451447354333,net negative transfers
-2025,Bolivia,Lower middle income,America,2.213318693766808,BOL,52.691,4.200563082436863,
-2025,Bosnia and Herzegovina,Upper middle income,Europe,-0.1951865763666625,BIH,30.572,-0.6384488301931915,net negative transfers
-2025,Botswana,Upper middle income,Africa,0.29452017589998647,BWA,23.488,1.2539176426259642,
-2025,Brazil,Upper middle income,America,-18.51549436836671,BRA,2362.163,-0.7838364400918442,net negative transfers
-2025,Bulgaria,Upper middle income,Europe,0.4791305991666503,BGR,117.499,0.40777419311368635,
-2025,Burkina Faso,Low income,Africa,1.029034164566697,BFA,24.851,4.140815921156883,
-2025,Burundi,Low income,Africa,0.6480179597666641,BDI,3.415,18.9756357179111,
-2025,Cabo Verde,Lower middle income,Africa,0.061229140266674816,CPV,2.991,2.0471126802632837,
-2025,Cambodia,Lower middle income,Asia,1.4157522455000122,KHM,35.859,3.948108551549157,
-2025,Cameroon,Lower middle income,Africa,1.17570635256666,CMR,56.791,2.0702335802621192,
-2025,Central African Republic,Low income,Africa,0.35365724663334386,CAF,3.205,11.034547476859402,
-2025,Chad,Low income,Africa,0.168144015533316,TCD,13.787,1.2195837784385,
-2025,Colombia,Upper middle income,America,-2.2389294007669447,COL,390.269,-0.5736887635879213,net negative transfers
-2025,Comoros,Lower middle income,Africa,0.16003532529999773,COM,1.536,10.41896649088527,
-2025,Congo Republic,Lower middle income,Africa,-0.2593475154000038,COG,16.217,-1.5992323820682235,net negative transfers
-2025,Costa Rica,Upper middle income,America,2.1114527748999206,CRI,97.239,2.1714052745296852,
-2025,Cote d'Ivoire,Lower middle income,Africa,4.178213113500009,CIV,94.471,4.422746783139809,
-2025,DR Congo,Low income,Africa,3.285519340566588,COD,81.189,4.04675429007204,
-2025,Djibouti,Lower middle income,Africa,-0.19280017723333132,DJI,4.541,-4.245764748586904,net negative transfers
-2025,Dominica,Upper middle income,America,0.0404116870333335,DMA,0.796,5.076845104690137,
-2025,Dominican Republic,Upper middle income,America,-3.8852741046333437,DOM,137.344,-2.828863368354893,net negative transfers
-2025,Ecuador,Upper middle income,America,-0.4012104557666578,ECU,127.109,-0.3156428386397956,net negative transfers
-2025,Egypt,Lower middle income,Africa,0.8266417946333924,EGY,408.934,0.20214552828412222,
-2025,El Salvador,Lower middle income,America,-0.30352278953331924,SLV,38.81,-0.7820736653783026,net negative transfers
-2025,Eritrea,Low income,Africa,0.010422364033333253,ERI,1.982,0.5258508594012742,
-2025,Eswatini,Lower middle income,Africa,0.4141049009333086,SWZ,5.189,7.980437481852159,
-2025,Ethiopia,Low income,Africa,1.6762365470000735,ETH,223.52,0.7499268732104839,
-2025,Fiji,Upper middle income,Oceania,0.577029736133334,FJI,6.342,9.098545192893946,
-2025,Gabon,Upper middle income,Africa,-1.076176898433335,GAB,20.409,-5.273050607248445,net negative transfers
-2025,Gambia,Low income,Africa,0.12032802680000286,GMB,2.903,4.144954419566065,
-2025,Georgia,Upper middle income,Asia,1.2269820427000244,GEO,34.075,3.6008277115187797,
-2025,Ghana,Lower middle income,Africa,-0.10098526200011683,GHA,76.707,-0.13165064726832862,net negative transfers
-2025,Grenada,Upper middle income,America,-0.02508431359999924,GRD,1.467,-1.7099054942058103,net negative transfers
-2025,Guatemala,Upper middle income,America,0.09634238490002131,GTM,119.494,0.08062529072591203,
-2025,Guinea,Low income,Africa,0.2057654795333153,GIN,27.331,0.7528648038246508,
-2025,Guinea-Bissau,Low income,Africa,0.056222180666668696,GNB,2.365,2.377259224806287,
-2025,Guyana,Upper middle income,America,1.1486275449333847,GUY,23.527,4.882167488134419,
-2025,Haiti,Lower middle income,America,0.9892242312,HTI,30.004,3.2969745073990135,
-2025,Honduras,Lower middle income,America,-0.17556761163330686,HND,37.796,-0.46451373593318573,net negative transfers
-2025,India,Lower middle income,Asia,-7.497446537733154,IND,4511.847,-0.16617244640018056,net negative transfers
-2025,Indonesia,Lower middle income,Asia,-16.87405338133333,IDN,1670.627,-1.010043138374594,net negative transfers
-2025,Iran,Lower middle income,Asia,0.48033300213333285,IRN,401.186,0.11972825625354147,
-2025,Iraq,Upper middle income,Asia,-1.4051903013666076,IRQ,281.788,-0.49866931926363356,net negative transfers
-2025,Jamaica,Upper middle income,America,-0.9263930808666642,JAM,21.043,-4.402381223526418,net negative transfers
-2025,Jordan,Upper middle income,Asia,0.06480218113326407,JOR,55.592,0.11656745778756668,
-2025,Kazakhstan,Upper middle income,Asia,0.360990937399951,KAZ,309.376,0.11668356220261139,
-2025,Kenya,Lower middle income,Africa,0.13255752466669846,KEN,122.393,0.1083048251670426,
-2025,Kosovo,Upper middle income,Europe,0.12122630920003205,XKX,11.947,1.0147008387045455,
-2025,Kyrgyz Republic,Lower middle income,Asia,0.7116128022333428,KGZ,14.693,4.843209706889966,
-2025,Laos,Lower middle income,Asia,-1.0885746458666625,LAO,14.866,-7.322579347952796,net negative transfers
-2025,Lebanon,Lower middle income,Asia,-1.8034996832999968,LBN,21.78,-8.280531144628084,net negative transfers
-2025,Lesotho,Lower middle income,Africa,0.1268580216333334,LSO,2.654,4.7798802424014095,
-2025,Liberia,Low income,Africa,0.3651198316666733,LBR,4.92,7.421134789973034,
-2025,Madagascar,Low income,Africa,1.2001407529999841,MDG,18.329,6.547769943804813,
-2025,Malawi,Low income,Africa,1.4643153177333446,MWI,11.307,12.950520188673782,
-2025,Maldives,Upper middle income,Asia,-0.04464014256665647,MDV,8.164,-0.5467925351133817,net negative transfers
-2025,Mali,Low income,Africa,1.2448032222000032,MLI,24.618,5.056475839629552,
-2025,Mauritania,Lower middle income,Africa,-0.2558366477333176,MRT,11.652,-2.195645792424628,net negative transfers
-2025,Mauritius,Upper middle income,Africa,0.8963757767000488,MUS,17.304,5.180165145053449,
-2025,Mexico,Upper middle income,America,-17.71512485969903,MEX,2081.181,-0.8512053905786681,net negative transfers
-2025,Moldova,Upper middle income,Europe,1.9041607608666993,MDA,17.935,10.617010096831333,
-2025,Mongolia,Lower middle income,Asia,2.3339148671,MNG,19.648,11.878638370826547,
-2025,Montenegro,Upper middle income,Europe,-0.6628215479333317,MNE,8.158,-8.124804461060698,net negative transfers
-2025,Morocco,Lower middle income,Africa,-1.2768150741333246,MAR,166.489,-0.7669065668802891,net negative transfers
-2025,Mozambique,Low income,Africa,2.8978263488666274,MOZ,25.721,11.266382912276455,
-2025,Myanmar,Lower middle income,Asia,-0.9559689026,MMR,83.578,-1.1438044731867236,net negative transfers
-2025,Nepal,Lower middle income,Asia,0.35102381410000516,NPL,49.939,0.7029051725104731,
-2025,Nicaragua,Lower middle income,America,0.052712810333339334,NIC,19.853,0.2655155912624758,
-2025,Niger,Low income,Africa,1.9218091630333207,NER,21.287,9.028088331062719,
-2025,Nigeria,Lower middle income,Africa,6.204905870799838,NGA,457.998,1.3547888573312195,
-2025,North Macedonia,Upper middle income,Europe,-1.1562666126333336,MKD,18.448,-6.267707136997688,net negative transfers
-2025,Pakistan,Lower middle income,Asia,-2.6053115391332646,PAK,340.636,-0.7648374038954381,net negative transfers
-2025,Papua New Guinea,Lower middle income,Oceania,1.0853128739333433,PNG,33.152,3.2737478098858084,
-2025,Paraguay,Upper middle income,America,-0.6632641926999421,PRY,49.186,-1.3484816669376287,net negative transfers
-2025,Peru,Upper middle income,America,-3.6045049763332884,PER,291.094,-1.23826151563869,net negative transfers
-2025,Philippines,Lower middle income,Asia,-1.543159377066472,PHL,521.895,-0.2956838783790747,net negative transfers
-2025,Rwanda,Low income,Africa,0.7771378661000207,RWA,14.25,5.453599060351022,
-2025,Samoa,Lower middle income,Oceania,0.05299862599999857,WSM,1.052,5.0378922053230575,
-2025,Sao Tome and Principe,Lower middle income,Africa,0.08828293653333244,STP,0.832,10.610929871794765,
-2025,Senegal,Lower middle income,Africa,-0.1151463494000063,SEN,39.666,-0.2902897932738524,net negative transfers
-2025,Serbia,Upper middle income,Europe,1.4184861906999602,SRB,88.905,1.5955077787525562,
-2025,Sierra Leone,Low income,Africa,0.21131692666665497,SLE,3.737,5.654721077512844,
-2025,Solomon Islands,Lower middle income,Oceania,0.3317209241666641,SLB,1.911,17.35849943310644,
-2025,Somalia,Low income,Africa,0.8198894506666871,SOM,13.544,6.053525182122615,
-2025,South Africa,Upper middle income,Africa,0.5888529144994049,ZAF,417.947,0.14089176725742855,
-2025,Sri Lanka,Lower middle income,Asia,-1.7978982463999147,LKA,74.846,-2.4021300355395274,net negative transfers
-2025,St. Lucia,Upper middle income,America,-0.034884023466666025,LCA,2.715,-1.2848627427869623,net negative transfers
-2025,St. Vincent and the Grenadines,Upper middle income,America,0.07809509763333074,VCT,1.183,6.60144527754275,
-2025,Sudan,Low income,Africa,0.5776176698999611,SDN,26.217,2.2032180260897936,
-2025,Suriname,Upper middle income,America,0.32357084270001035,SUR,4.434,7.2974930694634725,
-2025,Tajikistan,Lower middle income,Asia,0.2112813420999998,TJK,14.086,1.4999385354252435,
-2025,Tanzania,Lower middle income,Africa,3.6204987871000305,TZA,92.411,3.917822323208309,
-2025,Thailand,Upper middle income,Asia,-0.42771275199999287,THA,579.69,-0.07378301367972413,net negative transfers
-2025,Timor-Leste,Lower middle income,Asia,0.17902688419999696,TLS,2.185,8.193450077803064,
-2025,Togo,Low income,Africa,0.2617957351666633,TGO,10.62,2.465119916823572,
-2025,Tonga,Upper middle income,Oceania,0.07274313263333626,TON,0.607,11.9840416199895,
-2025,Tunisia,Lower middle income,Africa,-1.198734264800003,TUN,54.922,-2.1826121860092553,net negative transfers
-2025,Turkmenistan,Upper middle income,Asia,-0.09487412786666644,TKM,100.563,-0.09434297690668182,net negative transfers
-2025,Türkiye,Upper middle income,Asia,-4.253290159633286,TUR,1402.105,-0.3033503310831418,net negative transfers
-2025,Uganda,Low income,Africa,-0.2316108176333618,UGA,63.749,-0.36331678557053726,net negative transfers
-2025,Uzbekistan,Lower middle income,Asia,1.1958314772332763,UZB,113.025,1.0580238683771521,
-2025,Vanuatu,Lower middle income,Oceania,0.16949865423332924,VUT,1.357,12.490689331859192,
-2025,Vietnam,Lower middle income,Asia,-2.9341228848000136,VNM,514.653,-0.5701167358977822,net negative transfers
-2025,Yemen,Low income,Asia,3.753305146433325,YEM,25.19,14.899980732168816,
-2025,Zambia,Low income,Africa,-0.5507514603333253,ZMB,33.5,-1.644034209950225,net negative transfers
-2025,Zimbabwe,Lower middle income,Africa,0.9556082414666992,ZWE,49.734,1.9214385359446235,
+year,country,continent,income_level,net_flow,iso_3,gdp,net_flows_over_gdp_percent,nnt
+2022,Afghanistan,Asia,Low income,3.924253,AFG,14.467,27.12554779843782,
+2022,Albania,Europe,Upper middle income,0.23197158820000005,ALB,19.083,1.215592874286014,
+2022,Algeria,Africa,Lower middle income,0.11226608460000001,DZA,225.631,0.04975649826486609,
+2022,Angola,Africa,Lower middle income,-0.8864178457000008,AGO,122.826,-0.7216858366306815,net negative transfers
+2022,Argentina,America,Upper middle income,-0.7712333008999996,ARG,630.662,-0.12228948325727564,net negative transfers
+2022,Armenia,Asia,Upper middle income,0.20259294820000004,ARM,19.514,1.0381928266885316,
+2022,Azerbaijan,Asia,Upper middle income,-0.7891687264000001,AZE,78.721,-1.0024881879041172,net negative transfers
+2022,Bangladesh,Asia,Lower middle income,8.682725981799999,BGD,460.201,1.886724709811582,
+2022,Belarus,Europe,Upper middle income,-1.4896893852999997,BLR,72.835,-2.0452933140660394,net negative transfers
+2022,Belize,America,Upper middle income,0.015533646599999994,BLZ,2.831,0.5486982197103495,
+2022,Benin,Africa,Lower middle income,0.9406919945,BEN,17.439,5.394185414874706,
+2022,Bhutan,Asia,Lower middle income,0.17208256639999997,BTN,2.869,5.997998131753223,
+2022,Bolivia,America,Lower middle income,0.5728209255,BOL,44.315,1.2926118142841023,
+2022,Bosnia and Herzegovina,Europe,Upper middle income,0.1565086325,BIH,24.535,0.6378994599551661,
+2022,Botswana,Africa,Upper middle income,0.12256322270000004,BWA,20.352,0.6022170926690253,
+2022,Brazil,America,Upper middle income,-8.011721478599995,BRA,1951.849,-0.41046830357266345,net negative transfers
+2022,Bulgaria,Europe,Upper middle income,0.9336425798999999,BGR,90.422,1.0325391828316117,
+2022,Burkina Faso,Africa,Low income,1.4573753876000002,BFA,18.906,7.708533733206391,
+2022,Burundi,Africa,Low income,0.5934464033000001,BDI,3.917,15.15053365585908,
+2022,Cabo Verde,Africa,Lower middle income,0.09976875610000001,CPV,2.246,4.44206394033838,
+2022,Cambodia,Asia,Lower middle income,1.5113807484000001,KHM,39.063,3.8690851916135474,
+2022,Cameroon,Africa,Lower middle income,0.5226981125,CMR,44.508,1.1743913734609508,
+2022,Central African Republic,Africa,Low income,0.6273626228,CAF,2.459,25.512916746644976,
+2022,Chad,Africa,Low income,0.5491951553,TCD,16.417,3.345283275263446,
+2022,Colombia,America,Upper middle income,2.1164964085,COL,345.33,0.6128909763125128,
+2022,Comoros,Africa,Lower middle income,0.1504603271,COM,1.225,12.282475681632654,
+2022,Congo Republic,Africa,Lower middle income,-0.36334405329999997,COG,13.961,-2.6025646680037244,net negative transfers
+2022,Costa Rica,America,Upper middle income,0.8430607997999999,CRI,69.235,1.21768007481765,
+2022,Cote d'Ivoire,Africa,Lower middle income,4.4629911343,CIV,72.046,6.1946411102628876,
+2022,DR Congo,Africa,Low income,2.7883967379000003,COD,65.927,4.229521649551777,
+2022,Djibouti,Africa,Lower middle income,0.15376036820000002,DJI,3.726,4.126687283950618,
+2022,Dominica,America,Upper middle income,0.045700277299999995,DMA,0.607,7.528875996705107,
+2022,Dominican Republic,America,Upper middle income,1.3316829838000002,DOM,113.873,1.1694457718686608,
+2022,Ecuador,America,Upper middle income,-0.2263051881999998,ECU,116.586,-0.19411008886144118,net negative transfers
+2022,Egypt,Africa,Lower middle income,0.4817305746000004,EGY,475.231,0.10136766637698306,
+2022,El Salvador,America,Lower middle income,-0.8802073868000001,SLV,31.989,-2.751593944168308,net negative transfers
+2022,Eritrea,Africa,Low income,0.042515664,ERI,,,
+2022,Eswatini,Africa,Lower middle income,0.24892855950000004,SWZ,4.791,5.195753694427052,
+2022,Ethiopia,Africa,Low income,3.4608425103999996,ETH,118.968,2.9090532835720526,
+2022,Fiji,Oceania,Upper middle income,0.5043300648000001,FJI,4.98,10.12710973493976,
+2022,Gabon,Africa,Upper middle income,-0.1768319428,GAB,21.076,-0.839020415638641,net negative transfers
+2022,Gambia,Africa,Low income,0.2701617925,GMB,2.161,12.501702568255437,
+2022,Georgia,Asia,Upper middle income,1.1175887412999999,GEO,24.985,4.473038788473083,
+2022,Ghana,Africa,Lower middle income,1.1779699935999999,GHA,72.243,1.6305662743795246,
+2022,Grenada,America,Upper middle income,0.003781252599999994,GRD,1.231,0.3071691795288378,
+2022,Guatemala,America,Upper middle income,-0.056084843300000194,GTM,95.004,-0.05903419150772619,net negative transfers
+2022,Guinea,Africa,Low income,0.5882861739,GIN,19.589,3.003145509724846,
+2022,Guinea-Bissau,Africa,Low income,0.1223385242,GNB,1.718,7.120985110593714,
+2022,Guyana,America,Upper middle income,0.5184837693000001,GUY,14.529,3.568612907288871,
+2022,Haiti,America,Lower middle income,0.873596,HTI,19.826,4.406314939977807,
+2022,Honduras,America,Lower middle income,0.5023536564000001,HND,31.716,1.5839123987892547,
+2022,India,Asia,Lower middle income,2.9439574820999983,IND,3353.471,0.08778836859182615,
+2022,Indonesia,Asia,Lower middle income,-15.988365091399997,IDN,1319.076,-1.2120882414205092,net negative transfers
+2022,Iran,Asia,Lower middle income,0.37624087510000004,IRN,347.446,0.1082875828474065,
+2022,Iraq,Asia,Upper middle income,-1.7698154648999995,IRQ,261.369,-0.6771328906258964,net negative transfers
+2022,Jamaica,America,Upper middle income,-0.7338101795,JAM,17.003,-4.315768861377404,net negative transfers
+2022,Jordan,Asia,Upper middle income,0.5416455199000001,JOR,48.722,1.1117062515906573,
+2022,Kazakhstan,Asia,Upper middle income,-2.2244637275,KAZ,225.529,-0.9863315704410519,net negative transfers
+2022,Kenya,Africa,Lower middle income,1.4886921196000005,KEN,113.701,1.3093043329434224,
+2022,Kosovo,Europe,Upper middle income,0.3846565314,XKX,9.355,4.111774787814003,
+2022,Kyrgyz Republic,Asia,Lower middle income,0.520551731,KGZ,11.672,4.459833199108978,
+2022,Laos,Asia,Lower middle income,0.4373773763,LAO,15.121,2.892516211229416,
+2022,Lebanon,Asia,Lower middle income,1.5549915741,LBN,21.78,7.139538907713499,
+2022,Lesotho,Africa,Lower middle income,-0.05566856409999996,LSO,2.325,-2.394346843010751,net negative transfers
+2022,Liberia,Africa,Low income,0.5033147968,LBR,3.974,12.665193678912933,
+2022,Madagascar,Africa,Low income,1.0938882391000002,MDG,15.285,7.156612620870136,
+2022,Malawi,Africa,Low income,1.3604973008999999,MWI,12.522,10.86485626018208,
+2022,Maldives,Asia,Upper middle income,-0.049742678299999954,MDV,6.238,-0.7974138874639299,net negative transfers
+2022,Mali,Africa,Low income,1.3554422147000003,MLI,18.724,7.239063312860501,
+2022,Mauritania,Africa,Lower middle income,0.12890310589999998,MRT,9.799,1.315472047147668,
+2022,Mauritius,Africa,Upper middle income,0.38163027679999995,MUS,12.949,2.94717952583211,
+2022,Mexico,America,Upper middle income,0.15703848559999847,MEX,1463.324,0.010731627828150053,
+2022,Moldova,Europe,Upper middle income,1.1185865875,MDA,14.55,7.687880326460481,
+2022,Mongolia,Asia,Lower middle income,-0.7147994573,MNG,17.146,-4.1688992027295,net negative transfers
+2022,Montenegro,Europe,Upper middle income,-0.1796592582,MNE,6.243,-2.877771234983181,net negative transfers
+2022,Morocco,Africa,Lower middle income,0.2157409328000002,MAR,130.913,0.16479718041752933,
+2022,Mozambique,Africa,Low income,2.1964352414,MOZ,18.407,11.932608471777042,
+2022,Myanmar,Asia,Lower middle income,0.21725489910000004,MMR,61.766,0.35173865735194126,
+2022,Nepal,Asia,Lower middle income,1.105519659,NPL,40.828,2.707748748407955,
+2022,Nicaragua,America,Lower middle income,0.38422201889999996,NIC,15.671,2.4518028134771233,
+2022,Niger,Africa,Low income,1.8475797353999999,NER,15.448,11.959993108493007,
+2022,Nigeria,Africa,Lower middle income,5.1950802803,NGA,477.376,1.0882575329090696,
+2022,North Macedonia,Europe,Upper middle income,0.31086464690000004,MKD,13.735,2.2633028532945034,
+2022,Pakistan,Asia,Lower middle income,-2.365329144,PAK,374.748,-0.6311785904127574,net negative transfers
+2022,Papua New Guinea,Oceania,Lower middle income,1.395845663,PNG,31.61,4.415835694400506,
+2022,Paraguay,America,Upper middle income,1.0800272790999998,PRY,41.953,2.574374369175029,
+2022,Peru,America,Upper middle income,0.2131215363000002,PER,245.008,0.08698554181904272,
+2022,Philippines,Asia,Lower middle income,4.674763654,PHL,404.284,1.156306866954913,
+2022,Rwanda,Africa,Low income,1.3183043061,RWA,13.309,9.905359576977986,
+2022,Samoa,Oceania,Lower middle income,0.10182513959999999,WSM,0.833,12.223906314525811,
+2022,Sao Tome and Principe,Africa,Lower middle income,0.08473386470000001,STP,0.548,15.462384069343067,
+2022,Senegal,Africa,Lower middle income,1.0036297853,SEN,27.744,3.6174660658160325,
+2022,Serbia,Europe,Upper middle income,1.170680896,SRB,63.563,1.8417646995893835,
+2022,Sierra Leone,Africa,Low income,0.49581662309999996,SLE,4.095,12.107854043956044,
+2022,Solomon Islands,Oceania,Lower middle income,0.2508794179,SLB,1.56,16.08201396794872,
+2022,Somalia,Africa,Low income,1.9396159385999998,SOM,10.42,18.614356416506716,
+2022,South Africa,Africa,Upper middle income,-6.300150853400001,ZAF,405.106,-1.5551857670338134,net negative transfers
+2022,Sri Lanka,Asia,Lower middle income,0.7807410093000002,LKA,74.846,1.04312990580659,
+2022,St. Lucia,America,Upper middle income,-0.0035368941000000014,LCA,2.297,-0.1539788463212887,net negative transfers
+2022,St. Vincent and the Grenadines,America,Upper middle income,0.0594050927,VCT,0.947,6.2729770538542775,
+2022,Sudan,Africa,Low income,1.4264162054,SDN,33.762,4.224916193945856,
+2022,Suriname,America,Upper middle income,0.22913613789999998,SUR,3.631,6.310551856237951,
+2022,Tajikistan,Asia,Lower middle income,0.47212540239999995,TJK,10.493,4.49943202515963,
+2022,Tanzania,Africa,Lower middle income,2.1305913207000002,TZA,74.128,2.8742058610781354,
+2022,Thailand,Asia,Upper middle income,-0.49017064589999987,THA,495.646,-0.09889530953543454,net negative transfers
+2022,Timor-Leste,Asia,Lower middle income,0.2274153569,TLS,3.205,7.09564296099844,
+2022,Togo,Africa,Low income,0.344324725,TGO,8.144,4.227955857072692,
+2022,Tonga,Oceania,Upper middle income,0.13255854109999998,TON,0.498,26.618180943775098,
+2022,Tunisia,Africa,Lower middle income,-0.07922311509999991,TUN,46.265,-0.17123768529125669,net negative transfers
+2022,Turkmenistan,Asia,Upper middle income,-0.4747182710999999,TKM,77.963,-0.608902006208073,net negative transfers
+2022,Türkiye,Asia,Upper middle income,-0.8844091910999985,TUR,905.841,-0.09763404296118176,net negative transfers
+2022,Uganda,Africa,Low income,1.9864985126999999,UGA,47.567,4.176211475813064,
+2022,Uzbekistan,Asia,Lower middle income,3.2319968289000007,UZB,81.167,3.981909925092711,
+2022,Vanuatu,Oceania,Lower middle income,0.151002483,VUT,1.039,14.533443984600577,
+2022,Vietnam,Asia,Lower middle income,-1.9225096743999996,VNM,407.965,-0.47124377689262553,net negative transfers
+2022,Yemen,Asia,Low income,2.8652184494,YEM,23.534,12.174804323106994,
+2022,Zambia,Africa,Low income,1.4304010756999999,ZMB,29.122,4.911754260352997,
+2022,Zimbabwe,Africa,Lower middle income,1.0419541995,ZWE,31.291,3.329884629765747,
+2025,Afghanistan,Asia,Low income,4.3040178295,AFG,,,
+2025,Albania,Europe,Upper middle income,-0.39157981523333335,ALB,26.911,-1.4550920264328093,net negative transfers
+2025,Algeria,Africa,Lower middle income,0.12368504623333301,DZA,277.339,0.04459706216339318,
+2025,Angola,Africa,Lower middle income,1.9702159994998092,AGO,95.386,2.065519048392646,
+2025,Argentina,America,Upper middle income,0.8559521003335275,ARG,558.957,0.1531338010497279,
+2025,Armenia,Asia,Upper middle income,-0.05388919739999842,ARM,27.151,-0.19847960443445334,net negative transfers
+2025,Azerbaijan,Asia,Upper middle income,-0.6421428235000489,AZE,81.438,-0.7885051493161042,net negative transfers
+2025,Bangladesh,Asia,Lower middle income,9.302474239966674,BGD,491.815,1.8914580157105159,
+2025,Belarus,Europe,Upper middle income,-1.4251844333666306,BLR,70.815,-2.01254597665273,net negative transfers
+2025,Belize,America,Upper middle income,1.6248052195999998,BLZ,3.456,47.014039918981474,
+2025,Benin,Africa,Lower middle income,1.1410822869999955,BEN,23.107,4.9382537196520335,
+2025,Bhutan,Asia,Lower middle income,-0.15831370326666952,BTN,3.395,-4.663142953362873,net negative transfers
+2025,Bolivia,America,Lower middle income,2.213318693766808,BOL,52.52,4.2142397063343635,
+2025,Bosnia and Herzegovina,Europe,Upper middle income,-0.1951865763666625,BIH,30.754,-0.6346705351065309,net negative transfers
+2025,Botswana,Africa,Upper middle income,0.29452017589998647,BWA,22.779,1.2929460287983954,
+2025,Brazil,America,Upper middle income,-18.51549436836671,BRA,2437.906,-0.7594835226775237,net negative transfers
+2025,Bulgaria,Europe,Upper middle income,0.4791305991666503,BGR,114.461,0.41859725073750037,
+2025,Burkina Faso,Africa,Low income,1.029034164566697,BFA,23.56,4.367717167091244,
+2025,Burundi,Africa,Low income,0.6480179597666641,BDI,3.299,19.642860253612128,
+2025,Cabo Verde,Africa,Lower middle income,0.061229140266674816,CPV,2.904,2.1084414692381133,
+2025,Cambodia,Asia,Lower middle income,1.4157522455000122,KHM,48.725,2.9055972201129032,
+2025,Cameroon,Africa,Lower middle income,1.17570635256666,CMR,57.661,2.0389975070960613,
+2025,Central African Republic,Africa,Low income,0.35365724663334386,CAF,2.986,11.843846169904348,
+2025,Chad,Africa,Low income,0.168144015533316,TCD,19.698,0.8536095823602192,
+2025,Colombia,America,Upper middle income,-2.2389294007669447,COL,400.48,-0.5590614764200321,net negative transfers
+2025,Comoros,Africa,Lower middle income,0.16003532529999773,COM,1.516,10.556419874670036,
+2025,Congo Republic,Africa,Lower middle income,-0.2593475154000038,COG,16.229,-1.5980498823094693,net negative transfers
+2025,Costa Rica,America,Upper middle income,2.1114527748999206,CRI,102.334,2.0632954588894408,
+2025,Cote d'Ivoire,Africa,Lower middle income,4.178213113500009,CIV,93.892,4.450020356899426,
+2025,DR Congo,Africa,Low income,3.285519340566588,COD,83.082,3.954550131877649,
+2025,Djibouti,Africa,Lower middle income,-0.19280017723333132,DJI,4.715,-4.089081171438628,net negative transfers
+2025,Dominica,America,Upper middle income,0.0404116870333335,DMA,0.753,5.366757906153187,
+2025,Dominican Republic,America,Upper middle income,-3.8852741046333437,DOM,136.3,-2.8505312579848447,net negative transfers
+2025,Ecuador,America,Upper middle income,-0.4012104557666578,ECU,124.408,-0.32249570426874297,net negative transfers
+2025,Egypt,Africa,Lower middle income,0.8266417946333924,EGY,328.845,0.25137733419495273,
+2025,El Salvador,America,Lower middle income,-0.30352278953331924,SLV,37.09,-0.8183413036757057,net negative transfers
+2025,Eritrea,Africa,Low income,0.010422364033333253,ERI,,,
+2025,Eswatini,Africa,Lower middle income,0.4141049009333086,SWZ,5.306,7.804464774468688,
+2025,Ethiopia,Africa,Low income,1.6762365470000735,ETH,236.044,0.7101373248208273,
+2025,Fiji,Oceania,Upper middle income,0.577029736133334,FJI,6.103,9.454853942869638,
+2025,Gabon,Africa,Upper middle income,-1.076176898433335,GAB,21.099,-5.100606182441514,net negative transfers
+2025,Gambia,Africa,Low income,0.12032802680000286,GMB,3.006,4.0029283699269085,
+2025,Georgia,Asia,Upper middle income,1.2269820427000244,GEO,35.554,3.451037978005356,
+2025,Ghana,Africa,Lower middle income,-0.10098526200011683,GHA,76.019,-0.13284213420344496,net negative transfers
+2025,Grenada,America,Upper middle income,-0.02508431359999924,GRD,1.487,-1.6869074377941653,net negative transfers
+2025,Guatemala,America,Upper middle income,0.09634238490002131,GTM,117.986,0.08165577687185031,
+2025,Guinea,Africa,Low income,0.2057654795333153,GIN,27.216,0.756046000636814,
+2025,Guinea-Bissau,Africa,Low income,0.056222180666668696,GNB,2.321,2.4223257503950317,
+2025,Guyana,America,Upper middle income,1.1486275449333847,GUY,23.685,4.849599091971226,
+2025,Haiti,America,Lower middle income,0.9892242312,HTI,24.359,4.061021516482614,
+2025,Honduras,America,Lower middle income,-0.17556761163330686,HND,39.624,-0.4430840188605564,net negative transfers
+2025,India,Asia,Lower middle income,-7.497446537733154,IND,4339.83,-0.17275899142899961,net negative transfers
+2025,Indonesia,Asia,Lower middle income,-16.87405338133333,IDN,1613.904,-1.0455425713879716,net negative transfers
+2025,Iran,Asia,Lower middle income,0.48033300213333285,IRN,486.247,0.09878374614821948,
+2025,Iraq,Asia,Upper middle income,-1.4051903013666076,IRQ,278.811,-0.5039938529565218,net negative transfers
+2025,Jamaica,America,Upper middle income,-0.9263930808666642,JAM,20.856,-4.441854050952552,net negative transfers
+2025,Jordan,Asia,Upper middle income,0.06480218113326407,JOR,56.556,0.1145805593275056,
+2025,Kazakhstan,Asia,Upper middle income,0.360990937399951,KAZ,312.99,0.11533625272371353,
+2025,Kenya,Africa,Lower middle income,0.13255752466669846,KEN,109.646,0.1208959056114208,
+2025,Kosovo,Europe,Upper middle income,0.12122630920003205,XKX,12.215,0.9924380614001805,
+2025,Kyrgyz Republic,Asia,Lower middle income,0.7116128022333428,KGZ,14.666,4.852126020955562,
+2025,Laos,Asia,Lower middle income,-1.0885746458666625,LAO,16.221,-6.7108972681503145,net negative transfers
+2025,Lebanon,Asia,Lower middle income,-1.8034996832999968,LBN,,,net negative transfers
+2025,Lesotho,Africa,Lower middle income,0.1268580216333334,LSO,2.524,5.026070587691498,
+2025,Liberia,Africa,Low income,0.3651198316666733,LBR,5.068,7.20441656800855,
+2025,Madagascar,Africa,Low income,1.2001407529999841,MDG,17.917,6.6983353965506724,
+2025,Malawi,Africa,Low income,1.4643153177333446,MWI,11.333,12.920809297920625,
+2025,Maldives,Asia,Upper middle income,-0.04464014256665647,MDV,7.897,-0.5652797589800744,net negative transfers
+2025,Mali,Africa,Low income,1.2448032222000032,MLI,22.984,5.415955543856609,
+2025,Mauritania,Africa,Lower middle income,-0.2558366477333176,MRT,11.356,-2.252876433016182,net negative transfers
+2025,Mauritius,Africa,Upper middle income,0.8963757767000488,MUS,17.651,5.078328574585285,
+2025,Mexico,America,Upper middle income,-17.71512485969903,MEX,2128.07,-0.8324502887451555,net negative transfers
+2025,Moldova,Europe,Upper middle income,1.9041607608666993,MDA,20.19,9.43120733465428,
+2025,Mongolia,Asia,Lower middle income,2.3339148671,MNG,23.509,9.927750508741331,
+2025,Montenegro,Europe,Upper middle income,-0.6628215479333317,MNE,8.467,-7.828292759340164,net negative transfers
+2025,Morocco,Africa,Lower middle income,-1.2768150741333246,MAR,161.436,-0.7909109951518402,net negative transfers
+2025,Mozambique,Africa,Low income,2.8978263488666274,MOZ,25.208,11.495661491854282,
+2025,Myanmar,Asia,Lower middle income,-0.9559689026,MMR,73.539,-1.2999481942914644,net negative transfers
+2025,Nepal,Asia,Lower middle income,0.35102381410000516,NPL,48.904,0.7177813964093023,
+2025,Nicaragua,America,Lower middle income,0.052712810333339334,NIC,20.268,0.2600789931583744,
+2025,Niger,Africa,Low income,1.9218091630333207,NER,20.41,9.416017457292115,
+2025,Nigeria,Africa,Lower middle income,6.204905870799838,NGA,251.198,2.470125506890914,
+2025,North Macedonia,Europe,Upper middle income,-1.1562666126333336,MKD,16.904,-6.840195294802021,net negative transfers
+2025,Pakistan,Asia,Lower middle income,-2.6053115391332646,PAK,,,net negative transfers
+2025,Papua New Guinea,Oceania,Lower middle income,1.0853128739333433,PNG,32.64,3.3251007167075466,
+2025,Paraguay,America,Upper middle income,-0.6632641926999421,PRY,48.033,-1.3808510663500968,net negative transfers
+2025,Peru,America,Upper middle income,-3.6045049763332884,PER,294.781,-1.2227738478169516,net negative transfers
+2025,Philippines,Asia,Lower middle income,-1.543159377066472,PHL,509.379,-0.3029491551607883,net negative transfers
+2025,Rwanda,Africa,Low income,0.7771378661000207,RWA,14.135,5.497968631765268,
+2025,Samoa,Oceania,Lower middle income,0.05299862599999857,WSM,1.093,4.84891363220481,
+2025,Sao Tome and Principe,Africa,Lower middle income,0.08828293653333244,STP,0.821,10.753098237921126,
+2025,Senegal,Africa,Lower middle income,-0.1151463494000063,SEN,39.963,-0.28813239596628454,net negative transfers
+2025,Serbia,Europe,Upper middle income,1.4184861906999602,SRB,87.738,1.6167295706534912,
+2025,Sierra Leone,Africa,Low income,0.21131692666665497,SLE,4.594,4.599846031054744,
+2025,Solomon Islands,Oceania,Lower middle income,0.3317209241666641,SLB,1.82,18.22642440476176,
+2025,Somalia,Africa,Low income,0.8198894506666871,SOM,13.891,5.902306894152236,
+2025,South Africa,Africa,Upper middle income,0.5888529144994049,ZAF,384.765,0.15304222434457523,
+2025,Sri Lanka,Asia,Lower middle income,-1.7978982463999147,LKA,,,net negative transfers
+2025,St. Lucia,America,Upper middle income,-0.034884023466666025,LCA,2.701,-1.2915225274589421,net negative transfers
+2025,St. Vincent and the Grenadines,America,Upper middle income,0.07809509763333074,VCT,1.195,6.535154613667843,
+2025,Sudan,Africa,Low income,0.5776176698999611,SDN,27.447,2.1044838047872667,
+2025,Suriname,America,Upper middle income,0.32357084270001035,SUR,4.6,7.0341487543480525,
+2025,Tajikistan,Asia,Lower middle income,0.2112813420999998,TJK,14.118,1.4965387597393385,
+2025,Tanzania,Africa,Lower middle income,3.6204987871000305,TZA,86.126,4.2037233670436684,
+2025,Thailand,Asia,Upper middle income,-0.42771275199999287,THA,573.394,-0.07459316839729625,net negative transfers
+2025,Timor-Leste,Asia,Lower middle income,0.17902688419999696,TLS,2.14,8.365742252336306,
+2025,Togo,Africa,Low income,0.2617957351666633,TGO,10.557,2.4798307773672756,
+2025,Tonga,Oceania,Upper middle income,0.07274313263333626,TON,0.606,12.003817266227106,
+2025,Tunisia,Africa,Lower middle income,-1.198734264800003,TUN,55.847,-2.146461340448015,net negative transfers
+2025,Turkmenistan,Asia,Upper middle income,-0.09487412786666644,TKM,89.001,-0.10659894592944623,net negative transfers
+2025,Türkiye,Asia,Upper middle income,-4.253290159633286,TUR,1106.916,-0.3842468768753262,net negative transfers
+2025,Uganda,Africa,Low income,-0.2316108176333618,UGA,62.056,-0.3732287250763211,net negative transfers
+2025,Uzbekistan,Asia,Lower middle income,1.1958314772332763,UZB,109.853,1.088574255808468,
+2025,Vanuatu,Oceania,Lower middle income,0.16949865423332924,VUT,1.4,12.107046730952089,
+2025,Vietnam,Asia,Lower middle income,-2.9341228848000136,VNM,505.531,-0.5804041462937017,net negative transfers
+2025,Yemen,Asia,Low income,3.753305146433325,YEM,17.176,21.85203275752984,
+2025,Zambia,Africa,Low income,-0.5507514603333253,ZMB,32.41,-1.6993257029723092,net negative transfers
+2025,Zimbabwe,Africa,Lower middle income,0.9556082414666992,ZWE,35.312,2.706185550143575,

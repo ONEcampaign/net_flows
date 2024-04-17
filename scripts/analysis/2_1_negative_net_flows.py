@@ -1,6 +1,7 @@
 import pandas as pd
 from bblocks import set_bblocks_data_path
 from bblocks.dataframe_tools.add import add_iso_codes_column
+from bblocks.import_tools.imf_weo import WEO
 import numpy as np
 
 from scripts.config import Paths
@@ -15,7 +16,7 @@ def get_csv(doc: str) -> pd.DataFrame:
     Args:
         doc (str): Name of csv file.
     """
-    return pd.read_csv(Paths.output / doc)
+    return pd.read_csv(Paths.raw_data / doc)
 
 
 def get_parquet(doc: str) -> pd.DataFrame:
@@ -96,10 +97,36 @@ def add_latest_year_for_missing_gdp_data(
     return df
 
 
-def add_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
+def download_gdp_data() -> pd.DataFrame:
     """
-    Merges IMF WEO gdp data (in current prices, US$) from 'weo_data.csv' in output
-    folder to the specified DataFrame. Merges data on year and iso_code.
+    Download GDP data from IMF using bblocks. Takes latest version of IMF WEO database.
+
+    returns: pd.DataFrame containing IMF WEO GDP data by country and year from 1990 to
+    2029.
+    """
+
+    weo = WEO(version="latest")
+
+    weo = weo.load_data(indicators="NGDPD")
+
+    gdp = weo.get_data()
+
+    return (
+        gdp.pipe(
+            add_iso_codes_column,
+            id_column="ref_area",
+            id_type="regex",
+            target_column="iso_3",
+        )
+        .filter(items=["time_period", "obs_value", "iso_3"], axis=1)
+        .rename(columns={"time_period": "year", "obs_value": "gdp"})
+    )
+
+
+def merge_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Merges IMF WEO gdp data (in current prices, US$), scraped using bblocks (see
+    download_gdp_data function. Merges data on year and iso_code.
 
     Args:
         df (pd.DataFrame)
@@ -107,24 +134,9 @@ def add_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
     Returns: pd.DataFrame with additional column for gdp.
     """
 
-    gdp = get_csv(doc="weo_data.csv").rename(
-        {"entity_code": "iso_3", "value": "gdp"}, axis=1
-    )
+    gdp = download_gdp_data()
 
-    df_merged = pd.merge(df, gdp, on=["year", "iso_3"], how="left").filter(
-        items=[
-            "year",
-            "country",
-            "income_level",
-            "continent",
-            # "inflow",
-            # "outflow",
-            "net_flow",
-            "iso_3",
-            "gdp",
-        ],
-        axis="columns",
-    )
+    df_merged = pd.merge(df, gdp, on=["year", "iso_3"], how="left")
 
     df_filled_empty = add_latest_year_for_missing_gdp_data(df=df_merged, gdp=gdp)
 
@@ -181,7 +193,7 @@ def calculate_net_flow_as_share_gdp(df: pd.DataFrame) -> pd.DataFrame:
     """
 
     # add gdp data
-    df = add_gdp_data(df)
+    df = merge_gdp_data(df)
 
     # calculate net transfers share of gdp
     df = calculate_share_gdp(df)
