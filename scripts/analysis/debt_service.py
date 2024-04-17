@@ -3,11 +3,12 @@
 import pandas as pd
 
 from scripts.analysis.common import (
-    exclude_outlier_countries,
     create_grouping_totals,
     create_world_total,
     add_china_as_counterpart_type,
     reorder_countries,
+    exclude_countries_without_outflows,
+    exclude_outlier_countries,
 )
 from scripts.config import Paths
 from scripts.data.outflows import get_debt_service_data
@@ -97,6 +98,7 @@ def remove_default_groupings(data: pd.DataFrame) -> pd.DataFrame:
         "Latin America & Caribbean (excluding high income)",
         "Europe & Central Asia (excluding high income)",
         "East Asia & Pacific (excluding high income)",
+        "South Asia",
         "IDA only",
         "IDA total",
     ]
@@ -104,57 +106,64 @@ def remove_default_groupings(data: pd.DataFrame) -> pd.DataFrame:
     return data.loc[lambda d: ~d.country.isin(default_groupings)]
 
 
+def get_preprocess_debt_service(
+    constant: bool = False, china_as_type: bool = False
+) -> pd.DataFrame:
+    data = (
+        get_debt_service_data(constant=constant)
+        .pipe(exclude_outlier_countries)
+        .pipe(exclude_countries_without_outflows)
+        .pipe(remove_default_groupings)
+        .pipe(remove_world)
+        .pipe(create_world_total, "Developing countries")
+        .pipe(
+            create_grouping_totals,
+            group_column="continent",
+            exclude_cols=["income_level"],
+        )
+        .pipe(
+            create_grouping_totals,
+            group_column="income_level",
+            exclude_cols=["continent"],
+        )
+    )
+
+    if china_as_type:
+        data = data.pipe(add_china_as_counterpart_type)
+
+    data = (
+        data.pipe(groupby_counterpart_type)
+        .pipe(group_by_avg_payments, [(2010, 2014), (2018, 2022), (2023, 2025)])
+        .pipe(reorder_countries, True)
+        .drop(columns=["income_level", "continent"])
+        .replace({"year": {"2023-2025": "2023-2025 (projected)"}})
+        .pipe(add_percentages)
+    )
+
+    return data
+
+
+def add_percentages(data: pd.DataFrame) -> pd.DataFrame:
+    # add percentages as column
+    data = (
+        data.groupby(["year", "country"], dropna=False, observed=True, sort=False)[
+            ["year", "country", "counterpart_type", "value"]
+        ]
+        .apply(
+            lambda x: x.assign(percent=round(100 * x["value"] / x["value"].sum(), 1)),
+            include_groups=True,
+        )
+        .reset_index(drop=True)
+    )
+
+    return data
+
+
 def avg_repayments_charts() -> None:
     """Export data for average repayment charts for flourish"""
 
-    data = (
-        get_debt_service_data(constant=False)
-        .pipe(exclude_outlier_countries)
-        .pipe(remove_default_groupings)
-        .pipe(create_world_total, "Developing countries")
-        .pipe(
-            create_grouping_totals,
-            group_column="continent",
-            exclude_cols=["income_level"],
-        )
-        .pipe(
-            create_grouping_totals,
-            group_column="income_level",
-            exclude_cols=["continent"],
-        )
-        .pipe(remove_world)
-        .pipe(groupby_counterpart_type)
-        .pipe(group_by_avg_payments, [(2010, 2014), (2018, 2022), (2023, 2025)])
-        .pipe(add_africa_total)
-        .pipe(reorder_countries, True)
-        .drop(columns=["income_level", "continent"])
-        .replace({"year": {"2023-2025": "2023-2025 (projected)"}})
-    )
-
-    data_china = (
-        get_debt_service_data(constant=False)
-        .pipe(exclude_outlier_countries)
-        .pipe(remove_world)
-        .pipe(add_china_as_counterpart_type)
-        .pipe(remove_default_groupings)
-        .pipe(create_world_total, "Developing countries")
-        .pipe(
-            create_grouping_totals,
-            group_column="continent",
-            exclude_cols=["income_level"],
-        )
-        .pipe(
-            create_grouping_totals,
-            group_column="income_level",
-            exclude_cols=["continent"],
-        )
-        .pipe(groupby_counterpart_type)
-        .pipe(group_by_avg_payments, [(2010, 2014), (2018, 2022), (2023, 2025)])
-        .pipe(add_africa_total)
-        .pipe(reorder_countries, True)
-        .drop(columns=["income_level", "continent"])
-        .replace({"year": {"2023-2025": "2023-2025 (projected)"}})
-    )
+    data = get_preprocess_debt_service(constant=False, china_as_type=False)
+    data_china = get_preprocess_debt_service(constant=False, china_as_type=True)
 
     data.to_csv(Paths.output / "avg_repayments.csv", index=False)
     data_china.to_csv(Paths.output / "avg_repayments_china.csv", index=False)

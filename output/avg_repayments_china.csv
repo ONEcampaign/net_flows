@@ -1,1400 +1,1376 @@
-year,country,counterpart_type,value
-2010-2014,Developing countries,Bilateral,26727248850.62
-2010-2014,Developing countries,Multilateral,38875329827.020004
-2010-2014,Developing countries,Private,98142965169.64
-2010-2014,Developing countries,China,5443936730.36
-2018-2022,Developing countries,Bilateral,32449283497.839996
-2018-2022,Developing countries,Multilateral,62849014994.3
-2018-2022,Developing countries,Private,217223052705.6
-2018-2022,Developing countries,China,23576190729.079998
-2023-2025 (projected),Developing countries,Bilateral,43016882544.26667
-2023-2025 (projected),Developing countries,Multilateral,106773990359.46667
-2023-2025 (projected),Developing countries,Private,207417054344.96667
-2023-2025 (projected),Developing countries,China,40483418409.666664
-2010-2014,Low income,Bilateral,656557990.74
-2010-2014,Low income,Multilateral,1217279483.8600001
-2010-2014,Low income,Private,374836381.74
-2010-2014,Low income,China,545345366.7
-2018-2022,Low income,Bilateral,662555072.9
-2018-2022,Low income,Multilateral,2335487630.82
-2018-2022,Low income,Private,1645197324.72
-2018-2022,Low income,China,1721865545.56
-2023-2025 (projected),Low income,Bilateral,1856897364.2333333
-2023-2025 (projected),Low income,Multilateral,4460019260.433333
-2023-2025 (projected),Low income,Private,2544221854.633333
-2023-2025 (projected),Low income,China,4211818476.566667
-2010-2014,Lower middle income,Bilateral,15926676381.079998
-2010-2014,Lower middle income,Multilateral,14696648261.48
-2010-2014,Lower middle income,Private,29366383952.78
-2010-2014,Lower middle income,China,2720470174.46
-2018-2022,Lower middle income,Bilateral,16933060400.920002
-2018-2022,Lower middle income,Multilateral,27074936962.14
-2018-2022,Lower middle income,Private,69892854680.14
-2018-2022,Lower middle income,China,11515613720.7
-2023-2025 (projected),Lower middle income,Bilateral,22082358699.266666
-2023-2025 (projected),Lower middle income,Multilateral,48681302938.4
-2023-2025 (projected),Lower middle income,Private,77091737814.06667
-2023-2025 (projected),Lower middle income,China,22737464561.966667
-2010-2014,Upper middle income,Bilateral,6446940008.16
-2010-2014,Upper middle income,Multilateral,17746837879.7
-2010-2014,Upper middle income,Private,62632066420.340004
-2010-2014,Upper middle income,China,1725926447.7
-2018-2022,Upper middle income,Bilateral,10764568001.16
-2018-2022,Upper middle income,Multilateral,23636165755.3
-2018-2022,Upper middle income,Private,126842349925.06001
-2018-2022,Upper middle income,China,6835120699.92
-2023-2025 (projected),Upper middle income,Bilateral,10342271838.9
-2023-2025 (projected),Upper middle income,Multilateral,35915901679.86667
-2023-2025 (projected),Upper middle income,Private,106430697290.5
-2023-2025 (projected),Upper middle income,China,6393200566.833333
-2010-2014,Africa,Bilateral,5064700943.9800005
-2010-2014,Africa,Bilateral,10133635265.768333
-2010-2014,Africa,Multilateral,5239671354.780001
-2010-2014,Africa,Multilateral,10482409397.59
-2010-2014,Africa,Private,11795951609.32
-2010-2014,Africa,Private,23622312961.68833
-2010-2014,Africa,China,2078413941.52
-2010-2014,Africa,China,4180736368.7233334
-2018-2022,Africa,Bilateral,7858541421.780001
-2018-2022,Africa,Bilateral,15717263093.970001
-2018-2022,Africa,Multilateral,12282204670.079998
-2018-2022,Africa,Multilateral,24632792838.199997
-2018-2022,Africa,Private,32069448356.420002
-2018-2022,Africa,Private,64149589091.61
-2018-2022,Africa,China,7993859756.08
-2018-2022,Africa,China,16009781071.960001
-2023-2025 (projected),Africa,Bilateral,8647065281.666666
-2023-2025 (projected),Africa,Bilateral,17294130563.333332
-2023-2025 (projected),Africa,Multilateral,20213465814.733334
-2023-2025 (projected),Africa,Multilateral,40426931629.46667
-2023-2025 (projected),Africa,Private,36204835442.93333
-2023-2025 (projected),Africa,Private,72417849574.76666
-2023-2025 (projected),Africa,China,16657179618.133333
-2023-2025 (projected),Africa,China,33318631638.2
-2010-2014,Europe,Bilateral,1115959856.1399999
-2010-2014,Europe,Multilateral,1554472442.74
-2010-2014,Europe,Private,2157943109.66
-2010-2014,Europe,China,226966280.51999998
-2018-2022,Europe,Bilateral,2069996924.0199997
-2018-2022,Europe,Multilateral,2470993678.38
-2018-2022,Europe,Private,3684776732.7
-2018-2022,Europe,China,1040149671.3
-2023-2025 (projected),Europe,Bilateral,2670246819.066667
-2023-2025 (projected),Europe,Multilateral,3360742028.866667
-2023-2025 (projected),Europe,Private,3637060730.7999997
-2023-2025 (projected),Europe,China,1463489911.3333333
-2010-2014,Asia,Bilateral,13508510373.76
-2010-2014,Asia,Multilateral,12829693715.16
-2010-2014,Asia,Private,32932344752.119995
-2010-2014,Asia,China,1664622575.0
-2018-2022,Asia,Bilateral,14775615972.86
-2018-2022,Asia,Multilateral,22243723881.78
-2018-2022,Asia,Private,71117356891.34
-2018-2022,Asia,China,6797402125.68
-2023-2025 (projected),Asia,Bilateral,19571497228.333332
-2023-2025 (projected),Asia,Multilateral,39296179058.5
-2023-2025 (projected),Asia,Private,77322921946.63335
-2023-2025 (projected),Asia,China,11688059619.166666
-2010-2014,America,Bilateral,3303809269.54
-2010-2014,America,Multilateral,13949440601.52
-2010-2014,America,Private,45429187770.44
-2010-2014,America,China,1006828619.1
-2018-2022,America,Bilateral,3533867480.94
-2018-2022,America,Multilateral,15882967665.179998
-2018-2022,America,Private,91188427602.12
-2018-2022,America,China,4147193579.12
-2023-2025 (projected),America,Bilateral,3216016157.7666664
-2023-2025 (projected),America,Multilateral,25731002903.733334
-2023-2025 (projected),America,Private,68845700308.16667
-2023-2025 (projected),America,China,3339274973.366667
-2010-2014,Oceania,Bilateral,37193936.56
-2010-2014,Oceania,Multilateral,87487510.84
-2010-2014,Oceania,Private,57859513.32000001
-2010-2014,Oceania,China,14910572.720000003
-2018-2022,Oceania,Bilateral,122161675.38
-2018-2022,Oceania,Multilateral,166700452.84
-2018-2022,Oceania,Private,320392347.34000003
-2018-2022,Oceania,China,93994834.0
-2023-2025 (projected),Oceania,Bilateral,176702415.5666667
-2023-2025 (projected),Oceania,Multilateral,455834072.8666666
-2023-2025 (projected),Oceania,Private,56138530.666666664
-2023-2025 (projected),Oceania,China,194479483.36666667
-2010-2014,Afghanistan,Bilateral,1983333.3
-2010-2014,Afghanistan,Multilateral,11856375.48
-2018-2022,Afghanistan,Bilateral,2832255.9000000004
-2018-2022,Afghanistan,Multilateral,23381947.34
-2023-2025 (projected),Afghanistan,Bilateral,67168610.8
-2023-2025 (projected),Afghanistan,Multilateral,56452215.06666666
-2010-2014,Albania,Bilateral,50863047.22
-2010-2014,Albania,Multilateral,93757561.7
-2010-2014,Albania,Private,107455540.26000002
-2010-2014,Albania,China,3739800.0
-2018-2022,Albania,Bilateral,70461438.1
-2018-2022,Albania,Multilateral,211364842.76
-2018-2022,Albania,Private,227705775.32
-2023-2025 (projected),Albania,Bilateral,99926157.53333335
-2023-2025 (projected),Albania,Multilateral,339819235.8666667
-2023-2025 (projected),Albania,Private,333591662.93333334
-2010-2014,Algeria,Bilateral,275222306.64
-2010-2014,Algeria,Multilateral,2642452.12
-2010-2014,Algeria,Private,134534160.5
-2010-2014,Algeria,China,1342919.4
-2018-2022,Algeria,Bilateral,79276432.38000001
-2018-2022,Algeria,Multilateral,35982246.48
-2018-2022,Algeria,Private,6723057.180000002
-2023-2025 (projected),Algeria,Bilateral,22669800.46666667
-2023-2025 (projected),Algeria,Multilateral,69685887.8
-2010-2014,Angola,Bilateral,397797548.62
-2010-2014,Angola,Multilateral,20689885.64
-2010-2014,Angola,Private,2898675992.1
-2010-2014,Angola,China,962783200.0
-2018-2022,Angola,Bilateral,527418833.28000003
-2018-2022,Angola,Multilateral,172065588.88
-2018-2022,Angola,Private,5132425140.32
-2018-2022,Angola,China,2930848600.0
-2023-2025 (projected),Angola,Bilateral,279211636.96666664
-2023-2025 (projected),Angola,Multilateral,468745230.7
-2023-2025 (projected),Angola,Private,4681198966.766666
-2023-2025 (projected),Angola,China,6303199331.299999
-2010-2014,Argentina,Bilateral,401462315.7
-2010-2014,Argentina,Multilateral,2248127127.06
-2010-2014,Argentina,Private,5292602083.38
-2010-2014,Argentina,China,118687250.0
-2018-2022,Argentina,Bilateral,726922693.86
-2018-2022,Argentina,Multilateral,2570514908.3
-2018-2022,Argentina,Private,12152722364.64
-2018-2022,Argentina,China,431212200.0
-2023-2025 (projected),Argentina,Bilateral,460256366.7
-2023-2025 (projected),Argentina,Multilateral,3736065158.7333336
-2023-2025 (projected),Argentina,Private,9960996429.666666
-2023-2025 (projected),Argentina,China,1144610757.1
-2010-2014,Armenia,Bilateral,130040663.53999999
-2010-2014,Armenia,Multilateral,39553106.980000004
-2010-2014,Armenia,Private,8521143.42
-2018-2022,Armenia,Bilateral,95047597.97999999
-2018-2022,Armenia,Multilateral,198015312.4
-2018-2022,Armenia,Private,174737240.7
-2018-2022,Armenia,China,1233886.3199999998
-2023-2025 (projected),Armenia,Bilateral,158558504.29999998
-2023-2025 (projected),Armenia,Multilateral,316938511.59999996
-2023-2025 (projected),Armenia,Private,247643037.76666665
-2023-2025 (projected),Armenia,China,1816963.4000000001
-2010-2014,Azerbaijan,Bilateral,108068201.24000001
-2010-2014,Azerbaijan,Multilateral,176201645.02
-2010-2014,Azerbaijan,Private,225840426.6
-2018-2022,Azerbaijan,Bilateral,172028775.9
-2018-2022,Azerbaijan,Multilateral,824300763.0600001
-2018-2022,Azerbaijan,Private,648718820.6
-2023-2025 (projected),Azerbaijan,Bilateral,91910476.73333333
-2023-2025 (projected),Azerbaijan,Multilateral,895083376.8000001
-2023-2025 (projected),Azerbaijan,Private,1162371768.3333333
-2010-2014,Bangladesh,Bilateral,402208543.7
-2010-2014,Bangladesh,Multilateral,849730010.98
-2010-2014,Bangladesh,Private,42463812.86
-2010-2014,Bangladesh,China,13997823.26
-2018-2022,Bangladesh,Bilateral,360421493.0
-2018-2022,Bangladesh,Multilateral,1403167685.26
-2018-2022,Bangladesh,Private,434483524.38
-2018-2022,Bangladesh,China,163825849.98
-2023-2025 (projected),Bangladesh,Bilateral,1673156096.8333333
-2023-2025 (projected),Bangladesh,Multilateral,2869339267.5
-2023-2025 (projected),Bangladesh,Private,682520869.7666667
-2023-2025 (projected),Bangladesh,China,583908740.1
-2010-2014,Belarus,Bilateral,618725726.58
-2010-2014,Belarus,Multilateral,343892899.9
-2010-2014,Belarus,Private,903567057.24
-2010-2014,Belarus,China,178809685.8
-2018-2022,Belarus,Bilateral,1210458395.18
-2018-2022,Belarus,Multilateral,566082695.34
-2018-2022,Belarus,Private,983878438.74
-2018-2022,Belarus,China,842361626.96
-2023-2025 (projected),Belarus,Bilateral,1656969407.2333336
-2023-2025 (projected),Belarus,Multilateral,608175332.6999999
-2023-2025 (projected),Belarus,Private,555012163.1
-2023-2025 (projected),Belarus,China,1085813896.9
-2010-2014,Belize,Bilateral,19607964.04
-2010-2014,Belize,Multilateral,25883267.979999997
-2010-2014,Belize,Private,47312780.6
-2018-2022,Belize,Bilateral,14722243.540000001
-2018-2022,Belize,Multilateral,45127691.06
-2018-2022,Belize,Private,128055000.0
-2023-2025 (projected),Belize,Bilateral,52151594.93333334
-2023-2025 (projected),Belize,Multilateral,68821814.10000001
-2023-2025 (projected),Belize,Private,22445689.566666663
-2010-2014,Benin,Bilateral,3732241.4799999995
-2010-2014,Benin,Multilateral,40594849.339999996
-2010-2014,Benin,China,13641127.7
-2018-2022,Benin,Bilateral,25274769.48
-2018-2022,Benin,Multilateral,136030673.66
-2018-2022,Benin,Private,244485848.98000002
-2018-2022,Benin,China,13569275.580000002
-2023-2025 (projected),Benin,Bilateral,99442608.06666668
-2023-2025 (projected),Benin,Multilateral,237372270.13333336
-2023-2025 (projected),Benin,Private,376972629.8
-2023-2025 (projected),Benin,China,72752616.13333334
-2010-2014,Bhutan,Bilateral,80141971.12
-2010-2014,Bhutan,Multilateral,11469946.5
-2010-2014,Bhutan,Private,1873923.7399999998
-2018-2022,Bhutan,Bilateral,48219397.1
-2018-2022,Bhutan,Multilateral,28720807.860000003
-2018-2022,Bhutan,Private,6616349.4
-2023-2025 (projected),Bhutan,Bilateral,213052688.1
-2023-2025 (projected),Bhutan,Multilateral,46805573.23333333
-2023-2025 (projected),Bhutan,Private,5620448.699999999
-2010-2014,Bolivia,Bilateral,76268443.28
-2010-2014,Bolivia,Multilateral,208007710.14000002
-2010-2014,Bolivia,Private,33022277.860000003
-2010-2014,Bolivia,China,8118958.840000001
-2018-2022,Bolivia,Bilateral,14932118.52
-2018-2022,Bolivia,Multilateral,606264725.96
-2018-2022,Bolivia,Private,272608991.7
-2018-2022,Bolivia,China,83651842.78
-2023-2025 (projected),Bolivia,Bilateral,42756339.666666664
-2023-2025 (projected),Bolivia,Multilateral,1022761428.7000002
-2023-2025 (projected),Bolivia,Private,182080166.76666665
-2023-2025 (projected),Bolivia,China,105098743.23333333
-2010-2014,Bosnia and Herzegovina,Bilateral,37455651.08
-2010-2014,Bosnia and Herzegovina,Multilateral,157888901.42
-2010-2014,Bosnia and Herzegovina,Private,51929411.62
-2018-2022,Bosnia and Herzegovina,Bilateral,83526925.25999999
-2018-2022,Bosnia and Herzegovina,Multilateral,328573905.74
-2018-2022,Bosnia and Herzegovina,Private,38948159.64
-2023-2025 (projected),Bosnia and Herzegovina,Bilateral,108909833.3
-2023-2025 (projected),Bosnia and Herzegovina,Multilateral,464292943.1333334
-2023-2025 (projected),Bosnia and Herzegovina,Private,81298954.16666667
-2010-2014,Botswana,Bilateral,7757221.4
-2010-2014,Botswana,Multilateral,67746061.92
-2010-2014,Botswana,Private,510666.6666666667
-2010-2014,Botswana,China,12917904.26
-2018-2022,Botswana,Bilateral,5845831.540000001
-2018-2022,Botswana,Multilateral,152219679.16
-2018-2022,Botswana,Private,6794000.0
-2018-2022,Botswana,China,5858430.1
-2023-2025 (projected),Botswana,Bilateral,3921916.433333333
-2023-2025 (projected),Botswana,Multilateral,229597410.9
-2010-2014,Brazil,Bilateral,641488318.1
-2010-2014,Brazil,Multilateral,3922188886.4
-2010-2014,Brazil,Private,11834819317.54
-2010-2014,Brazil,China,329006800.0
-2018-2022,Brazil,Bilateral,629169376.02
-2018-2022,Brazil,Multilateral,3291133729.02
-2018-2022,Brazil,Private,27388366003.0
-2018-2022,Brazil,China,2053103000.0
-2023-2025 (projected),Brazil,Bilateral,573805846.5333334
-2023-2025 (projected),Brazil,Multilateral,4471056161.933333
-2023-2025 (projected),Brazil,Private,16716378699.966667
-2023-2025 (projected),Brazil,China,850244583.3333334
-2010-2014,Bulgaria,Bilateral,91417139.8
-2010-2014,Bulgaria,Multilateral,256760652.56000003
-2010-2014,Bulgaria,Private,380637702.41999996
-2018-2022,Bulgaria,Bilateral,47378819.4
-2018-2022,Bulgaria,Multilateral,292692617.04
-2018-2022,Bulgaria,Private,491586953.96000004
-2023-2025 (projected),Bulgaria,Bilateral,13231800.033333333
-2023-2025 (projected),Bulgaria,Multilateral,351224954.46666664
-2023-2025 (projected),Bulgaria,Private,1447188287.1666667
-2010-2014,Burkina Faso,Bilateral,15452918.5
-2010-2014,Burkina Faso,Multilateral,42318002.8
-2010-2014,Burkina Faso,Private,3727181.2
-2010-2014,Burkina Faso,China,6428195.66
-2018-2022,Burkina Faso,Bilateral,21021426.36
-2018-2022,Burkina Faso,Multilateral,111908433.16
-2018-2022,Burkina Faso,Private,2079362.1800000002
-2018-2022,Burkina Faso,China,6331913.0600000005
-2023-2025 (projected),Burkina Faso,Bilateral,48711228.133333325
-2023-2025 (projected),Burkina Faso,Multilateral,268319560.33333334
-2023-2025 (projected),Burkina Faso,Private,35392659.63333333
-2023-2025 (projected),Burkina Faso,China,14423672.199999997
-2010-2014,Burundi,Bilateral,1650351.44
-2010-2014,Burundi,Multilateral,9344927.32
-2018-2022,Burundi,Bilateral,3133628.48
-2018-2022,Burundi,Multilateral,14517518.64
-2018-2022,Burundi,China,707676.375
-2023-2025 (projected),Burundi,Bilateral,17960462.033333335
-2023-2025 (projected),Burundi,Multilateral,36647078.699999996
-2023-2025 (projected),Burundi,China,3047637.3000000003
-2010-2014,Cabo Verde,Bilateral,8296015.74
-2010-2014,Cabo Verde,Multilateral,22430945.04
-2010-2014,Cabo Verde,Private,4555901.779999999
-2010-2014,Cabo Verde,China,730793.58
-2018-2022,Cabo Verde,Bilateral,13570450.559999999
-2018-2022,Cabo Verde,Multilateral,40737803.92
-2018-2022,Cabo Verde,Private,9232283.34
-2018-2022,Cabo Verde,China,1906742.7600000002
-2023-2025 (projected),Cabo Verde,Bilateral,42154144.0
-2023-2025 (projected),Cabo Verde,Multilateral,57280017.666666664
-2023-2025 (projected),Cabo Verde,Private,45756593.46666667
-2023-2025 (projected),Cabo Verde,China,4314150.600000001
-2010-2014,Cambodia,Bilateral,15600354.040000001
-2010-2014,Cambodia,Multilateral,57915959.94
-2010-2014,Cambodia,China,21490418.36
-2018-2022,Cambodia,Bilateral,36269805.14
-2018-2022,Cambodia,Multilateral,104614987.36
-2018-2022,Cambodia,China,218614068.95999998
-2023-2025 (projected),Cambodia,Bilateral,220022290.23333335
-2023-2025 (projected),Cambodia,Multilateral,177805954.5666667
-2023-2025 (projected),Cambodia,China,321099606.86666673
-2010-2014,Cameroon,Bilateral,130462679.54
-2010-2014,Cameroon,Multilateral,50737730.9
-2010-2014,Cameroon,Private,9831750.760000002
-2010-2014,Cameroon,China,25963057.66
-2018-2022,Cameroon,Bilateral,150771086.56
-2018-2022,Cameroon,Multilateral,190567598.06
-2018-2022,Cameroon,Private,295671289.58000004
-2018-2022,Cameroon,China,298277302.56
-2023-2025 (projected),Cameroon,Bilateral,207966073.13333333
-2023-2025 (projected),Cameroon,Multilateral,586034993.6
-2023-2025 (projected),Cameroon,Private,262598724.86666667
-2023-2025 (projected),Cameroon,China,683276025.7333332
-2010-2014,Central African Republic,Bilateral,1874204.2
-2010-2014,Central African Republic,Multilateral,944714.4
-2010-2014,Central African Republic,Private,934988.55
-2010-2014,Central African Republic,China,496616.65
-2018-2022,Central African Republic,Bilateral,1315859.78
-2018-2022,Central African Republic,Multilateral,4849902.18
-2018-2022,Central African Republic,Private,1406130.8666666665
-2018-2022,Central African Republic,China,6016221.6
-2023-2025 (projected),Central African Republic,Bilateral,13937695.733333332
-2023-2025 (projected),Central African Republic,Multilateral,7414633.766666667
-2023-2025 (projected),Central African Republic,China,3269345.4
-2010-2014,Chad,Bilateral,25837493.32
-2010-2014,Chad,Multilateral,62757138.120000005
-2010-2014,Chad,Private,92249622.32000001
-2010-2014,Chad,China,3288816.4
-2018-2022,Chad,Bilateral,20328321.0
-2018-2022,Chad,Multilateral,33265799.24
-2018-2022,Chad,Private,134417000.0
-2018-2022,Chad,China,18507945.24
-2023-2025 (projected),Chad,Bilateral,83860468.56666666
-2023-2025 (projected),Chad,Multilateral,136692525.63333333
-2023-2025 (projected),Chad,Private,141306666.66666666
-2023-2025 (projected),Chad,China,42586287.5
-2010-2014,Colombia,Bilateral,117179242.52000001
-2010-2014,Colombia,Multilateral,1638201780.4
-2010-2014,Colombia,Private,2954348641.02
-2018-2022,Colombia,Bilateral,624799782.9
-2018-2022,Colombia,Multilateral,1870802335.28
-2018-2022,Colombia,Private,7111146059.139999
-2023-2025 (projected),Colombia,Bilateral,817009640.6333333
-2023-2025 (projected),Colombia,Multilateral,2967587138.7666664
-2023-2025 (projected),Colombia,Private,6158270825.733334
-2010-2014,Comoros,Bilateral,379487.1
-2010-2014,Comoros,Multilateral,3312996.56
-2018-2022,Comoros,Bilateral,300417.35
-2018-2022,Comoros,Multilateral,505747.7
-2018-2022,Comoros,China,1704390.8800000001
-2023-2025 (projected),Comoros,Bilateral,2687127.8333333335
-2023-2025 (projected),Comoros,Multilateral,10856785.666666666
-2023-2025 (projected),Comoros,Private,12176187.1
-2023-2025 (projected),Comoros,China,5277759.533333334
-2010-2014,Congo Republic,Bilateral,22972885.06
-2010-2014,Congo Republic,Multilateral,18160865.78
-2010-2014,Congo Republic,Private,112311243.04
-2010-2014,Congo Republic,China,111681685.18000002
-2018-2022,Congo Republic,Bilateral,49745763.480000004
-2018-2022,Congo Republic,Multilateral,108439584.78
-2018-2022,Congo Republic,Private,163880280.35999998
-2018-2022,Congo Republic,China,240495879.35999998
-2023-2025 (projected),Congo Republic,Bilateral,134847209.03333333
-2023-2025 (projected),Congo Republic,Multilateral,108819615.7
-2023-2025 (projected),Congo Republic,Private,281103593.43333334
-2023-2025 (projected),Congo Republic,China,335578807.5
-2010-2014,Costa Rica,Bilateral,49775880.12
-2010-2014,Costa Rica,Multilateral,377011261.44
-2010-2014,Costa Rica,Private,531244368.4
-2010-2014,Costa Rica,China,14134000.0
-2018-2022,Costa Rica,Bilateral,39371676.4
-2018-2022,Costa Rica,Multilateral,554983497.04
-2018-2022,Costa Rica,Private,922985000.0
-2018-2022,Costa Rica,China,3025662.88
-2023-2025 (projected),Costa Rica,Bilateral,27262014.066666666
-2023-2025 (projected),Costa Rica,Multilateral,928673719.6666666
-2023-2025 (projected),Costa Rica,Private,942621333.2999998
-2023-2025 (projected),Costa Rica,China,10708151.0
-2010-2014,Cote d'Ivoire,Bilateral,258533789.4
-2010-2014,Cote d'Ivoire,Multilateral,99530403.86
-2010-2014,Cote d'Ivoire,Private,101247816.7
-2010-2014,Cote d'Ivoire,China,7506229.82
-2018-2022,Cote d'Ivoire,Bilateral,360083586.71999997
-2018-2022,Cote d'Ivoire,Multilateral,161754923.3
-2018-2022,Cote d'Ivoire,Private,1060191169.1600001
-2018-2022,Cote d'Ivoire,China,88025972.78
-2023-2025 (projected),Cote d'Ivoire,Bilateral,424695047.0333333
-2023-2025 (projected),Cote d'Ivoire,Multilateral,454330169.3666666
-2023-2025 (projected),Cote d'Ivoire,Private,1852423005.0333335
-2023-2025 (projected),Cote d'Ivoire,China,357858691.59999996
-2010-2014,DR Congo,Bilateral,47083583.1
-2010-2014,DR Congo,Multilateral,214706846.72000003
-2010-2014,DR Congo,Private,6371764.0
-2010-2014,DR Congo,China,9823833.7
-2018-2022,DR Congo,Bilateral,35013286.98
-2018-2022,DR Congo,Multilateral,322755152.88
-2018-2022,DR Congo,Private,18261800.0
-2018-2022,DR Congo,China,98282389.44
-2023-2025 (projected),DR Congo,Bilateral,48011564.699999996
-2023-2025 (projected),DR Congo,Multilateral,156906923.33333334
-2023-2025 (projected),DR Congo,Private,24351566.700000003
-2023-2025 (projected),DR Congo,China,433855922.5
-2010-2014,Djibouti,Bilateral,7742732.339999999
-2010-2014,Djibouti,Multilateral,20974151.98
-2010-2014,Djibouti,Private,3356065.1799999997
-2010-2014,Djibouti,China,4308922.779999999
-2018-2022,Djibouti,Bilateral,5712976.74
-2018-2022,Djibouti,Multilateral,33515016.0
-2018-2022,Djibouti,China,16167201.62
-2023-2025 (projected),Djibouti,Bilateral,34636713.333333336
-2023-2025 (projected),Djibouti,Multilateral,61683923.5
-2023-2025 (projected),Djibouti,China,195832514.30000004
-2010-2014,Dominica,Bilateral,4087659.22
-2010-2014,Dominica,Multilateral,8300220.82
-2010-2014,Dominica,Private,3676515.8200000003
-2010-2014,Dominica,China,507215.55
-2018-2022,Dominica,Bilateral,4595757.68
-2018-2022,Dominica,Multilateral,11672390.64
-2018-2022,Dominica,Private,6426518.74
-2018-2022,Dominica,China,2750631.74
-2023-2025 (projected),Dominica,Bilateral,5880946.533333334
-2023-2025 (projected),Dominica,Multilateral,15189492.266666668
-2023-2025 (projected),Dominica,Private,9708258.933333334
-2023-2025 (projected),Dominica,China,3572066.8666666667
-2010-2014,Dominican Republic,Bilateral,308590543.5
-2010-2014,Dominican Republic,Multilateral,379892104.5
-2010-2014,Dominican Republic,Private,647346414.1800001
-2010-2014,Dominican Republic,China,1038000.0
-2018-2022,Dominican Republic,Bilateral,170751816.33999997
-2018-2022,Dominican Republic,Multilateral,417911808.56
-2018-2022,Dominican Republic,Private,2066379041.52
-2018-2022,Dominican Republic,China,246548.6
-2023-2025 (projected),Dominican Republic,Bilateral,194628407.53333333
-2023-2025 (projected),Dominican Republic,Multilateral,774411840.4666667
-2023-2025 (projected),Dominican Republic,Private,2250013987.233333
-2023-2025 (projected),Dominican Republic,China,193416.66666666666
-2010-2014,Ecuador,Bilateral,232716749.1
-2010-2014,Ecuador,Multilateral,693071453.3
-2010-2014,Ecuador,Private,154073460.14000002
-2010-2014,Ecuador,China,518780448.0
-2018-2022,Ecuador,Bilateral,337720249.94
-2018-2022,Ecuador,Multilateral,1142083247.04
-2018-2022,Ecuador,Private,1706741735.26
-2018-2022,Ecuador,China,1407901289.6200001
-2023-2025 (projected),Ecuador,Bilateral,172339001.56666666
-2023-2025 (projected),Ecuador,Multilateral,1824302572.5
-2023-2025 (projected),Ecuador,Private,816585907.5666666
-2023-2025 (projected),Ecuador,China,921791871.8000001
-2010-2014,Egypt,Bilateral,1868370413.94
-2010-2014,Egypt,Multilateral,912901490.0799999
-2010-2014,Egypt,Private,926582480.4200001
-2010-2014,Egypt,China,5441428.96
-2018-2022,Egypt,Bilateral,3531467033.5
-2018-2022,Egypt,Multilateral,3172963293.0
-2018-2022,Egypt,Private,4264790702.72
-2018-2022,Egypt,China,789185748.48
-2023-2025 (projected),Egypt,Bilateral,1895722921.6000001
-2023-2025 (projected),Egypt,Multilateral,4553657905.8
-2023-2025 (projected),Egypt,Private,8061858453.033333
-2023-2025 (projected),Egypt,China,1071024595.6333332
-2010-2014,El Salvador,Bilateral,51990883.9
-2010-2014,El Salvador,Multilateral,472367318.14
-2010-2014,El Salvador,Private,354408418.48
-2010-2014,El Salvador,China,4387400.0
-2018-2022,El Salvador,Bilateral,61625392.04
-2018-2022,El Salvador,Multilateral,540147185.88
-2018-2022,El Salvador,Private,769591524.96
-2018-2022,El Salvador,China,745000.0
-2023-2025 (projected),El Salvador,Bilateral,45402674.666666664
-2023-2025 (projected),El Salvador,Multilateral,737127437.0666666
-2023-2025 (projected),El Salvador,Private,764966705.4666667
-2023-2025 (projected),El Salvador,China,153500.0
-2010-2014,Eritrea,Bilateral,15536791.059999999
-2010-2014,Eritrea,Multilateral,14850583.780000001
-2010-2014,Eritrea,China,24138410.44
-2018-2022,Eritrea,Bilateral,10151818.1
-2018-2022,Eritrea,Multilateral,5581737.92
-2018-2022,Eritrea,China,5543396.9
-2023-2025 (projected),Eritrea,Bilateral,7218178.766666667
-2023-2025 (projected),Eritrea,Multilateral,24542150.433333334
-2023-2025 (projected),Eritrea,China,3413909.0999999996
-2010-2014,Eswatini,Bilateral,9856629.64
-2010-2014,Eswatini,Multilateral,29972811.72
-2010-2014,Eswatini,Private,3234880.3600000003
-2010-2014,Eswatini,China,269600.0
-2018-2022,Eswatini,Bilateral,18433245.62
-2018-2022,Eswatini,Multilateral,27268488.619999997
-2018-2022,Eswatini,Private,2296685.98
-2018-2022,Eswatini,China,7232000.0
-2023-2025 (projected),Eswatini,Bilateral,10171375.566666666
-2023-2025 (projected),Eswatini,Multilateral,58961293.199999996
-2023-2025 (projected),Eswatini,Private,1191629.5
-2023-2025 (projected),Eswatini,China,19207222.2
-2010-2014,Ethiopia,Bilateral,53924407.48
-2010-2014,Ethiopia,Multilateral,74232688.42
-2010-2014,Ethiopia,Private,171245993.5
-2010-2014,Ethiopia,China,170095367.76
-2018-2022,Ethiopia,Bilateral,182692163.26
-2018-2022,Ethiopia,Multilateral,244792620.16
-2018-2022,Ethiopia,Private,717087652.86
-2018-2022,Ethiopia,China,785869224.58
-2023-2025 (projected),Ethiopia,Bilateral,185895880.80000004
-2023-2025 (projected),Ethiopia,Multilateral,574023772.6666666
-2023-2025 (projected),Ethiopia,Private,1029222350.6333333
-2023-2025 (projected),Ethiopia,China,1480403684.5666668
-2010-2014,Fiji,Bilateral,5782584.0200000005
-2010-2014,Fiji,Multilateral,10521347.82
-2010-2014,Fiji,Private,49875100.0
-2010-2014,Fiji,China,4031845.7600000002
-2018-2022,Fiji,Bilateral,33544232.139999997
-2018-2022,Fiji,Multilateral,22368363.880000003
-2018-2022,Fiji,Private,77708333.33333333
-2018-2022,Fiji,China,23972318.8
-2023-2025 (projected),Fiji,Bilateral,6548053.466666666
-2023-2025 (projected),Fiji,Multilateral,110136096.7
-2023-2025 (projected),Fiji,China,29699649.599999998
-2010-2014,Gabon,Bilateral,71780928.72
-2010-2014,Gabon,Multilateral,68034972.78
-2010-2014,Gabon,Private,431566968.7
-2010-2014,Gabon,China,21607673.32
-2018-2022,Gabon,Bilateral,30652784.440000005
-2018-2022,Gabon,Multilateral,146259733.1
-2018-2022,Gabon,Private,589194851.72
-2018-2022,Gabon,China,114342632.32000001
-2023-2025 (projected),Gabon,Bilateral,91788101.39999999
-2023-2025 (projected),Gabon,Multilateral,225891802.0666667
-2023-2025 (projected),Gabon,Private,463499044.9666667
-2023-2025 (projected),Gabon,China,173876743.63333333
-2010-2014,Gambia,Bilateral,9833262.7
-2010-2014,Gambia,Multilateral,15239128.34
-2010-2014,Gambia,Private,2485694.9
-2010-2014,Gambia,China,14280134.1
-2018-2022,Gambia,Bilateral,8015598.5200000005
-2018-2022,Gambia,Multilateral,23736329.54
-2018-2022,Gambia,Private,2200303.08
-2018-2022,Gambia,China,463707.825
-2023-2025 (projected),Gambia,Bilateral,27508947.666666668
-2023-2025 (projected),Gambia,Multilateral,66278561.4
-2023-2025 (projected),Gambia,China,12817205.799999999
-2010-2014,Georgia,Bilateral,48717222.42
-2010-2014,Georgia,Multilateral,58997464.52
-2010-2014,Georgia,Private,252898621.11999997
-2010-2014,Georgia,China,486284.95
-2018-2022,Georgia,Bilateral,87570901.22
-2018-2022,Georgia,Multilateral,257167356.7
-2018-2022,Georgia,Private,371645043.65999997
-2018-2022,Georgia,China,446968.57999999996
-2023-2025 (projected),Georgia,Bilateral,125904720.96666665
-2023-2025 (projected),Georgia,Multilateral,488269911.4666667
-2023-2025 (projected),Georgia,Private,41965704.6
-2010-2014,Ghana,Bilateral,87481092.84
-2010-2014,Ghana,Multilateral,59059378.02
-2010-2014,Ghana,Private,225587902.43999997
-2010-2014,Ghana,China,82161329.91999999
-2018-2022,Ghana,Bilateral,182387356.06
-2018-2022,Ghana,Multilateral,170416190.35999998
-2018-2022,Ghana,Private,1717205068.6
-2018-2022,Ghana,China,322921419.21999997
-2023-2025 (projected),Ghana,Bilateral,239362968.0
-2023-2025 (projected),Ghana,Multilateral,464478271.6666667
-2023-2025 (projected),Ghana,Private,1960388356.8
-2023-2025 (projected),Ghana,China,396406245.76666665
-2010-2014,Grenada,Bilateral,4511815.720000001
-2010-2014,Grenada,Multilateral,12189342.059999999
-2010-2014,Grenada,Private,5250825.0
-2018-2022,Grenada,Bilateral,9573161.919999998
-2018-2022,Grenada,Multilateral,19189006.380000003
-2018-2022,Grenada,Private,18685535.54
-2018-2022,Grenada,China,482704.8
-2023-2025 (projected),Grenada,Bilateral,12063188.200000001
-2023-2025 (projected),Grenada,Multilateral,21859338.400000002
-2023-2025 (projected),Grenada,Private,15422756.666666666
-2023-2025 (projected),Grenada,China,5230260.9
-2010-2014,Guatemala,Bilateral,26944980.0
-2010-2014,Guatemala,Multilateral,452257122.21999997
-2010-2014,Guatemala,Private,202674894.85999998
-2010-2014,Guatemala,China,7336000.0
-2018-2022,Guatemala,Bilateral,65437661.239999995
-2018-2022,Guatemala,Multilateral,542049046.74
-2018-2022,Guatemala,Private,381276033.15999997
-2018-2022,Guatemala,China,2536000.0
-2023-2025 (projected),Guatemala,Bilateral,30869070.2
-2023-2025 (projected),Guatemala,Multilateral,635740869.3666667
-2023-2025 (projected),Guatemala,Private,310729843.1666667
-2023-2025 (projected),Guatemala,China,2743553.2
-2010-2014,Guinea,Bilateral,13688858.719999999
-2010-2014,Guinea,Multilateral,67197851.72
-2010-2014,Guinea,China,2285824.34
-2018-2022,Guinea,Bilateral,35270956.78
-2018-2022,Guinea,Multilateral,46526387.160000004
-2018-2022,Guinea,China,37698622.82
-2023-2025 (projected),Guinea,Bilateral,77219145.16666667
-2023-2025 (projected),Guinea,Multilateral,191915013.26666665
-2023-2025 (projected),Guinea,Private,19267015.433333334
-2023-2025 (projected),Guinea,China,314050762.8666666
-2010-2014,Guinea-Bissau,Bilateral,710392.74
-2010-2014,Guinea-Bissau,Multilateral,4839137.5
-2010-2014,Guinea-Bissau,Private,619000.0
-2018-2022,Guinea-Bissau,Bilateral,3513436.44
-2018-2022,Guinea-Bissau,Multilateral,22057231.580000002
-2018-2022,Guinea-Bissau,Private,6471800.0
-2023-2025 (projected),Guinea-Bissau,Bilateral,8803543.3
-2023-2025 (projected),Guinea-Bissau,Multilateral,38159767.23333333
-2023-2025 (projected),Guinea-Bissau,Private,19296000.0
-2010-2014,Guyana,Bilateral,28363871.6
-2010-2014,Guyana,Multilateral,20388327.54
-2010-2014,Guyana,Private,12000.0
-2010-2014,Guyana,China,4772707.74
-2018-2022,Guyana,Bilateral,12786504.98
-2018-2022,Guyana,Multilateral,44654666.8
-2018-2022,Guyana,Private,1799800.0
-2018-2022,Guyana,China,19495098.419999998
-2023-2025 (projected),Guyana,Bilateral,17352921.633333337
-2023-2025 (projected),Guyana,Multilateral,81006924.10000001
-2023-2025 (projected),Guyana,Private,2105066.6666666665
-2023-2025 (projected),Guyana,China,33656572.699999996
-2010-2014,Haiti,Bilateral,22704273.38
-2010-2014,Haiti,Multilateral,10834322.78
-2010-2014,Haiti,Private,1995800.0
-2018-2022,Haiti,Bilateral,6692200.0
-2018-2022,Haiti,Multilateral,4915307.4399999995
-2018-2022,Haiti,Private,2968600.0
-2023-2025 (projected),Haiti,Bilateral,144136113.4
-2023-2025 (projected),Haiti,Multilateral,8406715.966666667
-2023-2025 (projected),Haiti,Private,4229391.3
-2010-2014,Honduras,Bilateral,28172455.28
-2010-2014,Honduras,Multilateral,107743884.4
-2010-2014,Honduras,Private,29648110.18
-2010-2014,Honduras,China,4808600.0
-2018-2022,Honduras,Bilateral,52993030.46
-2018-2022,Honduras,Multilateral,316809171.3
-2018-2022,Honduras,Private,286710190.54
-2018-2022,Honduras,China,37987600.0
-2023-2025 (projected),Honduras,Bilateral,83177084.86666666
-2023-2025 (projected),Honduras,Multilateral,635568396.4666667
-2023-2025 (projected),Honduras,Private,167325425.36666664
-2023-2025 (projected),Honduras,China,69775944.4
-2010-2014,India,Bilateral,2091977233.2
-2010-2014,India,Multilateral,2499076875.16
-2010-2014,India,Private,4599678062.339999
-2010-2014,India,China,87344327.66666667
-2018-2022,India,Bilateral,2298359348.6
-2018-2022,India,Multilateral,5079117571.46
-2018-2022,India,Private,12610014949.3
-2023-2025 (projected),India,Bilateral,3071684265.2999997
-2023-2025 (projected),India,Multilateral,9714092545.0
-2023-2025 (projected),India,Private,16796279746.0
-2010-2014,Indonesia,Bilateral,4181309190.0399995
-2010-2014,Indonesia,Multilateral,2200759464.72
-2010-2014,Indonesia,Private,7645461457.58
-2010-2014,Indonesia,China,73724073.12
-2018-2022,Indonesia,Bilateral,2887919397.62
-2018-2022,Indonesia,Multilateral,2981339497.42
-2018-2022,Indonesia,Private,21980889795.760002
-2018-2022,Indonesia,China,222844440.9
-2023-2025 (projected),Indonesia,Bilateral,2083090435.0
-2023-2025 (projected),Indonesia,Multilateral,4860849018.766666
-2023-2025 (projected),Indonesia,Private,21092523752.766666
-2023-2025 (projected),Indonesia,China,245797523.0333333
-2010-2014,Iran,Bilateral,152608824.28
-2010-2014,Iran,Multilateral,88753929.94000001
-2010-2014,Iran,Private,570202771.8199999
-2010-2014,Iran,China,105672000.0
-2018-2022,Iran,Bilateral,21831394.72
-2018-2022,Iran,Multilateral,65892364.5
-2018-2022,Iran,Private,13442757.200000001
-2018-2022,Iran,China,25482000.0
-2023-2025 (projected),Iran,Bilateral,22405567.566666666
-2023-2025 (projected),Iran,Multilateral,13454742.700000001
-2023-2025 (projected),Iran,Private,11776230.633333333
-2018-2022,Iraq,Bilateral,1593049367.7
-2018-2022,Iraq,Multilateral,213111003.1
-2018-2022,Iraq,Private,826882976.48
-2018-2022,Iraq,China,168466800.0
-2023-2025 (projected),Iraq,Bilateral,1573472618.2666667
-2023-2025 (projected),Iraq,Multilateral,616247748.9
-2023-2025 (projected),Iraq,Private,1111685202.0666666
-2023-2025 (projected),Iraq,China,155708000.0
-2010-2014,Jamaica,Bilateral,84874142.1
-2010-2014,Jamaica,Multilateral,197509979.07999998
-2010-2014,Jamaica,Private,666371764.4200001
-2010-2014,Jamaica,China,18599391.880000003
-2018-2022,Jamaica,Bilateral,28600590.060000002
-2018-2022,Jamaica,Multilateral,268133332.1
-2018-2022,Jamaica,Private,858163284.1
-2018-2022,Jamaica,China,86968996.74
-2023-2025 (projected),Jamaica,Bilateral,3700545.9
-2023-2025 (projected),Jamaica,Multilateral,361953644.0333333
-2023-2025 (projected),Jamaica,Private,603087222.2333332
-2023-2025 (projected),Jamaica,China,119362836.26666667
-2010-2014,Jordan,Bilateral,248875503.85999998
-2010-2014,Jordan,Multilateral,455860964.4
-2010-2014,Jordan,Private,81791281.17999999
-2010-2014,Jordan,China,430597.07999999996
-2018-2022,Jordan,Bilateral,278698486.62
-2018-2022,Jordan,Multilateral,478594543.3
-2018-2022,Jordan,Private,1593791999.7
-2018-2022,Jordan,China,2352606.06
-2023-2025 (projected),Jordan,Bilateral,291572294.7
-2023-2025 (projected),Jordan,Multilateral,640683280.3333334
-2023-2025 (projected),Jordan,Private,988354559.5666666
-2023-2025 (projected),Jordan,China,2785332.6
-2010-2014,Kazakhstan,Bilateral,109064889.3
-2010-2014,Kazakhstan,Multilateral,261497581.01999998
-2010-2014,Kazakhstan,Private,150252333.33333334
-2018-2022,Kazakhstan,Bilateral,54296016.260000005
-2018-2022,Kazakhstan,Multilateral,829174562.2
-2018-2022,Kazakhstan,Private,1080765819.3
-2018-2022,Kazakhstan,China,123707745.24000001
-2023-2025 (projected),Kazakhstan,Bilateral,32743477.599999994
-2023-2025 (projected),Kazakhstan,Multilateral,1143048622.6000001
-2023-2025 (projected),Kazakhstan,Private,2202293177.2999997
-2023-2025 (projected),Kazakhstan,China,289945848.40000004
-2010-2014,Kenya,Bilateral,205350279.35999998
-2010-2014,Kenya,Multilateral,173348342.2
-2010-2014,Kenya,Private,168817167.16
-2010-2014,Kenya,China,31280763.18
-2018-2022,Kenya,Bilateral,227980236.14000002
-2018-2022,Kenya,Multilateral,908244784.3
-2018-2022,Kenya,Private,1024006489.4
-2018-2022,Kenya,China,598825758.1800001
-2023-2025 (projected),Kenya,Bilateral,375551049.26666665
-2023-2025 (projected),Kenya,Multilateral,1351177763.6333334
-2023-2025 (projected),Kenya,Private,1321038880.1333334
-2023-2025 (projected),Kenya,China,1264614609.8666668
-2010-2014,Kosovo,Bilateral,297948.1
-2010-2014,Kosovo,Multilateral,26564000.0
-2010-2014,Kosovo,Private,98347.3
-2018-2022,Kosovo,Bilateral,9698145.540000001
-2018-2022,Kosovo,Multilateral,29175435.439999998
-2018-2022,Kosovo,Private,456834.52
-2023-2025 (projected),Kosovo,Bilateral,5576955.8
-2023-2025 (projected),Kosovo,Multilateral,109238977.96666665
-2023-2025 (projected),Kosovo,Private,2821897.4333333336
-2010-2014,Kyrgyz Republic,Bilateral,16405717.059999999
-2010-2014,Kyrgyz Republic,Multilateral,52809091.08
-2010-2014,Kyrgyz Republic,China,10146954.7
-2018-2022,Kyrgyz Republic,Bilateral,23268473.0
-2018-2022,Kyrgyz Republic,Multilateral,90093224.36
-2018-2022,Kyrgyz Republic,China,69585819.12
-2023-2025 (projected),Kyrgyz Republic,Bilateral,37498506.199999996
-2023-2025 (projected),Kyrgyz Republic,Multilateral,158441040.93333337
-2023-2025 (projected),Kyrgyz Republic,China,154143409.6
-2010-2014,Laos,Bilateral,32826760.380000003
-2010-2014,Laos,Multilateral,87086269.26
-2010-2014,Laos,Private,3701131.16
-2010-2014,Laos,China,37855487.06
-2018-2022,Laos,Bilateral,100795232.02000001
-2018-2022,Laos,Multilateral,103694429.76
-2018-2022,Laos,Private,304238582.71999997
-2018-2022,Laos,China,118633342.22
-2023-2025 (projected),Laos,Bilateral,231382959.9333333
-2023-2025 (projected),Laos,Multilateral,146566915.66666666
-2023-2025 (projected),Laos,Private,355920800.06666666
-2023-2025 (projected),Laos,China,801365334.6333333
-2010-2014,Lebanon,Bilateral,179479290.5
-2010-2014,Lebanon,Multilateral,239563897.5
-2010-2014,Lebanon,Private,3632328124.44
-2018-2022,Lebanon,Bilateral,100031697.5
-2018-2022,Lebanon,Multilateral,138784327.74
-2018-2022,Lebanon,Private,1870036808.0
-2023-2025 (projected),Lebanon,Bilateral,80984341.8
-2023-2025 (projected),Lebanon,Multilateral,317779778.6666667
-2023-2025 (projected),Lebanon,Private,3157585511.933333
-2010-2014,Lesotho,Bilateral,3668283.4200000004
-2010-2014,Lesotho,Multilateral,27931626.76
-2010-2014,Lesotho,Private,2061310.28
-2010-2014,Lesotho,China,1481679.6199999999
-2018-2022,Lesotho,Bilateral,6217316.159999999
-2018-2022,Lesotho,Multilateral,139530689.84
-2018-2022,Lesotho,Private,395931.94
-2018-2022,Lesotho,China,5675576.76
-2023-2025 (projected),Lesotho,Bilateral,20136012.166666668
-2023-2025 (projected),Lesotho,Multilateral,59114389.166666664
-2023-2025 (projected),Lesotho,Private,405104.8333333333
-2023-2025 (projected),Lesotho,China,16622213.799999999
-2010-2014,Liberia,Bilateral,1427008.075
-2010-2014,Liberia,Multilateral,5254034.32
-2010-2014,Liberia,China,141500.0
-2018-2022,Liberia,Bilateral,3530786.6399999997
-2018-2022,Liberia,Multilateral,15379440.739999998
-2018-2022,Liberia,China,1116193.94
-2023-2025 (projected),Liberia,Bilateral,11850243.100000001
-2023-2025 (projected),Liberia,Multilateral,52186880.43333334
-2023-2025 (projected),Liberia,China,3860114.766666667
-2010-2014,Madagascar,Bilateral,23080320.380000003
-2010-2014,Madagascar,Multilateral,32197141.48
-2010-2014,Madagascar,Private,39533.075
-2010-2014,Madagascar,China,2108560.06
-2018-2022,Madagascar,Bilateral,20058148.5
-2018-2022,Madagascar,Multilateral,68699216.64
-2018-2022,Madagascar,Private,17467450.619999997
-2018-2022,Madagascar,China,7096765.9
-2023-2025 (projected),Madagascar,Bilateral,57326446.0
-2023-2025 (projected),Madagascar,Multilateral,201314467.33333334
-2023-2025 (projected),Madagascar,Private,63532404.06666667
-2023-2025 (projected),Madagascar,China,16468823.933333332
-2010-2014,Malawi,Bilateral,6653818.4399999995
-2010-2014,Malawi,Multilateral,18754825.759999998
-2010-2014,Malawi,Private,1124191.5666666667
-2010-2014,Malawi,China,2413168.42
-2018-2022,Malawi,Bilateral,18422788.240000002
-2018-2022,Malawi,Multilateral,41395029.22
-2018-2022,Malawi,China,18005766.98
-2023-2025 (projected),Malawi,Bilateral,20849829.066666666
-2023-2025 (projected),Malawi,Multilateral,101196701.8
-2023-2025 (projected),Malawi,China,21766549.333333332
-2010-2014,Maldives,Bilateral,46679198.36
-2010-2014,Maldives,Multilateral,18894574.02
-2010-2014,Maldives,Private,22027622.54
-2010-2014,Maldives,China,1443924.28
-2018-2022,Maldives,Bilateral,156926117.68
-2018-2022,Maldives,Multilateral,131195602.17999999
-2018-2022,Maldives,Private,116534458.38
-2018-2022,Maldives,China,77257331.94000001
-2023-2025 (projected),Maldives,Bilateral,91256660.73333333
-2023-2025 (projected),Maldives,Multilateral,100811637.89999999
-2023-2025 (projected),Maldives,Private,129207094.13333333
-2023-2025 (projected),Maldives,China,192788396.03333333
-2010-2014,Mali,Bilateral,19550352.3
-2010-2014,Mali,Multilateral,51991139.239999995
-2010-2014,Mali,Private,1213513.46
-2010-2014,Mali,China,7286133.4799999995
-2018-2022,Mali,Bilateral,50183134.0
-2018-2022,Mali,Multilateral,137241167.07999998
-2018-2022,Mali,Private,110025.15
-2018-2022,Mali,China,40456653.839999996
-2023-2025 (projected),Mali,Bilateral,103305089.73333333
-2023-2025 (projected),Mali,Multilateral,226444031.53333333
-2023-2025 (projected),Mali,China,77488882.23333333
-2010-2014,Mauritania,Bilateral,34681519.160000004
-2010-2014,Mauritania,Multilateral,113769925.96
-2010-2014,Mauritania,Private,6487558.399999999
-2010-2014,Mauritania,China,6901798.1
-2018-2022,Mauritania,Bilateral,92055633.36
-2018-2022,Mauritania,Multilateral,225771786.8
-2018-2022,Mauritania,China,23287899.96
-2023-2025 (projected),Mauritania,Bilateral,141335248.46666667
-2023-2025 (projected),Mauritania,Multilateral,276426454.8333333
-2023-2025 (projected),Mauritania,China,105661357.83333333
-2010-2014,Mauritius,Bilateral,31229742.0
-2010-2014,Mauritius,Multilateral,36872747.78
-2010-2014,Mauritius,Private,18968719.380000003
-2010-2014,Mauritius,China,10466470.02
-2018-2022,Mauritius,Bilateral,53278634.739999995
-2018-2022,Mauritius,Multilateral,104187038.9
-2018-2022,Mauritius,Private,15092220.580000002
-2018-2022,Mauritius,China,47842438.120000005
-2023-2025 (projected),Mauritius,Bilateral,83964224.7
-2023-2025 (projected),Mauritius,Multilateral,73343377.93333334
-2023-2025 (projected),Mauritius,Private,408830717.3333333
-2023-2025 (projected),Mauritius,China,38312094.53333333
-2010-2014,Mexico,Bilateral,592841114.28
-2010-2014,Mexico,Multilateral,1537991301.84
-2010-2014,Mexico,Private,21561564342.94
-2018-2022,Mexico,Bilateral,494810054.64
-2018-2022,Mexico,Multilateral,2300901400.0
-2018-2022,Mexico,Private,35553659912.159996
-2023-2025 (projected),Mexico,Bilateral,267415024.9
-2023-2025 (projected),Mexico,Multilateral,4558188353.3
-2023-2025 (projected),Mexico,Private,27601802971.733334
-2010-2014,Moldova,Bilateral,31654909.72
-2010-2014,Moldova,Multilateral,38512899.08
-2010-2014,Moldova,Private,6692755.3
-2010-2014,Moldova,China,6955400.0
-2018-2022,Moldova,Bilateral,50910139.95999999
-2018-2022,Moldova,Multilateral,81945718.03999999
-2018-2022,Moldova,Private,1793401.0
-2023-2025 (projected),Moldova,Bilateral,9767554.766666666
-2023-2025 (projected),Moldova,Multilateral,310028757.09999996
-2023-2025 (projected),Moldova,Private,2067612.2666666666
-2010-2014,Mongolia,Bilateral,40712915.739999995
-2010-2014,Mongolia,Multilateral,37013753.46
-2010-2014,Mongolia,Private,61696767.699999996
-2010-2014,Mongolia,China,5247200.0
-2018-2022,Mongolia,Bilateral,52491117.78
-2018-2022,Mongolia,Multilateral,119534075.38
-2018-2022,Mongolia,Private,835713331.26
-2018-2022,Mongolia,China,33851036.45
-2023-2025 (projected),Mongolia,Bilateral,184774361.19999996
-2023-2025 (projected),Mongolia,Multilateral,322241960.63333327
-2023-2025 (projected),Mongolia,Private,495534238.5
-2023-2025 (projected),Mongolia,China,723947799.9
-2010-2014,Montenegro,Bilateral,34610081.06
-2010-2014,Montenegro,Multilateral,49592909.160000004
-2010-2014,Montenegro,Private,148103176.76
-2010-2014,Montenegro,China,1260314.2
-2018-2022,Montenegro,Bilateral,40021450.760000005
-2018-2022,Montenegro,Multilateral,99552182.12
-2018-2022,Montenegro,Private,412551389.02
-2018-2022,Montenegro,China,40521200.0
-2023-2025 (projected),Montenegro,Bilateral,33322553.766666666
-2023-2025 (projected),Montenegro,Multilateral,99342996.56666666
-2023-2025 (projected),Montenegro,Private,219681854.4333333
-2023-2025 (projected),Montenegro,China,134251844.36666664
-2010-2014,Morocco,Bilateral,766489254.38
-2010-2014,Morocco,Multilateral,1207124825.04
-2010-2014,Morocco,Private,426780119.26
-2010-2014,Morocco,China,59197088.239999995
-2018-2022,Morocco,Bilateral,919246874.0799999
-2018-2022,Morocco,Multilateral,1483957727.8799999
-2018-2022,Morocco,Private,1452175921.98
-2018-2022,Morocco,China,65367025.220000006
-2023-2025 (projected),Morocco,Bilateral,1419563816.0
-2023-2025 (projected),Morocco,Multilateral,2444302320.0666666
-2023-2025 (projected),Morocco,Private,1736334717.0333335
-2023-2025 (projected),Morocco,China,33794706.76666667
-2010-2014,Mozambique,Bilateral,33069009.96
-2010-2014,Mozambique,Multilateral,61193800.339999996
-2010-2014,Mozambique,Private,62814049.92
-2010-2014,Mozambique,China,8878620.1
-2018-2022,Mozambique,Bilateral,65232942.720000006
-2018-2022,Mozambique,Multilateral,120948708.35999998
-2018-2022,Mozambique,Private,234840702.42
-2018-2022,Mozambique,China,165759089.3
-2023-2025 (projected),Mozambique,Bilateral,224344152.5666667
-2023-2025 (projected),Mozambique,Multilateral,210926351.83333334
-2023-2025 (projected),Mozambique,Private,134415975.43333334
-2023-2025 (projected),Mozambique,China,241007509.19999996
-2010-2014,Myanmar,Bilateral,546075037.3
-2010-2014,Myanmar,Multilateral,218128362.34
-2010-2014,Myanmar,Private,23716394.060000002
-2010-2014,Myanmar,China,149989856.9
-2018-2022,Myanmar,Bilateral,162225873.51999998
-2018-2022,Myanmar,Multilateral,74995135.8
-2018-2022,Myanmar,Private,32113323.52
-2018-2022,Myanmar,China,460266815.62
-2023-2025 (projected),Myanmar,Bilateral,398757044.5333333
-2023-2025 (projected),Myanmar,Multilateral,150678287.56666666
-2023-2025 (projected),Myanmar,Private,2665798.7
-2023-2025 (projected),Myanmar,China,472368127.56666666
-2010-2014,Nepal,Bilateral,37148080.980000004
-2010-2014,Nepal,Multilateral,158494773.3
-2010-2014,Nepal,Private,570047.7
-2010-2014,Nepal,China,889788.5249999999
-2018-2022,Nepal,Bilateral,34772615.18
-2018-2022,Nepal,Multilateral,221846694.6
-2018-2022,Nepal,Private,14395.949999999999
-2018-2022,Nepal,China,4334493.159999999
-2023-2025 (projected),Nepal,Bilateral,106447843.23333333
-2023-2025 (projected),Nepal,Multilateral,347034024.76666665
-2023-2025 (projected),Nepal,China,41175365.1
-2010-2014,Nicaragua,Bilateral,31533912.02
-2010-2014,Nicaragua,Multilateral,67396994.53999999
-2010-2014,Nicaragua,Private,905792.9400000001
-2018-2022,Nicaragua,Bilateral,47058112.64
-2018-2022,Nicaragua,Multilateral,284118028.41999996
-2018-2022,Nicaragua,Private,2559221.1799999997
-2023-2025 (projected),Nicaragua,Bilateral,40615170.23333334
-2023-2025 (projected),Nicaragua,Multilateral,669873395.3000001
-2023-2025 (projected),Nicaragua,Private,851866.3666666667
-2010-2014,Niger,Bilateral,4180767.9
-2010-2014,Niger,Multilateral,28324665.660000004
-2010-2014,Niger,China,27567932.233333334
-2018-2022,Niger,Bilateral,15197956.1
-2018-2022,Niger,Multilateral,112436917.32000001
-2018-2022,Niger,Private,11405028.333333334
-2018-2022,Niger,China,38195879.36
-2023-2025 (projected),Niger,Bilateral,51095780.333333336
-2023-2025 (projected),Niger,Multilateral,244617482.76666665
-2023-2025 (projected),Niger,Private,26052629.433333334
-2023-2025 (projected),Niger,China,25382748.933333334
-2010-2014,Nigeria,Bilateral,826684.4600000001
-2010-2014,Nigeria,Multilateral,177576282.54000002
-2010-2014,Nigeria,Private,39489200.0
-2010-2014,Nigeria,China,95573805.0
-2018-2022,Nigeria,Bilateral,60384455.32000001
-2018-2022,Nigeria,Multilateral,447429713.02
-2018-2022,Nigeria,Private,1282721725.48
-2018-2022,Nigeria,China,200125544.72
-2023-2025 (projected),Nigeria,Bilateral,138583221.53333333
-2023-2025 (projected),Nigeria,Multilateral,1096879026.7666667
-2023-2025 (projected),Nigeria,Private,2299283329.866667
-2023-2025 (projected),Nigeria,China,429289902.93333334
-2010-2014,North Macedonia,Bilateral,16902223.119999997
-2010-2014,North Macedonia,Multilateral,129895966.25999999
-2010-2014,North Macedonia,Private,110284129.06000002
-2010-2014,North Macedonia,China,11739598.44
-2018-2022,North Macedonia,Bilateral,20442715.54
-2018-2022,North Macedonia,Multilateral,166403675.62
-2018-2022,North Macedonia,Private,354599147.58000004
-2018-2022,North Macedonia,China,35928600.0
-2023-2025 (projected),North Macedonia,Bilateral,27108220.03333333
-2023-2025 (projected),North Macedonia,Multilateral,298142436.1333334
-2023-2025 (projected),North Macedonia,Private,686081866.3666667
-2023-2025 (projected),North Macedonia,China,67959710.16666667
-2010-2014,Pakistan,Bilateral,585114817.8
-2010-2014,Pakistan,Multilateral,1382817710.8799999
-2010-2014,Pakistan,Private,263864400.0
-2010-2014,Pakistan,China,222993396.4
-2018-2022,Pakistan,Bilateral,724010872.3
-2018-2022,Pakistan,Multilateral,2341117074.32
-2018-2022,Pakistan,Private,3313726452.22
-2018-2022,Pakistan,China,2674778204.54
-2023-2025 (projected),Pakistan,Bilateral,2520706014.0333333
-2023-2025 (projected),Pakistan,Multilateral,3554110137.2333336
-2023-2025 (projected),Pakistan,Private,1224388333.3333333
-2023-2025 (projected),Pakistan,China,4510950943.033334
-2010-2014,Papua New Guinea,Bilateral,28606219.74
-2010-2014,Papua New Guinea,Multilateral,54090326.1
-2010-2014,Papua New Guinea,Private,7670220.12
-2010-2014,Papua New Guinea,China,3438603.975
-2018-2022,Papua New Guinea,Bilateral,85349837.14000002
-2018-2022,Papua New Guinea,Multilateral,119127285.02000001
-2018-2022,Papua New Guinea,Private,273767347.34000003
-2018-2022,Papua New Guinea,China,44663291.519999996
-2023-2025 (projected),Papua New Guinea,Bilateral,165079099.33333334
-2023-2025 (projected),Papua New Guinea,Multilateral,317543165.3
-2023-2025 (projected),Papua New Guinea,Private,56138530.666666664
-2023-2025 (projected),Papua New Guinea,China,113508280.03333335
-2010-2014,Paraguay,Bilateral,67570314.26
-2010-2014,Paraguay,Multilateral,179802546.62
-2010-2014,Paraguay,Private,43276480.0
-2018-2022,Paraguay,Bilateral,41998648.9
-2018-2022,Paraguay,Multilateral,283778282.2
-2018-2022,Paraguay,Private,373495600.0
-2023-2025 (projected),Paraguay,Bilateral,31473005.966666665
-2023-2025 (projected),Paraguay,Multilateral,904591216.9
-2023-2025 (projected),Paraguay,Private,403059428.5333333
-2010-2014,Peru,Bilateral,506969992.52
-2010-2014,Peru,Multilateral,1351139861.2800002
-2010-2014,Peru,Private,1037531466.22
-2010-2014,Peru,China,1630000.0
-2018-2022,Peru,Bilateral,134945174.23999998
-2018-2022,Peru,Multilateral,650638511.54
-2018-2022,Peru,Private,1126051885.8
-2023-2025 (projected),Peru,Bilateral,149448739.36666667
-2023-2025 (projected),Peru,Multilateral,1126237500.8666666
-2023-2025 (projected),Peru,Private,1823714638.2
-2010-2014,Philippines,Bilateral,1311991744.24
-2010-2014,Philippines,Multilateral,932052879.14
-2010-2014,Philippines,Private,4444187502.64
-2010-2014,Philippines,China,34432636.86
-2018-2022,Philippines,Bilateral,652281968.8399999
-2018-2022,Philippines,Multilateral,1042444685.0599998
-2018-2022,Philippines,Private,4297920459.58
-2018-2022,Philippines,China,32104020.919999998
-2023-2025 (projected),Philippines,Bilateral,557907751.6666666
-2023-2025 (projected),Philippines,Multilateral,3052504124.566667
-2023-2025 (projected),Philippines,Private,2235172632.9333334
-2023-2025 (projected),Philippines,China,164529366.0
-2010-2014,Rwanda,Bilateral,3856107.7600000002
-2010-2014,Rwanda,Multilateral,15767007.2
-2010-2014,Rwanda,Private,20175000.0
-2010-2014,Rwanda,China,926014.9400000001
-2018-2022,Rwanda,Bilateral,17690816.3
-2018-2022,Rwanda,Multilateral,56090209.220000006
-2018-2022,Rwanda,Private,96457200.0
-2018-2022,Rwanda,China,11431489.86
-2023-2025 (projected),Rwanda,Bilateral,31796529.53333333
-2023-2025 (projected),Rwanda,Multilateral,160617789.79999998
-2023-2025 (projected),Rwanda,Private,68013000.0
-2023-2025 (projected),Rwanda,China,22126953.133333337
-2010-2014,Samoa,Bilateral,137947.47999999998
-2010-2014,Samoa,Multilateral,10021737.66
-2010-2014,Samoa,China,3778685.54
-2018-2022,Samoa,Bilateral,1787655.4249999998
-2018-2022,Samoa,Multilateral,12846596.6
-2018-2022,Samoa,China,10661123.02
-2023-2025 (projected),Samoa,Bilateral,2041119.8666666665
-2023-2025 (projected),Samoa,Multilateral,12050049.866666667
-2023-2025 (projected),Samoa,China,18637810.433333334
-2010-2014,Sao Tome and Principe,Bilateral,7974479.233333334
-2010-2014,Sao Tome and Principe,Multilateral,1634411.8800000001
-2018-2022,Sao Tome and Principe,Bilateral,1439294.9
-2018-2022,Sao Tome and Principe,Multilateral,3410284.34
-2023-2025 (projected),Sao Tome and Principe,Bilateral,7617045.333333333
-2023-2025 (projected),Sao Tome and Principe,Multilateral,4955828.233333333
-2023-2025 (projected),Sao Tome and Principe,Private,2418880.9666666663
-2010-2014,Senegal,Bilateral,80160068.94
-2010-2014,Senegal,Multilateral,76326478.5
-2010-2014,Senegal,Private,42823733.839999996
-2010-2014,Senegal,China,21297704.96
-2018-2022,Senegal,Bilateral,159220268.48
-2018-2022,Senegal,Multilateral,222961281.34
-2018-2022,Senegal,Private,439592503.46000004
-2018-2022,Senegal,China,110907748.72
-2023-2025 (projected),Senegal,Bilateral,284610089.29999995
-2023-2025 (projected),Senegal,Multilateral,605806559.2333333
-2023-2025 (projected),Senegal,Private,598341156.3333334
-2023-2025 (projected),Senegal,China,201997843.4
-2010-2014,Serbia,Bilateral,234092719.08
-2010-2014,Serbia,Multilateral,457606652.66
-2010-2014,Serbia,Private,449253667.53999996
-2010-2014,Serbia,China,24713544.919999998
-2018-2022,Serbia,Bilateral,537098894.28
-2018-2022,Serbia,Multilateral,695202606.28
-2018-2022,Serbia,Private,1173256632.9199998
-2018-2022,Serbia,China,121338244.34
-2023-2025 (projected),Serbia,Bilateral,715434336.6
-2023-2025 (projected),Serbia,Multilateral,780476394.9333334
-2023-2025 (projected),Serbia,Private,309316432.93333334
-2023-2025 (projected),Serbia,China,175464459.9
-2010-2014,Sierra Leone,Bilateral,2861063.96
-2010-2014,Sierra Leone,Multilateral,10905579.8
-2010-2014,Sierra Leone,China,1166792.56
-2018-2022,Sierra Leone,Bilateral,8909764.0
-2018-2022,Sierra Leone,Multilateral,32991926.98
-2018-2022,Sierra Leone,Private,7127500.0
-2018-2022,Sierra Leone,China,2641686.52
-2023-2025 (projected),Sierra Leone,Bilateral,16159574.066666665
-2023-2025 (projected),Sierra Leone,Multilateral,50119068.46666667
-2023-2025 (projected),Sierra Leone,China,7172019.5
-2010-2014,Solomon Islands,Bilateral,2256320.3
-2010-2014,Solomon Islands,Multilateral,6140269.8
-2010-2014,Solomon Islands,Private,124425.70000000001
-2018-2022,Solomon Islands,Bilateral,1393283.3599999999
-2018-2022,Solomon Islands,Multilateral,4813402.9399999995
-2023-2025 (projected),Solomon Islands,Bilateral,1421077.3333333333
-2023-2025 (projected),Solomon Islands,Multilateral,6418800.7
-2018-2022,Somalia,Multilateral,170958745.1
-2023-2025 (projected),Somalia,Bilateral,39799148.43333333
-2023-2025 (projected),Somalia,Multilateral,15157111.200000001
-2010-2014,South Africa,Bilateral,6070451.24
-2010-2014,South Africa,Multilateral,97435180.4
-2010-2014,South Africa,Private,5066821226.5
-2018-2022,South Africa,Bilateral,61951244.779999994
-2018-2022,South Africa,Multilateral,637758381.14
-2018-2022,South Africa,Private,11050990463.36
-2018-2022,South Africa,China,91087750.0
-2023-2025 (projected),South Africa,Bilateral,68839660.0
-2023-2025 (projected),South Africa,Multilateral,704413696.6666666
-2023-2025 (projected),South Africa,Private,7391396069.0
-2023-2025 (projected),South Africa,China,352412698.40000004
-2010-2014,South Asia,Bilateral,7394148941.280001
-2010-2014,South Asia,Multilateral,10429128403.960001
-2010-2014,South Asia,Private,11539356829.560001
-2010-2014,South Asia,China,904389483.0
-2018-2022,South Asia,Bilateral,8178200045.719999
-2018-2022,South Asia,Multilateral,19604849292.079998
-2018-2022,South Asia,Private,37685301551.36
-2018-2022,South Asia,China,7007181525.8
-2023-2025 (projected),South Asia,Bilateral,17470709283.733334
-2023-2025 (projected),South Asia,Multilateral,35433532961.53333
-2023-2025 (projected),South Asia,Private,42700794771.53333
-2023-2025 (projected),South Asia,China,14281869608.6
-2010-2014,Sri Lanka,Bilateral,453407958.82
-2010-2014,Sri Lanka,Multilateral,282223935.65999997
-2010-2014,Sri Lanka,Private,839200545.6
-2010-2014,Sri Lanka,China,160641170.14000002
-2018-2022,Sri Lanka,Bilateral,464690825.46000004
-2018-2022,Sri Lanka,Multilateral,573877263.02
-2018-2022,Sri Lanka,Private,2361269283.62
-2018-2022,Sri Lanka,China,583394883.28
-2023-2025 (projected),Sri Lanka,Bilateral,991882462.8333334
-2023-2025 (projected),Sri Lanka,Multilateral,1028121080.0666666
-2023-2025 (projected),Sri Lanka,Private,2514254376.7333336
-2023-2025 (projected),Sri Lanka,China,1812111360.0333335
-2010-2014,St. Lucia,Bilateral,3216816.46
-2010-2014,St. Lucia,Multilateral,21257919.06
-2010-2014,St. Lucia,Private,15069449.959999999
-2018-2022,St. Lucia,Bilateral,5528992.5600000005
-2018-2022,St. Lucia,Multilateral,20891728.919999998
-2018-2022,St. Lucia,Private,18512785.18
-2023-2025 (projected),St. Lucia,Bilateral,13856478.866666665
-2023-2025 (projected),St. Lucia,Multilateral,27651190.099999998
-2023-2025 (projected),St. Lucia,Private,218518.5
-2010-2014,St. Vincent and the Grenadines,Bilateral,2937582.44
-2010-2014,St. Vincent and the Grenadines,Multilateral,17877869.919999998
-2010-2014,St. Vincent and the Grenadines,Private,13092331.5
-2010-2014,St. Vincent and the Grenadines,China,411850.5
-2018-2022,St. Vincent and the Grenadines,Bilateral,4545139.6
-2018-2022,St. Vincent and the Grenadines,Multilateral,25522278.14
-2018-2022,St. Vincent and the Grenadines,Private,3978659.2
-2023-2025 (projected),St. Vincent and the Grenadines,Bilateral,8388449.233333333
-2023-2025 (projected),St. Vincent and the Grenadines,Multilateral,36473125.666666664
-2023-2025 (projected),St. Vincent and the Grenadines,Private,1513392.7333333334
-2010-2014,Sudan,Bilateral,71109886.72
-2010-2014,Sudan,Multilateral,109216651.88
-2010-2014,Sudan,China,198373952.22
-2018-2022,Sudan,Bilateral,28154820.24
-2018-2022,Sudan,Multilateral,357364450.18
-2018-2022,Sudan,China,91571002.0
-2023-2025 (projected),Sudan,Bilateral,135298960.13333333
-2023-2025 (projected),Sudan,Multilateral,274513847.6666667
-2023-2025 (projected),Sudan,China,45843100.43333334
-2018-2022,Suriname,Bilateral,5358878.075
-2018-2022,Suriname,Multilateral,70725386.42
-2018-2022,Suriname,Private,44429820.375
-2018-2022,Suriname,China,17376626.419999998
-2023-2025 (projected),Suriname,Bilateral,22027532.166666668
-2023-2025 (projected),Suriname,Multilateral,117455469.06666666
-2023-2025 (projected),Suriname,Private,87644622.0
-2023-2025 (projected),Suriname,China,72183882.56666668
-2010-2014,Syria,Bilateral,406935345.70000005
-2010-2014,Syria,Multilateral,207276875.1
-2010-2014,Syria,Private,2648715.5
-2010-2014,Syria,China,2528843.1
-2018-2022,Syria,Bilateral,13067555.4
-2018-2022,Syria,Multilateral,5043365.4
-2018-2022,Syria,Private,776540.7000000001
-2023-2025 (projected),Syria,Bilateral,33136752.566666666
-2023-2025 (projected),Syria,Multilateral,44000319.06666667
-2023-2025 (projected),Syria,Private,863412.7000000001
-2010-2014,Tajikistan,Bilateral,18118089.1
-2010-2014,Tajikistan,Multilateral,41969708.279999994
-2010-2014,Tajikistan,Private,387279.14
-2010-2014,Tajikistan,China,37161941.46
-2018-2022,Tajikistan,Bilateral,11926725.120000001
-2018-2022,Tajikistan,Multilateral,82429703.86
-2018-2022,Tajikistan,Private,35544604.5
-2018-2022,Tajikistan,China,81443853.53999999
-2023-2025 (projected),Tajikistan,Bilateral,16336908.233333334
-2023-2025 (projected),Tajikistan,Multilateral,158221402.20000002
-2023-2025 (projected),Tajikistan,Private,90221886.89999999
-2023-2025 (projected),Tajikistan,China,114172421.43333334
-2010-2014,Tanzania,Bilateral,10419954.16
-2010-2014,Tanzania,Multilateral,63836239.45999999
-2010-2014,Tanzania,Private,46957239.08
-2010-2014,Tanzania,China,10269032.940000001
-2018-2022,Tanzania,Bilateral,98826533.25999999
-2018-2022,Tanzania,Multilateral,232642082.92
-2018-2022,Tanzania,Private,668630705.04
-2018-2022,Tanzania,China,268480617.6
-2023-2025 (projected),Tanzania,Bilateral,180667051.9333333
-2023-2025 (projected),Tanzania,Multilateral,562325438.6
-2023-2025 (projected),Tanzania,Private,644256752.2333333
-2023-2025 (projected),Tanzania,China,270747629.96666664
-2010-2014,Thailand,Bilateral,690388804.22
-2010-2014,Thailand,Multilateral,43542789.4
-2010-2014,Thailand,Private,856522274.64
-2018-2022,Thailand,Bilateral,547259384.9399999
-2018-2022,Thailand,Multilateral,134097000.0
-2018-2022,Thailand,Private,2063638047.56
-2023-2025 (projected),Thailand,Bilateral,250097403.0
-2023-2025 (projected),Thailand,Multilateral,582779809.5
-2023-2025 (projected),Thailand,Private,2015810666.6666667
-2010-2014,Timor-Leste,Multilateral,111500.0
-2018-2022,Timor-Leste,Bilateral,180036.4
-2018-2022,Timor-Leste,Multilateral,8401600.0
-2023-2025 (projected),Timor-Leste,Bilateral,3008460.8000000003
-2023-2025 (projected),Timor-Leste,Multilateral,30498316.5
-2010-2014,Togo,Bilateral,8746055.799999999
-2010-2014,Togo,Multilateral,18058772.919999998
-2010-2014,Togo,Private,11956598.25
-2010-2014,Togo,China,2421718.4
-2018-2022,Togo,Bilateral,9727723.36
-2018-2022,Togo,Multilateral,49171322.06
-2018-2022,Togo,Private,17743728.64
-2018-2022,Togo,China,31091634.24
-2023-2025 (projected),Togo,Bilateral,26930295.399999995
-2023-2025 (projected),Togo,Multilateral,100257473.93333332
-2023-2025 (projected),Togo,Private,34704306.9
-2023-2025 (projected),Togo,China,62972254.0
-2010-2014,Tonga,Multilateral,3186776.2800000003
-2010-2014,Tonga,Private,264422.92000000004
-2010-2014,Tonga,China,2650239.08
-2018-2022,Tonga,Multilateral,3398604.4
-2018-2022,Tonga,China,3895646.1799999997
-2023-2025 (projected),Tonga,Multilateral,3855149.0
-2023-2025 (projected),Tonga,China,17362397.866666663
-2010-2014,Tunisia,Bilateral,361239367.58
-2010-2014,Tunisia,Multilateral,890403177.3399999
-2010-2014,Tunisia,Private,754238947.48
-2010-2014,Tunisia,China,9041986.98
-2018-2022,Tunisia,Bilateral,535320630.32
-2018-2022,Tunisia,Multilateral,1082237617.92
-2018-2022,Tunisia,Private,997630616.9399999
-2018-2022,Tunisia,China,8622610.14
-2023-2025 (projected),Tunisia,Bilateral,876317734.0666666
-2023-2025 (projected),Tunisia,Multilateral,1330274603.9666667
-2023-2025 (projected),Tunisia,Private,1259593404.2666667
-2023-2025 (projected),Tunisia,China,8808058.433333334
-2010-2014,Turkmenistan,Bilateral,90105689.28
-2010-2014,Turkmenistan,Multilateral,13034332.42
-2010-2014,Turkmenistan,Private,15606000.0
-2010-2014,Turkmenistan,China,438733387.52
-2018-2022,Turkmenistan,Bilateral,824725703.8399999
-2018-2022,Turkmenistan,Multilateral,45821819.72
-2018-2022,Turkmenistan,Private,116166495.82000001
-2018-2022,Turkmenistan,China,764811158.86
-2023-2025 (projected),Turkmenistan,Bilateral,593844767.6
-2023-2025 (projected),Turkmenistan,Multilateral,164858910.86666667
-2023-2025 (projected),Turkmenistan,Private,168759959.46666667
-2023-2025 (projected),Turkmenistan,China,22389147.966666665
-2010-2014,Türkiye,Bilateral,643279750.74
-2010-2014,Türkiye,Multilateral,1757895520.6799998
-2010-2014,Türkiye,Private,8356239132.7
-2010-2014,Türkiye,China,16969951.619999997
-2018-2022,Türkiye,Bilateral,1349129370.0800002
-2018-2022,Türkiye,Multilateral,2856789067.5
-2018-2022,Türkiye,Private,14606083080.76
-2018-2022,Türkiye,China,363103729.76
-2023-2025 (projected),Türkiye,Bilateral,1347673365.0
-2023-2025 (projected),Türkiye,Multilateral,3601934777.5333333
-2023-2025 (projected),Türkiye,Private,18735572805.600002
-2023-2025 (projected),Türkiye,China,488315430.6666667
-2010-2014,Uganda,Bilateral,11375146.9
-2010-2014,Uganda,Multilateral,54582124.54
-2010-2014,Uganda,Private,207582.0
-2010-2014,Uganda,China,6832995.039999999
-2018-2022,Uganda,Bilateral,53608857.92
-2018-2022,Uganda,Multilateral,212099050.34
-2018-2022,Uganda,Private,28507310.02
-2018-2022,Uganda,China,152477988.54000002
-2023-2025 (projected),Uganda,Bilateral,116458168.46666668
-2023-2025 (projected),Uganda,Multilateral,600986858.6
-2023-2025 (projected),Uganda,Private,88671107.3
-2023-2025 (projected),Uganda,China,357281425.43333334
-2010-2014,Uzbekistan,Bilateral,141998109.57999998
-2010-2014,Uzbekistan,Multilateral,122126956.75999999
-2010-2014,Uzbekistan,Private,70858298.28
-2010-2014,Uzbekistan,China,43045996.54000001
-2018-2022,Uzbekistan,Bilateral,129126579.42
-2018-2022,Uzbekistan,Multilateral,400157271.4
-2018-2022,Uzbekistan,Private,156078923.32
-2018-2022,Uzbekistan,China,190533084.54000002
-2023-2025 (projected),Uzbekistan,Bilateral,365077699.1666667
-2023-2025 (projected),Uzbekistan,Multilateral,1355454836.0666666
-2023-2025 (projected),Uzbekistan,Private,574185394.0666666
-2023-2025 (projected),Uzbekistan,China,308188735.7
-2010-2014,Vanuatu,Bilateral,410865.02
-2010-2014,Vanuatu,Multilateral,3527053.1799999997
-2010-2014,Vanuatu,China,1698919.1600000001
-2018-2022,Vanuatu,Bilateral,444198.4
-2018-2022,Vanuatu,Multilateral,4146200.0
-2018-2022,Vanuatu,China,10802454.48
-2023-2025 (projected),Vanuatu,Bilateral,1613065.5666666667
-2023-2025 (projected),Vanuatu,Multilateral,5830811.3
-2023-2025 (projected),Vanuatu,China,15271345.433333332
-2010-2014,Vietnam,Bilateral,857108224.76
-2010-2014,Vietnam,Multilateral,469254497.0
-2010-2014,Vietnam,Private,857759763.4399999
-2010-2014,Vietnam,China,228550648.14000002
-2018-2022,Vietnam,Bilateral,1503856555.1399999
-2018-2022,Vietnam,Multilateral,1304275232.04
-2018-2022,Vietnam,Private,1268520632.24
-2018-2022,Vietnam,China,443415392.98
-2023-2025 (projected),Vietnam,Bilateral,1912044928.8333333
-2023-2025 (projected),Vietnam,Multilateral,2067767605.7
-2023-2025 (projected),Vietnam,Private,1282794424.1000001
-2023-2025 (projected),Vietnam,China,270675335.8
-2010-2014,Yemen,Bilateral,85886783.22
-2010-2014,Yemen,Multilateral,178155989.28
-2010-2014,Yemen,Private,900588.3
-2010-2014,Yemen,China,7770632.92
-2018-2022,Yemen,Multilateral,86562600.0
-2018-2022,Yemen,China,176000.0
-2023-2025 (projected),Yemen,Bilateral,223936950.5666667
-2023-2025 (projected),Yemen,Multilateral,273303324.53333336
-2023-2025 (projected),Yemen,China,9876431.299999999
-2010-2014,Zambia,Bilateral,36284002.739999995
-2010-2014,Zambia,Multilateral,31679606.8
-2010-2014,Zambia,Private,22870500.0
-2010-2014,Zambia,China,70442760.2
-2018-2022,Zambia,Bilateral,47067974.559999995
-2018-2022,Zambia,Multilateral,88150612.74
-2018-2022,Zambia,Private,355764384.9
-2018-2022,Zambia,China,206373907.04
-2023-2025 (projected),Zambia,Bilateral,178313718.6
-2023-2025 (projected),Zambia,Multilateral,347025349.6333333
-2023-2025 (projected),Zambia,Private,867537752.8666667
-2023-2025 (projected),Zambia,China,1016975639.0666666
-2010-2014,Zimbabwe,Bilateral,2652461.2
-2010-2014,Zimbabwe,Multilateral,15333440.15
-2010-2014,Zimbabwe,Private,2885089.6
-2010-2014,Zimbabwe,China,47058878.88
-2018-2022,Zimbabwe,Bilateral,3617774.66
-2018-2022,Zimbabwe,Multilateral,20812304.259999998
-2018-2022,Zimbabwe,Private,4666400.0
-2018-2022,Zimbabwe,China,39523595.440000005
-2023-2025 (projected),Zimbabwe,Bilateral,27947435.733333334
-2023-2025 (projected),Zimbabwe,Multilateral,30787376.099999998
-2023-2025 (projected),Zimbabwe,Private,184500.0
-2023-2025 (projected),Zimbabwe,China,114371753.0
+year,country,counterpart_type,value,percent
+2010-2014,Developing countries,Bilateral,23030174379.98,14.9
+2010-2014,Developing countries,Multilateral,33660765625.04,21.8
+2010-2014,Developing countries,Private,92373286754.86,60.0
+2010-2014,Developing countries,China,4991741988.86,3.2
+2018-2022,Developing countries,Bilateral,28360183474.98,9.5
+2018-2022,Developing countries,Multilateral,53046590348.259995,17.7
+2018-2022,Developing countries,Private,198380401929.92,66.2
+2018-2022,Developing countries,China,20072599966.18,6.7
+2023-2025 (projected),Developing countries,Bilateral,34281527902.400005,10.0
+2023-2025 (projected),Developing countries,Multilateral,89057223878.7,26.0
+2023-2025 (projected),Developing countries,Private,186066656959.19998,54.3
+2023-2025 (projected),Developing countries,China,33342483605.36667,9.7
+2010-2014,Low income,Bilateral,656557990.74,23.5
+2010-2014,Low income,Multilateral,1217279483.8600001,43.6
+2010-2014,Low income,Private,374836381.74,13.4
+2010-2014,Low income,China,545345366.7,19.5
+2018-2022,Low income,Bilateral,662555072.9,10.4
+2018-2022,Low income,Multilateral,2335487630.82,36.7
+2018-2022,Low income,Private,1645197324.72,25.8
+2018-2022,Low income,China,1721865545.56,27.1
+2023-2025 (projected),Low income,Bilateral,1856897364.2333333,14.2
+2023-2025 (projected),Low income,Multilateral,4460019260.433333,34.1
+2023-2025 (projected),Low income,Private,2544221854.633333,19.5
+2023-2025 (projected),Low income,China,4211818476.566667,32.2
+2010-2014,Lower middle income,Bilateral,15926676381.079998,25.4
+2010-2014,Lower middle income,Multilateral,14696648261.48,23.4
+2010-2014,Lower middle income,Private,29366383952.78,46.8
+2010-2014,Lower middle income,China,2720470174.46,4.3
+2018-2022,Lower middle income,Bilateral,16933060400.920002,13.5
+2018-2022,Lower middle income,Multilateral,27074936962.14,21.6
+2018-2022,Lower middle income,Private,69892854680.14,55.7
+2018-2022,Lower middle income,China,11515613720.7,9.2
+2023-2025 (projected),Lower middle income,Bilateral,22082358699.266666,12.9
+2023-2025 (projected),Lower middle income,Multilateral,48681302938.4,28.5
+2023-2025 (projected),Lower middle income,Private,77091737814.06667,45.2
+2023-2025 (projected),Lower middle income,China,22737464561.966667,13.3
+2010-2014,Upper middle income,Bilateral,6446940008.16,7.3
+2010-2014,Upper middle income,Multilateral,17746837879.7,20.0
+2010-2014,Upper middle income,Private,62632066420.340004,70.7
+2010-2014,Upper middle income,China,1725926447.7,1.9
+2018-2022,Upper middle income,Bilateral,10764568001.16,6.4
+2018-2022,Upper middle income,Multilateral,23636165755.3,14.1
+2018-2022,Upper middle income,Private,126842349925.06001,75.5
+2018-2022,Upper middle income,China,6835120699.92,4.1
+2023-2025 (projected),Upper middle income,Bilateral,10342271838.9,6.5
+2023-2025 (projected),Upper middle income,Multilateral,35915901679.86667,22.6
+2023-2025 (projected),Upper middle income,Private,106430697290.5,66.9
+2023-2025 (projected),Upper middle income,China,6393200566.833333,4.0
+2010-2014,Africa,Bilateral,5064700943.9800005,20.9
+2010-2014,Africa,Multilateral,5239671354.780001,21.7
+2010-2014,Africa,Private,11795951609.32,48.8
+2010-2014,Africa,China,2078413941.52,8.6
+2018-2022,Africa,Bilateral,7858541421.780001,13.1
+2018-2022,Africa,Multilateral,12282204670.079998,20.4
+2018-2022,Africa,Private,32069448356.420002,53.3
+2018-2022,Africa,China,7993859756.08,13.3
+2023-2025 (projected),Africa,Bilateral,8647065281.666666,10.6
+2023-2025 (projected),Africa,Multilateral,20213465814.733334,24.7
+2023-2025 (projected),Africa,Private,36204835442.93333,44.3
+2023-2025 (projected),Africa,China,16657179618.133333,20.4
+2010-2014,Europe,Bilateral,1115959856.1399999,22.1
+2010-2014,Europe,Multilateral,1554472442.74,30.7
+2010-2014,Europe,Private,2157943109.66,42.7
+2010-2014,Europe,China,226966280.51999998,4.5
+2018-2022,Europe,Bilateral,2069996924.0199997,22.3
+2018-2022,Europe,Multilateral,2470993678.38,26.7
+2018-2022,Europe,Private,3684776732.7,39.8
+2018-2022,Europe,China,1040149671.3,11.2
+2023-2025 (projected),Europe,Bilateral,2670246819.066667,24.0
+2023-2025 (projected),Europe,Multilateral,3360742028.866667,30.2
+2023-2025 (projected),Europe,Private,3637060730.7999997,32.7
+2023-2025 (projected),Europe,China,1463489911.3333333,13.1
+2010-2014,Asia,Bilateral,13508510373.76,22.2
+2010-2014,Asia,Multilateral,12829693715.16,21.1
+2010-2014,Asia,Private,32932344752.119995,54.0
+2010-2014,Asia,China,1664622575.0,2.7
+2018-2022,Asia,Bilateral,14775615972.86,12.9
+2018-2022,Asia,Multilateral,22243723881.78,19.4
+2018-2022,Asia,Private,71117356891.34,61.9
+2018-2022,Asia,China,6797402125.68,5.9
+2023-2025 (projected),Asia,Bilateral,19571497228.333332,13.2
+2023-2025 (projected),Asia,Multilateral,39296179058.5,26.6
+2023-2025 (projected),Asia,Private,77322921946.63335,52.3
+2023-2025 (projected),Asia,China,11688059619.166666,7.9
+2010-2014,America,Bilateral,3303809269.54,5.2
+2010-2014,America,Multilateral,13949440601.52,21.9
+2010-2014,America,Private,45429187770.44,71.3
+2010-2014,America,China,1006828619.1,1.6
+2018-2022,America,Bilateral,3533867480.94,3.1
+2018-2022,America,Multilateral,15882967665.179998,13.8
+2018-2022,America,Private,91188427602.12,79.5
+2018-2022,America,China,4147193579.12,3.6
+2023-2025 (projected),America,Bilateral,3216016157.7666664,3.2
+2023-2025 (projected),America,Multilateral,25731002903.733334,25.4
+2023-2025 (projected),America,Private,68845700308.16667,68.1
+2023-2025 (projected),America,China,3339274973.366667,3.3
+2010-2014,Oceania,Bilateral,37193936.56,18.8
+2010-2014,Oceania,Multilateral,87487510.84,44.3
+2010-2014,Oceania,Private,57859513.32000001,29.3
+2010-2014,Oceania,China,14910572.720000003,7.6
+2018-2022,Oceania,Bilateral,122161675.38,17.4
+2018-2022,Oceania,Multilateral,166700452.84,23.7
+2018-2022,Oceania,Private,320392347.34000003,45.6
+2018-2022,Oceania,China,93994834.0,13.4
+2023-2025 (projected),Oceania,Bilateral,176702415.5666667,20.0
+2023-2025 (projected),Oceania,Multilateral,455834072.8666666,51.6
+2023-2025 (projected),Oceania,Private,56138530.666666664,6.4
+2023-2025 (projected),Oceania,China,194479483.36666667,22.0
+2010-2014,Afghanistan,Bilateral,1983333.3,14.3
+2010-2014,Afghanistan,Multilateral,11856375.48,85.7
+2018-2022,Afghanistan,Bilateral,2832255.9000000004,10.8
+2018-2022,Afghanistan,Multilateral,23381947.34,89.2
+2023-2025 (projected),Afghanistan,Bilateral,67168610.8,54.3
+2023-2025 (projected),Afghanistan,Multilateral,56452215.06666666,45.7
+2010-2014,Albania,Bilateral,50863047.22,19.9
+2010-2014,Albania,Multilateral,93757561.7,36.7
+2010-2014,Albania,Private,107455540.26000002,42.0
+2010-2014,Albania,China,3739800.0,1.5
+2018-2022,Albania,Bilateral,70461438.1,13.8
+2018-2022,Albania,Multilateral,211364842.76,41.5
+2018-2022,Albania,Private,227705775.32,44.7
+2023-2025 (projected),Albania,Bilateral,99926157.53333335,12.9
+2023-2025 (projected),Albania,Multilateral,339819235.8666667,43.9
+2023-2025 (projected),Albania,Private,333591662.93333334,43.1
+2010-2014,Algeria,Bilateral,275222306.64,66.5
+2010-2014,Algeria,Multilateral,2642452.12,0.6
+2010-2014,Algeria,Private,134534160.5,32.5
+2010-2014,Algeria,China,1342919.4,0.3
+2018-2022,Algeria,Bilateral,79276432.38000001,65.0
+2018-2022,Algeria,Multilateral,35982246.48,29.5
+2018-2022,Algeria,Private,6723057.180000002,5.5
+2023-2025 (projected),Algeria,Bilateral,22669800.46666667,24.5
+2023-2025 (projected),Algeria,Multilateral,69685887.8,75.5
+2010-2014,Angola,Bilateral,397797548.62,9.3
+2010-2014,Angola,Multilateral,20689885.64,0.5
+2010-2014,Angola,Private,2898675992.1,67.7
+2010-2014,Angola,China,962783200.0,22.5
+2018-2022,Angola,Bilateral,527418833.28000003,6.0
+2018-2022,Angola,Multilateral,172065588.88,2.0
+2018-2022,Angola,Private,5132425140.32,58.6
+2018-2022,Angola,China,2930848600.0,33.4
+2023-2025 (projected),Angola,Bilateral,279211636.96666664,2.4
+2023-2025 (projected),Angola,Multilateral,468745230.7,4.0
+2023-2025 (projected),Angola,Private,4681198966.766666,39.9
+2023-2025 (projected),Angola,China,6303199331.299999,53.7
+2010-2014,Argentina,Bilateral,401462315.7,5.0
+2010-2014,Argentina,Multilateral,2248127127.06,27.9
+2010-2014,Argentina,Private,5292602083.38,65.7
+2010-2014,Argentina,China,118687250.0,1.5
+2018-2022,Argentina,Bilateral,726922693.86,4.6
+2018-2022,Argentina,Multilateral,2570514908.3,16.2
+2018-2022,Argentina,Private,12152722364.64,76.5
+2018-2022,Argentina,China,431212200.0,2.7
+2023-2025 (projected),Argentina,Bilateral,460256366.7,3.0
+2023-2025 (projected),Argentina,Multilateral,3736065158.7333336,24.4
+2023-2025 (projected),Argentina,Private,9960996429.666666,65.1
+2023-2025 (projected),Argentina,China,1144610757.1,7.5
+2010-2014,Armenia,Bilateral,130040663.53999999,73.0
+2010-2014,Armenia,Multilateral,39553106.980000004,22.2
+2010-2014,Armenia,Private,8521143.42,4.8
+2018-2022,Armenia,Bilateral,95047597.97999999,20.3
+2018-2022,Armenia,Multilateral,198015312.4,42.2
+2018-2022,Armenia,Private,174737240.7,37.3
+2018-2022,Armenia,China,1233886.3199999998,0.3
+2023-2025 (projected),Armenia,Bilateral,158558504.29999998,21.9
+2023-2025 (projected),Armenia,Multilateral,316938511.59999996,43.7
+2023-2025 (projected),Armenia,Private,247643037.76666665,34.2
+2023-2025 (projected),Armenia,China,1816963.4000000001,0.3
+2010-2014,Azerbaijan,Bilateral,108068201.24000001,21.2
+2010-2014,Azerbaijan,Multilateral,176201645.02,34.5
+2010-2014,Azerbaijan,Private,225840426.6,44.3
+2018-2022,Azerbaijan,Bilateral,172028775.9,10.5
+2018-2022,Azerbaijan,Multilateral,824300763.0600001,50.1
+2018-2022,Azerbaijan,Private,648718820.6,39.4
+2023-2025 (projected),Azerbaijan,Bilateral,91910476.73333333,4.3
+2023-2025 (projected),Azerbaijan,Multilateral,895083376.8000001,41.6
+2023-2025 (projected),Azerbaijan,Private,1162371768.3333333,54.1
+2010-2014,Bangladesh,Bilateral,402208543.7,30.7
+2010-2014,Bangladesh,Multilateral,849730010.98,64.9
+2010-2014,Bangladesh,Private,42463812.86,3.2
+2010-2014,Bangladesh,China,13997823.26,1.1
+2018-2022,Bangladesh,Bilateral,360421493.0,15.3
+2018-2022,Bangladesh,Multilateral,1403167685.26,59.4
+2018-2022,Bangladesh,Private,434483524.38,18.4
+2018-2022,Bangladesh,China,163825849.98,6.9
+2023-2025 (projected),Bangladesh,Bilateral,1673156096.8333333,28.8
+2023-2025 (projected),Bangladesh,Multilateral,2869339267.5,49.4
+2023-2025 (projected),Bangladesh,Private,682520869.7666667,11.7
+2023-2025 (projected),Bangladesh,China,583908740.1,10.1
+2010-2014,Belarus,Bilateral,618725726.58,30.3
+2010-2014,Belarus,Multilateral,343892899.9,16.8
+2010-2014,Belarus,Private,903567057.24,44.2
+2010-2014,Belarus,China,178809685.8,8.7
+2018-2022,Belarus,Bilateral,1210458395.18,33.6
+2018-2022,Belarus,Multilateral,566082695.34,15.7
+2018-2022,Belarus,Private,983878438.74,27.3
+2018-2022,Belarus,China,842361626.96,23.4
+2023-2025 (projected),Belarus,Bilateral,1656969407.2333336,42.4
+2023-2025 (projected),Belarus,Multilateral,608175332.6999999,15.6
+2023-2025 (projected),Belarus,Private,555012163.1,14.2
+2023-2025 (projected),Belarus,China,1085813896.9,27.8
+2010-2014,Belize,Bilateral,19607964.04,21.1
+2010-2014,Belize,Multilateral,25883267.979999997,27.9
+2010-2014,Belize,Private,47312780.6,51.0
+2018-2022,Belize,Bilateral,14722243.540000001,7.8
+2018-2022,Belize,Multilateral,45127691.06,24.0
+2018-2022,Belize,Private,128055000.0,68.1
+2023-2025 (projected),Belize,Bilateral,52151594.93333334,36.4
+2023-2025 (projected),Belize,Multilateral,68821814.10000001,48.0
+2023-2025 (projected),Belize,Private,22445689.566666663,15.7
+2010-2014,Benin,Bilateral,3732241.4799999995,6.4
+2010-2014,Benin,Multilateral,40594849.339999996,70.0
+2010-2014,Benin,China,13641127.7,23.5
+2018-2022,Benin,Bilateral,25274769.48,6.0
+2018-2022,Benin,Multilateral,136030673.66,32.4
+2018-2022,Benin,Private,244485848.98000002,58.3
+2018-2022,Benin,China,13569275.580000002,3.2
+2023-2025 (projected),Benin,Bilateral,99442608.06666668,12.6
+2023-2025 (projected),Benin,Multilateral,237372270.13333336,30.2
+2023-2025 (projected),Benin,Private,376972629.8,47.9
+2023-2025 (projected),Benin,China,72752616.13333334,9.2
+2010-2014,Bhutan,Bilateral,80141971.12,85.7
+2010-2014,Bhutan,Multilateral,11469946.5,12.3
+2010-2014,Bhutan,Private,1873923.7399999998,2.0
+2018-2022,Bhutan,Bilateral,48219397.1,57.7
+2018-2022,Bhutan,Multilateral,28720807.860000003,34.4
+2018-2022,Bhutan,Private,6616349.4,7.9
+2023-2025 (projected),Bhutan,Bilateral,213052688.1,80.3
+2023-2025 (projected),Bhutan,Multilateral,46805573.23333333,17.6
+2023-2025 (projected),Bhutan,Private,5620448.699999999,2.1
+2010-2014,Bolivia,Bilateral,76268443.28,23.4
+2010-2014,Bolivia,Multilateral,208007710.14000002,63.9
+2010-2014,Bolivia,Private,33022277.860000003,10.1
+2010-2014,Bolivia,China,8118958.840000001,2.5
+2018-2022,Bolivia,Bilateral,14932118.52,1.5
+2018-2022,Bolivia,Multilateral,606264725.96,62.0
+2018-2022,Bolivia,Private,272608991.7,27.9
+2018-2022,Bolivia,China,83651842.78,8.6
+2023-2025 (projected),Bolivia,Bilateral,42756339.666666664,3.2
+2023-2025 (projected),Bolivia,Multilateral,1022761428.7000002,75.6
+2023-2025 (projected),Bolivia,Private,182080166.76666665,13.5
+2023-2025 (projected),Bolivia,China,105098743.23333333,7.8
+2010-2014,Bosnia and Herzegovina,Bilateral,37455651.08,15.1
+2010-2014,Bosnia and Herzegovina,Multilateral,157888901.42,63.9
+2010-2014,Bosnia and Herzegovina,Private,51929411.62,21.0
+2018-2022,Bosnia and Herzegovina,Bilateral,83526925.25999999,18.5
+2018-2022,Bosnia and Herzegovina,Multilateral,328573905.74,72.8
+2018-2022,Bosnia and Herzegovina,Private,38948159.64,8.6
+2023-2025 (projected),Bosnia and Herzegovina,Bilateral,108909833.3,16.6
+2023-2025 (projected),Bosnia and Herzegovina,Multilateral,464292943.1333334,70.9
+2023-2025 (projected),Bosnia and Herzegovina,Private,81298954.16666667,12.4
+2010-2014,Botswana,Bilateral,7757221.4,8.7
+2010-2014,Botswana,Multilateral,67746061.92,76.2
+2010-2014,Botswana,Private,510666.6666666667,0.6
+2010-2014,Botswana,China,12917904.26,14.5
+2018-2022,Botswana,Bilateral,5845831.540000001,3.4
+2018-2022,Botswana,Multilateral,152219679.16,89.2
+2018-2022,Botswana,Private,6794000.0,4.0
+2018-2022,Botswana,China,5858430.1,3.4
+2023-2025 (projected),Botswana,Bilateral,3921916.433333333,1.7
+2023-2025 (projected),Botswana,Multilateral,229597410.9,98.3
+2010-2014,Brazil,Bilateral,641488318.1,3.8
+2010-2014,Brazil,Multilateral,3922188886.4,23.4
+2010-2014,Brazil,Private,11834819317.54,70.8
+2010-2014,Brazil,China,329006800.0,2.0
+2018-2022,Brazil,Bilateral,629169376.02,1.9
+2018-2022,Brazil,Multilateral,3291133729.02,9.9
+2018-2022,Brazil,Private,27388366003.0,82.1
+2018-2022,Brazil,China,2053103000.0,6.2
+2023-2025 (projected),Brazil,Bilateral,573805846.5333334,2.5
+2023-2025 (projected),Brazil,Multilateral,4471056161.933333,19.8
+2023-2025 (projected),Brazil,Private,16716378699.966667,73.9
+2023-2025 (projected),Brazil,China,850244583.3333334,3.8
+2010-2014,Bulgaria,Bilateral,91417139.8,12.5
+2010-2014,Bulgaria,Multilateral,256760652.56000003,35.2
+2010-2014,Bulgaria,Private,380637702.41999996,52.2
+2018-2022,Bulgaria,Bilateral,47378819.4,5.7
+2018-2022,Bulgaria,Multilateral,292692617.04,35.2
+2018-2022,Bulgaria,Private,491586953.96000004,59.1
+2023-2025 (projected),Bulgaria,Bilateral,13231800.033333333,0.7
+2023-2025 (projected),Bulgaria,Multilateral,351224954.46666664,19.4
+2023-2025 (projected),Bulgaria,Private,1447188287.1666667,79.9
+2010-2014,Burkina Faso,Bilateral,15452918.5,22.7
+2010-2014,Burkina Faso,Multilateral,42318002.8,62.3
+2010-2014,Burkina Faso,Private,3727181.2,5.5
+2010-2014,Burkina Faso,China,6428195.66,9.5
+2018-2022,Burkina Faso,Bilateral,21021426.36,14.9
+2018-2022,Burkina Faso,Multilateral,111908433.16,79.2
+2018-2022,Burkina Faso,Private,2079362.1800000002,1.5
+2018-2022,Burkina Faso,China,6331913.0600000005,4.5
+2023-2025 (projected),Burkina Faso,Bilateral,48711228.133333325,13.3
+2023-2025 (projected),Burkina Faso,Multilateral,268319560.33333334,73.1
+2023-2025 (projected),Burkina Faso,Private,35392659.63333333,9.6
+2023-2025 (projected),Burkina Faso,China,14423672.199999997,3.9
+2010-2014,Burundi,Bilateral,1650351.44,15.0
+2010-2014,Burundi,Multilateral,9344927.32,85.0
+2018-2022,Burundi,Bilateral,3133628.48,17.1
+2018-2022,Burundi,Multilateral,14517518.64,79.1
+2018-2022,Burundi,China,707676.375,3.9
+2023-2025 (projected),Burundi,Bilateral,17960462.033333335,31.2
+2023-2025 (projected),Burundi,Multilateral,36647078.699999996,63.6
+2023-2025 (projected),Burundi,China,3047637.3000000003,5.3
+2010-2014,Cabo Verde,Bilateral,8296015.74,23.0
+2010-2014,Cabo Verde,Multilateral,22430945.04,62.3
+2010-2014,Cabo Verde,Private,4555901.779999999,12.7
+2010-2014,Cabo Verde,China,730793.58,2.0
+2018-2022,Cabo Verde,Bilateral,13570450.559999999,20.7
+2018-2022,Cabo Verde,Multilateral,40737803.92,62.2
+2018-2022,Cabo Verde,Private,9232283.34,14.1
+2018-2022,Cabo Verde,China,1906742.7600000002,2.9
+2023-2025 (projected),Cabo Verde,Bilateral,42154144.0,28.2
+2023-2025 (projected),Cabo Verde,Multilateral,57280017.666666664,38.3
+2023-2025 (projected),Cabo Verde,Private,45756593.46666667,30.6
+2023-2025 (projected),Cabo Verde,China,4314150.600000001,2.9
+2010-2014,Cambodia,Bilateral,15600354.040000001,16.4
+2010-2014,Cambodia,Multilateral,57915959.94,61.0
+2010-2014,Cambodia,China,21490418.36,22.6
+2018-2022,Cambodia,Bilateral,36269805.14,10.1
+2018-2022,Cambodia,Multilateral,104614987.36,29.1
+2018-2022,Cambodia,China,218614068.95999998,60.8
+2023-2025 (projected),Cambodia,Bilateral,220022290.23333335,30.6
+2023-2025 (projected),Cambodia,Multilateral,177805954.5666667,24.7
+2023-2025 (projected),Cambodia,China,321099606.86666673,44.7
+2010-2014,Cameroon,Bilateral,130462679.54,60.1
+2010-2014,Cameroon,Multilateral,50737730.9,23.4
+2010-2014,Cameroon,Private,9831750.760000002,4.5
+2010-2014,Cameroon,China,25963057.66,12.0
+2018-2022,Cameroon,Bilateral,150771086.56,16.1
+2018-2022,Cameroon,Multilateral,190567598.06,20.4
+2018-2022,Cameroon,Private,295671289.58000004,31.6
+2018-2022,Cameroon,China,298277302.56,31.9
+2023-2025 (projected),Cameroon,Bilateral,207966073.13333333,12.0
+2023-2025 (projected),Cameroon,Multilateral,586034993.6,33.7
+2023-2025 (projected),Cameroon,Private,262598724.86666667,15.1
+2023-2025 (projected),Cameroon,China,683276025.7333332,39.3
+2010-2014,Central African Republic,Bilateral,1874204.2,44.1
+2010-2014,Central African Republic,Multilateral,944714.4,22.2
+2010-2014,Central African Republic,Private,934988.55,22.0
+2010-2014,Central African Republic,China,496616.65,11.7
+2018-2022,Central African Republic,Bilateral,1315859.78,9.7
+2018-2022,Central African Republic,Multilateral,4849902.18,35.7
+2018-2022,Central African Republic,Private,1406130.8666666665,10.3
+2018-2022,Central African Republic,China,6016221.6,44.3
+2023-2025 (projected),Central African Republic,Bilateral,13937695.733333332,56.6
+2023-2025 (projected),Central African Republic,Multilateral,7414633.766666667,30.1
+2023-2025 (projected),Central African Republic,China,3269345.4,13.3
+2010-2014,Chad,Bilateral,25837493.32,14.0
+2010-2014,Chad,Multilateral,62757138.120000005,34.1
+2010-2014,Chad,Private,92249622.32000001,50.1
+2010-2014,Chad,China,3288816.4,1.8
+2018-2022,Chad,Bilateral,20328321.0,9.8
+2018-2022,Chad,Multilateral,33265799.24,16.1
+2018-2022,Chad,Private,134417000.0,65.1
+2018-2022,Chad,China,18507945.24,9.0
+2023-2025 (projected),Chad,Bilateral,83860468.56666666,20.7
+2023-2025 (projected),Chad,Multilateral,136692525.63333333,33.8
+2023-2025 (projected),Chad,Private,141306666.66666666,34.9
+2023-2025 (projected),Chad,China,42586287.5,10.5
+2010-2014,Colombia,Bilateral,117179242.52000001,2.5
+2010-2014,Colombia,Multilateral,1638201780.4,34.8
+2010-2014,Colombia,Private,2954348641.02,62.7
+2018-2022,Colombia,Bilateral,624799782.9,6.5
+2018-2022,Colombia,Multilateral,1870802335.28,19.5
+2018-2022,Colombia,Private,7111146059.139999,74.0
+2023-2025 (projected),Colombia,Bilateral,817009640.6333333,8.2
+2023-2025 (projected),Colombia,Multilateral,2967587138.7666664,29.8
+2023-2025 (projected),Colombia,Private,6158270825.733334,61.9
+2010-2014,Comoros,Bilateral,379487.1,10.3
+2010-2014,Comoros,Multilateral,3312996.56,89.7
+2018-2022,Comoros,Bilateral,300417.35,12.0
+2018-2022,Comoros,Multilateral,505747.7,20.1
+2018-2022,Comoros,China,1704390.8800000001,67.9
+2023-2025 (projected),Comoros,Bilateral,2687127.8333333335,8.7
+2023-2025 (projected),Comoros,Multilateral,10856785.666666666,35.0
+2023-2025 (projected),Comoros,Private,12176187.1,39.3
+2023-2025 (projected),Comoros,China,5277759.533333334,17.0
+2010-2014,Congo Republic,Bilateral,22972885.06,8.7
+2010-2014,Congo Republic,Multilateral,18160865.78,6.8
+2010-2014,Congo Republic,Private,112311243.04,42.4
+2010-2014,Congo Republic,China,111681685.18000002,42.1
+2018-2022,Congo Republic,Bilateral,49745763.480000004,8.8
+2018-2022,Congo Republic,Multilateral,108439584.78,19.3
+2018-2022,Congo Republic,Private,163880280.35999998,29.1
+2018-2022,Congo Republic,China,240495879.35999998,42.8
+2023-2025 (projected),Congo Republic,Bilateral,134847209.03333333,15.7
+2023-2025 (projected),Congo Republic,Multilateral,108819615.7,12.6
+2023-2025 (projected),Congo Republic,Private,281103593.43333334,32.7
+2023-2025 (projected),Congo Republic,China,335578807.5,39.0
+2010-2014,Costa Rica,Bilateral,49775880.12,5.1
+2010-2014,Costa Rica,Multilateral,377011261.44,38.8
+2010-2014,Costa Rica,Private,531244368.4,54.6
+2010-2014,Costa Rica,China,14134000.0,1.5
+2018-2022,Costa Rica,Bilateral,39371676.4,2.6
+2018-2022,Costa Rica,Multilateral,554983497.04,36.5
+2018-2022,Costa Rica,Private,922985000.0,60.7
+2018-2022,Costa Rica,China,3025662.88,0.2
+2023-2025 (projected),Costa Rica,Bilateral,27262014.066666666,1.4
+2023-2025 (projected),Costa Rica,Multilateral,928673719.6666666,48.6
+2023-2025 (projected),Costa Rica,Private,942621333.2999998,49.4
+2023-2025 (projected),Costa Rica,China,10708151.0,0.6
+2010-2014,Cote d'Ivoire,Bilateral,258533789.4,55.4
+2010-2014,Cote d'Ivoire,Multilateral,99530403.86,21.3
+2010-2014,Cote d'Ivoire,Private,101247816.7,21.7
+2010-2014,Cote d'Ivoire,China,7506229.82,1.6
+2018-2022,Cote d'Ivoire,Bilateral,360083586.71999997,21.6
+2018-2022,Cote d'Ivoire,Multilateral,161754923.3,9.7
+2018-2022,Cote d'Ivoire,Private,1060191169.1600001,63.5
+2018-2022,Cote d'Ivoire,China,88025972.78,5.3
+2023-2025 (projected),Cote d'Ivoire,Bilateral,424695047.0333333,13.7
+2023-2025 (projected),Cote d'Ivoire,Multilateral,454330169.3666666,14.7
+2023-2025 (projected),Cote d'Ivoire,Private,1852423005.0333335,60.0
+2023-2025 (projected),Cote d'Ivoire,China,357858691.59999996,11.6
+2010-2014,DR Congo,Bilateral,47083583.1,16.9
+2010-2014,DR Congo,Multilateral,214706846.72000003,77.2
+2010-2014,DR Congo,Private,6371764.0,2.3
+2010-2014,DR Congo,China,9823833.7,3.5
+2018-2022,DR Congo,Bilateral,35013286.98,7.4
+2018-2022,DR Congo,Multilateral,322755152.88,68.0
+2018-2022,DR Congo,Private,18261800.0,3.9
+2018-2022,DR Congo,China,98282389.44,20.7
+2023-2025 (projected),DR Congo,Bilateral,48011564.699999996,7.2
+2023-2025 (projected),DR Congo,Multilateral,156906923.33333334,23.7
+2023-2025 (projected),DR Congo,Private,24351566.700000003,3.7
+2023-2025 (projected),DR Congo,China,433855922.5,65.4
+2010-2014,Djibouti,Bilateral,7742732.339999999,21.3
+2010-2014,Djibouti,Multilateral,20974151.98,57.7
+2010-2014,Djibouti,Private,3356065.1799999997,9.2
+2010-2014,Djibouti,China,4308922.779999999,11.8
+2018-2022,Djibouti,Bilateral,5712976.74,10.3
+2018-2022,Djibouti,Multilateral,33515016.0,60.5
+2018-2022,Djibouti,China,16167201.62,29.2
+2023-2025 (projected),Djibouti,Bilateral,34636713.333333336,11.9
+2023-2025 (projected),Djibouti,Multilateral,61683923.5,21.1
+2023-2025 (projected),Djibouti,China,195832514.30000004,67.0
+2010-2014,Dominica,Bilateral,4087659.22,24.7
+2010-2014,Dominica,Multilateral,8300220.82,50.1
+2010-2014,Dominica,Private,3676515.8200000003,22.2
+2010-2014,Dominica,China,507215.55,3.1
+2018-2022,Dominica,Bilateral,4595757.68,18.1
+2018-2022,Dominica,Multilateral,11672390.64,45.9
+2018-2022,Dominica,Private,6426518.74,25.3
+2018-2022,Dominica,China,2750631.74,10.8
+2023-2025 (projected),Dominica,Bilateral,5880946.533333334,17.1
+2023-2025 (projected),Dominica,Multilateral,15189492.266666668,44.2
+2023-2025 (projected),Dominica,Private,9708258.933333334,28.3
+2023-2025 (projected),Dominica,China,3572066.8666666667,10.4
+2010-2014,Dominican Republic,Bilateral,308590543.5,23.1
+2010-2014,Dominican Republic,Multilateral,379892104.5,28.4
+2010-2014,Dominican Republic,Private,647346414.1800001,48.4
+2010-2014,Dominican Republic,China,1038000.0,0.1
+2018-2022,Dominican Republic,Bilateral,170751816.33999997,6.4
+2018-2022,Dominican Republic,Multilateral,417911808.56,15.7
+2018-2022,Dominican Republic,Private,2066379041.52,77.8
+2018-2022,Dominican Republic,China,246548.6,0.0
+2023-2025 (projected),Dominican Republic,Bilateral,194628407.53333333,6.0
+2023-2025 (projected),Dominican Republic,Multilateral,774411840.4666667,24.1
+2023-2025 (projected),Dominican Republic,Private,2250013987.233333,69.9
+2023-2025 (projected),Dominican Republic,China,193416.66666666666,0.0
+2010-2014,Ecuador,Bilateral,232716749.1,14.6
+2010-2014,Ecuador,Multilateral,693071453.3,43.4
+2010-2014,Ecuador,Private,154073460.14000002,9.6
+2010-2014,Ecuador,China,518780448.0,32.5
+2018-2022,Ecuador,Bilateral,337720249.94,7.4
+2018-2022,Ecuador,Multilateral,1142083247.04,24.9
+2018-2022,Ecuador,Private,1706741735.26,37.1
+2018-2022,Ecuador,China,1407901289.6200001,30.6
+2023-2025 (projected),Ecuador,Bilateral,172339001.56666666,4.6
+2023-2025 (projected),Ecuador,Multilateral,1824302572.5,48.8
+2023-2025 (projected),Ecuador,Private,816585907.5666666,21.9
+2023-2025 (projected),Ecuador,China,921791871.8000001,24.7
+2010-2014,Egypt,Bilateral,1868370413.94,50.3
+2010-2014,Egypt,Multilateral,912901490.0799999,24.6
+2010-2014,Egypt,Private,926582480.4200001,25.0
+2010-2014,Egypt,China,5441428.96,0.1
+2018-2022,Egypt,Bilateral,3531467033.5,30.0
+2018-2022,Egypt,Multilateral,3172963293.0,27.0
+2018-2022,Egypt,Private,4264790702.72,36.3
+2018-2022,Egypt,China,789185748.48,6.7
+2023-2025 (projected),Egypt,Bilateral,1895722921.6000001,12.2
+2023-2025 (projected),Egypt,Multilateral,4553657905.8,29.2
+2023-2025 (projected),Egypt,Private,8061858453.033333,51.7
+2023-2025 (projected),Egypt,China,1071024595.6333332,6.9
+2010-2014,El Salvador,Bilateral,51990883.9,5.9
+2010-2014,El Salvador,Multilateral,472367318.14,53.5
+2010-2014,El Salvador,Private,354408418.48,40.1
+2010-2014,El Salvador,China,4387400.0,0.5
+2018-2022,El Salvador,Bilateral,61625392.04,4.5
+2018-2022,El Salvador,Multilateral,540147185.88,39.4
+2018-2022,El Salvador,Private,769591524.96,56.1
+2018-2022,El Salvador,China,745000.0,0.1
+2023-2025 (projected),El Salvador,Bilateral,45402674.666666664,2.9
+2023-2025 (projected),El Salvador,Multilateral,737127437.0666666,47.6
+2023-2025 (projected),El Salvador,Private,764966705.4666667,49.4
+2023-2025 (projected),El Salvador,China,153500.0,0.0
+2010-2014,Eritrea,Bilateral,15536791.059999999,28.5
+2010-2014,Eritrea,Multilateral,14850583.780000001,27.2
+2010-2014,Eritrea,China,24138410.44,44.3
+2018-2022,Eritrea,Bilateral,10151818.1,47.7
+2018-2022,Eritrea,Multilateral,5581737.92,26.2
+2018-2022,Eritrea,China,5543396.9,26.1
+2023-2025 (projected),Eritrea,Bilateral,7218178.766666667,20.5
+2023-2025 (projected),Eritrea,Multilateral,24542150.433333334,69.8
+2023-2025 (projected),Eritrea,China,3413909.0999999996,9.7
+2010-2014,Eswatini,Bilateral,9856629.64,22.7
+2010-2014,Eswatini,Multilateral,29972811.72,69.2
+2010-2014,Eswatini,Private,3234880.3600000003,7.5
+2010-2014,Eswatini,China,269600.0,0.6
+2018-2022,Eswatini,Bilateral,18433245.62,33.4
+2018-2022,Eswatini,Multilateral,27268488.619999997,49.4
+2018-2022,Eswatini,Private,2296685.98,4.2
+2018-2022,Eswatini,China,7232000.0,13.1
+2023-2025 (projected),Eswatini,Bilateral,10171375.566666666,11.4
+2023-2025 (projected),Eswatini,Multilateral,58961293.199999996,65.9
+2023-2025 (projected),Eswatini,Private,1191629.5,1.3
+2023-2025 (projected),Eswatini,China,19207222.2,21.5
+2010-2014,Ethiopia,Bilateral,53924407.48,11.5
+2010-2014,Ethiopia,Multilateral,74232688.42,15.8
+2010-2014,Ethiopia,Private,171245993.5,36.5
+2010-2014,Ethiopia,China,170095367.76,36.2
+2018-2022,Ethiopia,Bilateral,182692163.26,9.5
+2018-2022,Ethiopia,Multilateral,244792620.16,12.7
+2018-2022,Ethiopia,Private,717087652.86,37.1
+2018-2022,Ethiopia,China,785869224.58,40.7
+2023-2025 (projected),Ethiopia,Bilateral,185895880.80000004,5.7
+2023-2025 (projected),Ethiopia,Multilateral,574023772.6666666,17.6
+2023-2025 (projected),Ethiopia,Private,1029222350.6333333,31.5
+2023-2025 (projected),Ethiopia,China,1480403684.5666668,45.3
+2010-2014,Fiji,Bilateral,5782584.0200000005,8.2
+2010-2014,Fiji,Multilateral,10521347.82,15.0
+2010-2014,Fiji,Private,49875100.0,71.0
+2010-2014,Fiji,China,4031845.7600000002,5.7
+2018-2022,Fiji,Bilateral,33544232.139999997,21.3
+2018-2022,Fiji,Multilateral,22368363.880000003,14.2
+2018-2022,Fiji,Private,77708333.33333333,49.3
+2018-2022,Fiji,China,23972318.8,15.2
+2023-2025 (projected),Fiji,Bilateral,6548053.466666666,4.5
+2023-2025 (projected),Fiji,Multilateral,110136096.7,75.2
+2023-2025 (projected),Fiji,China,29699649.599999998,20.3
+2010-2014,Gabon,Bilateral,71780928.72,12.1
+2010-2014,Gabon,Multilateral,68034972.78,11.5
+2010-2014,Gabon,Private,431566968.7,72.8
+2010-2014,Gabon,China,21607673.32,3.6
+2018-2022,Gabon,Bilateral,30652784.440000005,3.5
+2018-2022,Gabon,Multilateral,146259733.1,16.6
+2018-2022,Gabon,Private,589194851.72,66.9
+2018-2022,Gabon,China,114342632.32000001,13.0
+2023-2025 (projected),Gabon,Bilateral,91788101.39999999,9.6
+2023-2025 (projected),Gabon,Multilateral,225891802.0666667,23.7
+2023-2025 (projected),Gabon,Private,463499044.9666667,48.5
+2023-2025 (projected),Gabon,China,173876743.63333333,18.2
+2010-2014,Gambia,Bilateral,9833262.7,23.5
+2010-2014,Gambia,Multilateral,15239128.34,36.4
+2010-2014,Gambia,Private,2485694.9,5.9
+2010-2014,Gambia,China,14280134.1,34.1
+2018-2022,Gambia,Bilateral,8015598.5200000005,23.3
+2018-2022,Gambia,Multilateral,23736329.54,69.0
+2018-2022,Gambia,Private,2200303.08,6.4
+2018-2022,Gambia,China,463707.825,1.3
+2023-2025 (projected),Gambia,Bilateral,27508947.666666668,25.8
+2023-2025 (projected),Gambia,Multilateral,66278561.4,62.2
+2023-2025 (projected),Gambia,China,12817205.799999999,12.0
+2010-2014,Georgia,Bilateral,48717222.42,13.5
+2010-2014,Georgia,Multilateral,58997464.52,16.3
+2010-2014,Georgia,Private,252898621.11999997,70.0
+2010-2014,Georgia,China,486284.95,0.1
+2018-2022,Georgia,Bilateral,87570901.22,12.2
+2018-2022,Georgia,Multilateral,257167356.7,35.9
+2018-2022,Georgia,Private,371645043.65999997,51.8
+2018-2022,Georgia,China,446968.57999999996,0.1
+2023-2025 (projected),Georgia,Bilateral,125904720.96666665,19.2
+2023-2025 (projected),Georgia,Multilateral,488269911.4666667,74.4
+2023-2025 (projected),Georgia,Private,41965704.6,6.4
+2010-2014,Ghana,Bilateral,87481092.84,19.3
+2010-2014,Ghana,Multilateral,59059378.02,13.0
+2010-2014,Ghana,Private,225587902.43999997,49.7
+2010-2014,Ghana,China,82161329.91999999,18.1
+2018-2022,Ghana,Bilateral,182387356.06,7.6
+2018-2022,Ghana,Multilateral,170416190.35999998,7.1
+2018-2022,Ghana,Private,1717205068.6,71.8
+2018-2022,Ghana,China,322921419.21999997,13.5
+2023-2025 (projected),Ghana,Bilateral,239362968.0,7.8
+2023-2025 (projected),Ghana,Multilateral,464478271.6666667,15.2
+2023-2025 (projected),Ghana,Private,1960388356.8,64.1
+2023-2025 (projected),Ghana,China,396406245.76666665,13.0
+2010-2014,Grenada,Bilateral,4511815.720000001,20.6
+2010-2014,Grenada,Multilateral,12189342.059999999,55.5
+2010-2014,Grenada,Private,5250825.0,23.9
+2018-2022,Grenada,Bilateral,9573161.919999998,20.0
+2018-2022,Grenada,Multilateral,19189006.380000003,40.0
+2018-2022,Grenada,Private,18685535.54,39.0
+2018-2022,Grenada,China,482704.8,1.0
+2023-2025 (projected),Grenada,Bilateral,12063188.200000001,22.1
+2023-2025 (projected),Grenada,Multilateral,21859338.400000002,40.1
+2023-2025 (projected),Grenada,Private,15422756.666666666,28.3
+2023-2025 (projected),Grenada,China,5230260.9,9.6
+2010-2014,Guatemala,Bilateral,26944980.0,3.9
+2010-2014,Guatemala,Multilateral,452257122.21999997,65.6
+2010-2014,Guatemala,Private,202674894.85999998,29.4
+2010-2014,Guatemala,China,7336000.0,1.1
+2018-2022,Guatemala,Bilateral,65437661.239999995,6.6
+2018-2022,Guatemala,Multilateral,542049046.74,54.7
+2018-2022,Guatemala,Private,381276033.15999997,38.5
+2018-2022,Guatemala,China,2536000.0,0.3
+2023-2025 (projected),Guatemala,Bilateral,30869070.2,3.1
+2023-2025 (projected),Guatemala,Multilateral,635740869.3666667,64.9
+2023-2025 (projected),Guatemala,Private,310729843.1666667,31.7
+2023-2025 (projected),Guatemala,China,2743553.2,0.3
+2010-2014,Guinea,Bilateral,13688858.719999999,16.5
+2010-2014,Guinea,Multilateral,67197851.72,80.8
+2010-2014,Guinea,China,2285824.34,2.7
+2018-2022,Guinea,Bilateral,35270956.78,29.5
+2018-2022,Guinea,Multilateral,46526387.160000004,38.9
+2018-2022,Guinea,China,37698622.82,31.5
+2023-2025 (projected),Guinea,Bilateral,77219145.16666667,12.8
+2023-2025 (projected),Guinea,Multilateral,191915013.26666665,31.9
+2023-2025 (projected),Guinea,Private,19267015.433333334,3.2
+2023-2025 (projected),Guinea,China,314050762.8666666,52.1
+2010-2014,Guinea-Bissau,Bilateral,710392.74,11.5
+2010-2014,Guinea-Bissau,Multilateral,4839137.5,78.4
+2010-2014,Guinea-Bissau,Private,619000.0,10.0
+2018-2022,Guinea-Bissau,Bilateral,3513436.44,11.0
+2018-2022,Guinea-Bissau,Multilateral,22057231.580000002,68.8
+2018-2022,Guinea-Bissau,Private,6471800.0,20.2
+2023-2025 (projected),Guinea-Bissau,Bilateral,8803543.3,13.3
+2023-2025 (projected),Guinea-Bissau,Multilateral,38159767.23333333,57.6
+2023-2025 (projected),Guinea-Bissau,Private,19296000.0,29.1
+2010-2014,Guyana,Bilateral,28363871.6,53.0
+2010-2014,Guyana,Multilateral,20388327.54,38.1
+2010-2014,Guyana,Private,12000.0,0.0
+2010-2014,Guyana,China,4772707.74,8.9
+2018-2022,Guyana,Bilateral,12786504.98,16.2
+2018-2022,Guyana,Multilateral,44654666.8,56.7
+2018-2022,Guyana,Private,1799800.0,2.3
+2018-2022,Guyana,China,19495098.419999998,24.8
+2023-2025 (projected),Guyana,Bilateral,17352921.633333337,12.9
+2023-2025 (projected),Guyana,Multilateral,81006924.10000001,60.4
+2023-2025 (projected),Guyana,Private,2105066.6666666665,1.6
+2023-2025 (projected),Guyana,China,33656572.699999996,25.1
+2010-2014,Haiti,Bilateral,22704273.38,63.9
+2010-2014,Haiti,Multilateral,10834322.78,30.5
+2010-2014,Haiti,Private,1995800.0,5.6
+2018-2022,Haiti,Bilateral,6692200.0,45.9
+2018-2022,Haiti,Multilateral,4915307.4399999995,33.7
+2018-2022,Haiti,Private,2968600.0,20.4
+2023-2025 (projected),Haiti,Bilateral,144136113.4,91.9
+2023-2025 (projected),Haiti,Multilateral,8406715.966666667,5.4
+2023-2025 (projected),Haiti,Private,4229391.3,2.7
+2010-2014,Honduras,Bilateral,28172455.28,16.5
+2010-2014,Honduras,Multilateral,107743884.4,63.2
+2010-2014,Honduras,Private,29648110.18,17.4
+2010-2014,Honduras,China,4808600.0,2.8
+2018-2022,Honduras,Bilateral,52993030.46,7.6
+2018-2022,Honduras,Multilateral,316809171.3,45.6
+2018-2022,Honduras,Private,286710190.54,41.3
+2018-2022,Honduras,China,37987600.0,5.5
+2023-2025 (projected),Honduras,Bilateral,83177084.86666666,8.7
+2023-2025 (projected),Honduras,Multilateral,635568396.4666667,66.5
+2023-2025 (projected),Honduras,Private,167325425.36666664,17.5
+2023-2025 (projected),Honduras,China,69775944.4,7.3
+2010-2014,India,Bilateral,2091977233.2,22.5
+2010-2014,India,Multilateral,2499076875.16,26.9
+2010-2014,India,Private,4599678062.339999,49.6
+2010-2014,India,China,87344327.66666667,0.9
+2018-2022,India,Bilateral,2298359348.6,11.5
+2018-2022,India,Multilateral,5079117571.46,25.4
+2018-2022,India,Private,12610014949.3,63.1
+2023-2025 (projected),India,Bilateral,3071684265.2999997,10.4
+2023-2025 (projected),India,Multilateral,9714092545.0,32.8
+2023-2025 (projected),India,Private,16796279746.0,56.8
+2010-2014,Indonesia,Bilateral,4181309190.0399995,29.7
+2010-2014,Indonesia,Multilateral,2200759464.72,15.6
+2010-2014,Indonesia,Private,7645461457.58,54.2
+2010-2014,Indonesia,China,73724073.12,0.5
+2018-2022,Indonesia,Bilateral,2887919397.62,10.3
+2018-2022,Indonesia,Multilateral,2981339497.42,10.6
+2018-2022,Indonesia,Private,21980889795.760002,78.3
+2018-2022,Indonesia,China,222844440.9,0.8
+2023-2025 (projected),Indonesia,Bilateral,2083090435.0,7.4
+2023-2025 (projected),Indonesia,Multilateral,4860849018.766666,17.2
+2023-2025 (projected),Indonesia,Private,21092523752.766666,74.6
+2023-2025 (projected),Indonesia,China,245797523.0333333,0.9
+2010-2014,Iran,Bilateral,152608824.28,16.6
+2010-2014,Iran,Multilateral,88753929.94000001,9.7
+2010-2014,Iran,Private,570202771.8199999,62.2
+2010-2014,Iran,China,105672000.0,11.5
+2018-2022,Iran,Bilateral,21831394.72,17.2
+2018-2022,Iran,Multilateral,65892364.5,52.0
+2018-2022,Iran,Private,13442757.200000001,10.6
+2018-2022,Iran,China,25482000.0,20.1
+2023-2025 (projected),Iran,Bilateral,22405567.566666666,47.0
+2023-2025 (projected),Iran,Multilateral,13454742.700000001,28.2
+2023-2025 (projected),Iran,Private,11776230.633333333,24.7
+2018-2022,Iraq,Bilateral,1593049367.7,56.9
+2018-2022,Iraq,Multilateral,213111003.1,7.6
+2018-2022,Iraq,Private,826882976.48,29.5
+2018-2022,Iraq,China,168466800.0,6.0
+2023-2025 (projected),Iraq,Bilateral,1573472618.2666667,45.5
+2023-2025 (projected),Iraq,Multilateral,616247748.9,17.8
+2023-2025 (projected),Iraq,Private,1111685202.0666666,32.2
+2023-2025 (projected),Iraq,China,155708000.0,4.5
+2010-2014,Jamaica,Bilateral,84874142.1,8.8
+2010-2014,Jamaica,Multilateral,197509979.07999998,20.4
+2010-2014,Jamaica,Private,666371764.4200001,68.9
+2010-2014,Jamaica,China,18599391.880000003,1.9
+2018-2022,Jamaica,Bilateral,28600590.060000002,2.3
+2018-2022,Jamaica,Multilateral,268133332.1,21.6
+2018-2022,Jamaica,Private,858163284.1,69.1
+2018-2022,Jamaica,China,86968996.74,7.0
+2023-2025 (projected),Jamaica,Bilateral,3700545.9,0.3
+2023-2025 (projected),Jamaica,Multilateral,361953644.0333333,33.3
+2023-2025 (projected),Jamaica,Private,603087222.2333332,55.4
+2023-2025 (projected),Jamaica,China,119362836.26666667,11.0
+2010-2014,Jordan,Bilateral,248875503.85999998,31.6
+2010-2014,Jordan,Multilateral,455860964.4,57.9
+2010-2014,Jordan,Private,81791281.17999999,10.4
+2010-2014,Jordan,China,430597.07999999996,0.1
+2018-2022,Jordan,Bilateral,278698486.62,11.8
+2018-2022,Jordan,Multilateral,478594543.3,20.3
+2018-2022,Jordan,Private,1593791999.7,67.7
+2018-2022,Jordan,China,2352606.06,0.1
+2023-2025 (projected),Jordan,Bilateral,291572294.7,15.2
+2023-2025 (projected),Jordan,Multilateral,640683280.3333334,33.3
+2023-2025 (projected),Jordan,Private,988354559.5666666,51.4
+2023-2025 (projected),Jordan,China,2785332.6,0.1
+2010-2014,Kazakhstan,Bilateral,109064889.3,20.9
+2010-2014,Kazakhstan,Multilateral,261497581.01999998,50.2
+2010-2014,Kazakhstan,Private,150252333.33333334,28.8
+2018-2022,Kazakhstan,Bilateral,54296016.260000005,2.6
+2018-2022,Kazakhstan,Multilateral,829174562.2,39.7
+2018-2022,Kazakhstan,Private,1080765819.3,51.8
+2018-2022,Kazakhstan,China,123707745.24000001,5.9
+2023-2025 (projected),Kazakhstan,Bilateral,32743477.599999994,0.9
+2023-2025 (projected),Kazakhstan,Multilateral,1143048622.6000001,31.2
+2023-2025 (projected),Kazakhstan,Private,2202293177.2999997,60.0
+2023-2025 (projected),Kazakhstan,China,289945848.40000004,7.9
+2010-2014,Kenya,Bilateral,205350279.35999998,35.5
+2010-2014,Kenya,Multilateral,173348342.2,29.9
+2010-2014,Kenya,Private,168817167.16,29.2
+2010-2014,Kenya,China,31280763.18,5.4
+2018-2022,Kenya,Bilateral,227980236.14000002,8.3
+2018-2022,Kenya,Multilateral,908244784.3,32.9
+2018-2022,Kenya,Private,1024006489.4,37.1
+2018-2022,Kenya,China,598825758.1800001,21.7
+2023-2025 (projected),Kenya,Bilateral,375551049.26666665,8.7
+2023-2025 (projected),Kenya,Multilateral,1351177763.6333334,31.3
+2023-2025 (projected),Kenya,Private,1321038880.1333334,30.6
+2023-2025 (projected),Kenya,China,1264614609.8666668,29.3
+2010-2014,Kosovo,Bilateral,297948.1,1.1
+2010-2014,Kosovo,Multilateral,26564000.0,98.5
+2010-2014,Kosovo,Private,98347.3,0.4
+2018-2022,Kosovo,Bilateral,9698145.540000001,24.7
+2018-2022,Kosovo,Multilateral,29175435.439999998,74.2
+2018-2022,Kosovo,Private,456834.52,1.2
+2023-2025 (projected),Kosovo,Bilateral,5576955.8,4.7
+2023-2025 (projected),Kosovo,Multilateral,109238977.96666665,92.9
+2023-2025 (projected),Kosovo,Private,2821897.4333333336,2.4
+2010-2014,Kyrgyz Republic,Bilateral,16405717.059999999,20.7
+2010-2014,Kyrgyz Republic,Multilateral,52809091.08,66.5
+2010-2014,Kyrgyz Republic,China,10146954.7,12.8
+2018-2022,Kyrgyz Republic,Bilateral,23268473.0,12.7
+2018-2022,Kyrgyz Republic,Multilateral,90093224.36,49.2
+2018-2022,Kyrgyz Republic,China,69585819.12,38.0
+2023-2025 (projected),Kyrgyz Republic,Bilateral,37498506.199999996,10.7
+2023-2025 (projected),Kyrgyz Republic,Multilateral,158441040.93333337,45.3
+2023-2025 (projected),Kyrgyz Republic,China,154143409.6,44.0
+2010-2014,Laos,Bilateral,32826760.380000003,20.3
+2010-2014,Laos,Multilateral,87086269.26,53.9
+2010-2014,Laos,Private,3701131.16,2.3
+2010-2014,Laos,China,37855487.06,23.4
+2018-2022,Laos,Bilateral,100795232.02000001,16.1
+2018-2022,Laos,Multilateral,103694429.76,16.5
+2018-2022,Laos,Private,304238582.71999997,48.5
+2018-2022,Laos,China,118633342.22,18.9
+2023-2025 (projected),Laos,Bilateral,231382959.9333333,15.1
+2023-2025 (projected),Laos,Multilateral,146566915.66666666,9.5
+2023-2025 (projected),Laos,Private,355920800.06666666,23.2
+2023-2025 (projected),Laos,China,801365334.6333333,52.2
+2010-2014,Lebanon,Bilateral,179479290.5,4.4
+2010-2014,Lebanon,Multilateral,239563897.5,5.9
+2010-2014,Lebanon,Private,3632328124.44,89.7
+2018-2022,Lebanon,Bilateral,100031697.5,4.7
+2018-2022,Lebanon,Multilateral,138784327.74,6.6
+2018-2022,Lebanon,Private,1870036808.0,88.7
+2023-2025 (projected),Lebanon,Bilateral,80984341.8,2.3
+2023-2025 (projected),Lebanon,Multilateral,317779778.6666667,8.9
+2023-2025 (projected),Lebanon,Private,3157585511.933333,88.8
+2010-2014,Lesotho,Bilateral,3668283.4200000004,10.4
+2010-2014,Lesotho,Multilateral,27931626.76,79.5
+2010-2014,Lesotho,Private,2061310.28,5.9
+2010-2014,Lesotho,China,1481679.6199999999,4.2
+2018-2022,Lesotho,Bilateral,6217316.159999999,4.1
+2018-2022,Lesotho,Multilateral,139530689.84,91.9
+2018-2022,Lesotho,Private,395931.94,0.3
+2018-2022,Lesotho,China,5675576.76,3.7
+2023-2025 (projected),Lesotho,Bilateral,20136012.166666668,20.9
+2023-2025 (projected),Lesotho,Multilateral,59114389.166666664,61.4
+2023-2025 (projected),Lesotho,Private,405104.8333333333,0.4
+2023-2025 (projected),Lesotho,China,16622213.799999999,17.3
+2010-2014,Liberia,Bilateral,1427008.075,20.9
+2010-2014,Liberia,Multilateral,5254034.32,77.0
+2010-2014,Liberia,China,141500.0,2.1
+2018-2022,Liberia,Bilateral,3530786.6399999997,17.6
+2018-2022,Liberia,Multilateral,15379440.739999998,76.8
+2018-2022,Liberia,China,1116193.94,5.6
+2023-2025 (projected),Liberia,Bilateral,11850243.100000001,17.5
+2023-2025 (projected),Liberia,Multilateral,52186880.43333334,76.9
+2023-2025 (projected),Liberia,China,3860114.766666667,5.7
+2010-2014,Madagascar,Bilateral,23080320.380000003,40.2
+2010-2014,Madagascar,Multilateral,32197141.48,56.1
+2010-2014,Madagascar,Private,39533.075,0.1
+2010-2014,Madagascar,China,2108560.06,3.7
+2018-2022,Madagascar,Bilateral,20058148.5,17.7
+2018-2022,Madagascar,Multilateral,68699216.64,60.6
+2018-2022,Madagascar,Private,17467450.619999997,15.4
+2018-2022,Madagascar,China,7096765.9,6.3
+2023-2025 (projected),Madagascar,Bilateral,57326446.0,16.9
+2023-2025 (projected),Madagascar,Multilateral,201314467.33333334,59.4
+2023-2025 (projected),Madagascar,Private,63532404.06666667,18.8
+2023-2025 (projected),Madagascar,China,16468823.933333332,4.9
+2010-2014,Malawi,Bilateral,6653818.4399999995,23.0
+2010-2014,Malawi,Multilateral,18754825.759999998,64.8
+2010-2014,Malawi,Private,1124191.5666666667,3.9
+2010-2014,Malawi,China,2413168.42,8.3
+2018-2022,Malawi,Bilateral,18422788.240000002,23.7
+2018-2022,Malawi,Multilateral,41395029.22,53.2
+2018-2022,Malawi,China,18005766.98,23.1
+2023-2025 (projected),Malawi,Bilateral,20849829.066666666,14.5
+2023-2025 (projected),Malawi,Multilateral,101196701.8,70.4
+2023-2025 (projected),Malawi,China,21766549.333333332,15.1
+2010-2014,Maldives,Bilateral,46679198.36,52.4
+2010-2014,Maldives,Multilateral,18894574.02,21.2
+2010-2014,Maldives,Private,22027622.54,24.7
+2010-2014,Maldives,China,1443924.28,1.6
+2018-2022,Maldives,Bilateral,156926117.68,32.6
+2018-2022,Maldives,Multilateral,131195602.17999999,27.2
+2018-2022,Maldives,Private,116534458.38,24.2
+2018-2022,Maldives,China,77257331.94000001,16.0
+2023-2025 (projected),Maldives,Bilateral,91256660.73333333,17.8
+2023-2025 (projected),Maldives,Multilateral,100811637.89999999,19.6
+2023-2025 (projected),Maldives,Private,129207094.13333333,25.1
+2023-2025 (projected),Maldives,China,192788396.03333333,37.5
+2010-2014,Mali,Bilateral,19550352.3,24.4
+2010-2014,Mali,Multilateral,51991139.239999995,65.0
+2010-2014,Mali,Private,1213513.46,1.5
+2010-2014,Mali,China,7286133.4799999995,9.1
+2018-2022,Mali,Bilateral,50183134.0,22.0
+2018-2022,Mali,Multilateral,137241167.07999998,60.2
+2018-2022,Mali,Private,110025.15,0.0
+2018-2022,Mali,China,40456653.839999996,17.7
+2023-2025 (projected),Mali,Bilateral,103305089.73333333,25.4
+2023-2025 (projected),Mali,Multilateral,226444031.53333333,55.6
+2023-2025 (projected),Mali,China,77488882.23333333,19.0
+2010-2014,Mauritania,Bilateral,34681519.160000004,21.4
+2010-2014,Mauritania,Multilateral,113769925.96,70.3
+2010-2014,Mauritania,Private,6487558.399999999,4.0
+2010-2014,Mauritania,China,6901798.1,4.3
+2018-2022,Mauritania,Bilateral,92055633.36,27.0
+2018-2022,Mauritania,Multilateral,225771786.8,66.2
+2018-2022,Mauritania,China,23287899.96,6.8
+2023-2025 (projected),Mauritania,Bilateral,141335248.46666667,27.0
+2023-2025 (projected),Mauritania,Multilateral,276426454.8333333,52.8
+2023-2025 (projected),Mauritania,China,105661357.83333333,20.2
+2010-2014,Mauritius,Bilateral,31229742.0,32.0
+2010-2014,Mauritius,Multilateral,36872747.78,37.8
+2010-2014,Mauritius,Private,18968719.380000003,19.4
+2010-2014,Mauritius,China,10466470.02,10.7
+2018-2022,Mauritius,Bilateral,53278634.739999995,24.2
+2018-2022,Mauritius,Multilateral,104187038.9,47.3
+2018-2022,Mauritius,Private,15092220.580000002,6.8
+2018-2022,Mauritius,China,47842438.120000005,21.7
+2023-2025 (projected),Mauritius,Bilateral,83964224.7,13.9
+2023-2025 (projected),Mauritius,Multilateral,73343377.93333334,12.1
+2023-2025 (projected),Mauritius,Private,408830717.3333333,67.6
+2023-2025 (projected),Mauritius,China,38312094.53333333,6.3
+2010-2014,Mexico,Bilateral,592841114.28,2.5
+2010-2014,Mexico,Multilateral,1537991301.84,6.5
+2010-2014,Mexico,Private,21561564342.94,91.0
+2018-2022,Mexico,Bilateral,494810054.64,1.3
+2018-2022,Mexico,Multilateral,2300901400.0,6.0
+2018-2022,Mexico,Private,35553659912.159996,92.7
+2023-2025 (projected),Mexico,Bilateral,267415024.9,0.8
+2023-2025 (projected),Mexico,Multilateral,4558188353.3,14.1
+2023-2025 (projected),Mexico,Private,27601802971.733334,85.1
+2010-2014,Moldova,Bilateral,31654909.72,37.8
+2010-2014,Moldova,Multilateral,38512899.08,45.9
+2010-2014,Moldova,Private,6692755.3,8.0
+2010-2014,Moldova,China,6955400.0,8.3
+2018-2022,Moldova,Bilateral,50910139.95999999,37.8
+2018-2022,Moldova,Multilateral,81945718.03999999,60.9
+2018-2022,Moldova,Private,1793401.0,1.3
+2023-2025 (projected),Moldova,Bilateral,9767554.766666666,3.0
+2023-2025 (projected),Moldova,Multilateral,310028757.09999996,96.3
+2023-2025 (projected),Moldova,Private,2067612.2666666666,0.6
+2010-2014,Mongolia,Bilateral,40712915.739999995,28.1
+2010-2014,Mongolia,Multilateral,37013753.46,25.6
+2010-2014,Mongolia,Private,61696767.699999996,42.6
+2010-2014,Mongolia,China,5247200.0,3.6
+2018-2022,Mongolia,Bilateral,52491117.78,5.0
+2018-2022,Mongolia,Multilateral,119534075.38,11.5
+2018-2022,Mongolia,Private,835713331.26,80.2
+2018-2022,Mongolia,China,33851036.45,3.2
+2023-2025 (projected),Mongolia,Bilateral,184774361.19999996,10.7
+2023-2025 (projected),Mongolia,Multilateral,322241960.63333327,18.7
+2023-2025 (projected),Mongolia,Private,495534238.5,28.7
+2023-2025 (projected),Mongolia,China,723947799.9,41.9
+2010-2014,Montenegro,Bilateral,34610081.06,14.8
+2010-2014,Montenegro,Multilateral,49592909.160000004,21.2
+2010-2014,Montenegro,Private,148103176.76,63.4
+2010-2014,Montenegro,China,1260314.2,0.5
+2018-2022,Montenegro,Bilateral,40021450.760000005,6.8
+2018-2022,Montenegro,Multilateral,99552182.12,16.8
+2018-2022,Montenegro,Private,412551389.02,69.6
+2018-2022,Montenegro,China,40521200.0,6.8
+2023-2025 (projected),Montenegro,Bilateral,33322553.766666666,6.8
+2023-2025 (projected),Montenegro,Multilateral,99342996.56666666,20.4
+2023-2025 (projected),Montenegro,Private,219681854.4333333,45.1
+2023-2025 (projected),Montenegro,China,134251844.36666664,27.6
+2010-2014,Morocco,Bilateral,766489254.38,31.2
+2010-2014,Morocco,Multilateral,1207124825.04,49.1
+2010-2014,Morocco,Private,426780119.26,17.4
+2010-2014,Morocco,China,59197088.239999995,2.4
+2018-2022,Morocco,Bilateral,919246874.0799999,23.4
+2018-2022,Morocco,Multilateral,1483957727.8799999,37.8
+2018-2022,Morocco,Private,1452175921.98,37.0
+2018-2022,Morocco,China,65367025.220000006,1.7
+2023-2025 (projected),Morocco,Bilateral,1419563816.0,25.2
+2023-2025 (projected),Morocco,Multilateral,2444302320.0666666,43.4
+2023-2025 (projected),Morocco,Private,1736334717.0333335,30.8
+2023-2025 (projected),Morocco,China,33794706.76666667,0.6
+2010-2014,Mozambique,Bilateral,33069009.96,19.9
+2010-2014,Mozambique,Multilateral,61193800.339999996,36.9
+2010-2014,Mozambique,Private,62814049.92,37.8
+2010-2014,Mozambique,China,8878620.1,5.4
+2018-2022,Mozambique,Bilateral,65232942.720000006,11.1
+2018-2022,Mozambique,Multilateral,120948708.35999998,20.6
+2018-2022,Mozambique,Private,234840702.42,40.0
+2018-2022,Mozambique,China,165759089.3,28.2
+2023-2025 (projected),Mozambique,Bilateral,224344152.5666667,27.7
+2023-2025 (projected),Mozambique,Multilateral,210926351.83333334,26.0
+2023-2025 (projected),Mozambique,Private,134415975.43333334,16.6
+2023-2025 (projected),Mozambique,China,241007509.19999996,29.7
+2010-2014,Myanmar,Bilateral,546075037.3,58.2
+2010-2014,Myanmar,Multilateral,218128362.34,23.3
+2010-2014,Myanmar,Private,23716394.060000002,2.5
+2010-2014,Myanmar,China,149989856.9,16.0
+2018-2022,Myanmar,Bilateral,162225873.51999998,22.2
+2018-2022,Myanmar,Multilateral,74995135.8,10.3
+2018-2022,Myanmar,Private,32113323.52,4.4
+2018-2022,Myanmar,China,460266815.62,63.1
+2023-2025 (projected),Myanmar,Bilateral,398757044.5333333,38.9
+2023-2025 (projected),Myanmar,Multilateral,150678287.56666666,14.7
+2023-2025 (projected),Myanmar,Private,2665798.7,0.3
+2023-2025 (projected),Myanmar,China,472368127.56666666,46.1
+2010-2014,Nepal,Bilateral,37148080.980000004,18.8
+2010-2014,Nepal,Multilateral,158494773.3,80.4
+2010-2014,Nepal,Private,570047.7,0.3
+2010-2014,Nepal,China,889788.5249999999,0.5
+2018-2022,Nepal,Bilateral,34772615.18,13.3
+2018-2022,Nepal,Multilateral,221846694.6,85.0
+2018-2022,Nepal,Private,14395.949999999999,0.0
+2018-2022,Nepal,China,4334493.159999999,1.7
+2023-2025 (projected),Nepal,Bilateral,106447843.23333333,21.5
+2023-2025 (projected),Nepal,Multilateral,347034024.76666665,70.2
+2023-2025 (projected),Nepal,China,41175365.1,8.3
+2010-2014,Nicaragua,Bilateral,31533912.02,31.6
+2010-2014,Nicaragua,Multilateral,67396994.53999999,67.5
+2010-2014,Nicaragua,Private,905792.9400000001,0.9
+2018-2022,Nicaragua,Bilateral,47058112.64,14.1
+2018-2022,Nicaragua,Multilateral,284118028.41999996,85.1
+2018-2022,Nicaragua,Private,2559221.1799999997,0.8
+2023-2025 (projected),Nicaragua,Bilateral,40615170.23333334,5.7
+2023-2025 (projected),Nicaragua,Multilateral,669873395.3000001,94.2
+2023-2025 (projected),Nicaragua,Private,851866.3666666667,0.1
+2010-2014,Niger,Bilateral,4180767.9,7.0
+2010-2014,Niger,Multilateral,28324665.660000004,47.2
+2010-2014,Niger,China,27567932.233333334,45.9
+2018-2022,Niger,Bilateral,15197956.1,8.6
+2018-2022,Niger,Multilateral,112436917.32000001,63.4
+2018-2022,Niger,Private,11405028.333333334,6.4
+2018-2022,Niger,China,38195879.36,21.6
+2023-2025 (projected),Niger,Bilateral,51095780.333333336,14.7
+2023-2025 (projected),Niger,Multilateral,244617482.76666665,70.5
+2023-2025 (projected),Niger,Private,26052629.433333334,7.5
+2023-2025 (projected),Niger,China,25382748.933333334,7.3
+2010-2014,Nigeria,Bilateral,826684.4600000001,0.3
+2010-2014,Nigeria,Multilateral,177576282.54000002,56.6
+2010-2014,Nigeria,Private,39489200.0,12.6
+2010-2014,Nigeria,China,95573805.0,30.5
+2018-2022,Nigeria,Bilateral,60384455.32000001,3.0
+2018-2022,Nigeria,Multilateral,447429713.02,22.5
+2018-2022,Nigeria,Private,1282721725.48,64.4
+2018-2022,Nigeria,China,200125544.72,10.1
+2023-2025 (projected),Nigeria,Bilateral,138583221.53333333,3.5
+2023-2025 (projected),Nigeria,Multilateral,1096879026.7666667,27.7
+2023-2025 (projected),Nigeria,Private,2299283329.866667,58.0
+2023-2025 (projected),Nigeria,China,429289902.93333334,10.8
+2010-2014,North Macedonia,Bilateral,16902223.119999997,6.3
+2010-2014,North Macedonia,Multilateral,129895966.25999999,48.3
+2010-2014,North Macedonia,Private,110284129.06000002,41.0
+2010-2014,North Macedonia,China,11739598.44,4.4
+2018-2022,North Macedonia,Bilateral,20442715.54,3.5
+2018-2022,North Macedonia,Multilateral,166403675.62,28.8
+2018-2022,North Macedonia,Private,354599147.58000004,61.4
+2018-2022,North Macedonia,China,35928600.0,6.2
+2023-2025 (projected),North Macedonia,Bilateral,27108220.03333333,2.5
+2023-2025 (projected),North Macedonia,Multilateral,298142436.1333334,27.6
+2023-2025 (projected),North Macedonia,Private,686081866.3666667,63.6
+2023-2025 (projected),North Macedonia,China,67959710.16666667,6.3
+2010-2014,Pakistan,Bilateral,585114817.8,23.8
+2010-2014,Pakistan,Multilateral,1382817710.8799999,56.3
+2010-2014,Pakistan,Private,263864400.0,10.7
+2010-2014,Pakistan,China,222993396.4,9.1
+2018-2022,Pakistan,Bilateral,724010872.3,8.0
+2018-2022,Pakistan,Multilateral,2341117074.32,25.9
+2018-2022,Pakistan,Private,3313726452.22,36.6
+2018-2022,Pakistan,China,2674778204.54,29.5
+2023-2025 (projected),Pakistan,Bilateral,2520706014.0333333,21.3
+2023-2025 (projected),Pakistan,Multilateral,3554110137.2333336,30.1
+2023-2025 (projected),Pakistan,Private,1224388333.3333333,10.4
+2023-2025 (projected),Pakistan,China,4510950943.033334,38.2
+2010-2014,Papua New Guinea,Bilateral,28606219.74,30.5
+2010-2014,Papua New Guinea,Multilateral,54090326.1,57.7
+2010-2014,Papua New Guinea,Private,7670220.12,8.2
+2010-2014,Papua New Guinea,China,3438603.975,3.7
+2018-2022,Papua New Guinea,Bilateral,85349837.14000002,16.3
+2018-2022,Papua New Guinea,Multilateral,119127285.02000001,22.8
+2018-2022,Papua New Guinea,Private,273767347.34000003,52.4
+2018-2022,Papua New Guinea,China,44663291.519999996,8.5
+2023-2025 (projected),Papua New Guinea,Bilateral,165079099.33333334,25.3
+2023-2025 (projected),Papua New Guinea,Multilateral,317543165.3,48.7
+2023-2025 (projected),Papua New Guinea,Private,56138530.666666664,8.6
+2023-2025 (projected),Papua New Guinea,China,113508280.03333335,17.4
+2010-2014,Paraguay,Bilateral,67570314.26,23.2
+2010-2014,Paraguay,Multilateral,179802546.62,61.9
+2010-2014,Paraguay,Private,43276480.0,14.9
+2018-2022,Paraguay,Bilateral,41998648.9,6.0
+2018-2022,Paraguay,Multilateral,283778282.2,40.6
+2018-2022,Paraguay,Private,373495600.0,53.4
+2023-2025 (projected),Paraguay,Bilateral,31473005.966666665,2.4
+2023-2025 (projected),Paraguay,Multilateral,904591216.9,67.6
+2023-2025 (projected),Paraguay,Private,403059428.5333333,30.1
+2010-2014,Peru,Bilateral,506969992.52,17.5
+2010-2014,Peru,Multilateral,1351139861.2800002,46.6
+2010-2014,Peru,Private,1037531466.22,35.8
+2010-2014,Peru,China,1630000.0,0.1
+2018-2022,Peru,Bilateral,134945174.23999998,7.1
+2018-2022,Peru,Multilateral,650638511.54,34.0
+2018-2022,Peru,Private,1126051885.8,58.9
+2023-2025 (projected),Peru,Bilateral,149448739.36666667,4.8
+2023-2025 (projected),Peru,Multilateral,1126237500.8666666,36.3
+2023-2025 (projected),Peru,Private,1823714638.2,58.8
+2010-2014,Philippines,Bilateral,1311991744.24,19.5
+2010-2014,Philippines,Multilateral,932052879.14,13.9
+2010-2014,Philippines,Private,4444187502.64,66.1
+2010-2014,Philippines,China,34432636.86,0.5
+2018-2022,Philippines,Bilateral,652281968.8399999,10.8
+2018-2022,Philippines,Multilateral,1042444685.0599998,17.3
+2018-2022,Philippines,Private,4297920459.58,71.3
+2018-2022,Philippines,China,32104020.919999998,0.5
+2023-2025 (projected),Philippines,Bilateral,557907751.6666666,9.3
+2023-2025 (projected),Philippines,Multilateral,3052504124.566667,50.8
+2023-2025 (projected),Philippines,Private,2235172632.9333334,37.2
+2023-2025 (projected),Philippines,China,164529366.0,2.7
+2010-2014,Rwanda,Bilateral,3856107.7600000002,9.5
+2010-2014,Rwanda,Multilateral,15767007.2,38.7
+2010-2014,Rwanda,Private,20175000.0,49.5
+2010-2014,Rwanda,China,926014.9400000001,2.3
+2018-2022,Rwanda,Bilateral,17690816.3,9.7
+2018-2022,Rwanda,Multilateral,56090209.220000006,30.9
+2018-2022,Rwanda,Private,96457200.0,53.1
+2018-2022,Rwanda,China,11431489.86,6.3
+2023-2025 (projected),Rwanda,Bilateral,31796529.53333333,11.3
+2023-2025 (projected),Rwanda,Multilateral,160617789.79999998,56.8
+2023-2025 (projected),Rwanda,Private,68013000.0,24.1
+2023-2025 (projected),Rwanda,China,22126953.133333337,7.8
+2010-2014,Samoa,Bilateral,137947.47999999998,1.0
+2010-2014,Samoa,Multilateral,10021737.66,71.9
+2010-2014,Samoa,China,3778685.54,27.1
+2018-2022,Samoa,Bilateral,1787655.4249999998,7.1
+2018-2022,Samoa,Multilateral,12846596.6,50.8
+2018-2022,Samoa,China,10661123.02,42.1
+2023-2025 (projected),Samoa,Bilateral,2041119.8666666665,6.2
+2023-2025 (projected),Samoa,Multilateral,12050049.866666667,36.8
+2023-2025 (projected),Samoa,China,18637810.433333334,56.9
+2010-2014,Sao Tome and Principe,Bilateral,7974479.233333334,83.0
+2010-2014,Sao Tome and Principe,Multilateral,1634411.8800000001,17.0
+2018-2022,Sao Tome and Principe,Bilateral,1439294.9,29.7
+2018-2022,Sao Tome and Principe,Multilateral,3410284.34,70.3
+2023-2025 (projected),Sao Tome and Principe,Bilateral,7617045.333333333,50.8
+2023-2025 (projected),Sao Tome and Principe,Multilateral,4955828.233333333,33.1
+2023-2025 (projected),Sao Tome and Principe,Private,2418880.9666666663,16.1
+2010-2014,Senegal,Bilateral,80160068.94,36.3
+2010-2014,Senegal,Multilateral,76326478.5,34.6
+2010-2014,Senegal,Private,42823733.839999996,19.4
+2010-2014,Senegal,China,21297704.96,9.7
+2018-2022,Senegal,Bilateral,159220268.48,17.1
+2018-2022,Senegal,Multilateral,222961281.34,23.9
+2018-2022,Senegal,Private,439592503.46000004,47.1
+2018-2022,Senegal,China,110907748.72,11.9
+2023-2025 (projected),Senegal,Bilateral,284610089.29999995,16.8
+2023-2025 (projected),Senegal,Multilateral,605806559.2333333,35.8
+2023-2025 (projected),Senegal,Private,598341156.3333334,35.4
+2023-2025 (projected),Senegal,China,201997843.4,11.9
+2010-2014,Serbia,Bilateral,234092719.08,20.1
+2010-2014,Serbia,Multilateral,457606652.66,39.3
+2010-2014,Serbia,Private,449253667.53999996,38.5
+2010-2014,Serbia,China,24713544.919999998,2.1
+2018-2022,Serbia,Bilateral,537098894.28,21.3
+2018-2022,Serbia,Multilateral,695202606.28,27.5
+2018-2022,Serbia,Private,1173256632.9199998,46.4
+2018-2022,Serbia,China,121338244.34,4.8
+2023-2025 (projected),Serbia,Bilateral,715434336.6,36.1
+2023-2025 (projected),Serbia,Multilateral,780476394.9333334,39.4
+2023-2025 (projected),Serbia,Private,309316432.93333334,15.6
+2023-2025 (projected),Serbia,China,175464459.9,8.9
+2010-2014,Sierra Leone,Bilateral,2861063.96,19.2
+2010-2014,Sierra Leone,Multilateral,10905579.8,73.0
+2010-2014,Sierra Leone,China,1166792.56,7.8
+2018-2022,Sierra Leone,Bilateral,8909764.0,17.2
+2018-2022,Sierra Leone,Multilateral,32991926.98,63.9
+2018-2022,Sierra Leone,Private,7127500.0,13.8
+2018-2022,Sierra Leone,China,2641686.52,5.1
+2023-2025 (projected),Sierra Leone,Bilateral,16159574.066666665,22.0
+2023-2025 (projected),Sierra Leone,Multilateral,50119068.46666667,68.2
+2023-2025 (projected),Sierra Leone,China,7172019.5,9.8
+2010-2014,Solomon Islands,Bilateral,2256320.3,26.5
+2010-2014,Solomon Islands,Multilateral,6140269.8,72.1
+2010-2014,Solomon Islands,Private,124425.70000000001,1.5
+2018-2022,Solomon Islands,Bilateral,1393283.3599999999,22.4
+2018-2022,Solomon Islands,Multilateral,4813402.9399999995,77.6
+2023-2025 (projected),Solomon Islands,Bilateral,1421077.3333333333,18.1
+2023-2025 (projected),Solomon Islands,Multilateral,6418800.7,81.9
+2018-2022,Somalia,Multilateral,170958745.1,100.0
+2023-2025 (projected),Somalia,Bilateral,39799148.43333333,72.4
+2023-2025 (projected),Somalia,Multilateral,15157111.200000001,27.6
+2010-2014,South Africa,Bilateral,6070451.24,0.1
+2010-2014,South Africa,Multilateral,97435180.4,1.9
+2010-2014,South Africa,Private,5066821226.5,98.0
+2018-2022,South Africa,Bilateral,61951244.779999994,0.5
+2018-2022,South Africa,Multilateral,637758381.14,5.4
+2018-2022,South Africa,Private,11050990463.36,93.3
+2018-2022,South Africa,China,91087750.0,0.8
+2023-2025 (projected),South Africa,Bilateral,68839660.0,0.8
+2023-2025 (projected),South Africa,Multilateral,704413696.6666666,8.3
+2023-2025 (projected),South Africa,Private,7391396069.0,86.8
+2023-2025 (projected),South Africa,China,352412698.40000004,4.1
+2010-2014,Sri Lanka,Bilateral,453407958.82,26.1
+2010-2014,Sri Lanka,Multilateral,282223935.65999997,16.3
+2010-2014,Sri Lanka,Private,839200545.6,48.4
+2010-2014,Sri Lanka,China,160641170.14000002,9.3
+2018-2022,Sri Lanka,Bilateral,464690825.46000004,11.7
+2018-2022,Sri Lanka,Multilateral,573877263.02,14.4
+2018-2022,Sri Lanka,Private,2361269283.62,59.3
+2018-2022,Sri Lanka,China,583394883.28,14.6
+2023-2025 (projected),Sri Lanka,Bilateral,991882462.8333334,15.6
+2023-2025 (projected),Sri Lanka,Multilateral,1028121080.0666666,16.2
+2023-2025 (projected),Sri Lanka,Private,2514254376.7333336,39.6
+2023-2025 (projected),Sri Lanka,China,1812111360.0333335,28.6
+2010-2014,St. Lucia,Bilateral,3216816.46,8.1
+2010-2014,St. Lucia,Multilateral,21257919.06,53.8
+2010-2014,St. Lucia,Private,15069449.959999999,38.1
+2018-2022,St. Lucia,Bilateral,5528992.5600000005,12.3
+2018-2022,St. Lucia,Multilateral,20891728.919999998,46.5
+2018-2022,St. Lucia,Private,18512785.18,41.2
+2023-2025 (projected),St. Lucia,Bilateral,13856478.866666665,33.2
+2023-2025 (projected),St. Lucia,Multilateral,27651190.099999998,66.3
+2023-2025 (projected),St. Lucia,Private,218518.5,0.5
+2010-2014,St. Vincent and the Grenadines,Bilateral,2937582.44,8.6
+2010-2014,St. Vincent and the Grenadines,Multilateral,17877869.919999998,52.1
+2010-2014,St. Vincent and the Grenadines,Private,13092331.5,38.1
+2010-2014,St. Vincent and the Grenadines,China,411850.5,1.2
+2018-2022,St. Vincent and the Grenadines,Bilateral,4545139.6,13.3
+2018-2022,St. Vincent and the Grenadines,Multilateral,25522278.14,75.0
+2018-2022,St. Vincent and the Grenadines,Private,3978659.2,11.7
+2023-2025 (projected),St. Vincent and the Grenadines,Bilateral,8388449.233333333,18.1
+2023-2025 (projected),St. Vincent and the Grenadines,Multilateral,36473125.666666664,78.6
+2023-2025 (projected),St. Vincent and the Grenadines,Private,1513392.7333333334,3.3
+2010-2014,Sudan,Bilateral,71109886.72,18.8
+2010-2014,Sudan,Multilateral,109216651.88,28.8
+2010-2014,Sudan,China,198373952.22,52.4
+2018-2022,Sudan,Bilateral,28154820.24,5.9
+2018-2022,Sudan,Multilateral,357364450.18,74.9
+2018-2022,Sudan,China,91571002.0,19.2
+2023-2025 (projected),Sudan,Bilateral,135298960.13333333,29.7
+2023-2025 (projected),Sudan,Multilateral,274513847.6666667,60.2
+2023-2025 (projected),Sudan,China,45843100.43333334,10.1
+2018-2022,Suriname,Bilateral,5358878.075,3.9
+2018-2022,Suriname,Multilateral,70725386.42,51.3
+2018-2022,Suriname,Private,44429820.375,32.2
+2018-2022,Suriname,China,17376626.419999998,12.6
+2023-2025 (projected),Suriname,Bilateral,22027532.166666668,7.4
+2023-2025 (projected),Suriname,Multilateral,117455469.06666666,39.2
+2023-2025 (projected),Suriname,Private,87644622.0,29.3
+2023-2025 (projected),Suriname,China,72183882.56666668,24.1
+2010-2014,Syria,Bilateral,406935345.70000005,65.7
+2010-2014,Syria,Multilateral,207276875.1,33.5
+2010-2014,Syria,Private,2648715.5,0.4
+2010-2014,Syria,China,2528843.1,0.4
+2018-2022,Syria,Bilateral,13067555.4,69.2
+2018-2022,Syria,Multilateral,5043365.4,26.7
+2018-2022,Syria,Private,776540.7000000001,4.1
+2023-2025 (projected),Syria,Bilateral,33136752.566666666,42.5
+2023-2025 (projected),Syria,Multilateral,44000319.06666667,56.4
+2023-2025 (projected),Syria,Private,863412.7000000001,1.1
+2010-2014,Tajikistan,Bilateral,18118089.1,18.6
+2010-2014,Tajikistan,Multilateral,41969708.279999994,43.0
+2010-2014,Tajikistan,Private,387279.14,0.4
+2010-2014,Tajikistan,China,37161941.46,38.1
+2018-2022,Tajikistan,Bilateral,11926725.120000001,5.6
+2018-2022,Tajikistan,Multilateral,82429703.86,39.0
+2018-2022,Tajikistan,Private,35544604.5,16.8
+2018-2022,Tajikistan,China,81443853.53999999,38.5
+2023-2025 (projected),Tajikistan,Bilateral,16336908.233333334,4.3
+2023-2025 (projected),Tajikistan,Multilateral,158221402.20000002,41.8
+2023-2025 (projected),Tajikistan,Private,90221886.89999999,23.8
+2023-2025 (projected),Tajikistan,China,114172421.43333334,30.1
+2010-2014,Tanzania,Bilateral,10419954.16,7.9
+2010-2014,Tanzania,Multilateral,63836239.45999999,48.6
+2010-2014,Tanzania,Private,46957239.08,35.7
+2010-2014,Tanzania,China,10269032.940000001,7.8
+2018-2022,Tanzania,Bilateral,98826533.25999999,7.8
+2018-2022,Tanzania,Multilateral,232642082.92,18.3
+2018-2022,Tanzania,Private,668630705.04,52.7
+2018-2022,Tanzania,China,268480617.6,21.2
+2023-2025 (projected),Tanzania,Bilateral,180667051.9333333,10.9
+2023-2025 (projected),Tanzania,Multilateral,562325438.6,33.9
+2023-2025 (projected),Tanzania,Private,644256752.2333333,38.9
+2023-2025 (projected),Tanzania,China,270747629.96666664,16.3
+2010-2014,Thailand,Bilateral,690388804.22,43.4
+2010-2014,Thailand,Multilateral,43542789.4,2.7
+2010-2014,Thailand,Private,856522274.64,53.9
+2018-2022,Thailand,Bilateral,547259384.9399999,19.9
+2018-2022,Thailand,Multilateral,134097000.0,4.9
+2018-2022,Thailand,Private,2063638047.56,75.2
+2023-2025 (projected),Thailand,Bilateral,250097403.0,8.8
+2023-2025 (projected),Thailand,Multilateral,582779809.5,20.5
+2023-2025 (projected),Thailand,Private,2015810666.6666667,70.8
+2010-2014,Timor-Leste,Multilateral,111500.0,100.0
+2018-2022,Timor-Leste,Bilateral,180036.4,2.1
+2018-2022,Timor-Leste,Multilateral,8401600.0,97.9
+2023-2025 (projected),Timor-Leste,Bilateral,3008460.8000000003,9.0
+2023-2025 (projected),Timor-Leste,Multilateral,30498316.5,91.0
+2010-2014,Togo,Bilateral,8746055.799999999,21.2
+2010-2014,Togo,Multilateral,18058772.919999998,43.8
+2010-2014,Togo,Private,11956598.25,29.0
+2010-2014,Togo,China,2421718.4,5.9
+2018-2022,Togo,Bilateral,9727723.36,9.0
+2018-2022,Togo,Multilateral,49171322.06,45.6
+2018-2022,Togo,Private,17743728.64,16.5
+2018-2022,Togo,China,31091634.24,28.9
+2023-2025 (projected),Togo,Bilateral,26930295.399999995,12.0
+2023-2025 (projected),Togo,Multilateral,100257473.93333332,44.6
+2023-2025 (projected),Togo,Private,34704306.9,15.4
+2023-2025 (projected),Togo,China,62972254.0,28.0
+2010-2014,Tonga,Multilateral,3186776.2800000003,52.2
+2010-2014,Tonga,Private,264422.92000000004,4.3
+2010-2014,Tonga,China,2650239.08,43.4
+2018-2022,Tonga,Multilateral,3398604.4,46.6
+2018-2022,Tonga,China,3895646.1799999997,53.4
+2023-2025 (projected),Tonga,Multilateral,3855149.0,18.2
+2023-2025 (projected),Tonga,China,17362397.866666663,81.8
+2010-2014,Tunisia,Bilateral,361239367.58,17.9
+2010-2014,Tunisia,Multilateral,890403177.3399999,44.2
+2010-2014,Tunisia,Private,754238947.48,37.4
+2010-2014,Tunisia,China,9041986.98,0.4
+2018-2022,Tunisia,Bilateral,535320630.32,20.4
+2018-2022,Tunisia,Multilateral,1082237617.92,41.2
+2018-2022,Tunisia,Private,997630616.9399999,38.0
+2018-2022,Tunisia,China,8622610.14,0.3
+2023-2025 (projected),Tunisia,Bilateral,876317734.0666666,25.2
+2023-2025 (projected),Tunisia,Multilateral,1330274603.9666667,38.3
+2023-2025 (projected),Tunisia,Private,1259593404.2666667,36.2
+2023-2025 (projected),Tunisia,China,8808058.433333334,0.3
+2010-2014,Turkmenistan,Bilateral,90105689.28,16.2
+2010-2014,Turkmenistan,Multilateral,13034332.42,2.3
+2010-2014,Turkmenistan,Private,15606000.0,2.8
+2010-2014,Turkmenistan,China,438733387.52,78.7
+2018-2022,Turkmenistan,Bilateral,824725703.8399999,47.1
+2018-2022,Turkmenistan,Multilateral,45821819.72,2.6
+2018-2022,Turkmenistan,Private,116166495.82000001,6.6
+2018-2022,Turkmenistan,China,764811158.86,43.7
+2023-2025 (projected),Turkmenistan,Bilateral,593844767.6,62.5
+2023-2025 (projected),Turkmenistan,Multilateral,164858910.86666667,17.4
+2023-2025 (projected),Turkmenistan,Private,168759959.46666667,17.8
+2023-2025 (projected),Turkmenistan,China,22389147.966666665,2.4
+2010-2014,Türkiye,Bilateral,643279750.74,6.0
+2010-2014,Türkiye,Multilateral,1757895520.6799998,16.3
+2010-2014,Türkiye,Private,8356239132.7,77.6
+2010-2014,Türkiye,China,16969951.619999997,0.2
+2018-2022,Türkiye,Bilateral,1349129370.0800002,7.0
+2018-2022,Türkiye,Multilateral,2856789067.5,14.9
+2018-2022,Türkiye,Private,14606083080.76,76.2
+2018-2022,Türkiye,China,363103729.76,1.9
+2023-2025 (projected),Türkiye,Bilateral,1347673365.0,5.6
+2023-2025 (projected),Türkiye,Multilateral,3601934777.5333333,14.9
+2023-2025 (projected),Türkiye,Private,18735572805.600002,77.5
+2023-2025 (projected),Türkiye,China,488315430.6666667,2.0
+2010-2014,Uganda,Bilateral,11375146.9,15.6
+2010-2014,Uganda,Multilateral,54582124.54,74.8
+2010-2014,Uganda,Private,207582.0,0.3
+2010-2014,Uganda,China,6832995.039999999,9.4
+2018-2022,Uganda,Bilateral,53608857.92,12.0
+2018-2022,Uganda,Multilateral,212099050.34,47.5
+2018-2022,Uganda,Private,28507310.02,6.4
+2018-2022,Uganda,China,152477988.54000002,34.1
+2023-2025 (projected),Uganda,Bilateral,116458168.46666668,10.0
+2023-2025 (projected),Uganda,Multilateral,600986858.6,51.7
+2023-2025 (projected),Uganda,Private,88671107.3,7.6
+2023-2025 (projected),Uganda,China,357281425.43333334,30.7
+2010-2014,Uzbekistan,Bilateral,141998109.57999998,37.6
+2010-2014,Uzbekistan,Multilateral,122126956.75999999,32.3
+2010-2014,Uzbekistan,Private,70858298.28,18.7
+2010-2014,Uzbekistan,China,43045996.54000001,11.4
+2018-2022,Uzbekistan,Bilateral,129126579.42,14.7
+2018-2022,Uzbekistan,Multilateral,400157271.4,45.7
+2018-2022,Uzbekistan,Private,156078923.32,17.8
+2018-2022,Uzbekistan,China,190533084.54000002,21.8
+2023-2025 (projected),Uzbekistan,Bilateral,365077699.1666667,14.0
+2023-2025 (projected),Uzbekistan,Multilateral,1355454836.0666666,52.1
+2023-2025 (projected),Uzbekistan,Private,574185394.0666666,22.1
+2023-2025 (projected),Uzbekistan,China,308188735.7,11.8
+2010-2014,Vanuatu,Bilateral,410865.02,7.3
+2010-2014,Vanuatu,Multilateral,3527053.1799999997,62.6
+2010-2014,Vanuatu,China,1698919.1600000001,30.1
+2018-2022,Vanuatu,Bilateral,444198.4,2.9
+2018-2022,Vanuatu,Multilateral,4146200.0,26.9
+2018-2022,Vanuatu,China,10802454.48,70.2
+2023-2025 (projected),Vanuatu,Bilateral,1613065.5666666667,7.1
+2023-2025 (projected),Vanuatu,Multilateral,5830811.3,25.7
+2023-2025 (projected),Vanuatu,China,15271345.433333332,67.2
+2010-2014,Vietnam,Bilateral,857108224.76,35.5
+2010-2014,Vietnam,Multilateral,469254497.0,19.4
+2010-2014,Vietnam,Private,857759763.4399999,35.6
+2010-2014,Vietnam,China,228550648.14000002,9.5
+2018-2022,Vietnam,Bilateral,1503856555.1399999,33.3
+2018-2022,Vietnam,Multilateral,1304275232.04,28.9
+2018-2022,Vietnam,Private,1268520632.24,28.1
+2018-2022,Vietnam,China,443415392.98,9.8
+2023-2025 (projected),Vietnam,Bilateral,1912044928.8333333,34.6
+2023-2025 (projected),Vietnam,Multilateral,2067767605.7,37.4
+2023-2025 (projected),Vietnam,Private,1282794424.1000001,23.2
+2023-2025 (projected),Vietnam,China,270675335.8,4.9
+2010-2014,Yemen,Bilateral,85886783.22,31.5
+2010-2014,Yemen,Multilateral,178155989.28,65.3
+2010-2014,Yemen,Private,900588.3,0.3
+2010-2014,Yemen,China,7770632.92,2.8
+2018-2022,Yemen,Multilateral,86562600.0,99.8
+2018-2022,Yemen,China,176000.0,0.2
+2023-2025 (projected),Yemen,Bilateral,223936950.5666667,44.2
+2023-2025 (projected),Yemen,Multilateral,273303324.53333336,53.9
+2023-2025 (projected),Yemen,China,9876431.299999999,1.9
+2010-2014,Zambia,Bilateral,36284002.739999995,22.5
+2010-2014,Zambia,Multilateral,31679606.8,19.6
+2010-2014,Zambia,Private,22870500.0,14.2
+2010-2014,Zambia,China,70442760.2,43.7
+2018-2022,Zambia,Bilateral,47067974.559999995,6.7
+2018-2022,Zambia,Multilateral,88150612.74,12.6
+2018-2022,Zambia,Private,355764384.9,51.0
+2018-2022,Zambia,China,206373907.04,29.6
+2023-2025 (projected),Zambia,Bilateral,178313718.6,7.4
+2023-2025 (projected),Zambia,Multilateral,347025349.6333333,14.4
+2023-2025 (projected),Zambia,Private,867537752.8666667,36.0
+2023-2025 (projected),Zambia,China,1016975639.0666666,42.2
+2010-2014,Zimbabwe,Bilateral,2652461.2,3.9
+2010-2014,Zimbabwe,Multilateral,15333440.15,22.6
+2010-2014,Zimbabwe,Private,2885089.6,4.2
+2010-2014,Zimbabwe,China,47058878.88,69.3
+2018-2022,Zimbabwe,Bilateral,3617774.66,5.3
+2018-2022,Zimbabwe,Multilateral,20812304.259999998,30.3
+2018-2022,Zimbabwe,Private,4666400.0,6.8
+2018-2022,Zimbabwe,China,39523595.440000005,57.6
+2023-2025 (projected),Zimbabwe,Bilateral,27947435.733333334,16.1
+2023-2025 (projected),Zimbabwe,Multilateral,30787376.099999998,17.8
+2023-2025 (projected),Zimbabwe,Private,184500.0,0.1
+2023-2025 (projected),Zimbabwe,China,114371753.0,66.0
