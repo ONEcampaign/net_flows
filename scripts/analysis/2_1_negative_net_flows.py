@@ -9,38 +9,17 @@ from scripts.config import Paths
 set_bblocks_data_path(Paths.raw_data)
 
 
-def get_csv(doc: str) -> pd.DataFrame:
-    """
-    Loads csv from output folder based.
-
-    Args:
-        doc (str): Name of csv file.
-    """
-    return pd.read_csv(Paths.raw_data / doc)
-
-
-def get_parquet(doc: str) -> pd.DataFrame:
+def get_parquet(file_name: str) -> pd.DataFrame:
     """
     Loads parquet file from output folder based.
 
     Args:
         doc (str): Name of parquet file.
     """
-    return pd.read_parquet(Paths.output / doc)
+    return pd.read_parquet(Paths.output / file_name)
 
 
-def filter_for_specified_years(df: pd.DataFrame, years: list[int]) -> pd.DataFrame:
-    """
-    Filters the dataframe to keep only the rows for specified years.
-
-    Args:
-        df (pd.DataFrame)
-        years (list[int]): list of required years for filtered DataFrame.
-    """
-    return df.loc[lambda d: d.year.isin(years)]
-
-
-def calculate_net_transfers(df: pd.DataFrame) -> pd.DataFrame:
+def calculate_net_transfers(df: pd.DataFrame, as_billion: bool = True) -> pd.DataFrame:
     """
     Creates net_flow column, which is the sum of inflows (+ve) and outflows (-ve).
     Removes inflow and outflow columns for output.
@@ -53,112 +32,16 @@ def calculate_net_transfers(df: pd.DataFrame) -> pd.DataFrame:
     """
     df["net_flow"] = df["inflow"] + df["outflow"]
 
-    df["net_flow"] = df["net_flow"] / 1000000000
+    # If units required in billions, convert to billions
+    if as_billion:
+        df["net_flow"] = df["net_flow"] / 1e9
 
     return df.filter(
         items=["year", "country", "continent", "income_level", "net_flow"], axis=1
     )
 
 
-def add_latest_year_for_missing_gdp_data(
-    df: pd.DataFrame, gdp: pd.DataFrame
-) -> pd.DataFrame:
-    """
-    Fills gaps in GDP data where the year does not currently have data. Fills gaps with
-    latest available year.
-
-    Args:
-        df (pd.DataFrame) with missing GDP data
-        gdp (pd.DataFrame) with all gdp data
-
-    Returns: pd.DataFrame with gdp data for the latest year available, where neccessary.
-    """
-
-    # Make a copy to avoid modifying the original DataFrame
-    df = df.copy()
-
-    # Identify rows with missing GDP data
-    missing_gdp_indices = df.loc[lambda d: d.gdp.isna()].index
-
-    # Loop through rows with missing GDP data and fill in the latest year available
-    for idx in missing_gdp_indices:
-        iso = df.loc[idx, "iso_3"]
-        year = df.loc[idx, "year"]
-
-        # Find the latest year before the current 'year' for which GDP data is available
-        past_years = gdp.loc[lambda d: (d["iso_3"] == iso) & (d["year"] < year)]
-        if not past_years.empty:
-            latest_year = past_years["year"].max()
-            latest_gdp = gdp.loc[
-                lambda d: (d["iso_3"] == iso) & (d["year"] == latest_year), "gdp"
-            ].iloc[0]
-            df.loc[idx, "gdp"] = latest_gdp
-
-    return df
-
-
-def download_gdp_data() -> pd.DataFrame:
-    """
-    Download GDP data from IMF using bblocks. Takes latest version of IMF WEO database.
-
-    returns: pd.DataFrame containing IMF WEO GDP data by country and year from 1990 to
-    2029.
-    """
-
-    weo = WEO(version="latest")
-
-    weo = weo.load_data(indicators="NGDPD")
-
-    gdp = weo.get_data()
-
-    return (
-        gdp.pipe(
-            add_iso_codes_column,
-            id_column="ref_area",
-            id_type="regex",
-            target_column="iso_3",
-        )
-        .filter(items=["time_period", "obs_value", "iso_3"], axis=1)
-        .rename(columns={"time_period": "year", "obs_value": "gdp"})
-    )
-
-
-def merge_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Merges IMF WEO gdp data (in current prices, US$), scraped using bblocks (see
-    download_gdp_data function. Merges data on year and iso_code.
-
-    Args:
-        df (pd.DataFrame)
-
-    Returns: pd.DataFrame with additional column for gdp.
-    """
-
-    gdp = download_gdp_data()
-
-    df_merged = pd.merge(df, gdp, on=["year", "iso_3"], how="left")
-
-    df_filled_empty = add_latest_year_for_missing_gdp_data(df=df_merged, gdp=gdp)
-
-    return df_filled_empty
-
-
-def calculate_share_gdp(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Creates net_flow_over_gdp_percent column, which divides net_flow by gdp.
-
-    Args:
-        df (pd.DataFrame)
-
-    Returns: pd.DataFrame with additional column for 'net_flow_over_gdp_percent'
-    """
-
-    df["net_flows_over_gdp_percent"] = df["net_flow"] * 100 / df["gdp"]
-
-    return df
-
-
-def add_projections_data(df: pd.DataFrame) -> pd.DataFrame:
+def add_projections_data(df: pd.DataFrame, as_billion: bool = True) -> pd.DataFrame:
     """
     Adds projections data from the net_flow_projections_country.parquet file.
     Projections are represented in billions to match actual data.
@@ -169,12 +52,13 @@ def add_projections_data(df: pd.DataFrame) -> pd.DataFrame:
     Returns: pd.DataFrame with additional rows for 2023-2025 data.
     """
     # Load projections data
-    projection = get_parquet(doc="net_flow_projections_country.parquet").rename(
+    projection = get_parquet(file_name="net_flow_projections_country.parquet").rename(
         {"value": "net_flow"}, axis=1
     )
 
-    # put projections into billions
-    projection["net_flow"] = projection["net_flow"] / 1e9
+    # if billions required, put projections into billions
+    if as_billion:
+        projection["net_flow"] = projection["net_flow"] / 1e9
 
     # Merge projections data into actual data.
     df_merged = pd.concat([df, projection])
@@ -201,6 +85,92 @@ def calculate_net_flow_as_share_gdp(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def merge_gdp_data(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Merges IMF WEO gdp data (in current prices, US$), scraped using bblocks (see
+    download_gdp_data function. Merges data on year and iso_code.
+
+    Args:
+        df (pd.DataFrame)
+
+    Returns: pd.DataFrame with additional column for gdp.
+    """
+
+    gdp = _download_gdp_data()
+
+    df_merged = pd.merge(df, gdp, on=["year", "iso_3"], how="left")
+
+    df_filled_empty = _add_latest_year_for_missing_gdp_data(df=df_merged, gdp=gdp)
+
+    return df_filled_empty
+
+
+def _download_gdp_data() -> pd.DataFrame:
+    """
+    Download GDP data from IMF using bblocks. Takes latest version of IMF WEO database.
+
+    returns: pd.DataFrame containing IMF WEO GDP data by country and year from 1990 to
+    2029.
+    """
+
+    weo = WEO(version="latest")
+
+    weo = weo.load_data(indicators="NGDPD")
+
+    gdp = weo.get_data()
+
+    return (
+        gdp.pipe(
+            add_iso_codes_column,
+            id_column="ref_area",
+            id_type="regex",
+            target_column="iso_3",
+        )
+        .filter(items=["time_period", "obs_value", "iso_3"], axis=1)
+        .rename(columns={"time_period": "year", "obs_value": "gdp"})
+    )
+
+
+def _add_latest_year_for_missing_gdp_data(
+    df: pd.DataFrame, gdp: pd.DataFrame
+) -> pd.DataFrame:
+    """
+    Fills gaps in GDP data where the year does not currently have data. Fills gaps with
+    latest available year.
+
+    Args:
+        df (pd.DataFrame) with missing GDP data
+        gdp (pd.DataFrame) with all gdp data
+
+    Returns: pd.DataFrame with gdp data for the latest year available, where neccessary.
+    """
+
+    # Make sure data is sorted by year
+    df = df.sort_values(by=["iso_3", "year"])
+
+    # Forward fill the missing gdp values
+    df["gdp"] = df.groupby(
+        ["country", "continent", "income_level", "iso_3"], dropna=False
+    )["gdp"].ffill()
+
+    return df
+
+
+def calculate_share_gdp(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Creates net_flow_over_gdp_percent column, which divides net_flow by gdp.
+
+    Args:
+        df (pd.DataFrame)
+
+    Returns: pd.DataFrame with additional column for 'net_flow_over_gdp_percent'
+    """
+
+    df["net_flows_over_gdp_percent"] = df["net_flow"] * 100 / df["gdp"]
+
+    return df
+
+
 def add_nnt_column(df: pd.DataFrame, target_col: str) -> pd.DataFrame:
     """
     Adds new column nnt which is filled with 'net negative transfers' when net_transfers
@@ -213,6 +183,17 @@ def add_nnt_column(df: pd.DataFrame, target_col: str) -> pd.DataFrame:
     """
     df["nnt"] = np.where(df[target_col] < 0, "net negative transfers", "")
     return df
+
+
+def filter_for_specified_years(df: pd.DataFrame, years: list[int]) -> pd.DataFrame:
+    """
+    Filters the dataframe to keep only the rows for specified years.
+
+    Args:
+        df (pd.DataFrame)
+        years (list[int]): list of required years for filtered DataFrame.
+    """
+    return df.loc[lambda d: d.year.isin(years)]
 
 
 def flourish_1_beeswarm_pipeline(df: pd.DataFrame) -> pd.DataFrame:
@@ -251,7 +232,7 @@ def flourish_1_beeswarm_pipeline(df: pd.DataFrame) -> pd.DataFrame:
     df = calculate_net_transfers(df)
 
     # add projections data
-    df = add_projections_data(df)
+    df = add_projections_data(df, as_billion=True)
 
     # add iso columns (needed to merge in GDP data in next step)
     df = add_iso_codes_column(
@@ -272,7 +253,7 @@ def flourish_1_beeswarm_pipeline(df: pd.DataFrame) -> pd.DataFrame:
 
 if __name__ == "__main__":
 
-    data = get_parquet(doc="full_flows_country.parquet")
+    data = get_parquet(file_name="full_flows_country.parquet")
 
     flourish_chart_1 = flourish_1_beeswarm_pipeline(df=data)
     flourish_chart_1.to_csv(Paths.output / "chart_2_1.csv", index=False)
