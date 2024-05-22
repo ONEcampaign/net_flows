@@ -1,4 +1,6 @@
 import * as Inputs from "npm:@observablehq/inputs";
+import * as d3 from "npm:d3";
+
 
 export function unique(values) {
     return [...new Set(values)].sort(d3.ascending);
@@ -19,7 +21,7 @@ export function pricesSelector({ data, selectYear }) {
 
     const options = unique(filteredData.map((d) => d.prices))
 
-    return Inputs.select(options, { label: "Prices" });
+    return Inputs.select(options, { label: "Prices", value: "current" });
 }
 
 
@@ -50,7 +52,7 @@ export function incomeSelector({ data, selectYear, selectPrices, selectContinent
 
     const options = unique(filteredData.map((d) => d.income_level));
 
-    return Inputs.checkbox(options, { label: "Income Level" });
+    return Inputs.checkbox(options, { label: "Income Level", value:['Low income','Lower middle income','Upper middle income'] });
 }
 
 export function counterPartTypeSelector({ data, selectYear, selectPrices, selectContinent, selectIncome }) {
