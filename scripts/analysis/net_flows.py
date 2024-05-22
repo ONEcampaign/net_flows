@@ -267,6 +267,11 @@ def save_pipeline(data: pd.DataFrame, suffix: str) -> None:
     data_net.reset_index(drop=True).to_parquet(
         Paths.output / f"net_flows_country{suffix}.parquet"
     )
+
+    data_net.reset_index(drop=True).to_parquet(
+        Paths.dashboard / f"net_flows_country{suffix}.parquet"
+    )
+
     data_grouped_net.reset_index(drop=True).to_parquet(
         Paths.output / f"net_flows_grouping{suffix}.parquet"
     )

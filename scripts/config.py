@@ -9,6 +9,7 @@ class Paths:
     raw_data = project / "raw_data"
     output = project / "output"
     scripts = project / "scripts"
+    dashboard = project / "dashboard" / "src" / "data"
 
 
 CONSTANT_BASE_YEAR: int = 2022
