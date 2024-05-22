@@ -67,11 +67,11 @@ export function counterPartTypeSelector({ data, selectYear, selectPrices, select
         .filter((d) => d.continent === continent || continent === "All")
         .filter((d) => income.includes(d.income_level));
 
-    const options = Array.from(["All"]).concat(
+    const options =(
         unique(filteredData.map((d) => d.counterpart_type))
     );
 
-    return Inputs.select(options, { label: "Counterpart Type" });
+    return Inputs.checkbox(options, { label: "Counterpart Type", value:['Bilateral','Multilateral','Private'] });
 }
 
 export function counterPartSelector({ data, selectYear, selectPrices, selectContinent, selectIncome, selectCounterpartType }) {
@@ -86,7 +86,7 @@ export function counterPartSelector({ data, selectYear, selectPrices, selectCont
         .filter((d) => d.prices === prices)
         .filter((d) => d.continent === continent || continent === "All")
         .filter((d) => income.includes(d.income_level))
-        .filter((d) => d.counterpart_type === counterpartType || counterpartType === "All");
+        .filter((d) => counterpartType.includes(d.counterpart_type ));
 
     const options = Array.from(["All"]).concat(
         unique(filteredData.map((d) => d.counterpart_area))

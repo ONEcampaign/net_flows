@@ -68,7 +68,7 @@ const selectIncome = view(incomeSelector({data:data, selectYear: selectYear,
 ```
 </div>
 
-<div class="grid grid-cols-2" style="max-width:600px">
+
 <div>
 
 ```js
@@ -86,7 +86,6 @@ const selectCounterpart = view(counterPartSelector({data:data, selectYear: selec
   selectPrices:selectPrices, selectContinent:selectContinent, selectIncome:selectIncome, selectCounterpartType:selectCounterpartType
 }));
 ```
-</div>
 </div>
 
 <div>
@@ -136,7 +135,7 @@ const filteredData = data
         .filter((d) => d.prices === selectPrices)
         .filter((d) => d.continent === selectContinent || selectContinent === "All")
         .filter((d) => selectIncome.includes(d.income_level))
-        .filter((d) => d.counterpart_type === selectCounterpartType || selectCounterpartType === "All")
+        .filter((d) => selectCounterpartType.includes(d.counterpart_type ))
         .filter((d) => d.counterpart_area === selectCounterpart || selectCounterpart === "All")
         .filter((d) => d.country === selectCountry || selectCountry === 'All')
 ```
