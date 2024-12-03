@@ -11,9 +11,9 @@ class Paths:
     scripts = project / "scripts"
 
 
-CONSTANT_BASE_YEAR: int = 2022
+CONSTANT_BASE_YEAR: int = 2023
 PRICES_SOURCE: str = "imf"
-ANALYSIS_YEARS: tuple = (2000, 2022)
+ANALYSIS_YEARS: tuple = (2000, 2023)
 
 # Create a root logger
 logger = logging.getLogger(__name__)
