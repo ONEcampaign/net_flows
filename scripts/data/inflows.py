@@ -300,5 +300,5 @@ def export_debt_inflows(constant: bool = False):
 
 
 if __name__ == "__main__":
-    # inflows = get_total_inflows(constant=False)
+    inflows = get_total_inflows(constant=False)
     export_debt_inflows(constant=False)
