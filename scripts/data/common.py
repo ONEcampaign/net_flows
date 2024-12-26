@@ -316,12 +316,14 @@ def add_oecd_names(df: pd.DataFrame) -> pd.DataFrame:
     dac2a = read_dac2a(years=range(2010, 2023))
 
     # Create two dataframes, one with donors and one with recipients
-    donors = dac2a.filter(["donor_code", "donor"]).drop_duplicates()
-    recipients = dac2a.filter(["recipient_code", "recipient"]).drop_duplicates()
+    donors = dac2a.filter(["donor_code", "donor_name"]).drop_duplicates()
+    recipients = dac2a.filter(["recipient_code", "recipient_name"]).drop_duplicates()
 
     # Merge donors (by codes to get the names), and then merge recipients
     df = df.merge(donors, on=["donor_code"], how="left")
     df = df.merge(recipients, on=["recipient_code"], how="left")
+
+    df = df.rename(columns={"donor_name": "donor", "recipient_name": "recipient"})
 
     return df
 
