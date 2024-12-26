@@ -1,5 +1,5 @@
 import pandas as pd
-from bblocks import set_bblocks_data_path
+from bblocks import set_bblocks_data_path, WorldEconomicOutlook
 from bblocks.dataframe_tools.add import add_iso_codes_column
 from bblocks.import_tools.imf_weo import WEO
 import numpy as np
@@ -113,21 +113,20 @@ def _download_gdp_data() -> pd.DataFrame:
     2029.
     """
 
-    weo = WEO(version="latest")
+    weo = WorldEconomicOutlook()
 
-    weo = weo.load_data(indicators="NGDPD")
+    weo = weo.load_data(indicator="NGDPD")
 
-    gdp = weo.get_data()
-
-    return (
-        gdp.pipe(
-            add_iso_codes_column,
-            id_column="ref_area",
-            id_type="regex",
-            target_column="iso_3",
+    gdp = (
+        weo.get_data()
+        .rename(
+            columns={"iso_code": "iso_3", "value": "obs_value", "year": "time_period"}
         )
-        .filter(items=["time_period", "obs_value", "iso_3"], axis=1)
-        .rename(columns={"time_period": "year", "obs_value": "gdp"})
+        .assign(time_period=lambda d: d.time_period.dt.year)
+    )
+
+    return gdp.filter(items=["time_period", "obs_value", "iso_3"], axis=1).rename(
+        columns={"time_period": "year", "obs_value": "gdp"}
     )
 
 
